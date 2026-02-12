@@ -1,62 +1,60 @@
-# 个人简历网站 | Personal CV Website
-
-这是一个使用 **Astro** 框架构建的高性能个人简历网站，具备响应式设计、中英文双语支持以及针对打印优化的极简专业布局。
+# Personal CV Website
 
 This is a high-performance personal CV website built with **Astro**, featuring responsive design, bilingual support (Chinese & English), and a minimalist professional layout optimized for printing.
 
-[**在线预览 | Demo**](https://cv.wilboerht.cn)
+[**Live Demo**](https://cv.wilboerht.cn)
 
 ---
 
-## ✨ 核心特性 | Features
+## Features
 
-- **🚀 极致性能**: 基于 Astro 构建，极小的前端 JS 消耗。
-- **📱 响应式布局**: 完美适配手机、平板及超大屏幕显示。
-- **🌐 双语支持**: 提供完整的中文 (`/CV-cn`) 与英文 (`/CV-en`) 版本切换。
-- **📑 动态交互**: 项目经历部分支持折叠/展开功能。
-- **🖨️ 打印优化**: 专门针对纸质打印进行样式调优，支持导出完美 PDF。
-- **🛡️ 安全加固**: 预配置了 Content Security Policy (CSP) 及安全响应头。
+- **High Performance**: Built with Astro for minimal frontend JS overhead.
+- **Responsive Layout**: Perfectly adapted for mobile, tablet, and ultra-wide screens.
+- **Bilingual Support**: Complete support for switching between Chinese (`/CV-cn`) and English (`/CV-en`) versions.
+- **Dynamic Interaction**: Collapsible sections for project experience.
+- **Print Optimized**: Styles tuned specifically for printing to export perfect PDFs.
+- **Security Hardened**: Pre-configured with Content Security Policy (CSP) and security headers.
 
-## 🚀 项目结构 | Project Structure
+## Project Structure
 
 ```text
 /
 ├── public/
-│   ├── img/             # 图片及 Logo 资源
-│   └── fonts/           # 字体文件
+│   ├── img/             # Images and Logo assets
+│   └── fonts/           # Font files
 ├── src/
-│   ├── layouts/         # Astro 布局组件
-│   ├── pages/           # 页面路由
-│   │   ├── index.astro  # 语言选择首页
-│   │   ├── CV-cn.astro  # 简体中文简历
-│   │   └── CV-en.astro  # 英文版简历
-│   ├── styles/          # 全局 CSS 样式
-│   └── components/      # (可选) 可复用组件
+│   ├── layouts/         # Astro layout components
+│   ├── pages/           # Page routes
+│   │   ├── index.astro  # Language selection landing page
+│   │   ├── CV-cn.astro  # Simplified Chinese CV
+│   │   └── CV-en.astro  # English CV
+│   ├── styles/          # Global CSS styles
+│   └── components/      # (Optional) Reusable components
 ├── astro.config.mjs
 └── package.json
 ```
 
-## 🧞 命令 | Commands
+## Commands
 
-所有命令在项目根目录下通过终端运行：
+All commands are run from the root of the project, from a terminal:
 
-| 命令 | 操作 |
+| Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | 安装项目依赖 |
-| `npm run dev`             | 启动本地开发服务器 (`localhost:4321`) |
-| `npm run build`           | 构建生产环境版本到 `/dist/` 目录 |
-| `npm run preview`         | 本地预览构建完成的生产版本 |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
 
-## 🛠️ 技术栈 | Tech Stack
+## Tech Stack
 
-- **框架**: [Astro](https://astro.build/)
-- **样式**: Vanilla CSS (CSS3) + Flex/Grid
-- **字体**: Noto Serif SC, Inter, Serif
-- **部署**: Vercel / Nginx
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: Vanilla CSS (CSS3) + Flex/Grid
+- **Fonts**: Noto Serif SC, Inter, Serif
+- **Deployment**: Vercel / Nginx
 
 ---
 
-## 👨‍💻 作者 | Author
+## Author
 
 **Wang Hongkun (Wilboerht)**
 - Email: [me@wilboerht.cn](mailto:me@wilboerht.cn)
@@ -65,4 +63,4 @@ This is a high-performance personal CV website built with **Astro**, featuring r
 
 ---
 
-Proudly created with **Astro** 🚀
+Proudly created with **Astro**
