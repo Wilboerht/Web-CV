@@ -1,0 +1,15 @@
+# 允许所有搜索引擎爬取内容
+User-agent: *
+Allow: /
+
+# 隐藏特定的文件和目录
+User-agent: *
+Disallow: /fonts/
+Disallow: /css/
+Disallow: /js/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+
+# 网站地图位置
+Sitemap: https://cv.wilboerht.cn/sitemap.xml 
