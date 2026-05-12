@@ -15,7 +15,11 @@ export const prerender = true;
     <script is:inline>
       (function () {
         var lang = navigator.language || navigator.userLanguage || "";
-        var target = lang.toLowerCase().startsWith("zh") ? "/CV-cn" : "/CV-en";
+        var l = lang.toLowerCase();
+        var target;
+        if (l.startsWith("zh")) target = "/CV-cn";
+        else if (l.startsWith("ko")) target = "/CV-kr";
+        else target = "/CV-en";
         window.location.replace(target);
       })();
     </script>
