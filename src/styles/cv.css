@@ -91,11 +91,11 @@ h2 {
 }
 .entry-desc {
   font-size: 0.875rem;
-  color: var(--tag-text);
+  color: var(--text-color);
   margin: 8px 0 0 0;
   padding-left: 12px;
   border-left: 1px solid var(--border-color);
-  line-height: 1.75;
+  line-height: 1.7;
 }
 .entry-title-group {
   display: flex;
@@ -132,7 +132,7 @@ h2 {
   margin: 10px 0;
   padding-left: 12px;
   border-left: 2px solid var(--border-color);
-  line-height: 1.75;
+  line-height: 1.7;
 }
 .project-points {
   margin: 8px 0 0 0;
@@ -154,13 +154,14 @@ h2 {
   color: var(--text-color);
 }
 .skills-content {
-  color: var(--light-text);
+  color: var(--text-color);
 }
 .award-row {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   font-size: 0.875rem;
+  line-height: 1.7;
   margin-bottom: 5px;
 }
 .award-name {
