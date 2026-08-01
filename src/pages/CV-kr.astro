@@ -4,9 +4,57 @@ import "../styles/global.css";
 ---
 
 <Layout title="왕홍곤 - 이력서" lang="ko">
+  <slot name="head">
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "왕홍곤",
+        "alternateName": "Hongkun Wang",
+        "givenName": "Hongkun",
+        "familyName": "Wang",
+        "birthDate": "2002-11",
+        "email": "me@wilboerht.cn",
+        "telephone": "+8618721400154",
+        "url": "https://www.wilboerht.com",
+        "sameAs": [
+          "https://github.com/Wilboerht",
+          "https://twitter.com/wilboerht"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "상하이",
+          "addressRegion": "상하이시",
+          "postalCode": "200030",
+          "addressCountry": "CN"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "상하이과학기술직업학원"
+        },
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Prisma",
+          "PostgreSQL",
+          "Large Language Models",
+          "RAG",
+          "Docker",
+          "Linux"
+        ],
+        "jobTitle": "디지털 개발 매니저",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "모이다스"
+        }
+      }
+    </script>
+  </slot>
   <style>
     body {
-      font-family: "Times New Roman", "Inter", "Noto Sans KR", serif;
+      font-family: "Inter", "Noto Sans KR", serif;
       background: var(--background);
       color: var(--text-color);
       line-height: 1.5;
@@ -52,6 +100,17 @@ import "../styles/global.css";
       color: var(--link-color);
       text-decoration: none;
     }
+    .personal-line {
+      text-align: center;
+      font-size: 12px;
+      color: var(--light-text);
+      margin-top: 6px;
+    }
+    .entry-role-detail {
+      font-size: 12px;
+      color: var(--light-text);
+      margin-top: 2px;
+    }
     section {
       margin-bottom: 20px;
     }
@@ -96,12 +155,6 @@ import "../styles/global.css";
       font-weight: 500;
       margin-top: 2px;
     }
-    .entry-role {
-      font-size: 14px;
-      color: var(--text-color);
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
     .entry-desc {
       font-size: 13px;
       color: var(--tag-text);
@@ -122,11 +175,6 @@ import "../styles/global.css";
       font-weight: 700;
       font-size: 15px;
       color: var(--text-color);
-    }
-    .project-role {
-      font-size: 13px;
-      color: var(--tag-text);
-      margin-left: 10px;
     }
     .project-meta {
       font-size: 12px;
@@ -222,12 +270,7 @@ import "../styles/global.css";
         font-size: 14px;
         gap: 28px;
       }
-      .entry-title,
-      .project-name {
-        font-size: 16px;
-      }
-      .entry-date,
-      .project-role {
+      .entry-date {
         font-size: 14px;
       }
       .entry-desc,
@@ -264,7 +307,6 @@ import "../styles/global.css";
         font-size: 14px;
         gap: 24px;
       }
-      .entry-title,
       .project-name {
         font-size: 15px;
       }
@@ -329,16 +371,8 @@ import "../styles/global.css";
       .entry-major {
         font-size: 13px;
       }
-      .entry-role {
-        font-size: 13px;
-      }
       .project-name {
         font-size: 13px;
-      }
-      .project-role {
-        display: block;
-        margin-left: 0;
-        margin-top: 2px;
       }
       .project-meta {
         font-size: 11px;
@@ -404,37 +438,10 @@ import "../styles/global.css";
         padding: 20px;
         max-width: 100%;
       }
-      .toggle-projects-btn {
-        display: none !important;
+      a {
+        color: black;
+        text-decoration: none;
       }
-      .project-entry.hidden {
-        display: block !important;
-      }
-    }
-
-    .toggle-projects-btn {
-      display: block;
-      margin: 10px auto 0;
-      padding: 6px 20px;
-      background: transparent;
-      border: 1px solid #ddd;
-      color: #666;
-      font-size: 13px;
-      cursor: pointer;
-      border-radius: 20px;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-    .toggle-projects-btn:hover {
-      background: var(--hover-bg);
-      color: var(--text-color);
-      border-color: var(--tag-border);
-    }
-    .project-entry.hidden {
-      display: none;
-    }
-    .project-entry.no-border {
-      border-bottom: none;
     }
 
   </style>
@@ -444,25 +451,28 @@ import "../styles/global.css";
       <h1>왕홍곤</h1>
       <div class="contact-info">
         <span class="contact-item">
-          <i class="fas fa-phone"></i>
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
           <a href="tel:+8618721400154">+(86) 18721400154</a>
         </span>
         <span class="contact-item">
-          <i class="fas fa-envelope"></i>
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
           <a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a>
         </span>
         <span class="contact-item">
-          <i class="fas fa-globe"></i>
-          <a href="https://www.wilboerht.com" target="_blank">wilboerht.com</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>
+          <a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a>
         </span>
         <span class="contact-item">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/Wilboerht" target="_blank">GitHub</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
+          <a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a>
         </span>
         <span class="contact-item">
-          <i class="fab fa-twitter"></i>
-          <a href="https://twitter.com/wilboerht" target="_blank">Twitter</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-twitter"/></svg>
+          <a href="https://twitter.com/wilboerht" target="_blank" rel="noopener noreferrer">Twitter</a>
         </span>
+      </div>
+      <div class="personal-line">
+        2002년 11월 · 상하이시 쉬후이구, 200030
       </div>
     </header>
 
@@ -479,18 +489,16 @@ import "../styles/global.css";
           통신전자공학부, 정보안전기술응용전공, 전문학사
         </div>
         <p class="entry-desc">
-          <i
-            class="fas fa-book"
-            style="font-size: 13px; margin-right: 4px; color: var(--light-text);"
-          ></i>
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-book"/></svg>
           주요 과목: 네트워크 보안, 프로그래밍, 알고리즘 및 자료구조, 컴퓨터 구조, 운영체제, 데이터베이스 시스템, 컴퓨터 네트워크 등
         </p>
         <p class="entry-desc" style="margin-top: 4px;">
-          <i
-            class="fas fa-award"
-            style="font-size: 13px; margin-right: 4px; color: var(--light-text);"
-          ></i>
-          학업 성적: GPA 3.49/4.00, 우수 졸업생
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-award"/></svg>
+          교내 수상: 2023-2025 2개 학년도 2등 장학금, 2023-2024 학년도 우수학생, 우수 졸업생
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-star"/></svg>
+          학업 성적: GPA 3.41/4.00
         </p>
       </div>
     </section>
@@ -500,23 +508,42 @@ import "../styles/global.css";
       <div class="entry">
         <div class="entry-header">
           <span class="entry-org"
-            >모이다스 (NIHPLOD 사업부) — AI 응용 풀스택 개발 엔지니어</span
+            >모이다스 | NIHPLOD 사업부 — 디지털 개발 매니저</span
           >
           <span class="entry-date">2025년 10월 - 현재</span>
         </div>
+        <div class="entry-role-detail">인턴에서 정규직 전환, 이전 직책: AI 응용 풀스택 개발 엔지니어</div>
         <p class="entry-desc">
-          브랜드 중국 지역의 AI 응용 및 디지털 시스템 풀스택 개발을 주도하여 공식 웹사이트, 위챗 미니프로그램, AI 스킨케어 어드바이저, 인증 검증 플랫폼 등을 개발 및 런칭. Claude Code, Codex 등 AI 도구를 활용하여 개발 워크플로우를 최적화하고, 기존 대비 개발 기간을 50% 이상 단축. 요구사항 분석, 시스템 아키텍처, 모델 통합, 프론트엔드/백엔드 개발부터 컴플라이언스 론칭까지 전 주기를 독립적으로 수행하며, 운영 배포 및 비용 최적화를 관리.
+          <strong>디지털 제품 기획 및 구현:</strong> 브랜드 중화권 디지털 제품 매트릭스의 0에서 1까지 구축을 주도하며, 공식 웹사이트, 위챗 미니프로그램, AI 스킨케어 어드바이저, 인증 검증 플랫폼 등 핵심 시스템의 요구사항 분석, 기술 아키텍처, 모델 선정 및 컴플라이언스 론칭을 총괄. 핵심 모듈의 직접 개발에도 참여하여 엔드투엔드 폐쇄형 딜리버리를 실현.
+        </p>
+        <p class="entry-desc">
+          <strong>AI R&amp;D 효율성 시스템:</strong> AI 보조 개발 워크플로우(Claude Code, Codex 등 도구 체인)를 구축하여 평균 딜리버리 주기를 50% 이상 단축. UI/UX 디자인 표준 및 프론트엔드 구현 가이드라인을 수립하고, 핵심 페이지와 컴포넌트의 개발에 직접 참여하여 브랜드 비주얼 일관성을 확보.
+        </p>
+        <p class="entry-desc">
+          <strong>LLM 비즈니스 적용:</strong> RAG 아키텍처 기반 도메인 지식 베이스를 구축한 AI 스킨케어 어드바이저 시스템을 설계 및 구현하여 다중 턴 대화와 개인화 추천을 실현. 모델 통합 및 핵심 API 개발을 주도하여 사용자 상담 전환율 향상에 직접 기여.
+        </p>
+        <p class="entry-desc">
+          <strong>기술 운영 및 비용 거버넌스:</strong> 서버 리소스 계획 및 비용 최적화를 담당하며 비즈니스 트래픽에 따라 인프라 구성을 동적으로 조정. SEO &amp; GEO 전략 실행을 주도하고 검색 엔진 색인 및 생성형 엔진 인용 표시의 기술적 구현을 직접 추진하여 브랜드 온라인 노출을 향상.
+        </p>
+        <p class="entry-desc">
+          <strong>부서 간 협업 및 요구사항 관리:</strong> 기술 측 담당자로서 제품 및 마케팅 팀과 협력하여 마케팅 캠페인 기획에 참여하고 반복적 딜리버리 메커니즘을 구축. 긴급 요구사항에 대한 신속한 1차 대응 및 개발을 담당하여 다수 프로젝트의 병렬 딜리버리와 지속적 운영을 보장.
         </p>
       </div>
       <div class="entry">
         <div class="entry-header">
           <span class="entry-org"
-            >상하이 링강 징홍 보안방범과기발전유한공사 — R&D 인턴</span
+            >상하이 링강 징홍 보안방범과기발전유한공사 — R&amp;D 인턴</span
           >
           <span class="entry-date">2025년 7월 - 2025년 9월</span>
         </div>
         <p class="entry-desc">
-          엔터프라이즈급 풀스택 애플리케이션 개발 및 AI 기능 배포를 주도하여 시스템 아키텍처, 프론트엔드/백엔드 개발 및 프로덕션 환경 구축을 독립적으로 수행. 대규모 언어 모델(LLM) 기능을 비즈니스 시나리오에 통합하고, 지역화된 지능형 Q&A 시스템을 배포하여 낶부 워크플로우에서 AI 도구의 실제 활용을 추진.
+          <strong>기업 웹사이트 풀스택 딜리버리:</strong> 회사 공식 웹사이트의 시스템 아키텍처 설계, 프론트엔드/백엔드 개발 및 프로덕션 환경 배포를 독립적으로 완료. Next.js 기반 데스크톱 솔루션으로 브랜드 온라인 이미지 표시 및 비즈니스 유치를 지원.
+        </p>
+        <p class="entry-desc">
+          <strong>AI 역량 내부 임파워먼트:</strong> LLM 기반 지능형 Q&amp;A 어시스턴트(Weknora)를 로컬에 배포하고, RAG 아키텍처로 기업 지식 베이스 AI 상호작용 시스템을 구축하여 정확한 Q&amp;A를 실현. 회사 내부 프로세스에서 AI 도구의 첫 도입을 이끌었으며, 바이두 기업 Q&amp;A 데이터베이스 팀과 협력하여 향후 제품화 경험을 축적.
+        </p>
+        <p class="entry-desc">
+          <strong>보안 아키텍처 실무:</strong> 보안 업계의 데이터 민감성 요구사항에 대응하여 Prisma 데이터베이스 모델을 설계하고, JWT 인증, RLS 행 수준 보안 및 CSP 콘텐츠 보안 정책을 구성하여 다층 보안 방어 체계를 구현.
         </p>
       </div>
     </section>
@@ -526,40 +553,40 @@ import "../styles/global.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 중국 공식 프로젝트 시리즈</span>
+          <span class="project-name">NIHPLOD 중국 공식 디지털 플랫폼</span>
           <span class="entry-date">2025년 11월 - 현재</span>
         </div>
         <div class="project-meta">
-          프로젝트 설계, 풀스택 개발, UX/UI 디자인, 컴플라이언스 론칭 · 성과: <a
+          제품 기획 · 기술 아키텍처 · AI 통합 · 풀스택 개발 · 컴플라이언스 론칭 · 성과: <a
             href="https://www.nihplod.cn"
-            target="_blank">www.nihplod.cn</a
-          >, <a href="https://ba.nihplod.cn" target="_blank">ba.nihplod.cn</a
-          >, <a href="https://advisor.nihplod.cn" target="_blank"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          >, <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >advisor.nihplod.cn</a
           >
         </div>
         <p class="project-abstract">
-          프로젝트 구성: NIHPLOD China official website & WeChat mini-program,
-          authorization verification platform, AI skincare advisor, H5 redemption
-          system, influencer cooperation efficiency platform, etc.
+          기술 책임자로서 브랜드 중화권 디지털 제품 매트릭스의 0에서 1까지 기획 및 구현을 주도하며, 공식 웹사이트, 위챗 스토어, 인증 검증, AI 스킨케어 어드바이저, H5 인증, 인플루언서 협업 등 6개 이상의 핵심 시스템을 커버.
         </p>
         <ul class="project-points">
           <li>
-            정보 시스템 설계 및 개발, Claude Code 및 Codex 등 AI 도구를 활용하여 프로젝트 개발 및 런칭 시간을 크게 단축.
+            <strong>제품 기획 및 아키텍처 설계:</strong> 비즈니스 목표에 기반한 제품 로드맵 수립, 6개 핵심 시스템의 기술 선정 및 아키텍처 설계를 독립적으로 완료하여 확장성과 브랜드 비주얼 일관성을 확보.
           </li>
           <li>
-            요구사항 분석, 비즈니스 요구에 따라 관련 마케팅 도구 및 기존 정보 시스템 기능의 확장 또는 반복을 탐색 및 후속 조치.
+            <strong>AI 기반 딜리버리 가속화:</strong> AI 보조 개발 워크플로우(Claude Code, Codex)를 구축하여 평균 딜리버리 주기를 50% 이상 단축, 다수 프로젝트의 병렬 빠른 반복을 지원.
           </li>
           <li>
-            서버 운영 및 유지보수, 프로젝트 온라인 배포, 실제 프로젝트 요구 및 예상 방문자 트래픽에 따라 리소스 사용량을 추정하여 비용 절감 달성.
+            <strong>비용 통제 가능한 운영 체계:</strong> 비즈니스 트래픽에 따라 서버 리소스 구성을 동적으로 조정하여 안정성을 유지하면서 비용 최적화를 달성.
           </li>
           <li>
-            등록 및 컴플라이언스, 프로젝트 기능 및 관련 규제 요구사항에 따라 프로젝트 등록 및 기술 컴플라이언스 처리를 완료.
+            <strong>컴플라이언스 및 리스크 관리:</strong> ICP 등록, 개인정보 보호정책 및 이용약관 제정을 주도하고 데이터 컴플라이언스 심사를 완료하여 규제 요구사항을 충족.
           </li>
           <li>
-            검색 엔진 최적화(SEO & GEO), 프로젝트 정보의 노출 및 인용 확률을 높여 도달률을 향상.
+            <strong>검색 가시성 향상:</strong> SEO &amp; GEO 전략을 실행하여 검색 엔진 색인 및 생성형 엔진 인용 표시를 최적화하고 브랜드 온라인 노출을 향상.
           </li>
         </ul>
+        <p class="entry-desc" style="margin-top: 8px;">
+          주요 성과: NIHPLOD 중국 공식 웹사이트, 인증 검증 플랫폼, AI 스킨케어 어드바이저 등 핵심 시스템이 안정적으로 운영 중.
+        </p>
       </div>
 
       <div class="project-entry">
@@ -570,110 +597,56 @@ import "../styles/global.css";
           <span class="entry-date">2025년 7월 - 2025년 9월</span>
         </div>
         <div class="project-meta">
-          독립적으로 설계 및 개발한 AI 강화 비즈니스 시스템 · 풀스택 개발, AI 통합, UX/UI 디자인 · 성과: <a
+          독립적으로 설계 및 개발한 웹사이트 시스템 · 풀스택 개발, AI 통합, 보안 아키텍처 · 성과: <a
             href="https://www.lingangjh.com"
-            target="_blank">www.lingangjh.com</a
+            target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
           >
         </div>
         <ul class="project-points">
           <li>
-            Next.js 기반 반응형 공식 웹사이트 및 CMS 백엔드의 풀스택 개발, 기업 지식베이스 AI 상호작용을 위한 LLM 기반 지능형 Q&A 어시스턴트(Weknora) 지역화 배포.
+            <strong>풀스택 개발 및 성능 최적화:</strong> Next.js 기반으로 기업 공식 웹사이트 풀스택 개발, CMS 백엔드와 연동하여 자율적 콘텐츠 관리 실현, 첫 화면 로딩 시간 1.5초 이내 달성.
           </li>
           <li>
-            Prisma를 사용하여 데이터베이스 모델을 설계하고, JWT, RLS, CSP를 활용한 다층 보안을 구성.
+            <strong>AI Q&amp;A 어시스턴트 도입:</strong> Wenxin 대모델 및 Qwen 대모델 지능형 Q&amp;A 어시스턴트 Weknora를 로컬에 배포하고, RAG 지식 검색 파이프라인을 구축하여 기업 지식 베이스의 효율적인 Q&amp;A 상호작용 실현, 응답 정확도 85% 이상.
           </li>
           <li>
-            시스템 아키텍처, 프론트엔드/백엔드 개발 및 프로덕션 배포를 독립적으로 수행하며, 웹사이트 디스플레이, 콘텐츠 관리 및 채용 업무 워크플로우를 포괄.
+            <strong>보안 아키텍처 설계:</strong> Prisma 데이터베이스 모델을 설계하고, JWT 사용자 인증, RLS 데이터 격리, CSP 보안 정책을 구현하여 시스템 데이터 보안 및 접근 제어를 보장.
           </li>
         </ul>
       </div>
 
-      <div
-        id="project-toggle-btn-container"
-        style="text-align: center; margin-top: -10px; margin-bottom: 20px;"
-      >
-        <button id="toggle-projects-btn" class="toggle-projects-btn"
-          >더 많은 프로젝트 보기 <i
-            class="fas fa-chevron-down"
-            style="font-size: 11px; margin-left: 4px;"></i></button
-        >
+    </section>
+
+    <section>
+      <h2>기술 스택</h2>
+      <div class="skills-row">
+        <span class="skills-label">프론트엔드:</span>
+        <span class="skills-content">TypeScript / React / Next.js / Tailwind CSS / 반응형 및 모바일 대응</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">백엔드 &amp; DB:</span>
+        <span class="skills-content">Node.js / Prisma / PostgreSQL / RESTful API / JWT 인증</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">AI &amp; LLM:</span>
+        <span class="skills-content">LLM 통합 / RAG 검색 증강 / AI 워크플로우 설계 / Claude Code / Codex 기반 개발</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">DevOps &amp; 배포:</span>
+        <span class="skills-content">Linux / Docker / Nginx / CDN / 도메인 등록 / 비용 통제 및 리소스 최적화</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">보안 &amp; 컴플라이언스:</span>
+        <span class="skills-content">CSP / RLS / JWT / 정보보호 등급 기초 / 프로젝트 등록 및 기술 컴플라이언스</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">UI/UX 디자인:</span>
+        <span class="skills-content">Figma / 브랜드 비주얼 시스템 / 인터랙티브 프로토타입 / 디자인-코드 구현</span>
       </div>
     </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const projects = document.querySelectorAll(".project-entry");
-        const toggleBtn = document.getElementById("toggle-projects-btn");
-        const btnContainer = document.getElementById(
-          "project-toggle-btn-container",
-        );
-        const maxVisible = 3;
-
-        if (!toggleBtn || !btnContainer) return;
-
-        if (projects.length <= maxVisible) {
-          btnContainer.style.display = "none";
-        } else {
-          projects.forEach((project, index) => {
-            if (index >= maxVisible) {
-              project.classList.add("hidden");
-            }
-          });
-
-          if (projects[maxVisible - 1]) {
-            projects[maxVisible - 1].classList.add("no-border");
-          }
-
-          toggleBtn.addEventListener("click", () => {
-            const isExpanded =
-              toggleBtn.getAttribute("data-expanded") === "true";
-
-            if (isExpanded) {
-              projects.forEach((project, index) => {
-                if (index >= maxVisible) {
-                  project.classList.add("hidden");
-                }
-              });
-
-              if (projects[maxVisible - 1]) {
-                projects[maxVisible - 1].classList.add("no-border");
-              }
-
-              toggleBtn.innerHTML =
-                '더 많은 프로젝트 보기 <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i>';
-              toggleBtn.setAttribute("data-expanded", "false");
-            } else {
-              projects.forEach((project) => {
-                project.classList.remove("hidden");
-              });
-
-              if (projects[maxVisible - 1]) {
-                projects[maxVisible - 1].classList.remove("no-border");
-              }
-
-              toggleBtn.innerHTML =
-                '프로젝트 접기 <i class="fas fa-chevron-up" style="font-size: 11px; margin-left: 4px;"></i>';
-              toggleBtn.setAttribute("data-expanded", "true");
-            }
-          });
-        }
-      });
-    </script>
-
     <section>
       <h2>수상 및 자격증</h2>
-      <div class="award-row">
-        <span class="award-name"
-          >CTyun Advanced O&M Engineer Certification & CTyun Advanced Developer Certification (SCCP)</span
-        >
-        <span class="award-date">May & 2024년 11월</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
-          >알리바바 클라우드 ACA 클라우드 보안 어소시에이트 인증</span
-        >
-        <span class="award-date">2024년 10월</span>
-      </div>
       <div class="award-row">
         <span class="award-name"
           >상하이 "스타라이트 플랜" 기술 경연대회 "웹 기술" 부문 3등 (시 전체 16위)</span
@@ -694,21 +667,21 @@ import "../styles/global.css";
       </div>
       <div class="award-row">
         <span class="award-name"
-          >상하이과학기술직업학원 2023-2024 학년도 우수학생 및 2등 장학금</span
-        >
-        <span class="award-date">2024년 12월</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
-          >상하이과학기술직업학원 2024-2025 학년도 2등 장학금</span
-        >
-        <span class="award-date">2025년 9월</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
           >중국전자학회 전문기술증서: 청소년 소프트웨어 프로그래밍 지도교사 (Python)</span
         >
         <span class="award-date">2024년 11월</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >CTyun 고급 운영 엔지니어 인증 &amp; CTyun 고급 개발자 인증 (SCCP)</span
+        >
+        <span class="award-date">2024년 5월 &amp; 2024년 11월</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >알리바바 클라우드 ACA 클라우드 보안 어소시에이트 인증</span
+        >
+        <span class="award-date">2024년 10월</span>
       </div>
     </section>
 
@@ -721,9 +694,7 @@ import "../styles/global.css";
         <li>국가 보통화 수준 시험 2급 B등</li>
         <li>상하이 적십자 초급 구조원</li>
         <li>대학영어시험 4급 (CET-4)</li>
-        <li>Google Developer Group (GDG) 커뮤니티 멤버</li>
-        <li>2024 F1 국제 레이싱 자원봉사자</li>
-        <li>경량 다중로터 시각 범위 내 조종사 (AOPA)</li>
+        <li>Google Developer Group 커뮤니티 멤버</li>
       </ul>
     </section>
   </div>

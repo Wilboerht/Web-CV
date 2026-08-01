@@ -4,9 +4,57 @@ import "../styles/global.css";
 ---
 
 <Layout title="王泓坤 - 简历" lang="zh-CN">
+  <slot name="head">
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "王泓坤",
+        "alternateName": "Hongkun Wang",
+        "givenName": "泓坤",
+        "familyName": "王",
+        "birthDate": "2002-11",
+        "email": "me@wilboerht.cn",
+        "telephone": "+8618721400154",
+        "url": "https://www.wilboerht.com",
+        "sameAs": [
+          "https://github.com/Wilboerht",
+          "https://twitter.com/wilboerht"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "上海",
+          "addressRegion": "上海市",
+          "postalCode": "200030",
+          "addressCountry": "CN"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "上海科学技术职业学院"
+        },
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Prisma",
+          "PostgreSQL",
+          "Large Language Models",
+          "RAG",
+          "Docker",
+          "Linux"
+        ],
+        "jobTitle": "数字开发经理",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "穆埃达思 Moidas"
+        }
+      }
+    </script>
+  </slot>
   <style>
     body {
-      font-family: "Times New Roman", "Noto Serif SC", SimSun, serif;
+      font-family: "Times New Roman", "Noto Sans SC", "SimSun", serif;
       background: var(--background);
       color: var(--text-color);
       line-height: 1.5;
@@ -52,6 +100,17 @@ import "../styles/global.css";
       color: var(--link-color);
       text-decoration: none;
     }
+    .personal-line {
+      text-align: center;
+      font-size: 12px;
+      color: var(--light-text);
+      margin-top: 6px;
+    }
+    .entry-role-detail {
+      font-size: 12px;
+      color: var(--light-text);
+      margin-top: 2px;
+    }
     section {
       margin-bottom: 20px;
     }
@@ -63,6 +122,7 @@ import "../styles/global.css";
       margin: 0 0 12px 0;
       padding-bottom: 5px;
       border-bottom: 1px solid var(--primary-color);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     .entry {
       margin-bottom: 16px;
@@ -90,19 +150,10 @@ import "../styles/global.css";
       color: var(--light-text);
     }
     .entry-major {
-      font-size: 13px;
-      color: var(--text-color);
-      margin-bottom: 3px;
-    }
-    .entry-school {
-      font-size: 12px;
-      color: var(--light-text);
-    }
-    .entry-role {
       font-size: 14px;
       color: var(--text-color);
       font-weight: 500;
-      margin-bottom: 4px;
+      margin-top: 2px;
     }
     .entry-desc {
       font-size: 13px;
@@ -117,38 +168,6 @@ import "../styles/global.css";
       align-items: center;
       gap: 8px;
     }
-    .edu-icon {
-      color: var(--link-color);
-      font-size: 15px;
-    }
-    .uni-logo {
-      height: 18px;
-      width: 18px;
-      object-fit: contain;
-      vertical-align: text-bottom;
-      margin-right: 4px;
-    }
-    .status-tag {
-      font-size: 11px;
-      background: var(--tag-bg);
-      color: var(--link-color);
-      padding: 1px 6px;
-      border-radius: 3px;
-      font-weight: 500;
-      border: 1px solid var(--tag-border);
-    }
-    .entry-sub-info {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 2px;
-    }
-    .entry-major {
-      font-size: 14px;
-      color: var(--text-color);
-      font-weight: 500;
-      margin-top: 2px;
-    }
     .project-entry {
       margin-bottom: 18px;
       padding-bottom: 15px;
@@ -161,11 +180,6 @@ import "../styles/global.css";
       font-weight: 700;
       font-size: 15px;
       color: var(--text-color);
-    }
-    .project-role {
-      font-size: 13px;
-      color: var(--tag-text);
-      margin-left: 10px;
     }
     .project-meta {
       font-size: 12px;
@@ -261,12 +275,7 @@ import "../styles/global.css";
         font-size: 14px;
         gap: 28px;
       }
-      .entry-title,
-      .project-name {
-        font-size: 16px;
-      }
-      .entry-date,
-      .project-role {
+      .entry-date {
         font-size: 14px;
       }
       .entry-desc,
@@ -303,7 +312,6 @@ import "../styles/global.css";
         font-size: 14px;
         gap: 24px;
       }
-      .entry-title,
       .project-name {
         font-size: 15px;
       }
@@ -368,19 +376,8 @@ import "../styles/global.css";
       .entry-major {
         font-size: 13px;
       }
-      .entry-school {
-        font-size: 12px;
-      }
-      .entry-role {
-        font-size: 13px;
-      }
       .project-name {
         font-size: 13px;
-      }
-      .project-role {
-        display: block;
-        margin-left: 0;
-        margin-top: 2px;
       }
       .project-meta {
         font-size: 11px;
@@ -450,40 +447,6 @@ import "../styles/global.css";
         color: black;
         text-decoration: none;
       }
-      .tech-tag {
-        border-color: #999;
-      }
-      .toggle-projects-btn {
-        display: none !important;
-      }
-      .project-entry.hidden {
-        display: block !important;
-      }
-    }
-
-    .toggle-projects-btn {
-      display: block;
-      margin: 10px auto 0;
-      padding: 6px 20px;
-      background: transparent;
-      border: 1px solid #ddd;
-      color: #666;
-      font-size: 13px;
-      cursor: pointer;
-      border-radius: 20px;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-    .toggle-projects-btn:hover {
-      background: var(--hover-bg);
-      color: var(--text-color);
-      border-color: var(--tag-border);
-    }
-    .project-entry.hidden {
-      display: none;
-    }
-    .project-entry.no-border {
-      border-bottom: none;
     }
 
   </style>
@@ -493,25 +456,28 @@ import "../styles/global.css";
       <h1>王泓坤</h1>
       <div class="contact-info">
         <span class="contact-item">
-          <i class="fas fa-phone"></i>
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
           <a href="tel:+8618721400154">+(86) 18721400154</a>
         </span>
         <span class="contact-item">
-          <i class="fas fa-envelope"></i>
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
           <a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a>
         </span>
         <span class="contact-item">
-          <i class="fas fa-globe"></i>
-          <a href="https://www.wilboerht.com" target="_blank">wilboerht.com</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>
+          <a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a>
         </span>
         <span class="contact-item">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/Wilboerht" target="_blank">GitHub</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
+          <a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a>
         </span>
         <span class="contact-item">
-          <i class="fab fa-twitter"></i>
-          <a href="https://twitter.com/wilboerht" target="_blank">Twitter</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-twitter"/></svg>
+          <a href="https://twitter.com/wilboerht" target="_blank" rel="noopener noreferrer">Twitter</a>
         </span>
+      </div>
+      <div class="personal-line">
+        2002年11月 · 上海市 徐汇区，邮编 200030
       </div>
     </header>
 
@@ -528,18 +494,16 @@ import "../styles/global.css";
           通信与电子工程学院，信息安全技术应用专业，专科
         </div>
         <p class="entry-desc">
-          <i
-            class="fas fa-chart-line"
-            style="font-size: 13px; margin-right: 4px; color: var(--light-text);"
-          ></i>
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-chart"/></svg>
           主修课程：网络安全、程序设计、算法与数据结构、体系结构、操作系统、数据库系统、计算机网络等
         </p>
         <p class="entry-desc" style="margin-top: 4px;">
-          <i
-            class="fas fa-award"
-            style="font-size: 13px; margin-right: 4px; color: var(--light-text);"
-          ></i>
-          学业成绩：GPA: 3.49/4.00，校优秀毕业生
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-award"/></svg>
+          校内获奖：2023-2025 双学年校二等奖学金，2023-2024 学年校优秀学生，校优秀毕业生
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-star"/></svg>
+          学业成绩：GPA: 3.41/4.00
         </p>
       </div>
     </section>
@@ -549,12 +513,25 @@ import "../styles/global.css";
       <div class="entry">
         <div class="entry-header">
           <span class="entry-org"
-            >穆埃达思 Moidas（NIHPLOD 事业部） —— AI 应用全栈开发工程师</span
+            >穆埃达思 Moidas | 旎柏事业部 —— 数字开发经理</span
           >
           <span class="entry-date">2025.10 – 至今</span>
         </div>
+        <div class="entry-role-detail">实习转正，前职：AI 应用全栈开发工程师</div>
         <p class="entry-desc">
-          主导品牌中国区 AI 应用及数字化系统全栈开发，交付官网、微信小程序、AI 护肤顾问、授权验真平台等核心产品。以 Claude Code、Codex 等 AI 工具驱动研发流程，压缩交付周期 50% 以上。独立完成需求分析、系统架构、模型集成、前后端开发至合规上线的全链路交付，统筹运维部署与成本优化。
+          <strong>数字化产品规划与落地：</strong>主导品牌大中华区数字化产品矩阵从 0 到 1 建设，统筹官网、微信小程序、AI 护肤顾问、授权验真平台等核心系统的需求分析、技术架构、模型选型及合规上线；同时承担核心模块的一线开发，实现全链路闭环交付。
+        </p>
+        <p class="entry-desc">
+          <strong>AI 研发效能体系：</strong>建立 AI 辅助研发工作流（Claude Code、Codex 等工具链），将平均交付周期压缩 50% 以上；制定 UI/UX 设计规范与前端实现标准，并直接参与核心页面与组件的开发实现，确保品牌视觉一致性。
+        </p>
+        <p class="entry-desc">
+          <strong>大模型业务落地：</strong>设计并落地 AI 护肤顾问系统，基于 RAG 架构构建领域知识库，实现多轮对话与个性化推荐；主导模型集成与核心接口开发，直接驱动用户咨询转化率提升。
+        </p>
+        <p class="entry-desc">
+          <strong>技术运营与成本治理：</strong>负责服务器资源规划与成本优化，依据业务流量动态调整架构配置；主导 SEO &amp; GEO 策略实施，亲自推进搜索引擎收录与生成式引擎引用展示的技术实现，提升品牌线上曝光。
+        </p>
+        <p class="entry-desc">
+          <strong>跨部门协同与需求管理：</strong>作为技术侧负责人对接产品、营销团队，参与营销活动玩法设计，建立迭代响应机制；同时承担紧急需求的一线快速响应与开发，保障多项目并行交付与持续运营。
         </p>
       </div>
       <div class="entry">
@@ -565,7 +542,13 @@ import "../styles/global.css";
           <span class="entry-date">2025.07 - 2025.09</span>
         </div>
         <p class="entry-desc">
-          负责企业级全栈应用开发与 AI 功能落地，独立完成官网系统架构设计、前后端开发及生产环境部署。将大模型能力集成至业务场景，本地化部署智能问答系统，推动 AI 工具在内部流程中的实际应用。
+          <strong>企业官网全栈交付：</strong>独立完成公司官网系统架构设计、前后端开发及生产环境部署，基于 Next.js 构建桌面端方案，支撑品牌线上形象展示与业务获客。
+        </p>
+        <p class="entry-desc">
+          <strong>AI 能力内部赋能：</strong>本地化部署大模型智能问答助手（Weknora），构建企业知识库 AI 交互系统，基于 RAG 架构实现精准问答，推动 AI 工具在内部流程中的首次落地，与百度企业问答库团队对接，为后续产品化积累经验。
+        </p>
+        <p class="entry-desc">
+          <strong>安全架构实践：</strong>针对安防行业数据敏感特性，设计 Prisma 数据库模型，配置 JWT 认证、RLS 行级安全及 CSP 内容安全策略，实现多层安全防护体系。
         </p>
       </div>
     </section>
@@ -575,41 +558,40 @@ import "../styles/global.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">旎柏（NIHPLOD）中国区官方项目系列</span>
+          <span class="project-name">旎柏（NIHPLOD）中国官方数字化平台</span>
           <span class="entry-date">2025.11 – 至今</span>
         </div>
         <div class="project-meta">
-          项目设计、全栈开发、UX/UI 设计、合规上线 · 成果展示：<a
+          产品规划 · 技术架构 · AI 集成 · 全栈开发 · 合规上线 · 成果展示：<a
             href="https://www.nihplod.cn"
-            target="_blank">www.nihplod.cn</a
-          >、<a href="https://ba.nihplod.cn" target="_blank">ba.nihplod.cn</a
-          >、<a href="https://advisor.nihplod.cn" target="_blank"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          >、<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >advisor.nihplod.cn</a
           >
         </div>
         <p class="project-abstract">
-          项目组成：NIHPLOD 中国区官网 & 微信商城小程序、授权验真平台、AI
-          护肤顾问、H5 核销系统、达人合作效率平台等。
+          作为技术负责人，主导品牌大中华区数字化产品矩阵从 0 到 1 规划与落地，覆盖官网、微信商城、授权验真、AI 护肤顾问、H5 核销、达人合作等 6+ 核心系统。
         </p>
         <ul class="project-points">
           <li>
-            信息系统设计及开发，使用 Claude Code、Codex 等 AI
-            工具完成并大幅缩短项目开发上线时间。
+            <strong>产品规划与架构设计：</strong>基于业务目标拆解产品路线图，独立完成 6 个核心系统的技术选型与架构设计，确保系统可扩展性与品牌视觉一致性。
           </li>
           <li>
-            需求分析，根据业务需求探索并跟进相关的营销工具及已有信息系统功能的拓展或迭代。
+            <strong>AI 驱动研发提效：</strong>建立 AI 辅助开发工作流（Claude Code、Codex），将平均交付周期压缩 50% 以上，支撑多项目并行快速迭代。
           </li>
           <li>
-            服务器运维，上线部署项目，根据实际项目需求和上线访客预期判断资源用量，实现成本控制。
+            <strong>成本可控的运维体系：</strong>根据业务流量动态调整服务器资源配置，在保障稳定性的前提下实现成本优化。
           </li>
           <li>
-            备案与合规，根据项目功能和相关管局要求完成项目的备案及技术合规处理。
+            <strong>合规与风险管控：</strong>主导 ICP 备案、隐私政策及用户协议制定，完成数据合规审查，确保产品符合监管要求。
           </li>
           <li>
-            搜索引擎结果优化（SEO &
-            GEO），提高项目信息被展示及引用概率，提升曝光。
+            <strong>搜索可见性提升：</strong>实施 SEO &amp; GEO 策略，优化搜索引擎收录与生成式引擎引用展示，提升品牌线上曝光。
           </li>
         </ul>
+        <p class="entry-desc" style="margin-top: 8px;">
+          关键成果：NIHPLOD 中国区官网、授权验真平台、AI 护肤顾问等核心系统已稳定上线运营。
+        </p>
       </div>
 
       <div class="project-entry">
@@ -620,108 +602,56 @@ import "../styles/global.css";
           <span class="entry-date">2025.07 - 2025.09</span>
         </div>
         <div class="project-meta">
-          独立设计并完成的 AI 增强型业务系统 · 全栈开发、AI 集成、UX/UI 设计 · 成果展示：<a
+          独立设计并完成的网站系统项目 · 全栈开发、AI 集成、安全架构 · 成果展示：<a
             href="https://www.lingangjh.com"
-            target="_blank">www.lingangjh.com</a
+            target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
           >
         </div>
         <ul class="project-points">
           <li>
-            基于 Next.js 全栈开发响应式官网及 CMS 后台，本地化部署大模型智能问答助手（Weknora），实现企业知识库 AI 交互。
+            <strong>全栈开发与性能优化：</strong>基于 Next.js 独立完成企业官网全栈开发，配合 CMS 后台实现内容自主管理，首屏加载时间控制在 1.5s 以内。
           </li>
           <li>
-            使用 Prisma 设计数据库模型，配置 JWT、RLS 与 CSP 多层安全防护。
+            <strong>AI 问答助手落地：</strong>本地化部署文心大模型及 Qwen 大模型智能问答助手 Weknora，搭建 RAG 知识检索管道，实现企业知识库的高效问答交互，回答准确率 > 85%。
           </li>
           <li>
-            独立完成系统架构、前后端开发及生产部署，覆盖官网展示、内容管理与招聘业务全链路。
+            <strong>安全架构设计：</strong>设计 Prisma 数据库模型，实现 JWT 用户认证、RLS 数据隔离、CSP 安全策略，保障系统数据安全与访问控制。
           </li>
         </ul>
       </div>
 
-      <div
-        id="project-toggle-btn-container"
-        style="text-align: center; margin-top: -10px; margin-bottom: 20px;"
-      >
-        <button id="toggle-projects-btn" class="toggle-projects-btn"
-          >展开更多项目 <i
-            class="fas fa-chevron-down"
-            style="font-size: 11px; margin-left: 4px;"></i></button
-        >
+    </section>
+
+    <section>
+      <h2>技术栈</h2>
+      <div class="skills-row">
+        <span class="skills-label">前端开发：</span>
+        <span class="skills-content">TypeScript / React / Next.js / Tailwind CSS / 响应式与移动端适配</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">后端 &amp; 数据库：</span>
+        <span class="skills-content">Node.js / Prisma / PostgreSQL / RESTful API / JWT 认证</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">AI &amp; 大模型：</span>
+        <span class="skills-content">大模型集成 / RAG 检索增强 / AI 工作流设计 / Claude Code / Codex 驱动开发</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">运维 &amp; 部署：</span>
+        <span class="skills-content">Linux / Docker / Nginx / CDN / 域名备案 / 成本控制与资源优化</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">安全 &amp; 合规：</span>
+        <span class="skills-content">CSP / RLS / JWT / 等保基础 / 项目备案与技术合规</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">UI/UX 设计：</span>
+        <span class="skills-content">Figma / 品牌视觉系统 / 交互原型 / 设计至代码落地</span>
       </div>
     </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const projects = document.querySelectorAll(".project-entry");
-        const toggleBtn = document.getElementById("toggle-projects-btn");
-        const btnContainer = document.getElementById(
-          "project-toggle-btn-container",
-        );
-        const maxVisible = 3;
-
-        if (!toggleBtn || !btnContainer) return;
-
-        if (projects.length <= maxVisible) {
-          btnContainer.style.display = "none";
-        } else {
-          projects.forEach((project, index) => {
-            if (index >= maxVisible) {
-              project.classList.add("hidden");
-            }
-          });
-
-          if (projects[maxVisible - 1]) {
-            projects[maxVisible - 1].classList.add("no-border");
-          }
-
-          toggleBtn.addEventListener("click", () => {
-            const isExpanded =
-              toggleBtn.getAttribute("data-expanded") === "true";
-
-            if (isExpanded) {
-              projects.forEach((project, index) => {
-                if (index >= maxVisible) {
-                  project.classList.add("hidden");
-                }
-              });
-
-              if (projects[maxVisible - 1]) {
-                projects[maxVisible - 1].classList.add("no-border");
-              }
-
-              toggleBtn.innerHTML =
-                '展开更多项目 <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i>';
-              toggleBtn.setAttribute("data-expanded", "false");
-            } else {
-              projects.forEach((project) => {
-                project.classList.remove("hidden");
-              });
-
-              if (projects[maxVisible - 1]) {
-                projects[maxVisible - 1].classList.remove("no-border");
-              }
-
-              toggleBtn.innerHTML =
-                '收起项目 <i class="fas fa-chevron-up" style="font-size: 11px; margin-left: 4px;"></i>';
-              toggleBtn.setAttribute("data-expanded", "true");
-            }
-          });
-        }
-      });
-    </script>
-
     <section>
       <h2>获奖及证书</h2>
-      <div class="award-row">
-        <span class="award-name"
-          >天翼云高级运维工程师认证 & 天翼云高级开发工程师认证（SCCP）</span
-        ><span class="award-date">2024.05 & 2024.11</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name">阿里云 ACA 云安全助理工程师认证</span><span
-          class="award-date">2024.10</span
-        >
-      </div>
       <div class="award-row">
         <span class="award-name"
           >上海市"星光计划"职业院校技能竞赛"网站技术"三等奖（上海市第 16 名）</span
@@ -739,18 +669,18 @@ import "../styles/global.css";
       </div>
       <div class="award-row">
         <span class="award-name"
-          >上海科学技术职业学院 2023-2024 学年校级优秀学生、二等奖学金</span
-        ><span class="award-date">2024.12</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
-          >上海科学技术职业学院 2024-2025 学年校级二等奖学金</span
-        ><span class="award-date">2025.09</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
           >中国电子学会专业技术证书：青少年软件编程指导教师（Python）</span
         ><span class="award-date">2024.11</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >天翼云高级运维工程师认证 &amp; 天翼云高级开发工程师认证（SCCP）</span
+        ><span class="award-date">2024.05 &amp; 2024.11</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">阿里云 ACA 云安全助理工程师认证</span><span
+          class="award-date">2024.10</span
+        >
       </div>
     </section>
 
@@ -764,9 +694,7 @@ import "../styles/global.css";
         <li>国家普通话水平测试二级乙等</li>
         <li>上海市红十字会初级救护员</li>
         <li>大学英语四级考试（CET-4）</li>
-        <li>Google Developer Group（GDG）社区成员</li>
-        <li>2024 年 F1 国际赛车赛志愿者</li>
-        <li>轻型多旋翼视距内驾驶员（AOPA）</li>
+        <li>Google Developer Group 社区成员</li>
       </ul>
     </section>
   </div>

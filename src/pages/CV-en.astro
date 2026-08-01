@@ -4,6 +4,54 @@ import "../styles/global.css";
 ---
 
 <Layout title="Hongkun Wang - CV" lang="en">
+  <slot name="head">
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hongkun Wang",
+        "alternateName": "王泓坤",
+        "givenName": "Hongkun",
+        "familyName": "Wang",
+        "birthDate": "2002-11",
+        "email": "me@wilboerht.cn",
+        "telephone": "+8618721400154",
+        "url": "https://www.wilboerht.com",
+        "sameAs": [
+          "https://github.com/Wilboerht",
+          "https://twitter.com/wilboerht"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Shanghai",
+          "addressRegion": "Shanghai",
+          "postalCode": "200030",
+          "addressCountry": "CN"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Shanghai Scientific and Technical Vocational College"
+        },
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Prisma",
+          "PostgreSQL",
+          "Large Language Models",
+          "RAG",
+          "Docker",
+          "Linux"
+        ],
+        "jobTitle": "Digital Development Manager",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Moidas"
+        }
+      }
+    </script>
+  </slot>
   <style>
     body {
       font-family: "Times New Roman", "Inter", serif;
@@ -52,6 +100,17 @@ import "../styles/global.css";
       color: var(--link-color);
       text-decoration: none;
     }
+    .personal-line {
+      text-align: center;
+      font-size: 12px;
+      color: var(--light-text);
+      margin-top: 6px;
+    }
+    .entry-role-detail {
+      font-size: 12px;
+      color: var(--light-text);
+      margin-top: 2px;
+    }
     section {
       margin-bottom: 20px;
     }
@@ -96,12 +155,6 @@ import "../styles/global.css";
       font-weight: 500;
       margin-top: 2px;
     }
-    .entry-role {
-      font-size: 14px;
-      color: var(--text-color);
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
     .entry-desc {
       font-size: 13px;
       color: var(--tag-text);
@@ -122,11 +175,6 @@ import "../styles/global.css";
       font-weight: 700;
       font-size: 15px;
       color: var(--text-color);
-    }
-    .project-role {
-      font-size: 13px;
-      color: var(--tag-text);
-      margin-left: 10px;
     }
     .project-meta {
       font-size: 12px;
@@ -222,12 +270,7 @@ import "../styles/global.css";
         font-size: 14px;
         gap: 28px;
       }
-      .entry-title,
-      .project-name {
-        font-size: 16px;
-      }
-      .entry-date,
-      .project-role {
+      .entry-date {
         font-size: 14px;
       }
       .entry-desc,
@@ -264,7 +307,6 @@ import "../styles/global.css";
         font-size: 14px;
         gap: 24px;
       }
-      .entry-title,
       .project-name {
         font-size: 15px;
       }
@@ -329,16 +371,8 @@ import "../styles/global.css";
       .entry-major {
         font-size: 13px;
       }
-      .entry-role {
-        font-size: 13px;
-      }
       .project-name {
         font-size: 13px;
-      }
-      .project-role {
-        display: block;
-        margin-left: 0;
-        margin-top: 2px;
       }
       .project-meta {
         font-size: 11px;
@@ -404,37 +438,10 @@ import "../styles/global.css";
         padding: 20px;
         max-width: 100%;
       }
-      .toggle-projects-btn {
-        display: none !important;
+      a {
+        color: black;
+        text-decoration: none;
       }
-      .project-entry.hidden {
-        display: block !important;
-      }
-    }
-
-    .toggle-projects-btn {
-      display: block;
-      margin: 10px auto 0;
-      padding: 6px 20px;
-      background: transparent;
-      border: 1px solid #ddd;
-      color: #666;
-      font-size: 13px;
-      cursor: pointer;
-      border-radius: 20px;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-    .toggle-projects-btn:hover {
-      background: var(--hover-bg);
-      color: var(--text-color);
-      border-color: var(--tag-border);
-    }
-    .project-entry.hidden {
-      display: none;
-    }
-    .project-entry.no-border {
-      border-bottom: none;
     }
 
   </style>
@@ -444,25 +451,28 @@ import "../styles/global.css";
       <h1>Hongkun Wang</h1>
       <div class="contact-info">
         <span class="contact-item">
-          <i class="fas fa-phone"></i>
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
           <a href="tel:+8618721400154">+(86) 18721400154</a>
         </span>
         <span class="contact-item">
-          <i class="fas fa-envelope"></i>
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
           <a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a>
         </span>
         <span class="contact-item">
-          <i class="fas fa-globe"></i>
-          <a href="https://www.wilboerht.com" target="_blank">wilboerht.com</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>
+          <a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a>
         </span>
         <span class="contact-item">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/Wilboerht" target="_blank">GitHub</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
+          <a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a>
         </span>
         <span class="contact-item">
-          <i class="fab fa-twitter"></i>
-          <a href="https://twitter.com/wilboerht" target="_blank">Twitter</a>
+          <svg class="icon" aria-hidden="true"><use href="#icon-twitter"/></svg>
+          <a href="https://twitter.com/wilboerht" target="_blank" rel="noopener noreferrer">Twitter</a>
         </span>
+      </div>
+      <div class="personal-line">
+        Nov 2002 · Xuhui District, Shanghai, 200030
       </div>
     </header>
 
@@ -476,23 +486,21 @@ import "../styles/global.css";
           <span class="entry-date">Oct 2023 - Jun 2026</span>
         </div>
         <div class="entry-major">
-          School of Communication & Electronic Engineering, Information Security
+          School of Communication &amp; Electronic Engineering, Information Security
           Technology Application, Associate Degree
         </div>
         <p class="entry-desc">
-          <i
-            class="fas fa-book"
-            style="font-size: 13px; margin-right: 4px; color: var(--light-text);"
-          ></i>
-          Major Courses: Network Security, Programming, Algorithms & Data Structures,
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-book"/></svg>
+          Major Courses: Network Security, Programming, Algorithms &amp; Data Structures,
           Computer Architecture, Operating Systems, Database Systems, Computer Networks, etc.
         </p>
         <p class="entry-desc" style="margin-top: 4px;">
-          <i
-            class="fas fa-award"
-            style="font-size: 13px; margin-right: 4px; color: var(--light-text);"
-          ></i>
-          Academic Performance: GPA 3.49/4.00, Outstanding Graduate
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-award"/></svg>
+          School Awards: 2023-2025 Dual Academic Year 2nd-Class Scholarship, 2023-2024 Outstanding Student, Outstanding Graduate
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <svg class="icon" style="font-size:13px;margin-right:4px;color:var(--light-text)"><use href="#icon-star"/></svg>
+          Academic Performance: GPA 3.41/4.00
         </p>
       </div>
     </section>
@@ -502,34 +510,42 @@ import "../styles/global.css";
       <div class="entry">
         <div class="entry-header">
           <span class="entry-org"
-            >Moidas (NIHPLOD Division) — Full-stack AI Application Engineer</span
+            >Moidas | NIHPLOD Division — Digital Development Manager</span
           >
           <span class="entry-date">Oct 2025 - Present</span>
         </div>
+        <div class="entry-role-detail">Converted from intern; previously: AI Application Full-stack Engineer</div>
         <p class="entry-desc">
-          Led full-stack development of AI applications and digital systems for
-          the brand's China region, delivering the official website, WeChat mini-program,
-          AI skincare advisor, and authorization verification platform. Drove the
-          development workflow with AI tools (Claude Code, Codex), cutting delivery
-          cycles by over 50%. Independently owned the full-cycle delivery from
-          requirements analysis, system architecture, model integration, and front-end/back-end
-          development to compliant launch, while managing operations deployment and
-          cost optimization.
+          <strong>Digital Product Planning &amp; Delivery:</strong> Led the 0-to-1 build-out of the brand's Greater China digital product matrix, overseeing requirements analysis, technical architecture, model selection, and compliance launch for core systems including the official website, WeChat Mini Program, AI Skincare Advisor, and Authorization Verification Platform. Directly contributed to core module development, achieving end-to-end closed-loop delivery.
+        </p>
+        <p class="entry-desc">
+          <strong>AI-Driven R&amp;D Efficiency:</strong> Established AI-assisted development workflows (Claude Code, Codex, and related toolchains), reducing average delivery cycles by over 50%. Defined UI/UX design standards and front-end implementation guidelines, while directly developing core pages and components to ensure brand visual consistency.
+        </p>
+        <p class="entry-desc">
+          <strong>LLM Business Implementation:</strong> Designed and delivered the AI Skincare Advisor system, building a domain knowledge base on a RAG architecture to enable multi-turn conversations and personalized recommendations. Led model integration and core API development, directly driving improvements in user consultation conversion rates.
+        </p>
+        <p class="entry-desc">
+          <strong>Technical Operations &amp; Cost Governance:</strong> Managed server resource planning and cost optimization, dynamically adjusting infrastructure based on business traffic patterns. Led SEO &amp; GEO strategy implementation, personally driving the technical execution of search engine indexing and generative engine citation display to enhance online brand exposure.
+        </p>
+        <p class="entry-desc">
+          <strong>Cross-Functional Collaboration &amp; Demand Management:</strong> Served as the technical lead interfacing with product and marketing teams, contributing to campaign design and establishing iterative delivery mechanisms. Provided rapid frontline response for urgent requirements, ensuring parallel delivery and continuous operations across multiple projects.
         </p>
       </div>
       <div class="entry">
         <div class="entry-header">
           <span class="entry-org"
-            >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. — R&D Intern</span
+            >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. — R&amp;D Intern</span
           >
           <span class="entry-date">Jul 2025 - Sep 2025</span>
         </div>
         <p class="entry-desc">
-          Led enterprise-grade full-stack application development and AI feature
-          deployment, independently completing system architecture, front-end/back-end
-          development, and production environment setup. Integrated large language model
-          capabilities into business scenarios with localized intelligent Q&A system
-          deployment, driving practical AI tooling adoption in internal workflows.
+          <strong>Full-Stack Website Delivery:</strong> Independently completed system architecture design, front-end/back-end development, and production deployment of the company website, built on Next.js for the desktop experience, supporting brand image presentation and business acquisition.
+        </p>
+        <p class="entry-desc">
+          <strong>AI Capability Empowerment:</strong> Locally deployed an LLM-powered intelligent Q&amp;A assistant (Weknora), building an enterprise knowledge base AI interaction system with RAG architecture for accurate Q&amp;A — marking the first internal adoption of AI tools in company workflows. Engaged with Baidu's Enterprise Q&amp;A Database team, accumulating experience for future productization.
+        </p>
+        <p class="entry-desc">
+          <strong>Security Architecture Practice:</strong> Addressed the data sensitivity requirements of the security industry by designing Prisma database models and configuring JWT authentication, RLS row-level security, and CSP content security policies for a multi-layer defense system.
         </p>
       </div>
     </section>
@@ -539,166 +555,100 @@ import "../styles/global.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD China Official Project Series</span>
+          <span class="project-name">NIHPLOD China Official Digital Platform</span>
           <span class="entry-date">Nov 2025 - Present</span>
         </div>
         <div class="project-meta">
-          Project Design, Full-stack Development, UX/UI Design, Compliance Launch · Results: <a
+          Product Planning · Technical Architecture · AI Integration · Full-stack Development · Compliance Launch · Results: <a
             href="https://www.nihplod.cn"
-            target="_blank">www.nihplod.cn</a
-          >, <a href="https://ba.nihplod.cn" target="_blank">ba.nihplod.cn</a
-          >, <a href="https://advisor.nihplod.cn" target="_blank"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          >, <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >advisor.nihplod.cn</a
           >
         </div>
         <p class="project-abstract">
-          Project components: NIHPLOD China official website & WeChat mini-program,
-          authorization verification platform, AI skincare advisor, H5 redemption
-          system, influencer cooperation efficiency platform, etc.
+          As technical lead, drove the 0-to-1 planning and delivery of the brand's Greater China digital product matrix, covering 6+ core systems including the official website, WeChat Store, Authorization Verification, AI Skincare Advisor, H5 Redemption, and Influencer Collaboration.
         </p>
         <ul class="project-points">
           <li>
-            Information system design and development, using AI tools such as Claude
-            Code and Codex to significantly shorten project development and launch time.
+            <strong>Product Planning &amp; Architecture Design:</strong> Broke down product roadmap based on business objectives; independently completed technology selection and architecture design for 6 core systems, ensuring scalability and brand visual consistency.
           </li>
           <li>
-            Requirements analysis, exploring and following up on relevant marketing
-            tools and expansion or iteration of existing information system functions
-            based on business needs.
+            <strong>AI-Driven Delivery Acceleration:</strong> Established AI-assisted development workflows (Claude Code, Codex), reducing average delivery cycles by over 50% and enabling rapid parallel iteration across multiple projects.
           </li>
           <li>
-            Server operations and maintenance, deploying projects online, estimating
-            resource usage based on actual project needs and expected visitor traffic
-            to achieve cost control.
+            <strong>Cost-Controlled Operations:</strong> Dynamically adjusted server resource allocation based on business traffic patterns, achieving cost optimization while maintaining stability.
           </li>
           <li>
-            Filing and compliance, completing project filing and technical compliance
-            processing according to project functions and relevant regulatory requirements.
+            <strong>Compliance &amp; Risk Management:</strong> Led ICP filing, privacy policy and user agreement drafting, and data compliance review to ensure regulatory conformance.
           </li>
           <li>
-            Search engine optimization (SEO & GEO), improving the probability of
-            project information being displayed and cited, enhancing exposure.
+            <strong>Search Visibility Enhancement:</strong> Implemented SEO &amp; GEO strategies to optimize search engine indexing and generative engine citation display, boosting online brand exposure.
           </li>
         </ul>
+        <p class="entry-desc" style="margin-top: 8px;">
+          Key Results: NIHPLOD China official website, Authorization Verification Platform, and AI Skincare Advisor are now live and operational.
+        </p>
       </div>
 
       <div class="project-entry">
         <div class="entry-header">
           <span class="project-name"
-            >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. Website System</span
+            >Shanghai Lingang Jinghong Security Technology Website System</span
           >
           <span class="entry-date">Jul 2025 - Sep 2025</span>
         </div>
         <div class="project-meta">
-          Independently designed and delivered an AI-enhanced business system · Full-stack Development, AI Integration, UX/UI Design · Results: <a
+          Independently designed and delivered website system · Full-stack Development, AI Integration, Security Architecture · Results: <a
             href="https://www.lingangjh.com"
-            target="_blank">www.lingangjh.com</a
+            target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
           >
         </div>
         <ul class="project-points">
           <li>
-            Full-stack development of responsive official website and CMS backend
-            based on Next.js, with localized deployment of LLM-powered intelligent
-            Q&A assistant (Weknora) for enterprise knowledge base AI interaction.
+            <strong>Full-Stack Development &amp; Performance Optimization:</strong> Built the company's official website with Next.js full-stack development, paired with a CMS backend for autonomous content management, achieving a first-screen load time under 1.5s.
           </li>
           <li>
-            Designed database models using Prisma, configured multi-layer security
-            with JWT, RLS, and CSP.
+            <strong>AI Q&amp;A Assistant Deployment:</strong> Locally deployed LLM-powered intelligent Q&amp;A assistant (Weknora) with Wenxin and Qwen models, building a RAG knowledge retrieval pipeline for efficient enterprise knowledge base Q&amp;A with accuracy above 85%.
           </li>
           <li>
-            Independently owned system architecture, front-end/back-end development,
-            and production deployment, covering website display, content management,
-            and recruitment business workflows.
+            <strong>Security Architecture Design:</strong> Designed Prisma database models, implemented JWT user authentication, RLS data isolation, and CSP security policies to ensure system data security and access control.
           </li>
         </ul>
       </div>
 
-      <div
-        id="project-toggle-btn-container"
-        style="text-align: center; margin-top: -10px; margin-bottom: 20px;"
-      >
-        <button id="toggle-projects-btn" class="toggle-projects-btn"
-          >Show More Projects <i
-            class="fas fa-chevron-down"
-            style="font-size: 11px; margin-left: 4px;"></i></button
-        >
+    </section>
+
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="skills-row">
+        <span class="skills-label">Frontend:</span>
+        <span class="skills-content">TypeScript / React / Next.js / Tailwind CSS / Responsive &amp; Mobile Adaptation</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">Backend &amp; DB:</span>
+        <span class="skills-content">Node.js / Prisma / PostgreSQL / RESTful API / JWT Authentication</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">AI &amp; LLM:</span>
+        <span class="skills-content">LLM Integration / RAG / AI Workflow Design / Claude Code / Codex-Driven Development</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">DevOps &amp; Deploy:</span>
+        <span class="skills-content">Linux / Docker / Nginx / CDN / Domain Filing / Cost Control &amp; Resource Optimization</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">Security &amp; Compliance:</span>
+        <span class="skills-content">CSP / RLS / JWT / Information Security Baseline / Project Filing &amp; Tech Compliance</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">UI/UX Design:</span>
+        <span class="skills-content">Figma / Brand Visual System / Interactive Prototyping / Design-to-Code Implementation</span>
       </div>
     </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const projects = document.querySelectorAll(".project-entry");
-        const toggleBtn = document.getElementById("toggle-projects-btn");
-        const btnContainer = document.getElementById(
-          "project-toggle-btn-container",
-        );
-        const maxVisible = 3;
-
-        if (!toggleBtn || !btnContainer) return;
-
-        if (projects.length <= maxVisible) {
-          btnContainer.style.display = "none";
-        } else {
-          projects.forEach((project, index) => {
-            if (index >= maxVisible) {
-              project.classList.add("hidden");
-            }
-          });
-
-          if (projects[maxVisible - 1]) {
-            projects[maxVisible - 1].classList.add("no-border");
-          }
-
-          toggleBtn.addEventListener("click", () => {
-            const isExpanded =
-              toggleBtn.getAttribute("data-expanded") === "true";
-
-            if (isExpanded) {
-              projects.forEach((project, index) => {
-                if (index >= maxVisible) {
-                  project.classList.add("hidden");
-                }
-              });
-
-              if (projects[maxVisible - 1]) {
-                projects[maxVisible - 1].classList.add("no-border");
-              }
-
-              toggleBtn.innerHTML =
-                'Show More Projects <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i>';
-              toggleBtn.setAttribute("data-expanded", "false");
-            } else {
-              projects.forEach((project) => {
-                project.classList.remove("hidden");
-              });
-
-              if (projects[maxVisible - 1]) {
-                projects[maxVisible - 1].classList.remove("no-border");
-              }
-
-              toggleBtn.innerHTML =
-                'Show Less Projects <i class="fas fa-chevron-up" style="font-size: 11px; margin-left: 4px;"></i>';
-              toggleBtn.setAttribute("data-expanded", "true");
-            }
-          });
-        }
-      });
-    </script>
-
     <section>
-      <h2>Awards & Certifications</h2>
-      <div class="award-row">
-        <span class="award-name"
-          >CTyun Advanced O&M Engineer Certification & CTyun Advanced Developer Certification (SCCP)</span
-        >
-        <span class="award-date">May & Nov 2024</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
-          >Alibaba Cloud ACA Cloud Security Associate Certification</span
-        >
-        <span class="award-date">Oct 2024</span>
-      </div>
+      <h2>Awards &amp; Certifications</h2>
       <div class="award-row">
         <span class="award-name"
           >3rd Prize (16th Citywide) in "Web Technology" at the Shanghai "Starlight Plan" Skills Competition</span
@@ -719,21 +669,21 @@ import "../styles/global.css";
       </div>
       <div class="award-row">
         <span class="award-name"
-          >Shanghai Scientific and Technical Vocational College 2023-2024 Academic Year Outstanding Student & 2nd-Class Scholarship</span
-        >
-        <span class="award-date">Dec 2024</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
-          >Shanghai Scientific and Technical Vocational College 2024-2025 Academic Year 2nd-Class Scholarship</span
-        >
-        <span class="award-date">Sep 2025</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name"
           >CIE Professional Technical Certificate: Youth Software Programming Instructor (Python)</span
         >
         <span class="award-date">Nov 2024</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >CTyun Advanced O&amp;M Engineer Certification &amp; CTyun Advanced Developer Certification (SCCP)</span
+        >
+        <span class="award-date">May &amp; Nov 2024</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >Alibaba Cloud ACA Cloud Security Associate Certification</span
+        >
+        <span class="award-date">Oct 2024</span>
       </div>
     </section>
 
@@ -747,9 +697,7 @@ import "../styles/global.css";
         <li>National Mandarin Proficiency Test Grade 2 Level B</li>
         <li>Shanghai Red Cross First Aider</li>
         <li>College English Test Band 4 (CET-4)</li>
-        <li>Google Developer Group (GDG) Community Member</li>
-        <li>2024 F1 International Racing Volunteer</li>
-        <li>Light Multi-rotor Visual Line-of-Sight Pilot (AOPA)</li>
+        <li>Google Developer Group Community Member</li>
       </ul>
     </section>
   </div>
