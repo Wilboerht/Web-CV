@@ -356,6 +356,8 @@ h2 {
     max-width: 100%;
   }
 
+  /* 打印引擎不支持 flex min-height，改用 fixed 钉底（单页简历等价于“最后一页底部”） */
+
   /* Links: plain black text */
   a {
     color: #000;
