@@ -337,17 +337,115 @@ h2 {
 
 /* Print Optimization */
 @media print {
+  @page {
+    margin: 1.2cm 1.5cm;
+  }
+
+  /* Anchor: 1rem = 10pt, so any residual rem-based size scales proportionally */
+  html {
+    font-size: 10pt;
+  }
   body {
-    font-size: 10.5pt;
-    line-height: 1.5;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #000;
   }
   .container {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     max-width: 100%;
   }
+
+  /* Links: plain black text */
   a {
-    color: black;
+    color: #000;
     text-decoration: none;
+  }
+
+  /* Header: compact */
+  header {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+  h1 {
+    font-size: 16pt;
+  }
+  .contact-info {
+    font-size: 8pt;
+    gap: 0;
+    margin-top: 6px;
+  }
+  .contact-item:not(:last-child)::after {
+    margin: 0 10px;
+  }
+
+  /* Sections: tighter rhythm */
+  section {
+    margin-bottom: 14px;
+    break-inside: auto;
+  }
+  h2 {
+    font-size: 9pt;
+    margin-bottom: 8px;
+    padding-bottom: 3px;
+    break-after: avoid;
+  }
+
+  /* Entry & project headers */
+  .entry-org,
+  .project-name {
+    font-size: 9.5pt;
+  }
+  .entry-date {
+    font-size: 8pt;
+  }
+  .entry-major {
+    font-size: 8.5pt;
+  }
+  .project-meta {
+    font-size: 8pt;
+  }
+
+  /* Entries & projects: don't split across pages */
+  .entry,
+  .project-entry {
+    break-inside: avoid;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+  .project-abstract {
+    margin: 6px 0;
+    font-size: 9pt;
+  }
+  .project-points {
+    margin-top: 4px;
+  }
+  .project-points li {
+    margin-bottom: 3px;
+    font-size: 9pt;
+  }
+  .entry-desc {
+    font-size: 9pt;
+    margin-top: 4px;
+  }
+  .skills-row {
+    margin-bottom: 3px;
+    font-size: 9pt;
+  }
+  .award-row {
+    margin-bottom: 3px;
+    font-size: 9pt;
+  }
+  .award-name {
+    font-size: 9pt;
+  }
+  .award-date {
+    font-size: 8pt;
+  }
+
+  /* Widow/orphan control */
+  p, li {
+    widows: 3;
+    orphans: 3;
   }
 }

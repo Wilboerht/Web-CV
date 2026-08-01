@@ -152,11 +152,9 @@ a:hover {
     body {
         background: white;
     }
-    section {
-        break-inside: avoid;
-    }
     .lang-switch,
-    .print-btn {
+    .print-btn,
+    .skip-link {
         display: none !important;
     }
 }
