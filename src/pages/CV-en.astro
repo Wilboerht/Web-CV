@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ContactMenu from "../components/ContactMenu.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
 ---
@@ -55,34 +54,13 @@ import "../styles/cv.css";
   <div class="container">
     <header>
       <h1>Hongkun Wang</h1>
-      <ContactMenu label="Contact" />
-    </header>
-
-    <section>
-      <h2>Education</h2>
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-org"
-            >Shanghai Scientific and Technical Vocational College</span
-          >
-          <span class="entry-date">Oct 2023 - Jun 2026</span>
-        </div>
-        <div class="entry-major">
-          School of Communication &amp; Electronic Engineering, Information Security
-          Technology Application, Associate Degree
-        </div>
-        <p class="entry-desc">
-          <strong>Major Courses:</strong> Network Security, Programming, Algorithms &amp; Data Structures,
-          Computer Architecture, Operating Systems, Database Systems, Computer Networks, etc.
-        </p>
-        <p class="entry-desc" style="margin-top: 4px;">
-          <strong>School Awards:</strong> 2023-2025 Dual Academic Year 2nd-Class Scholarship, 2023-2024 Outstanding Student, Outstanding Graduate
-        </p>
-        <p class="entry-desc" style="margin-top: 4px;">
-          <strong>Academic Performance:</strong> GPA 3.41/4.00
-        </p>
+      <div class="contact-info">
+        <span class="contact-item"><a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a></span>
+        <span class="contact-item"><a href="tel:+8618721400154">+86 187 2140 0154</a></span>
+        <span class="contact-item"><a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        <span class="contact-item"><a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a></span>
       </div>
-    </section>
+    </header>
 
     <section>
       <h2>Experience</h2>
@@ -251,6 +229,32 @@ import "../styles/cv.css";
           >Alibaba Cloud ACA Cloud Security Associate Certification</span
         >
         <span class="award-date">Oct 2024</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-org"
+            >Shanghai Scientific and Technical Vocational College</span
+          >
+          <span class="entry-date">Oct 2023 - Jun 2026</span>
+        </div>
+        <div class="entry-major">
+          School of Communication &amp; Electronic Engineering, Information Security
+          Technology Application, Associate Degree
+        </div>
+        <p class="entry-desc">
+          <strong>Major Courses:</strong> Network Security, Programming, Algorithms &amp; Data Structures,
+          Computer Architecture, Operating Systems, Database Systems, Computer Networks, etc.
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>School Awards:</strong> 2023-2025 Dual Academic Year 2nd-Class Scholarship, 2023-2024 Outstanding Student, Outstanding Graduate
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>Academic Performance:</strong> GPA 3.41/4.00
+        </p>
       </div>
     </section>
 

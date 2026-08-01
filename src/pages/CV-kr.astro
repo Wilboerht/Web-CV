@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ContactMenu from "../components/ContactMenu.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
 ---
@@ -55,32 +54,13 @@ import "../styles/cv.css";
   <div class="container">
     <header>
       <h1>왕홍곤</h1>
-      <ContactMenu label="연락처" />
-    </header>
-
-    <section>
-      <h2>학력</h2>
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-org"
-            >상하이과학기술직업학원</span
-          >
-          <span class="entry-date">2023년 10월 - 2026년 6월</span>
-        </div>
-        <div class="entry-major">
-          통신전자공학부, 정보안전기술응용전공, 전문학사
-        </div>
-        <p class="entry-desc">
-          <strong>주요 과목:</strong> 네트워크 보안, 프로그래밍, 알고리즘 및 자료구조, 컴퓨터 구조, 운영체제, 데이터베이스 시스템, 컴퓨터 네트워크 등
-        </p>
-        <p class="entry-desc" style="margin-top: 4px;">
-          <strong>교내 수상:</strong> 2023-2025 2개 학년도 2등 장학금, 2023-2024 학년도 우수학생, 우수 졸업생
-        </p>
-        <p class="entry-desc" style="margin-top: 4px;">
-          <strong>학업 성적:</strong> GPA 3.41/4.00
-        </p>
+      <div class="contact-info">
+        <span class="contact-item"><a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a></span>
+        <span class="contact-item"><a href="tel:+8618721400154">+86 187 2140 0154</a></span>
+        <span class="contact-item"><a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        <span class="contact-item"><a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a></span>
       </div>
-    </section>
+    </header>
 
     <section>
       <h2>경력</h2>
@@ -249,6 +229,30 @@ import "../styles/cv.css";
           >알리바바 클라우드 ACA 클라우드 보안 어소시에이트 인증</span
         >
         <span class="award-date">2024년 10월</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>학력</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-org"
+            >상하이과학기술직업학원</span
+          >
+          <span class="entry-date">2023년 10월 - 2026년 6월</span>
+        </div>
+        <div class="entry-major">
+          통신전자공학부, 정보안전기술응용전공, 전문학사
+        </div>
+        <p class="entry-desc">
+          <strong>주요 과목:</strong> 네트워크 보안, 프로그래밍, 알고리즘 및 자료구조, 컴퓨터 구조, 운영체제, 데이터베이스 시스템, 컴퓨터 네트워크 등
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>교내 수상:</strong> 2023-2025 2개 학년도 2등 장학금, 2023-2024 학년도 우수학생, 우수 졸업생
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>학업 성적:</strong> GPA 3.41/4.00
+        </p>
       </div>
     </section>
 

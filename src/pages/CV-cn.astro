@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ContactMenu from "../components/ContactMenu.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
 ---
@@ -55,32 +54,13 @@ import "../styles/cv.css";
   <div class="container">
     <header>
       <h1>王泓坤</h1>
-      <ContactMenu label="联系我" />
-    </header>
-
-    <section>
-      <h2>教育背景</h2>
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-title-group">
-            <span class="entry-org">上海科学技术职业学院</span>
-          </div>
-          <span class="entry-date">2023.10 - 2026.06</span>
-        </div>
-        <div class="entry-major">
-          通信与电子工程学院，信息安全技术应用专业，专科
-        </div>
-        <p class="entry-desc">
-          <strong>主修课程：</strong>网络安全、程序设计、算法与数据结构、体系结构、操作系统、数据库系统、计算机网络等
-        </p>
-        <p class="entry-desc" style="margin-top: 4px;">
-          <strong>校内获奖：</strong>2023-2025 双学年校二等奖学金，2023-2024 学年校优秀学生，校优秀毕业生
-        </p>
-        <p class="entry-desc" style="margin-top: 4px;">
-          <strong>学业成绩：</strong>GPA: 3.41/4.00
-        </p>
+      <div class="contact-info">
+        <span class="contact-item"><a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a></span>
+        <span class="contact-item"><a href="tel:+8618721400154">+86 187 2140 0154</a></span>
+        <span class="contact-item"><a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        <span class="contact-item"><a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a></span>
       </div>
-    </section>
+    </header>
 
     <section>
       <h2>工作经历</h2>
@@ -244,6 +224,30 @@ import "../styles/cv.css";
         <span class="award-name">阿里云 ACA 云安全助理工程师认证</span><span
           class="award-date">2024.10</span
         >
+      </div>
+    </section>
+
+    <section>
+      <h2>教育背景</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title-group">
+            <span class="entry-org">上海科学技术职业学院</span>
+          </div>
+          <span class="entry-date">2023.10 - 2026.06</span>
+        </div>
+        <div class="entry-major">
+          通信与电子工程学院，信息安全技术应用专业，专科
+        </div>
+        <p class="entry-desc">
+          <strong>主修课程：</strong>网络安全、程序设计、算法与数据结构、体系结构、操作系统、数据库系统、计算机网络等
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>校内获奖：</strong>2023-2025 双学年校二等奖学金，2023-2024 学年校优秀学生，校优秀毕业生
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>学业成绩：</strong>GPA: 3.41/4.00
+        </p>
       </div>
     </section>
 

@@ -34,6 +34,14 @@ h1 {
   color: var(--link-color);
   text-decoration: none;
 }
+.contact-item a:hover {
+  text-decoration: underline;
+}
+.contact-item:not(:last-child)::after {
+  content: "·";
+  margin-left: 20px;
+  color: var(--light-text);
+}
 .personal-line {
   text-align: center;
   font-size: 0.75rem;
@@ -267,6 +275,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 6px;
+  }
+  .contact-item:not(:last-child)::after {
+    content: none;
   }
   .entry-header {
     flex-direction: column;

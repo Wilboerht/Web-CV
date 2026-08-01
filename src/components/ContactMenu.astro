@@ -80,6 +80,7 @@ const contacts = [
     border: 1px solid var(--border-color);
     border-radius: 999px;
     cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     transition:
       border-color 0.2s ease,
       box-shadow 0.2s ease,
@@ -88,11 +89,21 @@ const contacts = [
       color 0.2s ease;
   }
 
+  .contact-trigger .icon {
+    color: var(--link-color);
+    transition: color 0.2s ease;
+  }
+
   .contact-trigger:hover {
     border-color: var(--link-color);
     color: var(--link-color);
-    box-shadow: 0 2px 12px rgba(26, 84, 144, 0.14);
+    box-shadow: 0 3px 14px rgba(26, 84, 144, 0.16);
     transform: translateY(-1px);
+  }
+
+  .contact-trigger:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
   }
 
   .contact-trigger .chevron {
@@ -104,6 +115,11 @@ const contacts = [
   .contact-menu.open .contact-trigger {
     background: var(--primary-color);
     border-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-menu.open .contact-trigger .icon {
     color: #fff;
   }
 
