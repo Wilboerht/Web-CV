@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ContactMenu from "../components/ContactMenu.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
 ---
@@ -56,28 +57,7 @@ import "../styles/cv.css";
   <div class="container">
     <header>
       <h1>Hongkun Wang</h1>
-      <div class="contact-info">
-        <span class="contact-item">
-          <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
-          <a href="tel:+8618721400154">+(86) 18721400154</a>
-        </span>
-        <span class="contact-item">
-          <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
-          <a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a>
-        </span>
-        <span class="contact-item">
-          <svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>
-          <a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a>
-        </span>
-        <span class="contact-item">
-          <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
-          <a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </span>
-        <span class="contact-item">
-          <svg class="icon" aria-hidden="true"><use href="#icon-twitter"/></svg>
-          <a href="https://twitter.com/wilboerht" target="_blank" rel="noopener noreferrer">X</a>
-        </span>
-      </div>
+      <ContactMenu label="Contact" />
     </header>
 
     <section>
