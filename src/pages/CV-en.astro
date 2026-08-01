@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PrintFooter from "../components/PrintFooter.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
 ---
@@ -280,4 +281,11 @@ import "../styles/cv.css";
       </div>
     </section>
   </div>
+
+  <PrintFooter
+    warning="This resume contains personal information and is intended solely for recruitment evaluation. Unauthorized storage, distribution, or other use is prohibited."
+    versionLabel="Document version"
+    verifyLabel="Verify online at"
+    generatedLabel="Generated on"
+  />
 </Layout>

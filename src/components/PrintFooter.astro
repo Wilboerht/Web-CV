@@ -1,0 +1,61 @@
+---
+interface Props {
+  warning: string;
+  versionLabel: string;
+  verifyLabel: string;
+  generatedLabel: string;
+}
+
+const { warning, versionLabel, verifyLabel, generatedLabel } = Astro.props;
+
+// 文档版本号：单一来源，手动维护
+const version = "v2026.08";
+const verifyUrl = "wilboerht.com";
+---
+
+<footer class="print-footer">
+  <p class="print-footer-warning">{warning}</p>
+  <p class="print-footer-meta">
+    {versionLabel} {version} · {verifyLabel} {verifyUrl} · {generatedLabel}
+    <span class="gen-date">----</span>
+  </p>
+</footer>
+
+<style>
+  .print-footer {
+    display: none;
+  }
+
+  @media print {
+    .print-footer {
+      display: block;
+      margin-top: 14pt;
+      border-top: 0.5pt solid #ccc;
+      padding-top: 6pt;
+      text-align: center;
+    }
+    .print-footer-warning {
+      margin: 0 0 2pt 0;
+      font-size: 8pt;
+      line-height: 1.5;
+      color: #555;
+      font-weight: 600;
+    }
+    .print-footer-meta {
+      margin: 0;
+      font-size: 7.5pt;
+      line-height: 1.5;
+      color: #999;
+    }
+  }
+</style>
+
+<script>
+  // 本地生成时间戳：取查看者本机时间，如实反映"此份副本的生成时刻"
+  const dateEl = document.querySelector(".print-footer .gen-date");
+  if (dateEl) {
+    const d = new Date();
+    const pad = (n: number) => String(n).padStart(2, "0");
+    dateEl.textContent = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  }
+</script>
