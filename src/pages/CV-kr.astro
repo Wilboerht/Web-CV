@@ -49,8 +49,6 @@ import "../styles/cv.css";
   <style>
     :root {
       --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
-      --cv-skills-label: 120px;
-      --cv-skills-label-xl: 140px;
     }
   </style>
 
@@ -268,15 +266,23 @@ import "../styles/cv.css";
 
     <section>
       <h2>기타</h2>
-      <ul class="other-list">
-        <li>
-          SCITE 대학 정보기술 + 디지털 미디어 기초 (등급: 우수), Markdown을 사용한 문서 작성 능숙
-        </li>
-        <li>국가 보통화 수준 시험 2급 B등</li>
-        <li>상하이 적십자 초급 구조원</li>
-        <li>대학영어시험 4급 (CET-4)</li>
-        <li>Google Developer Group 커뮤니티 멤버</li>
-      </ul>
+      <div class="award-row">
+        <span class="award-name"
+          >SCITE 대학 정보기술 + 디지털 미디어 기초 (등급: 우수), Markdown을 사용한 문서 작성 능숙</span
+        >
+      </div>
+      <div class="award-row">
+        <span class="award-name">국가 보통화 수준 시험 2급 B등</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">상하이 적십자 초급 구조원</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">대학영어시험 4급 (CET-4)</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">Google Developer Group 커뮤니티 멤버</span>
+      </div>
     </section>
   </div>
 </Layout>
