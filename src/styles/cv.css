@@ -14,18 +14,6 @@ header {
   text-align: center;
   margin-bottom: 25px;
   padding-bottom: 20px;
-  border-bottom: 1px solid transparent;
-  background-image:
-    linear-gradient(var(--background), var(--background)),
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--header-line-color) 20%,
-      var(--header-line-color) 80%,
-      transparent
-    );
-  background-origin: padding-box, border-box;
-  background-clip: padding-box, border-box;
 }
 h1 {
   font-size: 1.625rem;
