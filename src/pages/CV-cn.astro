@@ -136,7 +136,10 @@ import "../styles/cv.css";
             <strong>AI 护肤顾问系统：</strong>基于 RAG 架构构建领域知识库，实现多轮对话与个性化推荐；主导模型集成与核心接口开发，驱动用户咨询转化率提升。
           </li>
           <li>
-            <strong>官网与商城：</strong>模块化架构设计，确保系统可扩展性与品牌视觉一致性。
+            <strong>品牌 SSO 体系：</strong>自建 OAuth 2.0 / OIDC 单点登录，主站作为 Authorization Server 签发 JWT，子站通过 Token Introspection + Backchannel Logout 实现跨域免登与全局登出；支持密钥轮换、Token 撤销（RFC 7009）及多实例黑名单共享。
+          </li>
+          <li>
+            <strong>非标交互页面：</strong>基于 Framer Motion + View Transitions 实现多步骤护肤仪式指南与沉浸式品牌叙事，集成产品抽屉与购物车联动，全端响应式适配。
           </li>
           <li>
             <strong>运维与成本治理：</strong>依据业务流量动态调整服务器资源配置，在保障稳定性的前提下实现成本优化。
