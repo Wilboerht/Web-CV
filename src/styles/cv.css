@@ -144,6 +144,9 @@ h2 {
   color: var(--text-color);
   line-height: 1.7;
 }
+.project-points li::marker {
+  font-size: 0.7em;
+}
 .skills-row {
   margin-bottom: 6px;
   font-size: 0.875rem;
