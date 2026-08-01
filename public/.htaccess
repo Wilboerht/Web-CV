@@ -13,9 +13,7 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   # 防止MIME类型嗅探
   Header always set X-Content-Type-Options "nosniff"
   
-  # 设置XSS保护
-  Header always set X-XSS-Protection "1; mode=block"
-  
+
   # 防止点击劫持
   Header always set X-Frame-Options "DENY"
   

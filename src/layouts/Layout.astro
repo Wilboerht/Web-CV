@@ -1,6 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-
 interface Props {
   title: string;
   lang: string;
@@ -15,18 +13,6 @@ const desc: Record<string, string> = {
 };
 
 const description = desc[lang] || desc["en"];
-
-const cspContent = [
-  "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src 'self' https://fonts.gstatic.com data:",
-  "img-src 'self' data:",
-  "connect-src 'self'",
-  "form-action 'self'",
-  "base-uri 'self'",
-  "object-src 'none'",
-].join("; ");
 
 const langs = [
   { code: "zh-CN", label: "中", path: "/CV-cn" },
@@ -50,29 +36,23 @@ const langs = [
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cv.wilboerht.cn" />
-    <meta property="og:image" content="https://cv.wilboerht.cn/favicon.png" />
+    <meta property="og:image" content="https://cv.wilboerht.cn/favicon.ico" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://cv.wilboerht.cn/favicon.png" />
+    <meta name="twitter:image" content="https://cv.wilboerht.cn/favicon.ico" />
 
-    <link rel="canonical" href={`https://cv.wilboerht.cn/${langs.find(l => l.code === lang)?.path ?? "CV-en"}`} />
+    <link rel="canonical" href={`https://cv.wilboerht.cn${langs.find(l => l.code === lang)?.path ?? '/CV-en'}`} />
     {
       langs.map((l) => (
         <link rel="alternate" hreflang={l.code} href={`https://cv.wilboerht.cn${l.path}`} />
       ))
     }
-
-    <meta http-equiv="Content-Security-Policy" content={cspContent} />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <link rel="alternate" hreflang="x-default" href="https://cv.wilboerht.cn/CV-en" />
 
     <title>{title}</title>
-    <ViewTransitions />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -81,13 +61,11 @@ const langs = [
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
       media="print"
       onload="this.media='all'"
-      crossorigin="anonymous"
     />
     <noscript>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
-        crossorigin="anonymous"
       />
     </noscript>
 
@@ -129,7 +107,6 @@ const langs = [
         <g id="icon-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
         <g id="icon-award"><circle cx="12" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
         <g id="icon-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
-        <g id="icon-chart"><line x1="18" y1="20" x2="18" y2="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="20" x2="12" y2="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="20" x2="6" y2="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
       </defs>
     </svg>
 
