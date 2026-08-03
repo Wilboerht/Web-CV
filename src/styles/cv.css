@@ -159,6 +159,9 @@ h2 {
   margin-bottom: 6px;
   font-size: 0.875rem;
   line-height: 1.7;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 .skills-label {
   font-weight: 600;
@@ -289,7 +292,8 @@ h2 {
   }
   .entry-date {
     margin-top: 2px;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
+    color: var(--light-text);
   }
   .entry-major {
     font-size: 0.875rem;
@@ -329,6 +333,9 @@ h2 {
   }
   h1 {
     font-size: 1.25rem;
+  }
+  h2 {
+    font-size: 0.8125rem;
   }
   .contact-info {
     font-size: 0.75rem;
