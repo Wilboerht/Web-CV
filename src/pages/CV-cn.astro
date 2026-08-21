@@ -64,6 +64,7 @@ import "../styles/cv.css";
         <span class="contact-item"><a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a></span>
         <span class="contact-item"><a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a></span>
       </div>
+      <p class="personal-line">数字开发经理 / 全栈工程师 —— 品牌信息系统 0→1 独立冷启动与统筹交付，全栈开发 × AI 应用落地 × 安全合规</p>
     </header>
 
     <section>
@@ -76,12 +77,12 @@ import "../styles/cv.css";
           <span class="entry-date">2025.10 – 至今</span>
         </div>
         <p class="entry-role-detail">
-          2025.10 以实习生身份加入并于毕业前全职在岗，2026.07 转正；直接汇报品牌方负责人。
+          2025.10 以实习生身份加入并于毕业前全职在岗，2026.07 转正，直接汇报品牌方负责人；作为事业部首位技术人员，从 0 到 1 冷启动品牌大中华区全部信息系统与数字化基础设施。
         </p>
         <ul class="project-points">
-          <li>统筹品牌大中华区数字化产品矩阵的规划与交付，覆盖官网、微信 AI 客服、授权验真、AI 护肤顾问等 6+ 核心系统。</li>
+          <li>统筹品牌大中华区数字化产品矩阵的规划与交付，覆盖官网电商、统一认证（SSO）、AI 护肤顾问、微信 AI 客服、小程序商城、授权验真 6+ 核心系统。</li>
           <li>建立 AI 辅助研发工作流与设计规范，将平均交付周期压缩 50% 以上，保障多项目并行交付。</li>
-          <li>作为技术侧负责人对接产品、营销团队，建立快速迭代响应机制，支撑品牌线上业务增长。</li>
+          <li>作为技术侧负责人承接产品、营销团队需求并拆解排期，主导需求评审与迭代节奏，支撑品牌线上零售渠道（官网电商 + 小程序商城）从 0 上线。</li>
         </ul>
       </div>
       <div class="entry">
@@ -166,13 +167,16 @@ import "../styles/cv.css";
         </div>
         <ul class="project-points">
           <li>
-            <strong>AI 测肤与个性化推荐：</strong>接入 qwen-vl / deepseek-vl 视觉大模型实现「问卷 + 扫脸」双通道皮肤分析，自研规则引擎按肤质画像打分匹配产品（8 种肤质画像 × 多渠道电商外链归因）；主导模型集成与核心接口开发，驱动用户咨询转化率提升 30%。
+            <strong>AI 测肤与个性化推荐：</strong>接入 qwen-vl / deepseek-vl 视觉大模型实现「问卷 + 扫脸」双通道皮肤分析，自研规则引擎按 8 种肤质画像打分匹配产品并支持后台可视化配置（运营零代码调整），多渠道电商外链归因；主导模型集成与核心接口开发，驱动用户咨询转化率提升 30%。
+          </li>
+          <li>
+            <strong>增长与传播设计：</strong>设计游客模式（设备指纹 + 限时档案）让用户免注册完成测肤，配合分享海报生成与渠道裂变归因支撑社交传播；输出脱敏统计数据反哺品牌白皮书与市场洞察，将工具沉淀为品牌数据资产。
           </li>
           <li>
             <strong>AI 成本工程：</strong>为 AI 调用设计熔断器与日/月 Token 预算熔断、调用计费持久化与模型白名单回退，修复 5xx 重试导致的重复扣费风险；用户报告数据 90 天滚动续期并冷热分层归档（冷层脱敏摘要）。
           </li>
           <li>
-            <strong>数据资产闭环：</strong>设计服务端间鉴权接口，测肤报告与护肤档案随会话一键透传至微信 AI 顾问（session_id 透传），将一次性测肤沉淀为可持续运营的用户数据资产，打通「测肤 → 方案 → 顾问跟进 → 复购」业务闭环。
+            <strong>数据资产闭环：</strong>设计服务端间鉴权接口，测肤报告与护肤档案随会话一键透传至微信 AI 顾问（session_id 透传），将一次性测肤沉淀为可持续运营、可驱动复购的用户数据资产。
           </li>
         </ul>
       </div>
@@ -190,7 +194,7 @@ import "../styles/cv.css";
             <strong>提示词与知识库工程：</strong>按客服账号路由双套人设（品牌客服 / 护肤顾问）的独立提示词与知识库；44KB 品牌 FAQ 知识库分段构建、按消息关键词匹配按需注入并支持热加载；内置 Prompt 注入防护与广告法禁语输出过滤双层合规兜底。
           </li>
           <li>
-            <strong>质量保障与合规：</strong>以 34 条真实大模型黄金回归用例锁定提示词迭代质量，配套 340+ 自动化测试用例；提供 PII 导出/删除接口（个保法合规），Linux + Nginx 自托管部署。
+            <strong>质量保障与可用性：</strong>以 34 条真实大模型黄金回归用例锁定提示词迭代质量，配套 340+ 自动化测试用例；AI 调用指数退避重试与超时控制，Redis 故障自动降级内存模式并定时重连恢复；提供 PII 导出/删除接口（个保法合规），Linux + Nginx 自托管部署。
           </li>
         </ul>
       </div>
@@ -202,10 +206,10 @@ import "../styles/cv.css";
         </div>
         <ul class="project-points">
           <li>
-            <strong>全栈商城闭环：</strong>基于 uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL 构建（小程序 / H5 双端 + 独立管理后台），打通微信支付 V3、退款责任链、顺丰物流与短信通知全链路。
+            <strong>全栈商城闭环：</strong>基于 uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL 构建（小程序 / H5 双端 + 独立管理后台），打通微信支付 V3、退款责任链、顺丰物流与短信通知全链路；配套优惠券、积分与护肤打卡等营销玩法，支撑品牌私域运营。
           </li>
           <li>
-            <strong>工程与安全：</strong>实现 RBAC 权限分级、审计日志与多级限流；26 个数据模型、191 个自动化测试用例（含并发下单专项测试），Docker 多阶段构建部署。
+            <strong>工程与安全：</strong>实现 RBAC 权限分级、审计日志与多级限流，自研内存缓存含请求去重防击穿；26 个数据模型、191 个自动化测试用例（含并发下单专项测试），Docker 多阶段构建部署。
           </li>
         </ul>
       </div>
