@@ -76,12 +76,12 @@ import "../styles/cv.css";
           <span class="entry-date">Oct 2025 - Present</span>
         </div>
         <p class="entry-role-detail">
-          Joined as an intern in Oct 2025 and worked full-time before graduation; converted to full-time in Jul 2026, reporting directly to the brand lead.
+          Joined as an intern in Oct 2025 and worked full-time before graduation; converted to full-time in Jul 2026, reporting directly to the brand lead. As the division's first engineer, cold-started the brand's entire Greater China information systems and digital infrastructure from 0 to 1.
         </p>
         <ul class="project-points">
-          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 6+ core systems including the official website, WeChat AI customer service, authenticity verification, and AI skincare advisor.</li>
+          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 6+ core systems: official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, mini-program store, and authorization &amp; verification platform.</li>
           <li>Established AI-assisted development workflows and design standards, reducing average delivery cycles by over 50% while ensuring parallel multi-project delivery.</li>
-          <li>Acted as technical lead interfacing with product and marketing teams, establishing rapid iteration mechanisms that supported online business growth.</li>
+          <li>As technical lead, took in requirements from product and marketing teams and broke them down into schedules, owning requirement reviews and iteration cadence, supporting the brand's online retail channels (official e-commerce site + mini-program store) from 0 to launch.</li>
         </ul>
       </div>
       <div class="entry">
@@ -130,7 +130,7 @@ import "../styles/cv.css";
       <div class="project-entry">
         <div class="entry-header">
           <span class="project-name">NIHPLOD Official E-Commerce &amp; Unified Authentication Platform</span>
-          <span class="entry-date">Nov 2025 - Present</span>
+          <span class="entry-date">Nov 2025 - Present (iterating)</span>
         </div>
         <div class="project-meta">
           Live: <a
@@ -166,13 +166,16 @@ import "../styles/cv.css";
         </div>
         <ul class="project-points">
           <li>
-            <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated qwen-vl / deepseek-vl vision LLMs for dual-channel (questionnaire + facial scan) skin analysis, with a custom rule engine scoring products against 8 skin-type personas and multi-channel e-commerce attribution links; led model integration and core API development, lifting consultation conversion by 30%.
+            <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated qwen-vl / deepseek-vl vision LLMs for dual-channel (questionnaire + facial scan) skin analysis, with a custom rule engine scoring products against 8 skin-type personas — configurable via a visual admin console (zero-code adjustments for operations) — plus multi-channel e-commerce attribution links; led model integration and core API development, lifting consultation conversion by 30%.
+          </li>
+          <li>
+            <strong>Growth &amp; Virality Design:</strong> Designed a guest mode (device fingerprint + time-limited profiles) letting users complete skin analysis without registration, plus shareable poster generation and channel-fission attribution to drive social spreading; exported desensitized statistics to feed the brand's whitepaper and market insights, turning the tool into a brand data asset.
           </li>
           <li>
             <strong>AI Cost Engineering:</strong> Designed circuit breakers with daily/monthly token budget cutoffs, persisted per-call billing, and a model whitelist with fallback for AI invocations — fixing a duplicate-billing risk caused by 5xx retries; user reports follow 90-day rolling retention with hot/cold tiered archiving (desensitized summaries in the cold tier).
           </li>
           <li>
-            <strong>Data Asset Loop:</strong> Designed a server-to-server authenticated API that hands off skin-analysis reports and skincare profiles with the session to WeChat AI advisors (session_id passthrough), turning one-off skin tests into continuously operable user data assets and closing the business loop of "analysis → regimen → advisor follow-up → repurchase".
+            <strong>Data Asset Loop:</strong> Designed a server-to-server authenticated API that hands off skin-analysis reports and skincare profiles with the session to WeChat AI advisors (session_id passthrough), turning one-off skin tests into continuously operable, repurchase-driving user data assets.
           </li>
         </ul>
       </div>
@@ -180,7 +183,7 @@ import "../styles/cv.css";
       <div class="project-entry">
         <div class="entry-header">
           <span class="project-name">WeChat AI Customer Service</span>
-          <span class="entry-date">Aug 2026 - Present</span>
+          <span class="entry-date">Aug 2026</span>
         </div>
         <ul class="project-points">
           <li>
@@ -190,22 +193,25 @@ import "../styles/cv.css";
             <strong>Prompt &amp; Knowledge-Base Engineering:</strong> Routed two agent personas (brand service / skincare advisor) with independent prompts and knowledge bases by service account; built a 44KB brand FAQ knowledge base in segments with keyword-matched on-demand injection and hot reload; dual-layer compliance guardrails via prompt-injection defense and advertising-law prohibited-word output filtering.
           </li>
           <li>
-            <strong>Quality Assurance &amp; Compliance:</strong> Locked prompt iteration quality with 34 golden regression cases against the live LLM, backed by 340+ automated tests; provided PII export/deletion endpoints (PIPL compliance); self-hosted on Linux + Nginx.
+            <strong>Quality Assurance &amp; Availability:</strong> Locked prompt iteration quality with 34 golden regression cases against the live LLM, backed by 340+ automated tests; exponential-backoff retries with timeout control for AI calls, with automatic in-memory degradation and scheduled reconnection on Redis failure; provided PII export/deletion endpoints (PIPL compliance); self-hosted on Linux + Nginx.
           </li>
         </ul>
       </div>
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">WeChat Mini-Program Store</span>
+          <span class="project-name">NIHPLOD Full-Stack E-Commerce System (WeChat Mini-Program + H5 + Admin Console)</span>
           <span class="entry-date">May 2026 - Present</span>
         </div>
         <ul class="project-points">
           <li>
-            <strong>Full-Stack Commerce Loop:</strong> Built with uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL (mini-program/H5 dual-end plus a standalone admin console), covering the full pipeline of WeChat Pay V3, refund chain, SF Express logistics, and SMS notifications.
+            <strong>Full-Stack Commerce Loop:</strong> Built with uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL (mini-program/H5 dual-end plus a standalone admin console), covering the full pipeline of WeChat Pay V3, refund chain, SF Express logistics, and SMS notifications; with coupons, points, and other marketing mechanics.
           </li>
           <li>
-            <strong>Engineering &amp; Security:</strong> Implemented RBAC, audit logging, and multi-tier rate limiting — 26 data models, 191 automated tests (including concurrent-ordering tests), deployed via multi-stage Docker builds.
+            <strong>Skin Profile Data Integration:</strong> Embedded the skin-analysis entry in the mini-program (web-view) to guide users through AI skin testing; analysis profiles are linked by phone number and synced back automatically, providing skin trends, historical reports, and daily skincare check-ins — turning analysis traffic into a private-domain, long-term operation asset along the "analysis → follow-up → repurchase" loop.
+          </li>
+          <li>
+            <strong>Engineering &amp; Security:</strong> Implemented RBAC, audit logging, and multi-tier rate limiting, plus a custom in-memory cache with request deduplication to prevent cache breakdown — 26 data models, 191 automated tests (including concurrent-ordering tests), deployed via multi-stage Docker builds.
           </li>
         </ul>
       </div>
@@ -213,7 +219,7 @@ import "../styles/cv.css";
       <div class="project-entry">
         <div class="entry-header">
           <span class="project-name">NIHPLOD Brand Authorization &amp; Verification Platform</span>
-          <span class="entry-date">Apr 2026 - Present</span>
+          <span class="entry-date">Apr 2026 - May 2026</span>
         </div>
         <div class="project-meta">
           Live: <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
