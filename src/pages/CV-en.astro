@@ -118,7 +118,7 @@ import "../styles/cv.css";
           >, etc.
         </div>
         <p class="project-abstract">
-          As technical lead, drove the brand's Greater China digital product matrix from 0 to 1 — architecture design and compliant launch — spanning 6+ systems: the official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, WeChat mini-program store, and the authorization &amp; verification platform (detailed below), with 170K+ lines of hand-written code and 1,400+ automated test cases delivered in total.
+          As technical lead, drove the brand's Greater China digital product matrix from 0 to 1 — architecture design and compliant launch — spanning 6+ systems: the official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, WeChat mini-program store, and the authorization &amp; verification platform (detailed below), with 170K+ lines of hand-written code and 1,400+ automated test cases delivered in total — and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
         </p>
         <ul class="project-points">
           <li>
@@ -172,7 +172,7 @@ import "../styles/cv.css";
             <strong>AI Cost Engineering:</strong> Designed circuit breakers with daily/monthly token budget cutoffs, persisted per-call billing, and a model whitelist with fallback for AI invocations — fixing a duplicate-billing risk caused by 5xx retries; user reports follow 90-day rolling retention with hot/cold tiered archiving (desensitized summaries in the cold tier).
           </li>
           <li>
-            <strong>Human-AI Handoff Pipeline:</strong> Designed a server-to-server authenticated API that transfers advisor sessions to WeChat human agents with full context (session_id passthrough), ensuring service continuity.
+            <strong>Data Asset Loop:</strong> Designed a server-to-server authenticated API that hands off skin-analysis reports and skincare profiles with the session to WeChat AI advisors (session_id passthrough), turning one-off skin tests into continuously operable user data assets and closing the business loop of "analysis → regimen → advisor follow-up → repurchase".
           </li>
         </ul>
       </div>
@@ -184,10 +184,13 @@ import "../styles/cv.css";
         </div>
         <ul class="project-points">
           <li>
-            <strong>Multi-Entry Messaging Gateway &amp; Multi-Turn Sessions:</strong> Built with FastAPI + Redis + the DeepSeek LLM, unifying three message entry points (WeCom customer service, WeCom app, and WeChat Official Account); implemented on-demand segmented knowledge-base injection, multi-turn sessions with user skincare profiles, guided order inquiries, and smart human handoff (keyword detection + service-hour windows + sticky agent assignment).
+            <strong>Multi-Entry Messaging Gateway &amp; Multi-Turn Sessions:</strong> Built with FastAPI + Redis + the DeepSeek LLM, unifying three message entry points (WeCom customer service, WeCom app, and WeChat Official Account); receiving user profiles handed off from the skin-analysis platform, with automatic skincare-profile accumulation across multi-turn dialogue (stage-goal tracking and re-evaluation reminders), guided order inquiries, and smart human handoff (keyword detection + service-hour windows + sticky agent assignment) — turning one-off inquiries into long-term companion-style engagement.
           </li>
           <li>
-            <strong>Compliance &amp; Quality Assurance:</strong> Built-in advertising-law prohibited-word filtering and PII export/deletion endpoints (PIPL compliance); self-hosted on Linux + Nginx, backed by 340+ test cases (including 34 golden regression cases against the live LLM).
+            <strong>Prompt &amp; Knowledge-Base Engineering:</strong> Routed two agent personas (brand service / skincare advisor) with independent prompts and knowledge bases by service account; built a 44KB brand FAQ knowledge base in segments with keyword-matched on-demand injection and hot reload; dual-layer compliance guardrails via prompt-injection defense and advertising-law prohibited-word output filtering.
+          </li>
+          <li>
+            <strong>Quality Assurance &amp; Compliance:</strong> Locked prompt iteration quality with 34 golden regression cases against the live LLM, backed by 340+ automated tests; provided PII export/deletion endpoints (PIPL compliance); self-hosted on Linux + Nginx.
           </li>
         </ul>
       </div>
