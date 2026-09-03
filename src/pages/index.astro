@@ -22,8 +22,10 @@ export const prerender = true;
         var lang = navigator.language || navigator.userLanguage || "";
         var l = lang.toLowerCase();
         var target;
-        if (l.startsWith("zh-tw") || l.startsWith("zh-hk") || l.startsWith("zh-mo")) target = "/CV-tw";
+        if (l.startsWith("zh-hk") || l.startsWith("zh-mo")) target = "/CV-hk";
+        else if (l.startsWith("zh-tw")) target = "/CV-tw";
         else if (l.startsWith("zh")) target = "/CV-cn";
+        else if (l.startsWith("de")) target = "/CV-de";
         else if (l.startsWith("ko")) target = "/CV-kr";
         else target = "/CV-en";
         window.location.replace(target);
@@ -41,7 +43,7 @@ export const prerender = true;
   <body>
     <noscript>
       <p style="text-align:center;padding:40px;font-size:0.875rem;color:#666">
-        Redirecting... <a href="/CV-cn">中文</a> | <a href="/CV-tw">繁體</a> | <a href="/CV-en">English</a> | <a href="/CV-kr">한국어</a>
+        Redirecting... <a href="/CV-cn">中文</a> | <a href="/CV-tw">繁體</a> | <a href="/CV-hk">繁體（港）</a> | <a href="/CV-en">English</a> | <a href="/CV-de">Deutsch</a> | <a href="/CV-kr">한국어</a>
       </p>
     </noscript>
   </body>

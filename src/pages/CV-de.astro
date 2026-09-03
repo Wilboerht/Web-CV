@@ -1,0 +1,368 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PrintFooter from "../components/PrintFooter.astro";
+import "../styles/global.css";
+import "../styles/cv.css";
+---
+
+<Layout title="Hongkun Wang - Lebenslauf" lang="de">
+  <slot name="head">
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hongkun Wang",
+        "alternateName": "王泓坤",
+        "givenName": "Hongkun",
+        "familyName": "Wang",
+        "email": "me@wilboerht.cn",
+        "telephone": "+8618721400154",
+        "url": "https://www.wilboerht.com",
+        "sameAs": [
+          "https://github.com/Wilboerht",
+          "https://twitter.com/wilboerht"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Shanghai Scientific and Technical Vocational College"
+        },
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Vue 3",
+          "Node.js",
+          "FastAPI",
+          "Prisma",
+          "PostgreSQL",
+          "Redis",
+          "Large Language Models",
+          "RAG",
+          "Docker",
+          "Linux"
+        ],
+        "jobTitle": "Digital Development Manager",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Moidas"
+        }
+      }
+    </script>
+  </slot>
+  <style>
+    :root {
+      --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
+    }
+  </style>
+
+  <div class="container">
+    <header>
+      <h1>Hongkun Wang</h1>
+      <div class="contact-info">
+        <span class="contact-item"><a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a></span>
+        <span class="contact-item"><a href="tel:+8618721400154">+86 187 2140 0154</a></span>
+        <span class="contact-item"><a href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        <span class="contact-item"><a href="https://www.wilboerht.com" target="_blank" rel="noopener noreferrer">wilboerht.com</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Berufserfahrung</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-org"
+            >Moidas | NIHPLOD Greater China Division — Digital Development Manager</span
+          >
+          <span class="entry-date">Okt. 2025 – heute</span>
+        </div>
+        <p class="entry-role-detail">
+          Im Oktober 2025 als Praktikant eingestiegen und bereits vor dem Abschluss in Vollzeit tätig; im Juli 2026 in eine Festanstellung übernommen, mit direkter Berichtslinie an die Markenleitung. Als erster Ingenieur der Division sämtliche Informationssysteme und die digitale Infrastruktur der Marke für Greater China von 0 auf 1 aufgebaut.
+        </p>
+        <ul class="project-points">
+          <li>Verantwortlich für Planung und Umsetzung des digitalen Produktportfolios der Marke für Greater China — 6+ Kernsysteme: offizielle E-Commerce-Website, einheitliche Authentifizierung (SSO), KI-Hautpflegeberater, WeChat-KI-Kundenservice, Mini-Programm-Shop sowie Autorisierungs- &amp; Verifizierungsplattform.</li>
+          <li>KI-gestützte Entwicklungsworkflows und Designstandards etabliert und die durchschnittlichen Lieferzyklen um über 50 % verkürzt — bei paralleler Auslieferung mehrerer Projekte.</li>
+          <li>Als technischer Lead Anforderungen von Produkt- und Marketingteams aufgenommen und in Zeitpläne zerlegt, Requirement-Reviews und Iterationsrhythmus verantwortet sowie die Online-Retail-Kanäle der Marke (offizielle E-Commerce-Website + Mini-Programm-Shop) von 0 bis zum Launch begleitet.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-org"
+            >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. — F&amp;E-Praktikant</span
+          >
+          <span class="entry-date">Jul. 2025 – Sep. 2025</span>
+        </div>
+        <ul class="project-points">
+          <li>Eigenverantwortliche End-to-End-Umsetzung der Unternehmenswebsite — von Architektur und UI/UX-Design bis zum Produktions-Deployment.</li>
+          <li>Auf Basis des Unitree-Roboterhund-SDKs ein internes MVP für eine Campus-Patrouillen-Verwaltungsplattform entwickelt und die Produktmachbarkeit validiert.</li>
+          <li>Die erste interne Einführung von KI-Frage-Antwort-Tools im Unternehmen vorangetrieben und als Unternehmensvertreter die Geschäftszusammenarbeit mit Baidus offiziellem Enterprise-QA-Team angebahnt.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projekte</h2>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name">Offizielle digitale Plattform von NIHPLOD China (Portfolio)</span>
+          <span class="entry-date">Nov. 2025 – heute</span>
+        </div>
+        <div class="project-meta">
+          Live: <a
+            href="https://www.nihplod.cn"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          >, <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >advisor.nihplod.cn</a
+          >, <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >ba.nihplod.cn</a
+          > u. a.
+        </div>
+        <p class="project-abstract">
+          Als technischer Lead die digitale Produktmatrix der Marke für Greater China von 0 auf 1 vorangetrieben — Architekturdesign und Compliance-konformer Launch über 6+ Systeme hinweg: offizielle E-Commerce-Website, einheitliche Authentifizierung (SSO), KI-Hautpflegeberater, WeChat-KI-Kundenservice, WeChat-Mini-Programm-Shop und Autorisierungs- &amp; Verifizierungsplattform (Details unten) — insgesamt über 170.000 Zeilen handgeschriebenen Code und über 1.400 automatisierte Testfälle ausgeliefert — und über einheitliche Konten und Profildaten den Geschäftskreislauf „Hautanalyse → personalisierte Pflegeroutine → 7×24-KI-Beratung → Wiederkauf" verbunden.
+        </p>
+        <ul class="project-points">
+          <li>
+            <strong>Compliance &amp; Betriebs-Governance:</strong> ICP-Anmeldung, Datenschutzrichtlinie und Nutzungsvereinbarung erstellt sowie Data-Compliance-Reviews durchgeführt, um Compliance-konforme Launches über alle Systeme sicherzustellen; Serverressourcen dynamisch an den Traffic angepasst, um Kosten zu optimieren.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name">NIHPLOD E-Commerce-Website &amp; Plattform für einheitliche Authentifizierung</span>
+          <span class="entry-date">Nov. 2025 – heute (iterativ)</span>
+        </div>
+        <div class="project-meta">
+          Live: <a
+            href="https://www.nihplod.cn"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>E-Commerce-Kreislauf:</strong> E-Commerce-Hauptseite der Marke mit Next.js 16 + Prisma + PostgreSQL aufgebaut — mit Dual-Channel-Zahlungen (WeChat Pay / Alipay) und Rückerstattungen (idempotente asynchrone Benachrichtigungen), SF-Express-Logistik sowie Mitgliederpunkte- und Coupon-Systemen; mehrkanalige Identitäten (WeChat, Douyin, Telefon-OTP) in einem einheitlichen Kontosystem aggregiert — 121 API-Routen, 36 Datenmodelle und 824 Testfälle seitenweit.
+          </li>
+          <li>
+            <strong>Einheitliche Authentifizierung (SSO):</strong> Self-hosted OAuth 2.0 / OIDC-SSO aufgebaut — die Hauptseite fungiert als Authorization Server und stellt RS256-JWTs aus; die Endpunkte authorize / token / userinfo / introspect / revoke / end-session vollständig implementiert, inkl. PKCE, DPoP und TOTP-Zwei-Faktor-Authentifizierung; npm-SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) verpackt und veröffentlicht für die Integration von Sub-Projekten im Minutenbereich; mit Token Introspection + Backchannel Logout für domainübergreifendes SSO und globalen Logout.
+          </li>
+          <li>
+            <strong>Security-Härtung:</strong> Unterstützt Secret-Rotation, Token-Revocation (RFC 7009) und Multi-Instanz-Blacklist-Sharing für ein wartbares und auditierbares Authentifizierungssystem.
+          </li>
+          <li>
+            <strong>Interaktive Erfahrung:</strong> Mehrstufige Hautpflegeritual-Guides und immersives Brand-Storytelling mit Framer Motion + View Transitions umgesetzt, mit integriertem Produkt-Drawer und Warenkorb-Synchronisation, vollständig responsiv auf allen Geräten.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name">KI-Hautpflegeberater</span>
+          <span class="entry-date">Jan. 2026 – heute</span>
+        </div>
+        <div class="project-meta">
+          Live: <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >advisor.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>KI-Hautanalyse &amp; personalisierte Empfehlungen:</strong> Vision-LLMs (qwen-vl / deepseek-vl) für die zweikanalige Hautanalyse (Fragebogen + Gesichtsscan) integriert; eine eigene Regel-Engine bewertet Produkte anhand von 8 Hauttyp-Personas — über eine visuelle Admin-Konsole konfigurierbar (Zero-Code-Anpassungen für den Betrieb) — plus mehrkanalige E-Commerce-Attributionslinks; Modellintegration und Entwicklung der Kern-APIs geleitet und die Beratungs-Conversion um 30 % gesteigert.
+          </li>
+          <li>
+            <strong>Wachstum &amp; Viralität:</strong> Einen Gast-Modus (Geräte-Fingerprint + zeitlich begrenzte Profile) entworfen, der die Hautanalyse ohne Registrierung ermöglicht; dazu teilbare Poster-Generierung und Kanal-Fission-Attribution für soziale Verbreitung; desensibilisierte Statistiken exportiert, um Whitepaper und Markt-Insights der Marke zu speisen — das Tool so zu einem Marken-Datenasset gemacht.
+          </li>
+          <li>
+            <strong>KI-Kosten-Engineering:</strong> Circuit Breaker mit Tages-/Monats-Token-Budget-Limits, persistente Abrechnung pro Aufruf und eine Modell-Whitelist mit Fallback für KI-Aufrufe entworfen — damit ein durch 5xx-Retries verursachtes Doppelabrechnungsrisiko behoben; Nutzerberichte folgen einer rollierenden 90-Tage-Aufbewahrung mit Hot/Cold-Tier-Archivierung (desensibilisierte Zusammenfassungen im Cold Tier).
+          </li>
+          <li>
+            <strong>Datenasset-Kreislauf:</strong> Eine Server-zu-Server-API mit Authentifizierung entworfen, die Hautanalyse-Berichte und Hautpflegeprofile samt Session an die WeChat-KI-Berater übergibt (session_id-Durchreichung) — einmalige Hauttests so zu dauerhaft nutzbaren, wiederkauf-fördernden Nutzerdaten-Assets gemacht.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name">WeChat-KI-Kundenservice</span>
+          <span class="entry-date">Aug. 2026</span>
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Multi-Entry-Messaging-Gateway &amp; Multi-Turn-Sessions:</strong> Mit FastAPI + Redis + dem DeepSeek-LLM gebaut; drei Nachrichten-Eingänge vereinheitlicht (WeCom-Kundenservice, WeCom-App und WeChat-Official-Account); vom Hautanalyse-Platform übergebene Nutzerprofile übernommen, mit automatischer Anreicherung des Hautpflegeprofils über Multi-Turn-Dialoge hinweg (Phasenziel-Tracking und Reevaluierungs-Erinnerungen), geführten Bestellabfragen und smarter Übergabe an menschliche Mitarbeiter (Keyword-Erkennung + Servicezeitfenster + Sticky-Agent-Zuordnung) — einmalige Anfragen so zu langfristiger, begleitender Betreuung gemacht.
+          </li>
+          <li>
+            <strong>Prompt- &amp; Wissensdatenbank-Engineering:</strong> Zwei Agenten-Personas (Marken-Service / Hautpflegeberater) mit unabhängigen Prompts und Wissensdatenbanken je Service-Konto geroutet; eine 44-KB-Marken-FAQ-Wissensdatenbank segmentweise aufgebaut, mit Keyword-basiertem On-Demand-Injection und Hot-Reload; doppelte Compliance-Guardrails durch Prompt-Injection-Abwehr und Ausgabefilter für werberechtlich verbotene Begriffe.
+          </li>
+          <li>
+            <strong>Qualitätssicherung &amp; Verfügbarkeit:</strong> Prompt-Iterationsqualität mit 34 Golden-Regression-Cases gegen das Live-LLM abgesichert, unterstützt durch 340+ automatisierte Tests; Exponential-Backoff-Retries mit Timeout-Kontrolle für KI-Aufrufe, mit automatischer In-Memory-Degradierung und geplanter Wiederverbindung bei Redis-Ausfällen; PII-Export/-Lösch-Endpunkte bereitgestellt (PIPL-Compliance); self-hosted auf Linux + Nginx.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name">NIHPLOD Full-Stack-E-Commerce-System (WeChat-Mini-Programm + H5 + Admin-Konsole)</span>
+          <span class="entry-date">Mai 2026 – heute</span>
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Full-Stack-Commerce-Kreislauf:</strong> Mit uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL gebaut (Mini-Programm-/H5-Doppelend plus eigenständige Admin-Konsole); die gesamte Pipeline aus WeChat Pay V3, Rückerstattungskette, SF-Express-Logistik und SMS-Benachrichtigungen abgedeckt; dazu Coupons, Punkte und weitere Marketing-Mechaniken.
+          </li>
+          <li>
+            <strong>Hautprofil-Datenintegration:</strong> Den Hautanalyse-Einstieg in das Mini-Programm eingebettet (web-view), um Nutzer durch KI-Hauttests zu führen; Analyseprofile werden über die Telefonnummer verknüpft und automatisch zurückgesynct und liefern Haut-Trends, historische Berichte und tägliche Hautpflege-Check-ins — Analyse-Traffic so zu einem Private-Domain-Asset für den langfristigen Betrieb entlang des Kreislaufs „Analyse → Follow-up → Wiederkauf" gemacht.
+          </li>
+          <li>
+            <strong>Engineering &amp; Sicherheit:</strong> RBAC, Audit-Logging und mehrstufiges Rate-Limiting implementiert, dazu einen eigenen In-Memory-Cache mit Request-Deduplizierung gegen Cache-Breakdown — 26 Datenmodelle, 191 automatisierte Tests (inkl. Concurrent-Ordering-Tests), Deployment über mehrstufige Docker-Builds.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name">NIHPLOD Autorisierungs- &amp; Verifizierungsplattform</span>
+          <span class="entry-date">Apr. 2026 – Mai 2026</span>
+        </div>
+        <div class="project-meta">
+          Live: <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >ba.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Autorisierungsprüfung &amp; Fälschungsschutz-Zertifikate:</strong> Das Händler-Autorisierungssystem mit Next.js + Prisma + PostgreSQL gebaut und einen mehrstufigen Prüfworkflow implementiert (Antrag → Prüfer-Review → Freigabe durch den Verantwortlichen); Canvas-basierte Erzeugung fälschungssicherer Zertifikate mit E-Siegel und dynamischen QR-Codes (PNG-/PDF-Download).
+          </li>
+          <li>
+            <strong>Öffentliche Verifizierung &amp; Sicherheit:</strong> Öffentliche Echtheitsprüfung mit dreistufigem Fallback-Matching (exakt → Präfix → fuzzy, beschleunigt durch pg_trgm-Indizes) und ein Meldesystem für Fälschungsmeldungen; gehärtet mit JWT-Blacklisting, datenbankpersistiertem Rate-Limiting und vollständigem Audit-Logging.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name"
+            >Website-System der Shanghai Lingang Jinghong Security Technology</span
+          >
+          <span class="entry-date">Jul. 2025 – Sep. 2025</span>
+        </div>
+        <div class="project-meta">
+          Eigenständig umgesetzt (Full-Stack) · Live: <a
+            href="https://www.lingangjh.com"
+            target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Full-Stack-Entwicklung &amp; Design-Umsetzung:</strong> Die Unternehmenswebsite eigenständig End-to-End mit Next.js gebaut, plus ein CMS-Backend für autonomes Content-Management; das visuelle System und Interaktionsprototypen eigenständig in Figma entworfen — First-Screen-Ladezeit unter 1,5 s, vollständig responsiv auf allen Geräten.
+          </li>
+          <li>
+            <strong>KI-QA &amp; Sicherheitsarchitektur:</strong> Den auf Wenxin/Qwen-LLMs basierenden QA-Assistenten (Weknora) lokal mit einer RAG-Retrieval-Pipeline deployed und eine Antwortgenauigkeit von über 85 % erreicht; JWT-Authentifizierung, RLS-Datenisolation und CSP-Richtlinien für Datensicherheit und Zugriffskontrolle implementiert.
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Tech-Stack</h2>
+      <div class="skills-row">
+        <span class="skills-label">Frontend:</span>
+        <span class="skills-content">TypeScript / React / Next.js / Vue 3 / uni-app / Tailwind CSS / Responsive &amp; mobile Anpassung</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">Backend &amp; Datenbanken:</span>
+        <span class="skills-content">Node.js / Python (FastAPI) / Prisma / PostgreSQL / Redis / RESTful API / JWT · OAuth 2.0 · OIDC</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">KI &amp; LLM:</span>
+        <span class="skills-content">LLM-Integration / Hautanalyse mit Vision-Modellen / RAG / KI-Kosten-Engineering (Circuit Breaker &amp; Budgetkontrolle) / Claude Code / Codex-gestützte Entwicklung</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">DevOps &amp; Deployment:</span>
+        <span class="skills-content">Linux / Docker / Nginx / CDN / ICP-Anmeldung / Kostenkontrolle &amp; Ressourcenoptimierung</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">Sicherheit &amp; Compliance:</span>
+        <span class="skills-content">CSP / RLS / Informationssicherheits-Baseline / Datenschutz &amp; Daten-Compliance</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">UI/UX-Design:</span>
+        <span class="skills-content">Figma / Marken-Visual-System / Interaktives Prototyping / Design-to-Code-Umsetzung</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Auszeichnungen &amp; Zertifikate</h2>
+      <div class="award-row">
+        <span class="award-name"
+          >3. Preis in „Webtechnologie" beim Berufswettbewerb „Starlight Plan" in Shanghai (Platz 16 in Shanghai)</span
+        >
+        <span class="award-date">Mai 2025</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >MOHRSS-Zertifikat für berufliche Qualifikationsstufen: Computerprogrammierer Stufe III (Fortgeschritten) (Wettbewerb)</span
+        >
+        <span class="award-date">Mai 2025</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >National Information Security Test Program Stufe II (NISP)</span
+        >
+        <span class="award-date">Mai 2025</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">CTyun Advanced-Developer-Zertifizierung (SCCP)</span>
+        <span class="award-date">Nov. 2024</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name"
+          >Alibaba Cloud ACA Cloud Security Associate-Zertifizierung</span
+        >
+        <span class="award-date">Okt. 2024</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">CTyun Advanced-O&amp;M-Engineer-Zertifizierung</span>
+        <span class="award-date">Mai 2024</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ausbildung</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-org"
+            >Shanghai Scientific and Technical Vocational College</span
+          >
+          <span class="entry-date">Okt. 2023 – Jun. 2026</span>
+        </div>
+        <div class="entry-major">
+          Fakultät für Kommunikations- &amp; Elektrotechnik, Angewandte
+          Informationssicherheitstechnik, Associate Degree
+        </div>
+        <p class="entry-desc">
+          <strong>Akademische Leistung:</strong> GPA 3.41/4.00
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>Auszeichnungen der Hochschule:</strong> 2.-Klasse-Stipendium in zwei aufeinanderfolgenden Studienjahren (2023–2025), Herausragender Student (2023–2024), Herausragender Absolvent
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>Englischkenntnisse:</strong> College English Test Band 4 (CET-4)
+        </p>
+        <p class="entry-desc" style="margin-top: 4px;">
+          <strong>Kernfächer:</strong> Netzwerksicherheit, Programmierung, Algorithmen &amp; Datenstrukturen,
+          Rechnerarchitektur, Betriebssysteme, Datenbanksysteme, Computernetzwerke u. a.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sonstiges</h2>
+      <div class="award-row">
+        <span class="award-name">Mitglied der Google Developer Group Community</span>
+      </div>
+    </section>
+  </div>
+
+  <PrintFooter
+    warning="Dieser Lebenslauf enthält persönliche Daten und ist ausschließlich für die Bewertung im Rahmen von Einstellungsverfahren bestimmt. Unbefugte Speicherung, Weitergabe oder sonstige Nutzung ist untersagt."
+  />
+</Layout>

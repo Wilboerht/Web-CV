@@ -9,7 +9,9 @@ const { title, lang } = Astro.props;
 const desc: Record<string, string> = {
   "zh-CN": "王泓坤 · 数字开发经理 · 全栈工程师 · TypeScript / React / Next.js / AI / RAG — 个人简历",
   "zh-TW": "王泓坤 · 數位開發經理 · 全棧工程師 · TypeScript / React / Next.js / AI / RAG — 個人履歷",
+  "zh-HK": "王泓坤 · 數碼開發經理 · 全棧工程師 · TypeScript / React / Next.js / AI / RAG — 個人履歷",
   "en": "Hongkun Wang · Digital Development Manager · Full-stack Engineer · TypeScript / React / Next.js / AI / RAG — CV",
+  "de": "Hongkun Wang · Digital Development Manager · Full-Stack-Entwickler · TypeScript / React / Next.js / AI / RAG — Lebenslauf",
   "ko": "왕홍곤 · 디지털 개발 매니저 · 풀스택 엔지니어 · TypeScript / React / Next.js / AI / RAG — 이력서",
 };
 
@@ -18,14 +20,18 @@ const description = desc[lang] || desc["en"];
 const langs = [
   { code: "zh-CN", label: "中", path: "/CV-cn" },
   { code: "zh-TW", label: "繁", path: "/CV-tw" },
+  { code: "zh-HK", label: "港", path: "/CV-hk" },
   { code: "en", label: "EN", path: "/CV-en" },
+  { code: "de", label: "DE", path: "/CV-de" },
   { code: "ko", label: "한", path: "/CV-kr" },
 ];
 
 const ogLocales: Record<string, string> = {
   "zh-CN": "zh_CN",
   "zh-TW": "zh_TW",
+  "zh-HK": "zh_HK",
   en: "en_US",
+  de: "de_DE",
   ko: "ko_KR",
 };
 
