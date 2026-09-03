@@ -1,7 +1,7 @@
-# 安全联系方式
+﻿# 安全联系方式
 Contact: mailto:me@wilboerht.cn
 Expires: 2027-12-31T23:59:59+00:00
 Preferred-Languages: zh, en
 
 # 数字签名
-Canonical: https://cv.wilboerht.cn/.well-known/security.txt 
+Canonical: https://cv.wilboerht.com/.well-known/security.txt 

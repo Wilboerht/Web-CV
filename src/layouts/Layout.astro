@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
   title: string;
   lang: string;
@@ -8,6 +8,7 @@ const { title, lang } = Astro.props;
 
 const desc: Record<string, string> = {
   "zh-CN": "王泓坤 · 数字开发经理 · 全栈工程师 · TypeScript / React / Next.js / AI / RAG — 个人简历",
+  "zh-TW": "王泓坤 · 數位開發經理 · 全棧工程師 · TypeScript / React / Next.js / AI / RAG — 個人履歷",
   "en": "Hongkun Wang · Digital Development Manager · Full-stack Engineer · TypeScript / React / Next.js / AI / RAG — CV",
   "ko": "왕홍곤 · 디지털 개발 매니저 · 풀스택 엔지니어 · TypeScript / React / Next.js / AI / RAG — 이력서",
 };
@@ -16,9 +17,19 @@ const description = desc[lang] || desc["en"];
 
 const langs = [
   { code: "zh-CN", label: "中", path: "/CV-cn" },
+  { code: "zh-TW", label: "繁", path: "/CV-tw" },
   { code: "en", label: "EN", path: "/CV-en" },
   { code: "ko", label: "한", path: "/CV-kr" },
 ];
+
+const ogLocales: Record<string, string> = {
+  "zh-CN": "zh_CN",
+  "zh-TW": "zh_TW",
+  en: "en_US",
+  ko: "ko_KR",
+};
+
+const ogLocale = ogLocales[lang] || ogLocales.en;
 ---
 
 <!doctype html>
@@ -35,20 +46,28 @@ const langs = [
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cv.wilboerht.cn" />
-    <meta property="og:image" content="https://cv.wilboerht.cn/favicon.ico" />
+    <meta property="og:url" content="https://cv.wilboerht.com" />
+    <meta property="og:image" content="https://cv.wilboerht.com/favicon.ico" />
+    <meta property="og:locale" content={ogLocale} />
+    {
+      langs
+        .filter((l) => l.code !== lang)
+        .map((l) => (
+          <meta property="og:locale:alternate" content={ogLocales[l.code]} />
+        ))
+    }
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://cv.wilboerht.cn/favicon.ico" />
+    <meta name="twitter:image" content="https://cv.wilboerht.com/favicon.ico" />
 
-    <link rel="canonical" href={`https://cv.wilboerht.cn${langs.find(l => l.code === lang)?.path ?? '/CV-en'}`} />
+    <link rel="canonical" href={`https://cv.wilboerht.com${langs.find(l => l.code === lang)?.path ?? '/CV-en'}`} />
     {
       langs.map((l) => (
-        <link rel="alternate" hreflang={l.code} href={`https://cv.wilboerht.cn${l.path}`} />
+        <link rel="alternate" hreflang={l.code} href={`https://cv.wilboerht.com${l.path}`} />
       ))
     }
-    <link rel="alternate" hreflang="x-default" href="https://cv.wilboerht.cn/CV-en" />
+    <link rel="alternate" hreflang="x-default" href="https://cv.wilboerht.com/CV-en" />
 
     <title>{title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

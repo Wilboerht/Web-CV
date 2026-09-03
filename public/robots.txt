@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://cv.wilboerht.cn/sitemap.xml
+Sitemap: https://cv.wilboerht.com/sitemap-index.xml
