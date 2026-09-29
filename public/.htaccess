@@ -30,8 +30,8 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # 防止目录浏览
 Options -Indexes
 
-# 防止访问敏感文件
-<FilesMatch "^\.(?!well-known)|(?:git|env|htaccess|lock|json|xml|md|yml|yaml)$">
+# 防止访问敏感文件（注意：不要匹配 *.xml / *.json，否则会误封 sitemap）
+<FilesMatch "^\.(?!well-known)|\.(?:lock|md|ya?ml)$|^package-lock\.json$">
   Require all denied
 </FilesMatch>
 

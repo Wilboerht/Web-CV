@@ -6,6 +6,8 @@ interface Props {
 
 const { title, lang } = Astro.props;
 
+const SITE_URL = Astro.site ? Astro.site.href.replace(/\/+$/, "") : "https://cv.wilboerht.com";
+
 const desc: Record<string, string> = {
   "zh-CN": "王泓坤 · 数字开发经理 · 全栈工程师 · TypeScript / React / Next.js / AI / RAG — 个人简历",
   "zh-TW": "王泓坤 · 數位開發經理 · 全棧工程師 · TypeScript / React / Next.js / AI / RAG — 個人履歷",
@@ -18,12 +20,12 @@ const desc: Record<string, string> = {
 const description = desc[lang] || desc["en"];
 
 const langs = [
-  { code: "zh-CN", label: "中", path: "/CV-cn" },
-  { code: "zh-TW", label: "繁", path: "/CV-tw" },
-  { code: "zh-HK", label: "港", path: "/CV-hk" },
-  { code: "en", label: "EN", path: "/CV-en" },
-  { code: "de", label: "DE", path: "/CV-de" },
-  { code: "ko", label: "한", path: "/CV-kr" },
+  { code: "zh-CN", label: "中", path: "/CV-cn/" },
+  { code: "zh-TW", label: "繁", path: "/CV-tw/" },
+  { code: "zh-HK", label: "港", path: "/CV-hk/" },
+  { code: "en", label: "EN", path: "/CV-en/" },
+  { code: "de", label: "DE", path: "/CV-de/" },
+  { code: "ko", label: "한", path: "/CV-kr/" },
 ];
 
 const ogLocales: Record<string, string> = {
@@ -36,6 +38,56 @@ const ogLocales: Record<string, string> = {
 };
 
 const ogLocale = ogLocales[lang] || ogLocales.en;
+
+const ogImageAlt: Record<string, string> = {
+  "zh-CN": "王泓坤 — 数字开发经理 · 全栈工程师简历",
+  "zh-TW": "王泓坤 — 數位開發經理 · 全棧工程師履歷",
+  "zh-HK": "王泓坤 — 數碼開發經理 · 全棧工程師履歷",
+  en: "Hongkun Wang — Digital Development Manager · Full-Stack Engineer CV",
+  de: "Hongkun Wang — Digital Development Manager · Full-Stack-Entwickler Lebenslauf",
+  ko: "왕홍곤 — 디지털 개발 매니저 · 풀스택 엔지니어 이력서",
+};
+
+const skipLabels: Record<string, string> = {
+  "zh-CN": "跳到正文",
+  "zh-TW": "跳至正文",
+  "zh-HK": "跳至正文",
+  en: "Skip to content",
+  de: "Zum Inhalt springen",
+  ko: "본문으로 건너뛰기",
+};
+
+const updatedLabels: Record<string, string> = {
+  "zh-CN": "最后更新：",
+  "zh-TW": "最後更新：",
+  "zh-HK": "最後更新：",
+  en: "Last updated: ",
+  de: "Zuletzt aktualisiert: ",
+  ko: "최종 업데이트: ",
+};
+
+const intlLocales: Record<string, string> = {
+  "zh-CN": "zh-CN",
+  "zh-TW": "zh-TW",
+  "zh-HK": "zh-HK",
+  en: "en-US",
+  de: "de-DE",
+  ko: "ko-KR",
+};
+
+const now = new Date();
+const updatedDate = new Intl.DateTimeFormat(intlLocales[lang] || "en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+}).format(now);
+const updatedISO = now.toISOString().slice(0, 10);
+
+const pathname = Astro.url.pathname.endsWith("/")
+  ? Astro.url.pathname
+  : `${Astro.url.pathname}/`;
+const canonical = `${SITE_URL}${pathname}`;
 ---
 
 <!doctype html>
@@ -44,16 +96,23 @@ const ogLocale = ogLocales[lang] || ogLocales.en;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content={description} />
+    <meta name="author" content="Hongkun Wang" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
+    <meta property="og:site_name" content="Hongkun Wang · CV" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cv.wilboerht.com" />
-    <meta property="og:image" content="https://cv.wilboerht.com/favicon.ico" />
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Hongkun" />
+    <meta property="profile:last_name" content="Wang" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt[lang] || ogImageAlt.en} />
     <meta property="og:locale" content={ogLocale} />
     {
       langs
@@ -62,22 +121,23 @@ const ogLocale = ogLocales[lang] || ogLocales.en;
           <meta property="og:locale:alternate" content={ogLocales[l.code]} />
         ))
     }
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://cv.wilboerht.com/favicon.ico" />
+    <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
+    <meta name="twitter:image:alt" content={ogImageAlt[lang] || ogImageAlt.en} />
 
-    <link rel="canonical" href={`https://cv.wilboerht.com${langs.find(l => l.code === lang)?.path ?? '/CV-en'}`} />
+    <link rel="canonical" href={canonical} />
     {
       langs.map((l) => (
-        <link rel="alternate" hreflang={l.code} href={`https://cv.wilboerht.com${l.path}`} />
+        <link rel="alternate" hreflang={l.code} href={`${SITE_URL}${l.path}`} />
       ))
     }
-    <link rel="alternate" hreflang="x-default" href="https://cv.wilboerht.com/CV-en" />
+    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/CV-en/`} />
 
     <title>{title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -97,7 +157,7 @@ const ogLocale = ogLocales[lang] || ogLocales.en;
     <slot name="head" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">{skipLabels[lang] || skipLabels.en}</a>
 
     <svg style="display:none" aria-hidden="true">
       <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -109,6 +169,26 @@ const ogLocale = ogLocales[lang] || ogLocales.en;
 
     <main id="main-content">
       <slot />
+      <footer class="last-updated">
+        <time datetime={updatedISO}>
+          {updatedLabels[lang] || updatedLabels.en}{updatedDate}
+        </time>
+      </footer>
     </main>
+
+    <style>
+      .last-updated {
+        text-align: center;
+        font-size: 0.75rem;
+        color: #666666;
+        margin: 32px 0 24px;
+      }
+
+      @media print {
+        .last-updated {
+          display: none;
+        }
+      }
+    </style>
   </body>
 </html>

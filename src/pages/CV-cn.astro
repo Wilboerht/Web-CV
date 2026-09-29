@@ -3,52 +3,103 @@ import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
+
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://cv.wilboerht.com/CV-cn/#page",
+  "url": "https://cv.wilboerht.com/CV-cn/",
+  "inLanguage": "zh-CN",
+  "dateModified": new Date().toISOString(),
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://www.wilboerht.com/#person",
+    "name": "王泓坤",
+    "alternateName": "Hongkun Wang",
+    "givenName": "泓坤",
+    "familyName": "王",
+    "description": "数字开发经理、全栈工程师（TypeScript / React / Next.js / AI / RAG），常驻上海。作为品牌大中华区首位工程师，从 0 到 1 搭建品牌电商、统一认证（SSO）、AI 顾问与智能客服等数字系统。",
+    "email": "me@wilboerht.cn",
+    "telephone": "+8618721400154",
+    "url": "https://www.wilboerht.com",
+    "image": "https://cv.wilboerht.com/og-image.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "上海",
+      "addressCountry": "CN"
+    },
+    "sameAs": [
+      "https://github.com/Wilboerht",
+      "https://twitter.com/wilboerht"
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "上海科学技术职业学院"
+      }
+    ],
+    "knowsAbout": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Vue 3",
+      "Node.js",
+      "FastAPI",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Large Language Models",
+      "RAG",
+      "Docker",
+      "Linux"
+    ],
+    "jobTitle": "数字开发经理",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "穆埃达思 Moidas",
+      "url": "https://www.nihplod.cn"
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "上海市“星光计划”职业院校技能竞赛“网站技术”三等奖（上海市第 16 名）",
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "人社部“职业技能等级证书”计算机程序设计员 三级（高级）（竞赛）",
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "国家信息安全水平考试二级（NISP）",
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "天翼云高级开发工程师认证（SCCP）",
+        "dateCreated": "2024-11"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "阿里云 ACA 云安全助理工程师认证",
+        "dateCreated": "2024-10"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "天翼云高级运维工程师认证",
+        "dateCreated": "2024-05"
+      }
+    ],
+    "award": "上海市“星光计划”职业院校技能竞赛“网站技术”三等奖"
+  }
+};
 ---
 
-<Layout title="王泓坤 - 简历" lang="zh-CN">
-  <slot name="head">
-    <script type="application/ld+json" is:inline>
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "王泓坤",
-        "alternateName": "Hongkun Wang",
-        "givenName": "泓坤",
-        "familyName": "王",
-        "email": "me@wilboerht.cn",
-        "telephone": "+8618721400154",
-        "url": "https://www.wilboerht.com",
-        "sameAs": [
-          "https://github.com/Wilboerht",
-          "https://twitter.com/wilboerht"
-        ],
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "上海科学技术职业学院"
-        },
-        "knowsAbout": [
-          "TypeScript",
-          "React",
-          "Next.js",
-          "Vue 3",
-          "Node.js",
-          "FastAPI",
-          "Prisma",
-          "PostgreSQL",
-          "Redis",
-          "Large Language Models",
-          "RAG",
-          "Docker",
-          "Linux"
-        ],
-        "jobTitle": "数字开发经理",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "穆埃达思 Moidas"
-        }
-      }
-    </script>
-  </slot>
+<Layout title="王泓坤 · 数字开发经理 · 全栈工程师 - 简历" lang="zh-CN">
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(ld, null, 2)} />
+  </Fragment>
   <style>
     :root {
       --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
@@ -70,9 +121,8 @@ import "../styles/cv.css";
       <h2>工作经历</h2>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >穆埃达思 Moidas | 旎柏（大中华区）事业部 —— 数字开发经理</span
-          >
+          <h3 class="entry-org"
+            >穆埃达思 Moidas | 旎柏（大中华区）事业部 —— 数字开发经理</h3>
           <span class="entry-date">2025.10 – 至今</span>
         </div>
         <p class="entry-role-detail">
@@ -86,9 +136,8 @@ import "../styles/cv.css";
       </div>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >上海临港景鸿安全防范科技发展有限公司 —— 技术研发实习生</span
-          >
+          <h3 class="entry-org"
+            >上海临港景鸿安全防范科技发展有限公司 —— 技术研发实习生</h3>
           <span class="entry-date">2025.07 - 2025.09</span>
         </div>
         <ul class="project-points">
@@ -104,7 +153,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">旎柏（NIHPLOD）中国官方数字化平台（平台群）</span>
+          <h3 class="project-name">旎柏（NIHPLOD）中国官方数字化平台（平台群）</h3>
           <span class="entry-date">2025.11 – 至今</span>
         </div>
         <div class="project-meta">
@@ -129,7 +178,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 官网电商与统一认证平台</span>
+          <h3 class="project-name">NIHPLOD 官网电商与统一认证平台</h3>
           <span class="entry-date">2025.11 – 至今（迭代）</span>
         </div>
         <div class="project-meta">
@@ -156,7 +205,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">AI 护肤顾问系统</span>
+          <h3 class="project-name">AI 护肤顾问系统</h3>
           <span class="entry-date">2026.01 – 至今</span>
         </div>
         <div class="project-meta">
@@ -182,7 +231,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">微信 AI 智能客服</span>
+          <h3 class="project-name">微信 AI 智能客服</h3>
           <span class="entry-date">2026.08</span>
         </div>
         <ul class="project-points">
@@ -200,7 +249,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 全栈电商系统（微信小程序 + H5 + 管理后台）</span>
+          <h3 class="project-name">NIHPLOD 全栈电商系统（微信小程序 + H5 + 管理后台）</h3>
           <span class="entry-date">2026.05 – 至今</span>
         </div>
         <ul class="project-points">
@@ -218,7 +267,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 授权验真平台</span>
+          <h3 class="project-name">NIHPLOD 授权验真平台</h3>
           <span class="entry-date">2026.04 – 2026.05</span>
         </div>
         <div class="project-meta">
@@ -238,10 +287,10 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name"
+          <h3 class="project-name"
             >上海临港景鸿安全防范科技发展有限公司网站系统</span
           >
-          <span class="entry-date">2025.07 - 2025.09</span>
+          <span class="entry-date">2025.07 - 2025.09</h3>
         </div>
         <div class="project-meta">
           独立完成（全栈） · 成果展示：<a
@@ -326,7 +375,7 @@ import "../styles/cv.css";
       <div class="entry">
         <div class="entry-header">
           <div class="entry-title-group">
-            <span class="entry-org">上海科学技术职业学院</span>
+            <h3 class="entry-org">上海科学技术职业学院</h3>
           </div>
           <span class="entry-date">2023.10 - 2026.06</span>
         </div>

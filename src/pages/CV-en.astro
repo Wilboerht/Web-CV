@@ -3,52 +3,106 @@ import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
+
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://cv.wilboerht.com/CV-en/#page",
+  "url": "https://cv.wilboerht.com/CV-en/",
+  "inLanguage": "en",
+  "dateModified": new Date().toISOString(),
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://www.wilboerht.com/#person",
+    "name": "Hongkun Wang",
+    "alternateName": "王泓坤",
+    "givenName": "Hongkun",
+    "familyName": "Wang",
+    "description": "Digital Development Manager and full-stack engineer (TypeScript / React / Next.js / AI / RAG) based in Shanghai. First engineer of a brand's Greater China division — built its e-commerce, SSO, AI advisor and customer service systems from 0 to 1.",
+    "email": "me@wilboerht.cn",
+    "telephone": "+8618721400154",
+    "url": "https://www.wilboerht.com",
+    "image": "https://cv.wilboerht.com/og-image.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shanghai",
+      "addressCountry": "CN"
+    },
+    "sameAs": [
+      "https://github.com/Wilboerht",
+      "https://twitter.com/wilboerht"
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Shanghai Scientific and Technical Vocational College"
+      }
+    ],
+    "knowsAbout": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Vue 3",
+      "Node.js",
+      "FastAPI",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Large Language Models",
+      "RAG",
+      "Docker",
+      "Linux"
+    ],
+    "jobTitle": "Digital Development Manager",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Moidas",
+      "url": "https://www.nihplod.cn"
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": '3rd Prize in "Web Technology" at the Shanghai "Starlight Plan" Vocational Skills Competition (ranked 16th in Shanghai)',
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "MOHRSS Vocational Skill Level Certificate: Computer Programmer Grade III (Advanced) (Competition)",
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "National Information Security Test Program Grade II (NISP)",
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "CTyun Advanced Developer Certification (SCCP)",
+        "dateCreated": "2024-11"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Alibaba Cloud ACA Cloud Security Associate Certification",
+        "dateCreated": "2024-10"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "CTyun Advanced O&M Engineer Certification",
+        "dateCreated": "2024-05"
+      }
+    ],
+    "award": '3rd Prize in "Web Technology" at the Shanghai "Starlight Plan" Vocational Skills Competition'
+  }
+};
 ---
 
-<Layout title="Hongkun Wang - CV" lang="en">
-  <slot name="head">
-    <script type="application/ld+json" is:inline>
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Hongkun Wang",
-        "alternateName": "王泓坤",
-        "givenName": "Hongkun",
-        "familyName": "Wang",
-        "email": "me@wilboerht.cn",
-        "telephone": "+8618721400154",
-        "url": "https://www.wilboerht.com",
-        "sameAs": [
-          "https://github.com/Wilboerht",
-          "https://twitter.com/wilboerht"
-        ],
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Shanghai Scientific and Technical Vocational College"
-        },
-        "knowsAbout": [
-          "TypeScript",
-          "React",
-          "Next.js",
-          "Vue 3",
-          "Node.js",
-          "FastAPI",
-          "Prisma",
-          "PostgreSQL",
-          "Redis",
-          "Large Language Models",
-          "RAG",
-          "Docker",
-          "Linux"
-        ],
-        "jobTitle": "Digital Development Manager",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Moidas"
-        }
-      }
-    </script>
-  </slot>
+<Layout
+  title="Hongkun Wang · Digital Development Manager · Full-Stack Engineer - CV"
+  lang="en"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(ld, null, 2)} />
+  </Fragment>
   <style>
     :root {
       --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
@@ -70,9 +124,8 @@ import "../styles/cv.css";
       <h2>Experience</h2>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >Moidas | NIHPLOD Greater China Division — Digital Development Manager</span
-          >
+          <h3 class="entry-org"
+            >Moidas | NIHPLOD Greater China Division — Digital Development Manager</h3>
           <span class="entry-date">Oct 2025 - Present</span>
         </div>
         <p class="entry-role-detail">
@@ -86,9 +139,8 @@ import "../styles/cv.css";
       </div>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. — R&amp;D Intern</span
-          >
+          <h3 class="entry-org"
+            >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. — R&amp;D Intern</h3>
           <span class="entry-date">Jul 2025 - Sep 2025</span>
         </div>
         <ul class="project-points">
@@ -104,7 +156,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD China Official Digital Platform (Portfolio)</span>
+          <h3 class="project-name">NIHPLOD China Official Digital Platform (Portfolio)</h3>
           <span class="entry-date">Nov 2025 - Present</span>
         </div>
         <div class="project-meta">
@@ -129,7 +181,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD Official E-Commerce &amp; Unified Authentication Platform</span>
+          <h3 class="project-name">NIHPLOD Official E-Commerce &amp; Unified Authentication Platform</h3>
           <span class="entry-date">Nov 2025 - Present (iterating)</span>
         </div>
         <div class="project-meta">
@@ -156,7 +208,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">AI Skincare Advisor</span>
+          <h3 class="project-name">AI Skincare Advisor</h3>
           <span class="entry-date">Jan 2026 - Present</span>
         </div>
         <div class="project-meta">
@@ -182,7 +234,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">WeChat AI Customer Service</span>
+          <h3 class="project-name">WeChat AI Customer Service</h3>
           <span class="entry-date">Aug 2026</span>
         </div>
         <ul class="project-points">
@@ -200,7 +252,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD Full-Stack E-Commerce System (WeChat Mini-Program + H5 + Admin Console)</span>
+          <h3 class="project-name">NIHPLOD Full-Stack E-Commerce System (WeChat Mini-Program + H5 + Admin Console)</h3>
           <span class="entry-date">May 2026 - Present</span>
         </div>
         <ul class="project-points">
@@ -218,7 +270,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD Brand Authorization &amp; Verification Platform</span>
+          <h3 class="project-name">NIHPLOD Brand Authorization &amp; Verification Platform</h3>
           <span class="entry-date">Apr 2026 - May 2026</span>
         </div>
         <div class="project-meta">
@@ -238,10 +290,10 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name"
+          <h3 class="project-name"
             >Shanghai Lingang Jinghong Security Technology Website System</span
           >
-          <span class="entry-date">Jul 2025 - Sep 2025</span>
+          <span class="entry-date">Jul 2025 - Sep 2025</h3>
         </div>
         <div class="project-meta">
           Independently delivered (full-stack) · Live: <a
@@ -329,9 +381,8 @@ import "../styles/cv.css";
       <h2>Education</h2>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >Shanghai Scientific and Technical Vocational College</span
-          >
+          <h3 class="entry-org"
+            >Shanghai Scientific and Technical Vocational College</h3>
           <span class="entry-date">Oct 2023 - Jun 2026</span>
         </div>
         <div class="entry-major">

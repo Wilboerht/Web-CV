@@ -3,52 +3,103 @@ import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import "../styles/global.css";
 import "../styles/cv.css";
+
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://cv.wilboerht.com/CV-kr/#page",
+  "url": "https://cv.wilboerht.com/CV-kr/",
+  "inLanguage": "ko",
+  "dateModified": new Date().toISOString(),
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://www.wilboerht.com/#person",
+    "name": "왕홍곤",
+    "alternateName": "Hongkun Wang",
+    "givenName": "Hongkun",
+    "familyName": "Wang",
+    "description": "상하이에 거주하는 디지털 개발 매니저이자 풀스택 엔지니어(TypeScript / React / Next.js / AI / RAG). 브랜드 중화권 사업부의 첫 엔지니어로 이커머스, SSO, AI 어드바이저, 고객 서비스 시스템을 0에서 1로 구축.",
+    "email": "me@wilboerht.cn",
+    "telephone": "+8618721400154",
+    "url": "https://www.wilboerht.com",
+    "image": "https://cv.wilboerht.com/og-image.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "상하이",
+      "addressCountry": "CN"
+    },
+    "sameAs": [
+      "https://github.com/Wilboerht",
+      "https://twitter.com/wilboerht"
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "상하이과학기술직업학원"
+      }
+    ],
+    "knowsAbout": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Vue 3",
+      "Node.js",
+      "FastAPI",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Large Language Models",
+      "RAG",
+      "Docker",
+      "Linux"
+    ],
+    "jobTitle": "디지털 개발 매니저",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "모이다스",
+      "url": "https://www.nihplod.cn"
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": '상하이 "스타라이트 플랜" 기술 경연대회 "웹 기술" 부문 3등 (시 전체 16위)',
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "인력자원사회보장부 직업기능등급증서: 컴퓨터 프로그래머 3급 (고급) (경연)",
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "국가 정보안전 수준 시험 2급 (NISP)",
+        "dateCreated": "2025-05"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "CTyun 고급 개발자 인증 (SCCP)",
+        "dateCreated": "2024-11"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "알리바바 클라우드 ACA 클라우드 보안 어소시에이트 인증",
+        "dateCreated": "2024-10"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "CTyun 고급 운영 엔지니어 인증",
+        "dateCreated": "2024-05"
+      }
+    ],
+    "award": '상하이 "스타라이트 플랜" 기술 경연대회 "웹 기술" 부문 3등'
+  }
+};
 ---
 
-<Layout title="왕홍곤 - 이력서" lang="ko">
-  <slot name="head">
-    <script type="application/ld+json" is:inline>
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "왕홍곤",
-        "alternateName": "Hongkun Wang",
-        "givenName": "Hongkun",
-        "familyName": "Wang",
-        "email": "me@wilboerht.cn",
-        "telephone": "+8618721400154",
-        "url": "https://www.wilboerht.com",
-        "sameAs": [
-          "https://github.com/Wilboerht",
-          "https://twitter.com/wilboerht"
-        ],
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "상하이과학기술직업학원"
-        },
-        "knowsAbout": [
-          "TypeScript",
-          "React",
-          "Next.js",
-          "Vue 3",
-          "Node.js",
-          "FastAPI",
-          "Prisma",
-          "PostgreSQL",
-          "Redis",
-          "Large Language Models",
-          "RAG",
-          "Docker",
-          "Linux"
-        ],
-        "jobTitle": "디지털 개발 매니저",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "모이다스"
-        }
-      }
-    </script>
-  </slot>
+<Layout title="왕홍곤 · 디지털 개발 매니저 · 풀스택 엔지니어 - 이력서" lang="ko">
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(ld, null, 2)} />
+  </Fragment>
   <style>
     :root {
       --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
@@ -70,9 +121,8 @@ import "../styles/cv.css";
       <h2>경력</h2>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >모이다스 | NIHPLOD 중화권 사업부 — 디지털 개발 매니저</span
-          >
+          <h3 class="entry-org"
+            >모이다스 | NIHPLOD 중화권 사업부 — 디지털 개발 매니저</h3>
           <span class="entry-date">2025년 10월 - 현재</span>
         </div>
         <p class="entry-role-detail">
@@ -86,9 +136,8 @@ import "../styles/cv.css";
       </div>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >상하이 링강 징홍 보안방범과기발전유한공사 — R&amp;D 인턴</span
-          >
+          <h3 class="entry-org"
+            >상하이 링강 징홍 보안방범과기발전유한공사 — R&amp;D 인턴</h3>
           <span class="entry-date">2025년 7월 - 2025년 9월</span>
         </div>
         <ul class="project-points">
@@ -104,7 +153,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 중국 공식 디지털 플랫폼 (포트폴리오)</span>
+          <h3 class="project-name">NIHPLOD 중국 공식 디지털 플랫폼 (포트폴리오)</h3>
           <span class="entry-date">2025년 11월 - 현재</span>
         </div>
         <div class="project-meta">
@@ -129,7 +178,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 공식 이커머스 및 통합 인증 플랫폼</span>
+          <h3 class="project-name">NIHPLOD 공식 이커머스 및 통합 인증 플랫폼</h3>
           <span class="entry-date">2025년 11월 - 현재(지속 반복)</span>
         </div>
         <div class="project-meta">
@@ -156,7 +205,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">AI 스킨케어 어드바이저 시스템</span>
+          <h3 class="project-name">AI 스킨케어 어드바이저 시스템</h3>
           <span class="entry-date">2026년 1월 - 현재</span>
         </div>
         <div class="project-meta">
@@ -182,7 +231,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">위챗 AI 스마트 고객서비스</span>
+          <h3 class="project-name">위챗 AI 스마트 고객서비스</h3>
           <span class="entry-date">2026년 8월</span>
         </div>
         <ul class="project-points">
@@ -200,7 +249,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 풀스택 이커머스 시스템(위챗 미니 프로그램 + H5 + 관리자 콘솔)</span>
+          <h3 class="project-name">NIHPLOD 풀스택 이커머스 시스템(위챗 미니 프로그램 + H5 + 관리자 콘솔)</h3>
           <span class="entry-date">2026년 5월 - 현재</span>
         </div>
         <ul class="project-points">
@@ -218,7 +267,7 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name">NIHPLOD 브랜드 인증 검증 플랫폼</span>
+          <h3 class="project-name">NIHPLOD 브랜드 인증 검증 플랫폼</h3>
           <span class="entry-date">2026년 4월 - 2026년 5월</span>
         </div>
         <div class="project-meta">
@@ -238,10 +287,10 @@ import "../styles/cv.css";
 
       <div class="project-entry">
         <div class="entry-header">
-          <span class="project-name"
+          <h3 class="project-name"
             >상하이 링강 징홍 보안방범과기발전유한공사 웹사이트 시스템</span
           >
-          <span class="entry-date">2025년 7월 - 2025년 9월</span>
+          <span class="entry-date">2025년 7월 - 2025년 9월</h3>
         </div>
         <div class="project-meta">
           독립 완성(풀스택) · 성과: <a
@@ -329,9 +378,8 @@ import "../styles/cv.css";
       <h2>학력</h2>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-org"
-            >상하이과학기술직업학원</span
-          >
+          <h3 class="entry-org"
+            >상하이과학기술직업학원</h3>
           <span class="entry-date">2023년 10월 - 2026년 6월</span>
         </div>
         <div class="entry-major">

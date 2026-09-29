@@ -1,0 +1,27 @@
+# Hongkun Wang (王泓坤) — CV
+
+> Digital Development Manager and full-stack engineer based in Shanghai, China. Specializes in TypeScript / React / Next.js, Node.js / FastAPI, and LLM / RAG applications. As the first engineer of Moidas' Greater China division, built the brand's e-commerce platform, unified SSO, AI skincare advisor, WeChat AI customer service, mini-program store and brand authorization platform from 0 to 1.
+
+Key facts:
+
+- Current role: Digital Development Manager at Moidas (NIHPLOD Greater China Division), Oct 2025 – present
+- Location: Shanghai, China
+- Contact: me@wilboerht.cn · +86 187 2140 0154
+- Website: https://www.wilboerht.com
+- GitHub: https://github.com/Wilboerht · X: https://twitter.com/wilboerht
+- Education: Shanghai Scientific and Technical Vocational College (2023–2026), Information Security Technology Application, Associate Degree, GPA 3.41/4.00
+- Languages: Chinese (native), English (CET-4)
+- Core skills: TypeScript, React, Next.js, Vue 3, uni-app, Node.js, FastAPI, Prisma, PostgreSQL, Redis, OAuth 2.0 / OIDC, LLM integration, RAG, Docker, Linux, Nginx, Figma
+
+## CV pages (multilingual)
+
+- [English CV](https://cv.wilboerht.com/CV-en/): full English resume
+- [简体中文简历](https://cv.wilboerht.com/CV-cn/): 完整中文简历
+- [繁體中文履歷（台灣）](https://cv.wilboerht.com/CV-tw/): 完整繁體中文履歷
+- [繁體中文履歷（香港）](https://cv.wilboerht.com/CV-hk/): 完整繁體中文履歷
+- [Lebenslauf（Deutsch）](https://cv.wilboerht.com/CV-de/): vollständiger Lebenslauf
+- [이력서（한국어）](https://cv.wilboerht.com/CV-kr/): 전체 이력서
+
+## Full text
+
+- [llms-full.txt](https://cv.wilboerht.com/llms-full.txt): complete CV content in Markdown (English)

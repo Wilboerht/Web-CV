@@ -125,6 +125,10 @@ h2 {
   font-size: 0.9375rem;
   color: var(--text-color);
 }
+h3.entry-org,
+h3.project-name {
+  margin: 0;
+}
 .project-meta {
   font-size: 0.75rem;
   color: var(--light-text);
