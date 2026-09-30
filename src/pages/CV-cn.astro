@@ -128,9 +128,9 @@ const ld = {
           2025.10 以实习生身份加入并于毕业前全职在岗，2026.07 转正，直接汇报品牌负责人；作为事业部首位技术人员，从 0 到 1 冷启动品牌大中华区全部信息系统与数字化基础设施。
         </p>
         <ul class="project-points">
-          <li>统筹品牌大中华区数字化产品矩阵的规划与交付，覆盖官网电商、统一认证（SSO）、AI 护肤顾问、微信 AI 客服、小程序商城、授权验真 6 个核心系统。</li>
+          <li>统筹品牌大中华区数字化产品矩阵的规划与交付，覆盖中国官网、统一认证（SSO）、AI 护肤顾问、微信 AI 客服、授权验真 5 个核心系统。</li>
           <li>建立 AI 辅助研发工作流与设计规范，将平均交付周期压缩 50% 以上，保障多项目并行交付。</li>
-          <li>作为技术侧负责人承接产品、营销团队需求并拆解排期，主导需求评审与迭代节奏，支撑品牌线上零售渠道（官网电商 + 小程序商城）从 0 上线。</li>
+          <li>作为技术侧负责人承接产品、营销团队需求并拆解排期，主导需求评审与迭代节奏，支撑品牌线上零售渠道（中国官网）从 0 上线。</li>
         </ul>
       </div>
       <div class="entry">
@@ -166,7 +166,7 @@ const ld = {
           > 等
         </div>
         <p class="project-abstract">
-          作为技术负责人，统筹品牌大中华区数字化产品矩阵从 0 到 1 的架构设计与合规上线，在 10 个月内独立完成 6 个核心系统（官网电商、统一认证 SSO、AI 护肤顾问、微信 AI 客服、小程序商城、授权验真，详见下方各条目）的全流程交付，配套 1400+ 自动化测试用例；并以统一账号与档案数据打通「测肤 → 个性化方案 → 7×24 AI 顾问跟进 → 复购」业务闭环。
+          作为技术负责人，统筹品牌大中华区数字化产品矩阵从 0 到 1 的架构设计与合规上线，在 10 个月内独立完成 5 个核心系统（中国官网、统一认证 SSO、AI 护肤顾问、微信 AI 客服、授权验真，详见下方各条目）的全流程交付，配套 1400+ 自动化测试用例；并以统一账号与档案数据打通「测肤 → 个性化方案 → 7×24 AI 顾问跟进 → 复购」业务闭环。
         </p>
         <ul class="project-points">
           <li>
@@ -177,8 +177,82 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
+          <h3 class="project-name">NIHPLOD 中国官网</h3>
+          <span class="entry-date">2025.11 – 至今（迭代）</span>
+        </div>
+        <div class="project-meta">
+          独立完成（产品设计 · UI/UX · 全栈开发） · 成果展示：<a
+            href="https://www.nihplod.cn"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>电商闭环：</strong>基于 Next.js 16 + Prisma + PostgreSQL 构建品牌官网与电商主站，打通微信支付 / 支付宝双渠道支付与退款（异步通知幂等处理）、顺丰物流、会员积分与优惠券体系；聚合微信、抖音、手机号验证码多端身份至统一账号体系（接入统一认证 SSO）；全站 121 个 API 路由、36 个数据模型、824 个测试用例。
+          </li>
+          <li>
+            <strong>产品与交互设计：</strong>从信息架构、Figma 交互原型到视觉样式全程独立设计，基于 Framer Motion + View Transitions 实现多步骤护肤仪式指南与沉浸式品牌叙事，集成产品抽屉与购物车联动，全端响应式适配。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD 统一认证平台（SSO / OIDC）</h3>
+          <span class="entry-date">2026.06 – 至今（迭代）</span>
+        </div>
+        <div class="project-meta">
+          独立完成（产品设计 · 全栈开发）
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>协议实现：</strong>自建 OAuth 2.0 / OIDC 单点登录，与官网主站同构部署，主站作为 Authorization Server 签发 JWT（RS256），完整实现 authorize / token / userinfo / introspect / revoke / end-session 协议端点，支持 PKCE、DPoP 与 TOTP 二因素。
+          </li>
+          <li>
+            <strong>SDK 与接入：</strong>封装并发布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子项目分钟级接入，通过 Token Introspection + Backchannel Logout 实现跨域免登与全局登出，支撑平台群 5 个系统统一登录。
+          </li>
+          <li>
+            <strong>安全加固：</strong>支持密钥轮换、Token 撤销（RFC 7009）与多实例黑名单共享，保障认证体系可运维、可审计。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">AI 护肤顾问系统</h3>
+          <span class="entry-date">2026.01 – 至今</span>
+        </div>
+        <div class="project-meta">
+          负责产品设计 · UX 交互 · 全栈开发（UI 视觉由协作设计师完成） · 成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >advisor.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>AI 测肤与个性化推荐：</strong>接入 qwen-vl / deepseek-vl 视觉大模型实现「问卷 + 扫脸」双通道皮肤分析；自研规则引擎按 8 种肤质画像打分匹配产品，支持后台可视化配置（运营零代码调整）。
+          </li>
+          <li>
+            <strong>转化与归因：</strong>主导模型集成与核心接口开发，多渠道电商外链归因，驱动用户咨询转化率提升 30%。
+          </li>
+          <li>
+            <strong>增长与传播设计：</strong>设计游客模式（设备指纹 + 限时档案）让用户免注册完成测肤，配合分享海报生成与渠道裂变归因支撑社交传播；输出脱敏统计数据反哺品牌白皮书与市场洞察，将工具沉淀为品牌数据资产。
+          </li>
+          <li>
+            <strong>AI 成本工程：</strong>为 AI 调用设计熔断器与日/月 Token 预算熔断、调用计费持久化与模型白名单回退，修复 5xx 重试导致的重复扣费风险；用户报告数据 90 天滚动续期并冷热分层归档（冷层脱敏摘要）。
+          </li>
+          <li>
+            <strong>数据资产闭环：</strong>设计服务端间鉴权接口，测肤报告与护肤档案随会话一键透传至微信 AI 客服（session_id 透传），将一次性测肤沉淀为可持续运营、可驱动复购的用户数据资产。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
           <h3 class="project-name">微信 AI 智能客服</h3>
           <span class="entry-date">2026.08</span>
+        </div>
+        <div class="project-meta">
+          独立完成（产品设计 · 全栈开发，基于微信客服原生聊天窗）
         </div>
         <ul class="project-points">
           <li>
@@ -198,103 +272,20 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 全栈电商系统（微信小程序 + H5 + 管理后台）</h3>
-          <span class="entry-date">2026.05 – 至今</span>
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>全栈商城闭环：</strong>基于 uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL 构建（小程序 / H5 双端 + 独立管理后台），打通微信支付 V3、退款责任链、顺丰物流与短信通知全链路；配套优惠券、积分等营销玩法。
-          </li>
-          <li>
-            <strong>肌肤档案数据打通：</strong>小程序内嵌测肤入口（web-view）引导用户完成 AI 测肤，测肤档案以手机号关联自动同步回小程序，提供测肤趋势、历史报告与每日护肤打卡，将测肤流量沉淀为「测肤 → 跟进 → 复购」的私域长期运营阵地。
-          </li>
-          <li>
-            <strong>工程与安全：</strong>实现 RBAC 权限分级、审计日志与多级限流，自研内存缓存含请求去重防击穿；26 个数据模型、191 个自动化测试用例（含并发下单专项测试），Docker 多阶段构建部署。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
           <h3 class="project-name">NIHPLOD 授权验真平台</h3>
           <span class="entry-date">2026.04 – 2026.05</span>
         </div>
         <div class="project-meta">
-          成果展示：<a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
+          独立完成（产品设计 · UI/UX · 全栈开发） · 成果展示：<a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >ba.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>授权审核与防伪证书：</strong>基于 Next.js + Prisma + PostgreSQL 构建经销商授权管理系统，实现「申请 — 审核员初审 — 负责人终审签发」多级审核流；Canvas 自动合成含电子公章与动态二维码的防伪授权证书（支持 PNG/PDF 下载）。
+            <strong>授权审核与防伪证书：</strong>基于 Next.js 16 + PostgreSQL 构建经销商授权管理系统，实现「审核员提报 → 负责人终审核发」两级审核与证书状态机（签发 / 打回 / 到期 / 吊销）；浏览器端 Canvas + jsPDF 实时合成含电子公章与动态二维码的防伪授权证书（支持 PNG / PDF 下载）。
           </li>
           <li>
-            <strong>公众查验与安全体系：</strong>面向公众提供「精确 → 前缀 → 模糊」三级回退真伪查验（pg_trgm 索引加速）与打假举报工单系统；配套 JWT 黑名单、数据库持久化限流与全链路操作审计。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">AI 护肤顾问系统</h3>
-          <span class="entry-date">2026.01 – 至今</span>
-        </div>
-        <div class="project-meta">
-          成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >advisor.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>AI 测肤与个性化推荐：</strong>接入 qwen-vl / deepseek-vl 视觉大模型实现「问卷 + 扫脸」双通道皮肤分析，自研规则引擎按 8 种肤质画像打分匹配产品并支持后台可视化配置（运营零代码调整），多渠道电商外链归因；主导模型集成与核心接口开发，驱动用户咨询转化率提升 30%。
-          </li>
-          <li>
-            <strong>增长与传播设计：</strong>设计游客模式（设备指纹 + 限时档案）让用户免注册完成测肤，配合分享海报生成与渠道裂变归因支撑社交传播；输出脱敏统计数据反哺品牌白皮书与市场洞察，将工具沉淀为品牌数据资产。
-          </li>
-          <li>
-            <strong>AI 成本工程：</strong>为 AI 调用设计熔断器与日/月 Token 预算熔断、调用计费持久化与模型白名单回退，修复 5xx 重试导致的重复扣费风险；用户报告数据 90 天滚动续期并冷热分层归档（冷层脱敏摘要）。
-          </li>
-          <li>
-            <strong>数据资产闭环：</strong>设计服务端间鉴权接口，测肤报告与护肤档案随会话一键透传至微信 AI 顾问（session_id 透传），将一次性测肤沉淀为可持续运营、可驱动复购的用户数据资产。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 统一认证平台（SSO / OIDC）</h3>
-          <span class="entry-date">2025.11 – 至今（迭代）</span>
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>协议实现：</strong>自建 OAuth 2.0 / OIDC 单点登录，与官网主站同构部署，主站作为 Authorization Server 签发 JWT（RS256），完整实现 authorize / token / userinfo / introspect / revoke / end-session 协议端点，支持 PKCE、DPoP 与 TOTP 二因素。
-          </li>
-          <li>
-            <strong>SDK 与接入：</strong>封装并发布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子项目分钟级接入，通过 Token Introspection + Backchannel Logout 实现跨域免登与全局登出，支撑平台群 6 个系统统一登录。
-          </li>
-          <li>
-            <strong>安全加固：</strong>支持密钥轮换、Token 撤销（RFC 7009）与多实例黑名单共享，保障认证体系可运维、可审计。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 官网电商平台</h3>
-          <span class="entry-date">2025.11 – 至今（迭代）</span>
-        </div>
-        <div class="project-meta">
-          成果展示：<a
-            href="https://www.nihplod.cn"
-            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>电商闭环：</strong>基于 Next.js 16 + Prisma + PostgreSQL 构建品牌电商主站，打通微信支付 / 支付宝双渠道支付与退款（异步通知幂等处理）、顺丰物流、会员积分与优惠券体系；聚合微信、抖音、手机号验证码多端身份至统一账号体系（接入统一认证 SSO）；全站 121 个 API 路由、36 个数据模型、824 个测试用例。
-          </li>
-          <li>
-            <strong>交互体验：</strong>基于 Framer Motion + View Transitions 实现多步骤护肤仪式指南与沉浸式品牌叙事，集成产品抽屉与购物车联动，全端响应式适配。
+            <strong>公众查验与安全体系：</strong>面向公众提供「精确 → 前缀 → 模糊」三级回退真伪查验（pg_trgm GIN 索引加速，支持摄像头扫码）与带完整状态流转的打假举报工单系统；配套 JWT 黑名单与改密即时失效、数据库持久化限流，以及覆盖证书全生命周期与工单处理的操作审计。
           </li>
         </ul>
       </div>
@@ -307,14 +298,14 @@ const ld = {
           <span class="entry-date">2025.07 – 2025.09</span>
         </div>
         <div class="project-meta">
-          独立完成（全栈） · 成果展示：<a
+          独立完成（产品设计 · UI/UX · 全栈开发） · 成果展示：<a
             href="https://www.lingangjh.com"
             target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>全栈开发与设计落地：</strong>基于 Next.js 独立完成企业官网全栈开发与 CMS 内容管理后台，并基于 Figma 独立完成品牌视觉与交互原型设计；首屏加载时间控制在 1.5s 以内，全端响应式适配。
+            <strong>全栈开发与设计落地：</strong>基于 Next.js 完成企业官网全栈开发与 CMS 内容管理后台，并基于 Figma 完成品牌视觉与交互原型设计；首屏加载时间控制在 1.5s 以内，全端响应式适配。
           </li>
           <li>
             <strong>AI 问答与安全架构：</strong>本地化部署文心 / Qwen 大模型问答助手 Weknora，搭建 RAG 知识检索管道，回答准确率 > 85%；实现 JWT 用户认证、RLS 数据隔离与 CSP 安全策略，保障数据安全与访问控制。
