@@ -20,7 +20,6 @@ const ld = {
     "familyName": "王",
     "description": "數位開發經理、全棧工程師（TypeScript / React / Next.js / AI / RAG），常駐上海。作為品牌大中華區首位工程師，從 0 到 1 打造品牌電商、統一認證（SSO）、AI 顧問與智慧客服等數位系統。",
     "email": "me@wilboerht.cn",
-    "telephone": "+8618721400154",
     "url": "https://www.wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
     "address": {
@@ -129,7 +128,7 @@ const ld = {
           2025.10 以實習生身分加入並於畢業前全職在崗，2026.07 轉正，直接彙報品牌負責人；作為事業部首位技術人員，從 0 到 1 冷啟動品牌大中華區全部資訊系統與數位化基礎設施。
         </p>
         <ul class="project-points">
-          <li>統籌品牌大中華區數位化產品矩陣的規劃與交付，覆蓋官網電商、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、小程式商城、授權驗真 6+ 核心系統。</li>
+          <li>統籌品牌大中華區數位化產品矩陣的規劃與交付，覆蓋官網電商、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、小程式商城、授權驗真 6 個核心系統。</li>
           <li>建立 AI 輔助研發工作流與設計規範，將平均交付週期壓縮 50% 以上，保障多專案並行交付。</li>
           <li>作為技術側負責人承接產品、行銷團隊需求並拆解排期，主導需求評審與迭代節奏，支撐品牌線上零售管道（官網電商 + 小程式商城）從 0 上線。</li>
         </ul>
@@ -138,7 +137,7 @@ const ld = {
         <div class="entry-header">
           <h3 class="entry-org"
             >上海臨港景鴻安全防範科技發展有限公司 —— 技術研發實習生</h3>
-          <span class="entry-date">2025.07 - 2025.09</span>
+          <span class="entry-date">2025.07 – 2025.09</span>
         </div>
         <ul class="project-points">
           <li>獨立承擔企業官網全鏈路交付，覆蓋從架構設計、UI/UX 設計到生產部署全過程。</li>
@@ -167,64 +166,11 @@ const ld = {
           > 等
         </div>
         <p class="project-abstract">
-          作為技術負責人，統籌品牌大中華區數位化產品矩陣從 0 到 1 的架構設計與合規上線，覆蓋官網電商、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、小程式商城、授權驗真 6+ 系統（詳見下方各條目），累計交付 17+ 萬行手寫程式碼、1400+ 自動化測試用例；並以統一帳號與檔案資料打通「測膚 → 個人化方案 → 7×24 AI 顧問跟進 → 回購」業務閉環。
+          作為技術負責人，統籌品牌大中華區數位化產品矩陣從 0 到 1 的架構設計與合規上線，在 10 個月內獨立完成 6 個核心系統（官網電商、統一認證 SSO、AI 護膚顧問、微信 AI 客服、小程式商城、授權驗真，詳見下方各條目）的全流程交付，配套 1400+ 自動化測試用例；並以統一帳號與檔案資料打通「測膚 → 個人化方案 → 7×24 AI 顧問跟進 → 回購」業務閉環。
         </p>
         <ul class="project-points">
           <li>
             <strong>合規與營運治理：</strong>主導 ICP 備案、隱私政策及使用者協議制定，完成資料合規審查，保障多系統合規上線；依據流量動態調整伺服器資源配置，實現成本最佳化。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 官網電商與統一認證平台</h3>
-          <span class="entry-date">2025.11 – 至今（迭代）</span>
-        </div>
-        <div class="project-meta">
-          成果展示：<a
-            href="https://www.nihplod.cn"
-            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>電商閉環：</strong>基於 Next.js 16 + Prisma + PostgreSQL 構建品牌電商主站，打通微信支付 / 支付寶雙管道支付與退款（非同步通知冪等處理）、順豐物流、會員積分與優惠券體系；聚合微信、抖音、手機號驗證碼多端身分至統一帳號體系；全站 121 個 API 路由、36 個資料模型、824 個測試用例。
-          </li>
-          <li>
-            <strong>統一認證（SSO）：</strong>自建 OAuth 2.0 / OIDC 單一登入，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP 與 TOTP 二因素；封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全域登出。
-          </li>
-          <li>
-            <strong>安全加固：</strong>支援金鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共用，保障認證體系可運維、可稽核。
-          </li>
-          <li>
-            <strong>互動體驗：</strong>基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與購物車連動，全端響應式適配。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">AI 護膚顧問系統</h3>
-          <span class="entry-date">2026.01 – 至今</span>
-        </div>
-        <div class="project-meta">
-          成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >advisor.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>AI 測膚與個人化推薦：</strong>接入 qwen-vl / deepseek-vl 視覺大模型實現「問卷 + 掃臉」雙通道皮膚分析，自研規則引擎按 8 種膚質畫像打分匹配產品並支援後台視覺化配置（營運零程式碼調整），多管道電商外鏈歸因；主導模型整合與核心介面開發，驅動使用者諮詢轉化率提升 30%。
-          </li>
-          <li>
-            <strong>增長與傳播設計：</strong>設計遊客模式（裝置指紋 + 限時檔案）讓使用者免註冊完成測膚，配合分享海報生成與管道裂變歸因支撐社群傳播；輸出去識別化統計資料反哺品牌白皮書與市場洞察，將工具沉澱為品牌資料資產。
-          </li>
-          <li>
-            <strong>AI 成本工程：</strong>為 AI 呼叫設計熔斷器與日/月 Token 預算熔斷、呼叫計費持久化與模型白名單回退，修復 5xx 重試導致的重複扣費風險；使用者報告資料 90 天滾動續期並冷熱分層歸檔（冷層去識別化摘要）。
-          </li>
-          <li>
-            <strong>資料資產閉環：</strong>設計伺服器端間鑑權介面，測膚報告與護膚檔案隨工作階段一鍵透傳至微信 AI 顧問（session_id 透傳），將一次性測膚沉澱為可持續營運、可驅動回購的使用者資料資產。
           </li>
         </ul>
       </div>
@@ -236,7 +182,10 @@ const ld = {
         </div>
         <ul class="project-points">
           <li>
-            <strong>多入口訊息閘道與多輪會話：</strong>基於 FastAPI + Redis + DeepSeek 大模型構建，統一接入企業微信客服、企業微信應用與公眾號三路訊息入口；承接測膚平台透傳的使用者檔案，實現多輪會話中護膚檔案自動沉澱（階段目標管理與複評提醒）、訂單查詢引導與智慧轉人工（關鍵字辨識 + 服務時間窗 + 接待人黏性繫結），將一次性諮詢轉化為長期陪伴式跟進。
+            <strong>多入口訊息閘道：</strong>基於 FastAPI + Redis + DeepSeek 大模型構建，統一接入企業微信客服、企業微信應用與公眾號三路訊息入口；支援智慧轉人工（關鍵字辨識 + 服務時間窗 + 接待人黏性繫結）。
+          </li>
+          <li>
+            <strong>陪伴式會話營運：</strong>承接測膚平台透傳的使用者檔案，多輪會話中自動沉澱護膚檔案（階段目標管理與複評提醒），並提供訂單查詢引導，將一次性諮詢轉化為長期陪伴式跟進。
           </li>
           <li>
             <strong>提示詞與知識庫工程：</strong>按客服帳號路由雙套人設（品牌客服 / 護膚顧問）的獨立提示詞與知識庫；44KB 品牌 FAQ 知識庫分段構建、按訊息關鍵字匹配按需注入並支援熱載入；內建 Prompt 注入防護與廣告法禁語輸出過濾雙層合規兜底。
@@ -287,10 +236,75 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
+          <h3 class="project-name">AI 護膚顧問系統</h3>
+          <span class="entry-date">2026.01 – 至今</span>
+        </div>
+        <div class="project-meta">
+          成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >advisor.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>AI 測膚與個人化推薦：</strong>接入 qwen-vl / deepseek-vl 視覺大模型實現「問卷 + 掃臉」雙通道皮膚分析，自研規則引擎按 8 種膚質畫像打分匹配產品並支援後台視覺化配置（營運零程式碼調整），多管道電商外鏈歸因；主導模型整合與核心介面開發，驅動使用者諮詢轉化率提升 30%。
+          </li>
+          <li>
+            <strong>增長與傳播設計：</strong>設計遊客模式（裝置指紋 + 限時檔案）讓使用者免註冊完成測膚，配合分享海報生成與管道裂變歸因支撐社群傳播；輸出去識別化統計資料反哺品牌白皮書與市場洞察，將工具沉澱為品牌資料資產。
+          </li>
+          <li>
+            <strong>AI 成本工程：</strong>為 AI 呼叫設計熔斷器與日/月 Token 預算熔斷、呼叫計費持久化與模型白名單回退，修復 5xx 重試導致的重複扣費風險；使用者報告資料 90 天滾動續期並冷熱分層歸檔（冷層去識別化摘要）。
+          </li>
+          <li>
+            <strong>資料資產閉環：</strong>設計伺服器端間鑑權介面，測膚報告與護膚檔案隨工作階段一鍵透傳至微信 AI 顧問（session_id 透傳），將一次性測膚沉澱為可持續營運、可驅動回購的使用者資料資產。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD 統一認證平台（SSO / OIDC）</h3>
+          <span class="entry-date">2025.11 – 至今（迭代）</span>
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同構部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP 與 TOTP 二因素。
+          </li>
+          <li>
+            <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全域登出，支撐平台群 6 個系統統一登入。
+          </li>
+          <li>
+            <strong>安全加固：</strong>支援金鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共用，保障認證體系可運維、可稽核。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD 官網電商平台</h3>
+          <span class="entry-date">2025.11 – 至今（迭代）</span>
+        </div>
+        <div class="project-meta">
+          成果展示：<a
+            href="https://www.nihplod.cn"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>電商閉環：</strong>基於 Next.js 16 + Prisma + PostgreSQL 構建品牌電商主站，打通微信支付 / 支付寶雙管道支付與退款（非同步通知冪等處理）、順豐物流、會員積分與優惠券體系；聚合微信、抖音、手機號驗證碼多端身分至統一帳號體系（接入統一認證 SSO）；全站 121 個 API 路由、36 個資料模型、824 個測試用例。
+          </li>
+          <li>
+            <strong>互動體驗：</strong>基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與購物車連動，全端響應式適配。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
           <h3 class="project-name"
             >上海臨港景鴻安全防範科技發展有限公司網站系統</h3
           >
-          <span class="entry-date">2025.07 - 2025.09</span>
+          <span class="entry-date">2025.07 – 2025.09</span>
         </div>
         <div class="project-meta">
           獨立完成（全棧） · 成果展示：<a
@@ -356,17 +370,9 @@ const ld = {
         ><span class="award-date">2025.05</span>
       </div>
       <div class="award-row">
-        <span class="award-name">天翼雲高級開發工程師認證（SCCP）</span
-        ><span class="award-date">2024.11</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name">阿里雲 ACA 雲安全助理工程師認證</span><span
-          class="award-date">2024.10</span
-        >
-      </div>
-      <div class="award-row">
-        <span class="award-name">天翼雲高級運維工程師認證</span
-        ><span class="award-date">2024.05</span>
+        <span class="award-name"
+          >雲廠商認證：天翼雲高級開發工程師（SCCP）、天翼雲高級運維工程師、阿里雲 ACA 雲安全助理工程師</span
+        ><span class="award-date">2024.05 – 2024.11</span>
       </div>
     </section>
 
@@ -377,7 +383,7 @@ const ld = {
           <div class="entry-title-group">
             <h3 class="entry-org">上海科學技術職業學院</h3>
           </div>
-          <span class="entry-date">2023.10 - 2026.06</span>
+          <span class="entry-date">2023.10 – 2026.06</span>
         </div>
         <div class="entry-major">
           通訊與電子工程學院，資訊安全技術應用專業，專科

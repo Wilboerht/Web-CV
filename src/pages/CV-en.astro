@@ -20,7 +20,6 @@ const ld = {
     "familyName": "Wang",
     "description": "Digital Development Manager and full-stack engineer (TypeScript / React / Next.js / AI / RAG) based in Shanghai. First engineer of a brand's Greater China division — built its e-commerce, SSO, AI advisor and customer service systems from 0 to 1.",
     "email": "me@wilboerht.cn",
-    "telephone": "+8618721400154",
     "url": "https://www.wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
     "address": {
@@ -126,13 +125,13 @@ const ld = {
         <div class="entry-header">
           <h3 class="entry-org"
             >Moidas | NIHPLOD Greater China Division — Digital Development Manager</h3>
-          <span class="entry-date">Oct 2025 - Present</span>
+          <span class="entry-date">Oct 2025 – Present</span>
         </div>
         <p class="entry-role-detail">
           Joined as an intern in Oct 2025 and worked full-time before graduation; converted to full-time in Jul 2026, reporting directly to the brand lead. As the division's first engineer, cold-started the brand's entire Greater China information systems and digital infrastructure from 0 to 1.
         </p>
         <ul class="project-points">
-          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 6+ core systems: official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, mini-program store, and authorization &amp; verification platform.</li>
+          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 6 core systems: official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, mini-program store, and authorization &amp; verification platform.</li>
           <li>Established AI-assisted development workflows and design standards, reducing average delivery cycles by over 50% while ensuring parallel multi-project delivery.</li>
           <li>As technical lead, took in requirements from product and marketing teams and broke them down into schedules, owning requirement reviews and iteration cadence, supporting the brand's online retail channels (official e-commerce site + mini-program store) from 0 to launch.</li>
         </ul>
@@ -141,7 +140,7 @@ const ld = {
         <div class="entry-header">
           <h3 class="entry-org"
             >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. — R&amp;D Intern</h3>
-          <span class="entry-date">Jul 2025 - Sep 2025</span>
+          <span class="entry-date">Jul 2025 – Sep 2025</span>
         </div>
         <ul class="project-points">
           <li>Independently delivered the company website end-to-end, from architecture and UI/UX design to production deployment.</li>
@@ -157,7 +156,7 @@ const ld = {
       <div class="project-entry">
         <div class="entry-header">
           <h3 class="project-name">NIHPLOD China Official Digital Platform (Portfolio)</h3>
-          <span class="entry-date">Nov 2025 - Present</span>
+          <span class="entry-date">Nov 2025 – Present</span>
         </div>
         <div class="project-meta">
           Live: <a
@@ -170,7 +169,7 @@ const ld = {
           >, etc.
         </div>
         <p class="project-abstract">
-          As technical lead, drove the brand's Greater China digital product matrix from 0 to 1 — architecture design and compliant launch — spanning 6+ systems: the official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, WeChat mini-program store, and the authorization &amp; verification platform (detailed below), with 170K+ lines of hand-written code and 1,400+ automated test cases delivered in total — and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
+          As technical lead, drove the brand's Greater China digital product matrix from 0 to 1 — architecture design and compliant launch — independently delivering 6 core systems end-to-end within 10 months (official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, mini-program store, and authorization &amp; verification platform — detailed below), backed by 1,400+ automated test cases, and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
         </p>
         <ul class="project-points">
           <li>
@@ -181,27 +180,59 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Official E-Commerce &amp; Unified Authentication Platform</h3>
-          <span class="entry-date">Nov 2025 - Present (iterating)</span>
+          <h3 class="project-name">WeChat AI Customer Service</h3>
+          <span class="entry-date">Aug 2026</span>
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Multi-Entry Messaging Gateway:</strong> Built with FastAPI + Redis + the DeepSeek LLM, unifying three message entry points (WeCom customer service, WeCom app, and WeChat Official Account); supports smart human handoff (keyword detection + service-hour windows + sticky agent assignment).
+          </li>
+          <li>
+            <strong>Companion-Style Conversation Operations:</strong> Inherits user profiles handed off from the skin-analysis platform, automatically accumulating skincare profiles across multi-turn dialogue (stage-goal tracking and re-evaluation reminders) and providing guided order inquiries — turning one-off inquiries into long-term companion-style engagement.
+          </li>
+          <li>
+            <strong>Prompt &amp; Knowledge-Base Engineering:</strong> Routed two agent personas (brand service / skincare advisor) with independent prompts and knowledge bases by service account; built a 44KB brand FAQ knowledge base in segments with keyword-matched on-demand injection and hot reload; dual-layer compliance guardrails via prompt-injection defense and advertising-law prohibited-word output filtering.
+          </li>
+          <li>
+            <strong>Quality Assurance &amp; Availability:</strong> Locked prompt iteration quality with 34 golden regression cases against the live LLM, backed by 340+ automated tests; exponential-backoff retries with timeout control for AI calls, with automatic in-memory degradation and scheduled reconnection on Redis failure; provided PII export/deletion endpoints (PIPL compliance); self-hosted on Linux + Nginx.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD Full-Stack E-Commerce System (WeChat Mini-Program + H5 + Admin Console)</h3>
+          <span class="entry-date">May 2026 – Present</span>
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Full-Stack Commerce Loop:</strong> Built with uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL (mini-program/H5 dual-end plus a standalone admin console), covering the full pipeline of WeChat Pay V3, refund chain, SF Express logistics, and SMS notifications; with coupons, points, and other marketing mechanics.
+          </li>
+          <li>
+            <strong>Skin Profile Data Integration:</strong> Embedded the skin-analysis entry in the mini-program (web-view) to guide users through AI skin testing; analysis profiles are linked by phone number and synced back automatically, providing skin trends, historical reports, and daily skincare check-ins — turning analysis traffic into a private-domain, long-term operation asset along the "analysis → follow-up → repurchase" loop.
+          </li>
+          <li>
+            <strong>Engineering &amp; Security:</strong> Implemented RBAC, audit logging, and multi-tier rate limiting, plus a custom in-memory cache with request deduplication to prevent cache breakdown — 26 data models, 191 automated tests (including concurrent-ordering tests), deployed via multi-stage Docker builds.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD Brand Authorization &amp; Verification Platform</h3>
+          <span class="entry-date">Apr 2026 – May 2026</span>
         </div>
         <div class="project-meta">
-          Live: <a
-            href="https://www.nihplod.cn"
-            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
+          Live: <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >ba.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>E-Commerce Loop:</strong> Built the brand's e-commerce main site with Next.js 16 + Prisma + PostgreSQL, covering dual-channel payments (WeChat Pay / Alipay) and refunds (idempotent async notifications), SF Express logistics, and membership points &amp; coupon systems; aggregated multi-channel identities (WeChat, Douyin, phone OTP) into a unified account system — 121 API routes, 36 data models, and 824 test cases across the site.
+            <strong>Authorization Review &amp; Anti-Counterfeit Certificates:</strong> Built the dealer authorization system with Next.js + Prisma + PostgreSQL, implementing a multi-level review workflow (application → auditor review → manager issuance); Canvas-based synthesis of anti-counterfeit certificates with e-seal and dynamic QR codes (PNG/PDF download).
           </li>
           <li>
-            <strong>Unified Authentication (SSO):</strong> Built a self-hosted OAuth 2.0 / OIDC SSO — the main site acts as Authorization Server issuing RS256 JWTs, fully implementing the authorize / token / userinfo / introspect / revoke / end-session endpoints with PKCE, DPoP, and TOTP two-factor authentication; packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) for minute-level sub-project integration, with Token Introspection + Backchannel Logout for cross-domain SSO and global sign-out.
-          </li>
-          <li>
-            <strong>Security Hardening:</strong> Supports secret rotation, token revocation (RFC 7009), and multi-instance blacklist sharing for an operable and auditable auth system.
-          </li>
-          <li>
-            <strong>Interactive Experience:</strong> Implemented multi-step skincare ritual guides and immersive brand storytelling using Framer Motion + View Transitions, with integrated product drawer and cart synchronization, fully responsive across devices.
+            <strong>Public Verification &amp; Security:</strong> Public authenticity verification with three-tier fallback matching (exact → prefix → fuzzy, accelerated by pg_trgm indexes) and a counterfeit-report ticketing system; hardened with JWT blacklisting, database-persisted rate limiting, and full audit logging.
           </li>
         </ul>
       </div>
@@ -209,7 +240,7 @@ const ld = {
       <div class="project-entry">
         <div class="entry-header">
           <h3 class="project-name">AI Skincare Advisor</h3>
-          <span class="entry-date">Jan 2026 - Present</span>
+          <span class="entry-date">Jan 2026 – Present</span>
         </div>
         <div class="project-meta">
           Live: <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
@@ -234,56 +265,39 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">WeChat AI Customer Service</h3>
-          <span class="entry-date">Aug 2026</span>
+          <h3 class="project-name">NIHPLOD Unified Authentication Platform (SSO / OIDC)</h3>
+          <span class="entry-date">Nov 2025 – Present (iterating)</span>
         </div>
         <ul class="project-points">
           <li>
-            <strong>Multi-Entry Messaging Gateway &amp; Multi-Turn Sessions:</strong> Built with FastAPI + Redis + the DeepSeek LLM, unifying three message entry points (WeCom customer service, WeCom app, and WeChat Official Account); receiving user profiles handed off from the skin-analysis platform, with automatic skincare-profile accumulation across multi-turn dialogue (stage-goal tracking and re-evaluation reminders), guided order inquiries, and smart human handoff (keyword detection + service-hour windows + sticky agent assignment) — turning one-off inquiries into long-term companion-style engagement.
+            <strong>Protocol Implementation:</strong> Built a self-hosted OAuth 2.0 / OIDC SSO, deployed isomorphically with the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE, DPoP, and TOTP two-factor authentication.
           </li>
           <li>
-            <strong>Prompt &amp; Knowledge-Base Engineering:</strong> Routed two agent personas (brand service / skincare advisor) with independent prompts and knowledge bases by service account; built a 44KB brand FAQ knowledge base in segments with keyword-matched on-demand injection and hot reload; dual-layer compliance guardrails via prompt-injection defense and advertising-law prohibited-word output filtering.
+            <strong>SDK &amp; Integration:</strong> Packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) for minute-level sub-project integration, enabling cross-domain SSO and global sign-out via Token Introspection + Backchannel Logout, supporting unified login across the platform group's 6 systems.
           </li>
           <li>
-            <strong>Quality Assurance &amp; Availability:</strong> Locked prompt iteration quality with 34 golden regression cases against the live LLM, backed by 340+ automated tests; exponential-backoff retries with timeout control for AI calls, with automatic in-memory degradation and scheduled reconnection on Redis failure; provided PII export/deletion endpoints (PIPL compliance); self-hosted on Linux + Nginx.
+            <strong>Security Hardening:</strong> Supports secret rotation, token revocation (RFC 7009), and multi-instance blacklist sharing for an operable and auditable auth system.
           </li>
         </ul>
       </div>
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Full-Stack E-Commerce System (WeChat Mini-Program + H5 + Admin Console)</h3>
-          <span class="entry-date">May 2026 - Present</span>
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Full-Stack Commerce Loop:</strong> Built with uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL (mini-program/H5 dual-end plus a standalone admin console), covering the full pipeline of WeChat Pay V3, refund chain, SF Express logistics, and SMS notifications; with coupons, points, and other marketing mechanics.
-          </li>
-          <li>
-            <strong>Skin Profile Data Integration:</strong> Embedded the skin-analysis entry in the mini-program (web-view) to guide users through AI skin testing; analysis profiles are linked by phone number and synced back automatically, providing skin trends, historical reports, and daily skincare check-ins — turning analysis traffic into a private-domain, long-term operation asset along the "analysis → follow-up → repurchase" loop.
-          </li>
-          <li>
-            <strong>Engineering &amp; Security:</strong> Implemented RBAC, audit logging, and multi-tier rate limiting, plus a custom in-memory cache with request deduplication to prevent cache breakdown — 26 data models, 191 automated tests (including concurrent-ordering tests), deployed via multi-stage Docker builds.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Brand Authorization &amp; Verification Platform</h3>
-          <span class="entry-date">Apr 2026 - May 2026</span>
+          <h3 class="project-name">NIHPLOD Official E-Commerce Platform</h3>
+          <span class="entry-date">Nov 2025 – Present (iterating)</span>
         </div>
         <div class="project-meta">
-          Live: <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >ba.nihplod.cn</a
+          Live: <a
+            href="https://www.nihplod.cn"
+            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>Authorization Review &amp; Anti-Counterfeit Certificates:</strong> Built the dealer authorization system with Next.js + Prisma + PostgreSQL, implementing a multi-level review workflow (application → auditor review → manager issuance); Canvas-based synthesis of anti-counterfeit certificates with e-seal and dynamic QR codes (PNG/PDF download).
+            <strong>E-Commerce Loop:</strong> Built the brand's e-commerce main site with Next.js 16 + Prisma + PostgreSQL, covering dual-channel payments (WeChat Pay / Alipay) and refunds (idempotent async notifications), SF Express logistics, and membership points &amp; coupon systems; aggregated multi-channel identities (WeChat, Douyin, phone OTP) into a unified account system (backed by the unified authentication SSO) — 121 API routes, 36 data models, and 824 test cases across the site.
           </li>
           <li>
-            <strong>Public Verification &amp; Security:</strong> Public authenticity verification with three-tier fallback matching (exact → prefix → fuzzy, accelerated by pg_trgm indexes) and a counterfeit-report ticketing system; hardened with JWT blacklisting, database-persisted rate limiting, and full audit logging.
+            <strong>Interactive Experience:</strong> Implemented multi-step skincare ritual guides and immersive brand storytelling using Framer Motion + View Transitions, with integrated product drawer and cart synchronization, fully responsive across devices.
           </li>
         </ul>
       </div>
@@ -293,7 +307,7 @@ const ld = {
           <h3 class="project-name"
             >Shanghai Lingang Jinghong Security Technology Website System</h3
           >
-          <span class="entry-date">Jul 2025 - Sep 2025</span>
+          <span class="entry-date">Jul 2025 – Sep 2025</span>
         </div>
         <div class="project-meta">
           Independently delivered (full-stack) · Live: <a
@@ -362,18 +376,10 @@ const ld = {
         <span class="award-date">May 2025</span>
       </div>
       <div class="award-row">
-        <span class="award-name">CTyun Advanced Developer Certification (SCCP)</span>
-        <span class="award-date">Nov 2024</span>
-      </div>
-      <div class="award-row">
         <span class="award-name"
-          >Alibaba Cloud ACA Cloud Security Associate Certification</span
+          >Cloud Certifications: CTyun Advanced Developer (SCCP), CTyun Advanced O&amp;M Engineer, Alibaba Cloud ACA Cloud Security Associate</span
         >
-        <span class="award-date">Oct 2024</span>
-      </div>
-      <div class="award-row">
-        <span class="award-name">CTyun Advanced O&amp;M Engineer Certification</span>
-        <span class="award-date">May 2024</span>
+        <span class="award-date">May 2024 – Nov 2024</span>
       </div>
     </section>
 
@@ -383,7 +389,7 @@ const ld = {
         <div class="entry-header">
           <h3 class="entry-org"
             >Shanghai Scientific and Technical Vocational College</h3>
-          <span class="entry-date">Oct 2023 - Jun 2026</span>
+          <span class="entry-date">Oct 2023 – Jun 2026</span>
         </div>
         <div class="entry-major">
           School of Communication &amp; Electronic Engineering, Information Security
