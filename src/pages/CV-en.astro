@@ -128,12 +128,13 @@ const ld = {
           <span class="entry-date">Oct 2025 – Present</span>
         </div>
         <p class="entry-role-detail">
-          Joined as an intern in Oct 2025 and worked full-time before graduation; converted to full-time in Jul 2026, reporting directly to the brand lead. As the division's first engineer, cold-started the brand's entire Greater China information systems and digital infrastructure from 0 to 1.
+          Joined as an intern in Oct 2025 and worked full-time before graduation; converted to full-time in Jul 2026, reporting directly to the brand lead. As the division's first engineer, cold-started the brand's entire Greater China information systems and digital infrastructure from 0 to 1 — independently delivering 5 core systems within 10 months, backed by 1,400+ automated test cases, and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
         </p>
         <ul class="project-points">
-          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 6 core systems: official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, mini-program store, and authorization &amp; verification platform.</li>
+          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 5 core systems: official China website, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, and authorization &amp; verification platform.</li>
           <li>Established AI-assisted development workflows and design standards, reducing average delivery cycles by over 50% while ensuring parallel multi-project delivery.</li>
-          <li>As technical lead, took in requirements from product and marketing teams and broke them down into schedules, owning requirement reviews and iteration cadence, supporting the brand's online retail channels (official e-commerce site + mini-program store) from 0 to launch.</li>
+          <li>As technical lead, took in requirements from product and marketing teams and broke them down into schedules, owning requirement reviews and iteration cadence, supporting the brand's online retail channel (official China website) from 0 to launch.</li>
+          <li>Led ICP filing, privacy policy and user agreement drafting, and data compliance review to ensure compliant launches across systems; dynamically adjusted server resources based on traffic to optimize costs.</li>
         </ul>
       </div>
       <div class="entry">
@@ -155,25 +156,71 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD China Official Digital Platform (Portfolio)</h3>
-          <span class="entry-date">Nov 2025 – Present</span>
+          <h3 class="project-name">NIHPLOD China Official Website</h3>
+          <span class="entry-date">Nov 2025 – Present (iterating)</span>
         </div>
         <div class="project-meta">
-          Live: <a
+          Independently delivered (product design · UI/UX · full-stack) · Live: <a
             href="https://www.nihplod.cn"
             target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
-          >, <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >advisor.nihplod.cn</a
-          >, <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >ba.nihplod.cn</a
-          >, etc.
+          >
         </div>
-        <p class="project-abstract">
-          As technical lead, drove the brand's Greater China digital product matrix from 0 to 1 — architecture design and compliant launch — independently delivering 6 core systems end-to-end within 10 months (official e-commerce site, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, mini-program store, and authorization &amp; verification platform — detailed below), backed by 1,400+ automated test cases, and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
-        </p>
         <ul class="project-points">
           <li>
-            <strong>Compliance &amp; Operations Governance:</strong> Led ICP filing, privacy policy and user agreement drafting, and data compliance review to ensure compliant launches across systems; dynamically adjusted server resources based on traffic to optimize costs.
+            <strong>E-Commerce Loop:</strong> Built the brand's official website and e-commerce main site with Next.js 16 + Prisma + PostgreSQL, covering dual-channel payments (WeChat Pay / Alipay) and refunds (idempotent async notifications), SF Express logistics, and membership points &amp; coupon systems; aggregated multi-channel identities (WeChat, Douyin, phone OTP) into a unified account system (backed by the unified authentication SSO) — 121 API routes, 36 data models, and 824 test cases across the site.
+          </li>
+          <li>
+            <strong>Product &amp; Interaction Design:</strong> Independently designed everything from information architecture and Figma interactive prototypes to visual styling; implemented multi-step skincare ritual guides and immersive brand storytelling with Framer Motion + View Transitions, with integrated product drawer and cart synchronization, fully responsive across devices.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD Unified Authentication Platform (SSO / OIDC)</h3>
+          <span class="entry-date">Jun 2026 – Present (iterating)</span>
+        </div>
+        <div class="project-meta">
+          Independently delivered (product design · full-stack)
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Protocol Implementation:</strong> Built a self-hosted OAuth 2.0 / OIDC SSO, deployed isomorphically with the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE, DPoP, and TOTP two-factor authentication.
+          </li>
+          <li>
+            <strong>SDK &amp; Integration:</strong> Packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) for minute-level sub-project integration, enabling cross-domain SSO and global sign-out via Token Introspection + Backchannel Logout, supporting unified login across the platform group's 5 systems.
+          </li>
+          <li>
+            <strong>Security Hardening:</strong> Supports secret rotation, token revocation (RFC 7009), and multi-instance blacklist sharing for an operable and auditable auth system.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">AI Skincare Advisor System</h3>
+          <span class="entry-date">Jan 2026 – Present</span>
+        </div>
+        <div class="project-meta">
+          Responsible for product design · UX interaction · full-stack development (UI visuals by a collaborating designer) · Live: <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >advisor.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated qwen-vl / deepseek-vl vision LLMs for dual-channel (questionnaire + facial scan) skin analysis; a custom rule engine scores and matches products against 8 skin-type personas, configurable via a visual admin console (zero-code adjustments for operations).
+          </li>
+          <li>
+            <strong>Conversion &amp; Attribution:</strong> Led model integration and core API development with multi-channel e-commerce outbound-link attribution, lifting user consultation conversion by 30%.
+          </li>
+          <li>
+            <strong>Growth &amp; Virality Design:</strong> Designed a guest mode (device fingerprint + time-limited profiles) letting users complete skin analysis without registration, plus shareable poster generation and channel-fission attribution to drive social spreading; exported desensitized statistics to feed the brand's whitepaper and market insights, turning the tool into a brand data asset.
+          </li>
+          <li>
+            <strong>AI Cost Engineering:</strong> Designed circuit breakers with daily/monthly token budget cutoffs, persisted per-call billing, and a model whitelist with fallback for AI invocations — fixing a duplicate-billing risk caused by 5xx retries; user reports follow 90-day rolling retention with hot/cold tiered archiving (desensitized summaries in the cold tier).
+          </li>
+          <li>
+            <strong>Data Asset Loop:</strong> Designed a server-to-server authenticated API that hands off skin-analysis reports and skincare profiles with the session to WeChat AI customer service (session_id passthrough), turning one-off skin tests into continuously operable, repurchase-driving user data assets.
           </li>
         </ul>
       </div>
@@ -182,6 +229,9 @@ const ld = {
         <div class="entry-header">
           <h3 class="project-name">WeChat AI Customer Service</h3>
           <span class="entry-date">Aug 2026</span>
+        </div>
+        <div class="project-meta">
+          Independently delivered (product design · full-stack, built on the native WeCom customer-service chat window)
         </div>
         <ul class="project-points">
           <li>
@@ -201,103 +251,44 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Full-Stack E-Commerce System (WeChat Mini-Program + H5 + Admin Console)</h3>
-          <span class="entry-date">May 2026 – Present</span>
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Full-Stack Commerce Loop:</strong> Built with uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL (mini-program/H5 dual-end plus a standalone admin console), covering the full pipeline of WeChat Pay V3, refund chain, SF Express logistics, and SMS notifications; with coupons, points, and other marketing mechanics.
-          </li>
-          <li>
-            <strong>Skin Profile Data Integration:</strong> Embedded the skin-analysis entry in the mini-program (web-view) to guide users through AI skin testing; analysis profiles are linked by phone number and synced back automatically, providing skin trends, historical reports, and daily skincare check-ins — turning analysis traffic into a private-domain, long-term operation asset along the "analysis → follow-up → repurchase" loop.
-          </li>
-          <li>
-            <strong>Engineering &amp; Security:</strong> Implemented RBAC, audit logging, and multi-tier rate limiting, plus a custom in-memory cache with request deduplication to prevent cache breakdown — 26 data models, 191 automated tests (including concurrent-ordering tests), deployed via multi-stage Docker builds.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Brand Authorization &amp; Verification Platform</h3>
+          <h3 class="project-name">NIHPLOD Authorization &amp; Verification Platform</h3>
           <span class="entry-date">Apr 2026 – May 2026</span>
         </div>
         <div class="project-meta">
-          Live: <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
+          Independently delivered (product design · UI/UX · full-stack) · Live: <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >ba.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>Authorization Review &amp; Anti-Counterfeit Certificates:</strong> Built the dealer authorization system with Next.js + Prisma + PostgreSQL, implementing a multi-level review workflow (application → auditor review → manager issuance); Canvas-based synthesis of anti-counterfeit certificates with e-seal and dynamic QR codes (PNG/PDF download).
+            <strong>Authorization Review &amp; Anti-Counterfeit Certificates:</strong> Built the dealer authorization management system with Next.js 16 + PostgreSQL, implementing a two-level review workflow (auditor submission → manager final issuance) and a certificate state machine (issued / returned / expired / revoked); browser-side Canvas + jsPDF real-time synthesis of anti-counterfeit authorization certificates with e-seal and dynamic QR codes (PNG / PDF download).
           </li>
           <li>
-            <strong>Public Verification &amp; Security:</strong> Public authenticity verification with three-tier fallback matching (exact → prefix → fuzzy, accelerated by pg_trgm indexes) and a counterfeit-report ticketing system; hardened with JWT blacklisting, database-persisted rate limiting, and full audit logging.
+            <strong>Public Verification &amp; Security System:</strong> Public authenticity verification with three-tier fallback matching (exact → prefix → fuzzy, accelerated by pg_trgm GIN indexes, with camera QR scanning) and a counterfeit-report ticketing system with full status transitions; JWT blacklisting with immediate invalidation on password change, database-persisted rate limiting, and operation audit covering the full certificate lifecycle and ticket handling.
           </li>
         </ul>
       </div>
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">AI Skincare Advisor</h3>
-          <span class="entry-date">Jan 2026 – Present</span>
+          <h3 class="project-name">Myskin.Today (AI Skin Analysis Platform Official Website)</h3>
+          <span class="entry-date">Jan 2026 – Feb 2026</span>
         </div>
         <div class="project-meta">
-          Live: <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >advisor.nihplod.cn</a
+          Independently delivered (product design · UI/UX · full-stack · AIGC visual assets) · Live: <a
+            href="https://myskin.today"
+            target="_blank" rel="noopener noreferrer">myskin.today</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated qwen-vl / deepseek-vl vision LLMs for dual-channel (questionnaire + facial scan) skin analysis, with a custom rule engine scoring products against 8 skin-type personas — configurable via a visual admin console (zero-code adjustments for operations) — plus multi-channel e-commerce attribution links; led model integration and core API development, lifting consultation conversion by 30%.
+            <strong>Official Site &amp; Commercialization:</strong> Built the official website of the AI skin analysis platform with Next.js 16 + Tailwind CSS v4, covering product capability showcases, three B2B business-model landing pages (API integration / white-label customization / strategic partnership), and an API documentation site; partnership inquiry forms are pushed in real time to a WeCom bot via API routes (IP rate limiting, input sanitization, timeout retries).
           </li>
           <li>
-            <strong>Growth &amp; Virality Design:</strong> Designed a guest mode (device fingerprint + time-limited profiles) letting users complete skin analysis without registration, plus shareable poster generation and channel-fission attribution to drive social spreading; exported desensitized statistics to feed the brand's whitepaper and market insights, turning the tool into a brand data asset.
+            <strong>Design System &amp; Visual Assets:</strong> Built a custom brand design system (color / typography / spacing variables, Bento grid, light &amp; dark themes) and produced all site illustrations and promotional scene videos with AIGC; implemented scroll-aware navigation and number-counting interactions with Framer Motion, fully responsive across devices.
           </li>
           <li>
-            <strong>AI Cost Engineering:</strong> Designed circuit breakers with daily/monthly token budget cutoffs, persisted per-call billing, and a model whitelist with fallback for AI invocations — fixing a duplicate-billing risk caused by 5xx retries; user reports follow 90-day rolling retention with hot/cold tiered archiving (desensitized summaries in the cold tier).
-          </li>
-          <li>
-            <strong>Data Asset Loop:</strong> Designed a server-to-server authenticated API that hands off skin-analysis reports and skincare profiles with the session to WeChat AI advisors (session_id passthrough), turning one-off skin tests into continuously operable, repurchase-driving user data assets.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Unified Authentication Platform (SSO / OIDC)</h3>
-          <span class="entry-date">Nov 2025 – Present (iterating)</span>
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Protocol Implementation:</strong> Built a self-hosted OAuth 2.0 / OIDC SSO, deployed isomorphically with the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE, DPoP, and TOTP two-factor authentication.
-          </li>
-          <li>
-            <strong>SDK &amp; Integration:</strong> Packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) for minute-level sub-project integration, enabling cross-domain SSO and global sign-out via Token Introspection + Backchannel Logout, supporting unified login across the platform group's 6 systems.
-          </li>
-          <li>
-            <strong>Security Hardening:</strong> Supports secret rotation, token revocation (RFC 7009), and multi-instance blacklist sharing for an operable and auditable auth system.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Official E-Commerce Platform</h3>
-          <span class="entry-date">Nov 2025 – Present (iterating)</span>
-        </div>
-        <div class="project-meta">
-          Live: <a
-            href="https://www.nihplod.cn"
-            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>E-Commerce Loop:</strong> Built the brand's e-commerce main site with Next.js 16 + Prisma + PostgreSQL, covering dual-channel payments (WeChat Pay / Alipay) and refunds (idempotent async notifications), SF Express logistics, and membership points &amp; coupon systems; aggregated multi-channel identities (WeChat, Douyin, phone OTP) into a unified account system (backed by the unified authentication SSO) — 121 API routes, 36 data models, and 824 test cases across the site.
-          </li>
-          <li>
-            <strong>Interactive Experience:</strong> Implemented multi-step skincare ritual guides and immersive brand storytelling using Framer Motion + View Transitions, with integrated product drawer and cart synchronization, fully responsive across devices.
+            <strong>SEO &amp; Engineering Quality:</strong> Site-wide independent metadata / OpenGraph / JSON-LD structured data / sitemap / PWA; next/image optimization with domain whitelisting across the site, plus anti-theft protection for image and video content.
           </li>
         </ul>
       </div>
@@ -310,7 +301,7 @@ const ld = {
           <span class="entry-date">Jul 2025 – Sep 2025</span>
         </div>
         <div class="project-meta">
-          Independently delivered (full-stack) · Live: <a
+          Independently delivered (product design · UI/UX · full-stack) · Live: <a
             href="https://www.lingangjh.com"
             target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
           >

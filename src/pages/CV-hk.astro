@@ -125,12 +125,13 @@ const ld = {
           <span class="entry-date">2025.10 – 至今</span>
         </div>
         <p class="entry-role-detail">
-          2025.10 以實習生身份加入並於畢業前全職在崗，2026.07 轉正，直接匯報品牌負責人；作為事業部首位技術人員，從 0 到 1 冷啟動品牌大中華區全部資訊系統與數碼化基礎設施。
+          2025.10 以實習生身份加入並於畢業前全職在崗，2026.07 轉正，直接匯報品牌負責人；作為事業部首位技術人員，從 0 到 1 冷啟動品牌大中華區全部資訊系統與數碼化基礎設施，10 個月內獨立完成 5 個核心系統交付，配套 1400+ 自動化測試用例，並以統一帳戶與檔案數據打通「測膚 → 個人化方案 → 7×24 AI 顧問跟進 → 回購」業務閉環。
         </p>
         <ul class="project-points">
-          <li>統籌品牌大中華區數碼化產品矩陣的規劃與交付，覆蓋官網電商、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、小程式商城、授權驗真 6 個核心系統。</li>
+          <li>統籌品牌大中華區數碼化產品矩陣的規劃與交付，覆蓋中國官網、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、授權驗真 5 個核心系統。</li>
           <li>建立 AI 輔助研發工作流與設計規範，將平均交付週期壓縮 50% 以上，保障多專案並行交付。</li>
-          <li>作為技術側負責人承接產品、營銷團隊需求並拆解排期，主導需求評審與迭代節奏，支撐品牌網上零售渠道（官網電商 + 小程式商城）從 0 上線。</li>
+          <li>作為技術側負責人承接產品、營銷團隊需求並拆解排期，主導需求評審與迭代節奏，支撐品牌網上零售渠道（中國官網）從 0 上線。</li>
+          <li>主導 ICP 備案、私隱政策及用戶協議制定，完成數據合規審查，保障多系統合規上線；依據流量動態調整伺服器資源配置，實現成本優化。</li>
         </ul>
       </div>
       <div class="entry">
@@ -152,25 +153,71 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">旎柏（NIHPLOD）中國官方數碼化平台（平台群）</h3>
-          <span class="entry-date">2025.11 – 至今</span>
+          <h3 class="project-name">NIHPLOD 中國官網</h3>
+          <span class="entry-date">2025.11 – 至今（迭代）</span>
         </div>
         <div class="project-meta">
-          成果展示：<a
+          獨立完成（產品設計 · UI/UX · 全棧開發） · 成果展示：<a
             href="https://www.nihplod.cn"
             target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
-          >、<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >advisor.nihplod.cn</a
-          >、<a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >ba.nihplod.cn</a
-          > 等
+          >
         </div>
-        <p class="project-abstract">
-          作為技術負責人，統籌品牌大中華區數碼化產品矩陣從 0 到 1 的架構設計與合規上線，在 10 個月內獨立完成 6 個核心系統（官網電商、統一認證 SSO、AI 護膚顧問、微信 AI 客服、小程式商城、授權驗真，詳見下方各條目）的全流程交付，配套 1400+ 自動化測試用例；並以統一帳戶與檔案數據打通「測膚 → 個人化方案 → 7×24 AI 顧問跟進 → 回購」業務閉環。
-        </p>
         <ul class="project-points">
           <li>
-            <strong>合規與營運治理：</strong>主導 ICP 備案、私隱政策及用戶協議制定，完成數據合規審查，保障多系統合規上線；依據流量動態調整伺服器資源配置，實現成本優化。
+            <strong>電商閉環：</strong>基於 Next.js 16 + Prisma + PostgreSQL 構建品牌官網與電商主站，打通微信支付 / 支付寶雙渠道支付與退款（非同步通知冪等處理）、順豐物流、會員積分與優惠券體系；聚合微信、抖音、手機號驗證碼多端身份至統一帳戶體系（接入統一認證 SSO）；全站 121 個 API 路由、36 個數據模型、824 個測試用例。
+          </li>
+          <li>
+            <strong>產品與互動設計：</strong>從資訊架構、Figma 互動原型到視覺樣式全程獨立設計，基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與購物車聯動，全端回應式適配。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD 統一認證平台（SSO / OIDC）</h3>
+          <span class="entry-date">2026.06 – 至今（迭代）</span>
+        </div>
+        <div class="project-meta">
+          獨立完成（產品設計 · 全棧開發）
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同構部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP 與 TOTP 二因素。
+          </li>
+          <li>
+            <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全局登出，支撐平台群 5 個系統統一登入。
+          </li>
+          <li>
+            <strong>安全加固：</strong>支援密鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共享，保障認證體系可維護、可審計。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">AI 護膚顧問系統</h3>
+          <span class="entry-date">2026.01 – 至今</span>
+        </div>
+        <div class="project-meta">
+          負責產品設計 · UX 互動 · 全棧開發（UI 視覺由協作設計師完成） · 成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+            >advisor.nihplod.cn</a
+          >
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>AI 測膚與個人化推薦：</strong>接入 qwen-vl / deepseek-vl 視覺大模型實現「問卷 + 掃臉」雙通道皮膚分析；自研規則引擎按 8 種膚質畫像打分匹配產品，支援後台可視化配置（營運零程式碼調整）。
+          </li>
+          <li>
+            <strong>轉化與歸因：</strong>主導模型整合與核心介面開發，多渠道電商外鏈歸因，驅動用戶諮詢轉化率提升 30%。
+          </li>
+          <li>
+            <strong>增長與傳播設計：</strong>設計訪客模式（裝置指紋 + 限時檔案）讓用戶免註冊完成測膚，配合分享海報生成與渠道裂變歸因支撐社交傳播；輸出去識別化統計數據反哺品牌白皮書與市場洞察，將工具沉澱為品牌數據資產。
+          </li>
+          <li>
+            <strong>AI 成本工程：</strong>為 AI 調用設計熔斷器與日/月 Token 預算熔斷、調用計費持久化與模型白名單回退，修復 5xx 重試導致的重複扣費風險；用戶報告數據 90 天滾動續期並冷熱分層歸檔（冷層去識別化摘要）。
+          </li>
+          <li>
+            <strong>數據資產閉環：</strong>設計伺服器端間鑑權介面，測膚報告與護膚檔案隨會話一鍵透傳至微信 AI 客服（session_id 透傳），將一次性測膚沉澱為可持續營運、可驅動回購的用戶數據資產。
           </li>
         </ul>
       </div>
@@ -179,6 +226,9 @@ const ld = {
         <div class="entry-header">
           <h3 class="project-name">微信 AI 智能客服</h3>
           <span class="entry-date">2026.08</span>
+        </div>
+        <div class="project-meta">
+          獨立完成（產品設計 · 全棧開發，基於微信客服原生聊天窗）
         </div>
         <ul class="project-points">
           <li>
@@ -198,103 +248,44 @@ const ld = {
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 全棧電商系統（微信小程式 + H5 + 管理後台）</h3>
-          <span class="entry-date">2026.05 – 至今</span>
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>全棧商城閉環：</strong>基於 uni-app + Vue 3 + Express 5 + Prisma + PostgreSQL 構建（小程式 / H5 雙端 + 獨立管理後台），打通微信支付 V3、退款責任鏈、順豐物流與短訊通知全鏈路；配套優惠券、積分等營銷玩法。
-          </li>
-          <li>
-            <strong>肌膚檔案數據打通：</strong>小程式內嵌測膚入口（web-view）引導用戶完成 AI 測膚，測膚檔案以手機號關聯自動同步回小程式，提供測膚趨勢、歷史報告與每日護膚打卡，將測膚流量沉澱為「測膚 → 跟進 → 回購」的私域長期營運陣地。
-          </li>
-          <li>
-            <strong>工程與安全：</strong>實現 RBAC 權限分級、審計日誌與多級限流，自研內存緩存含請求去重防擊穿；26 個數據模型、191 個自動化測試用例（含並發下單專項測試），Docker 多階段構建部署。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
           <h3 class="project-name">NIHPLOD 授權驗真平台</h3>
           <span class="entry-date">2026.04 – 2026.05</span>
         </div>
         <div class="project-meta">
-          成果展示：<a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
+          獨立完成（產品設計 · UI/UX · 全棧開發） · 成果展示：<a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >ba.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>授權審計與防偽證書：</strong>基於 Next.js + Prisma + PostgreSQL 構建經銷商授權管理系統，實現「申請 — 審計員初審 — 負責人終審簽發」多級審計流；Canvas 自動合成含電子公章與動態 QR Code 的防偽授權證書（支援 PNG/PDF 下載）。
+            <strong>授權審計與防偽證書：</strong>基於 Next.js 16 + PostgreSQL 構建經銷商授權管理系統，實現「審計員提報 → 負責人終審簽發」兩級審計與證書狀態機（簽發 / 打回 / 到期 / 吊銷）；瀏覽器端 Canvas + jsPDF 實時合成含電子公章與動態 QR Code 的防偽授權證書（支援 PNG / PDF 下載）。
           </li>
           <li>
-            <strong>公眾查驗與安全體系：</strong>面向公眾提供「精確 → 前綴 → 模糊」三級回退真偽查驗（pg_trgm 索引加速）與打假舉報工單系統；配套 JWT 黑名單、數據庫持久化限流與全鏈路操作審計。
+            <strong>公眾查驗與安全體系：</strong>面向公眾提供「精確 → 前綴 → 模糊」三級回退真偽查驗（pg_trgm GIN 索引加速，支援鏡頭掃碼查驗）與帶完整狀態流轉的打假舉報工單系統；配套 JWT 黑名單與改密即時失效、數據庫持久化限流，以及覆蓋證書全生命週期與工單處理的操作審計。
           </li>
         </ul>
       </div>
 
       <div class="project-entry">
         <div class="entry-header">
-          <h3 class="project-name">AI 護膚顧問系統</h3>
-          <span class="entry-date">2026.01 – 至今</span>
+          <h3 class="project-name">Myskin.Today（AI 肌膚分析平台官網）</h3>
+          <span class="entry-date">2026.01 – 2026.02</span>
         </div>
         <div class="project-meta">
-          成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >advisor.nihplod.cn</a
+          獨立完成（產品設計 · UI/UX · 全棧開發 · AIGC 視覺素材） · 成果展示：<a
+            href="https://myskin.today"
+            target="_blank" rel="noopener noreferrer">myskin.today</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>AI 測膚與個人化推薦：</strong>接入 qwen-vl / deepseek-vl 視覺大模型實現「問卷 + 掃臉」雙通道皮膚分析，自研規則引擎按 8 種膚質畫像打分匹配產品並支援後台可視化配置（營運零程式碼調整），多渠道電商外鏈歸因；主導模型整合與核心介面開發，驅動用戶諮詢轉化率提升 30%。
+            <strong>官網與商業化落地：</strong>基於 Next.js 16 + Tailwind CSS v4 構建 AI 肌膚分析平台官方網站，覆蓋產品能力展示、API 接入 / 白標訂製 / 戰略合作三類 B 端商業模式落地頁與 API 文件站；合作意向表單經 API 路由（IP 限流、輸入消毒、超時重試）實時推送企業微信機械人。
           </li>
           <li>
-            <strong>增長與傳播設計：</strong>設計訪客模式（裝置指紋 + 限時檔案）讓用戶免註冊完成測膚，配合分享海報生成與渠道裂變歸因支撐社交傳播；輸出去識別化統計數據反哺品牌白皮書與市場洞察，將工具沉澱為品牌數據資產。
+            <strong>設計系統與視覺資產：</strong>自建品牌設計系統（色彩 / 字體 / 間距變數、Bento 網格、深淺雙主題），並以 AIGC 產出全站插畫素材與宣傳場景影片；基於 Framer Motion 實現捲動感知導覽與數字捲動等互動動效，全端回應式。
           </li>
           <li>
-            <strong>AI 成本工程：</strong>為 AI 調用設計熔斷器與日/月 Token 預算熔斷、調用計費持久化與模型白名單回退，修復 5xx 重試導致的重複扣費風險；用戶報告數據 90 天滾動續期並冷熱分層歸檔（冷層去識別化摘要）。
-          </li>
-          <li>
-            <strong>數據資產閉環：</strong>設計伺服器端間鑑權介面，測膚報告與護膚檔案隨會話一鍵透傳至微信 AI 顧問（session_id 透傳），將一次性測膚沉澱為可持續營運、可驅動回購的用戶數據資產。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 統一認證平台（SSO / OIDC）</h3>
-          <span class="entry-date">2025.11 – 至今（迭代）</span>
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同構部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP 與 TOTP 二因素。
-          </li>
-          <li>
-            <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全局登出，支撐平台群 6 個系統統一登入。
-          </li>
-          <li>
-            <strong>安全加固：</strong>支援密鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共享，保障認證體系可維護、可審計。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 官網電商平台</h3>
-          <span class="entry-date">2025.11 – 至今（迭代）</span>
-        </div>
-        <div class="project-meta">
-          成果展示：<a
-            href="https://www.nihplod.cn"
-            target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>電商閉環：</strong>基於 Next.js 16 + Prisma + PostgreSQL 構建品牌電商主站，打通微信支付 / 支付寶雙渠道支付與退款（非同步通知冪等處理）、順豐物流、會員積分與優惠券體系；聚合微信、抖音、手機號驗證碼多端身份至統一帳戶體系（接入統一認證 SSO）；全站 121 個 API 路由、36 個數據模型、824 個測試用例。
-          </li>
-          <li>
-            <strong>互動體驗：</strong>基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與購物車聯動，全端回應式適配。
+            <strong>SEO 與工程品質：</strong>全站獨立 metadata / OpenGraph / JSON-LD 結構化數據 / sitemap / PWA 體系；next/image 全站圖片優化與域名白名單，配套圖片與影片內容防盜保護。
           </li>
         </ul>
       </div>
@@ -307,7 +298,7 @@ const ld = {
           <span class="entry-date">2025.07 – 2025.09</span>
         </div>
         <div class="project-meta">
-          獨立完成（全棧） · 成果展示：<a
+          獨立完成（產品設計 · UI/UX · 全棧開發） · 成果展示：<a
             href="https://www.lingangjh.com"
             target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
           >
