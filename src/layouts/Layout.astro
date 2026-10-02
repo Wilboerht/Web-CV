@@ -57,33 +57,6 @@ const skipLabels: Record<string, string> = {
   ko: "본문으로 건너뛰기",
 };
 
-const updatedLabels: Record<string, string> = {
-  "zh-CN": "最后更新：",
-  "zh-TW": "最後更新：",
-  "zh-HK": "最後更新：",
-  en: "Last updated: ",
-  de: "Zuletzt aktualisiert: ",
-  ko: "최종 업데이트: ",
-};
-
-const intlLocales: Record<string, string> = {
-  "zh-CN": "zh-CN",
-  "zh-TW": "zh-TW",
-  "zh-HK": "zh-HK",
-  en: "en-US",
-  de: "de-DE",
-  ko: "ko-KR",
-};
-
-const now = new Date();
-const updatedDate = new Intl.DateTimeFormat(intlLocales[lang] || "en-US", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-  timeZone: "UTC",
-}).format(now);
-const updatedISO = now.toISOString().slice(0, 10);
-
 const pathname = Astro.url.pathname.endsWith("/")
   ? Astro.url.pathname
   : `${Astro.url.pathname}/`;
@@ -169,26 +142,6 @@ const canonical = `${SITE_URL}${pathname}`;
 
     <main id="main-content">
       <slot />
-      <footer class="last-updated">
-        <time datetime={updatedISO}>
-          {updatedLabels[lang] || updatedLabels.en}{updatedDate}
-        </time>
-      </footer>
     </main>
-
-    <style>
-      .last-updated {
-        text-align: center;
-        font-size: 0.75rem;
-        color: #666666;
-        margin: 32px 0 24px;
-      }
-
-      @media print {
-        .last-updated {
-          display: none;
-        }
-      }
-    </style>
   </body>
 </html>
