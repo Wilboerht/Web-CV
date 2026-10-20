@@ -18,7 +18,7 @@ const ld = {
     "alternateName": "Hongkun Wang",
     "givenName": "泓坤",
     "familyName": "王",
-    "description": "数字开发经理、全栈工程师（TypeScript / React / Next.js / AI / RAG），常驻上海。作为品牌大中华区首位工程师，从 0 到 1 搭建品牌电商、统一认证（SSO）、AI 顾问与智能客服等数字系统。",
+    "description": "数字开发经理、全栈工程师（TypeScript / React / Next.js / AI / RAG），常驻上海。作为品牌大中华区首位工程师，从 0 到 1 搭建品牌官网、会员体系与积分、统一认证（SSO）、AI 顾问与智能客服等数字系统。",
     "email": "me@wilboerht.cn",
     "url": "https://www.wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
@@ -125,10 +125,11 @@ const ld = {
           <span class="entry-date">2025.10 – 至今</span>
         </div>
         <p class="entry-role-detail">
-          2025.10 以实习生身份加入并于毕业前全职在岗，2026.07 转正，直接汇报品牌负责人；作为事业部首位技术人员，从 0 到 1 冷启动品牌大中华区全部信息系统与数字化基础设施，10 个月内独立完成 5 个核心系统交付，配套 1400+ 自动化测试用例，并以统一账号与档案数据打通「测肤 → 个性化方案 → 7×24 AI 顾问跟进 → 复购」业务闭环。
+          2025.10 以实习生身份加入并于毕业前全职在岗，2026.07 转正，直接汇报品牌负责人；作为事业部首位技术人员，从 0 到 1 冷启动品牌大中华区全部信息系统与数字化基础设施，12 个月内独立完成 7 个核心系统交付，核心系统配套 2100+ 自动化测试用例，并以统一账号与档案数据打通「测肤 → 个性化方案 → 7×24 AI 顾问跟进 → 复购」业务闭环。
         </p>
         <ul class="project-points">
-          <li>统筹品牌大中华区数字化产品矩阵的规划与交付，覆盖中国官网、统一认证（SSO）、AI 护肤顾问、微信 AI 客服、授权验真 5 个核心系统。</li>
+          <li>统筹品牌大中华区数字化产品矩阵的规划与交付，覆盖中国官网、统一认证（SSO）、AI 护肤顾问、微信 AI 客服、授权验真及测肤 / 会员中心双小程序 7 个核心系统。</li>
+          <li>参与品牌大中华区会员体系制定，联合品牌与运营团队设计四档会员等级、权益、积分与兑礼规则，并落地官网 / 小程序会员中心，支撑会员留存与复购。</li>
           <li>建立 AI 辅助研发工作流与设计规范，将平均交付周期压缩 50% 以上，保障多项目并行交付。</li>
           <li>作为技术侧负责人承接产品、营销团队需求并拆解排期，主导需求评审与迭代节奏，支撑品牌线上零售渠道（中国官网）从 0 上线。</li>
           <li>主导 ICP 备案、隐私政策及用户协议制定，完成数据合规审查，保障多系统合规上线；依据流量动态调整服务器资源配置，实现成本优化。</li>
@@ -164,10 +165,13 @@ const ld = {
         </div>
         <ul class="project-points">
           <li>
-            <strong>电商闭环：</strong>基于 Next.js 16 + Prisma + PostgreSQL 构建品牌官网与电商主站，打通微信支付 / 支付宝双渠道支付与退款（异步通知幂等处理）、顺丰物流、会员积分与优惠券体系；聚合微信、抖音、手机号验证码多端身份至统一账号体系（接入统一认证 SSO）；全站 121 个 API 路由、36 个数据模型、824 个测试用例。
+            <strong>品牌官网与会员中台：</strong>基于 Next.js 16 + Prisma + PostgreSQL 构建品牌官网、产品陈列与第三方电商导购（天猫 / 抖音 / 小红书外链 + GA 事件追踪），并落地会员等级、积分账本、积分兑礼（顺丰物流轨迹）、消费补录、测肤档案与安全中心；聚合微信、抖音、手机号验证码多端身份至统一账号体系；全站 169 个 API 路由、43 个数据模型、1725 个自动化测试用例。
           </li>
           <li>
-            <strong>产品与交互设计：</strong>从信息架构、Figma 交互原型到视觉样式全程独立设计，基于 Framer Motion + View Transitions 实现多步骤护肤仪式指南与沉浸式品牌叙事，集成产品抽屉与购物车联动，全端响应式适配。
+            <strong>产品与交互设计：</strong>从信息架构、Figma 交互原型到视觉样式全程独立设计，基于 Framer Motion + View Transitions 实现多步骤护肤仪式指南与沉浸式品牌叙事，集成产品抽屉与详情页联动，全端响应式适配。
+          </li>
+          <li>
+            <strong>运营后台与安全治理：</strong>搭建覆盖产品 / 分类 / 会员 / 积分兑礼 / 消费补录 / 职位 / 消息 / OAuth 客户端的运营后台（Tiptap 富文本），配套 TOTP 二因素与敏感操作 Step-up 验证、操作审计与每日完整性锚点、定时任务、数据库持久化限流及 Webhook 失败重投；完成 SEO / GEO（sitemap / JSON-LD / llms.txt / 百度推送）。
           </li>
         </ul>
       </div>
@@ -185,7 +189,7 @@ const ld = {
             <strong>协议实现：</strong>自建 OAuth 2.0 / OIDC 单点登录，与官网主站同构部署，主站作为 Authorization Server 签发 JWT（RS256），完整实现 authorize / token / userinfo / introspect / revoke / end-session 协议端点，支持 PKCE、DPoP 与 TOTP 二因素。
           </li>
           <li>
-            <strong>SDK 与接入：</strong>封装并发布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子项目分钟级接入，通过 Token Introspection + Backchannel Logout 实现跨域免登与全局登出，支撑平台群 5 个系统统一登录。
+            <strong>SDK 与接入：</strong>封装并发布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子项目分钟级接入，通过 Token Introspection + Backchannel Logout 实现跨域免登与全局登出，支撑官网、测肤站、微信双小程序及管理端统一登录。
           </li>
           <li>
             <strong>安全加固：</strong>支持密钥轮换、Token 撤销（RFC 7009）与多实例黑名单共享，保障认证体系可运维、可审计。
@@ -199,25 +203,25 @@ const ld = {
           <span class="entry-date">2026.01 – 至今</span>
         </div>
         <div class="project-meta">
-          负责产品设计 · UX 交互 · 全栈开发（UI 视觉由协作设计师完成） · 成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+          负责产品设计 · UX 交互 · 全栈开发（UI 视觉由协作设计师完成） · 85 个 API 路由 / 426 个自动化测试 · 成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >advisor.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>AI 测肤与个性化推荐：</strong>接入 qwen-vl / deepseek-vl 视觉大模型实现「问卷 + 扫脸」双通道皮肤分析；自研规则引擎按 8 种肤质画像打分匹配产品，支持后台可视化配置（运营零代码调整）。
+            <strong>AI 测肤与个性化推荐：</strong>接入通义千问 VL / DeepSeek 大模型实现「问卷 + 扫脸」双通道皮肤分析；自研规则引擎按 8 种肤质画像与季节 / 地域环境因子打分匹配产品，支持后台可视化配置（运营零代码调整）。
           </li>
           <li>
-            <strong>转化与归因：</strong>主导模型集成与核心接口开发，多渠道电商外链归因，驱动用户咨询转化率提升 30%。
+            <strong>转化与归因：</strong>主导模型集成与核心接口开发；电商外链（天猫 / 抖音 / 小红书）支持 UTM / pid 追踪与点击事件埋点，结合企微顾问短链形成可归因的咨询转化链路。
           </li>
           <li>
-            <strong>增长与传播设计：</strong>设计游客模式（设备指纹 + 限时档案）让用户免注册完成测肤，配合分享海报生成与渠道裂变归因支撑社交传播；输出脱敏统计数据反哺品牌白皮书与市场洞察，将工具沉淀为品牌数据资产。
+            <strong>增长与会员运营：</strong>打通四档会员测肤配额（普通 10 次、银卡按消费解锁、金卡 / 钻石不限量），以登录账号承接报告与档案；设计分享海报、渠道 ref 归因与注册转化弹窗，并输出脱敏群体统计 CSV 反哺品牌白皮书与市场洞察。
           </li>
           <li>
-            <strong>AI 成本工程：</strong>为 AI 调用设计熔断器与日/月 Token 预算熔断、调用计费持久化与模型白名单回退，修复 5xx 重试导致的重复扣费风险；用户报告数据 90 天滚动续期并冷热分层归档（冷层脱敏摘要）。
+            <strong>AI 成本与稳定性工程：</strong>设计 AI 请求队列与并发控制、熔断器、日/月 Token 与费用预算熔断、调用计费持久化、模型白名单与 Provider 回退；以失败重试幂等与额度预占 / 释放规避重复扣费；报告采用 90 天滚动有效期 + 冷热分层归档（冷层脱敏摘要）。
           </li>
           <li>
-            <strong>数据资产闭环：</strong>设计服务端间鉴权接口，测肤报告与护肤档案随会话一键透传至微信 AI 客服（session_id 透传），将一次性测肤沉淀为可持续运营、可驱动复购的用户数据资产。
+            <strong>数据资产闭环：</strong>设计 HMAC 签名 + IP 限流的服务端间接口，测肤报告与护肤档案随 session_id 一键透传至企微 AI 客服，将一次性测肤沉淀为可持续运营、可驱动复购的用户数据资产。
           </li>
         </ul>
       </div>
@@ -262,6 +266,48 @@ const ld = {
           </li>
           <li>
             <strong>公众查验与安全体系：</strong>面向公众提供「精确 → 前缀 → 模糊」三级回退真伪查验（pg_trgm GIN 索引加速，支持摄像头扫码）与带完整状态流转的打假举报工单系统；配套 JWT 黑名单与改密即时失效、数据库持久化限流，以及覆盖证书全生命周期与工单处理的操作审计。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">肌智派 AI 测肤小程序</h3>
+          <span class="entry-date">2026.10 – 至今</span>
+        </div>
+        <div class="project-meta">
+          独立完成（产品设计 · UI/UX · 小程序开发） · 复用 H5 测肤平台账号与 AI 能力
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>移动端测肤闭环：</strong>将「问卷 + 扫脸」测肤流程迁移至微信小程序（14 个页面），基于微信 VisionKit 106 关键点实现正脸 / 右转 / 左转 / 抬头四步姿态引导与自动拍摄（连续 5 帧稳定判定、多脸阻断、超时手动降级）；问卷支持 dependsOn 条件题与测肤次数限额拦截。
+          </li>
+          <li>
+            <strong>异步分析与报告渲染：</strong>人脸图片压缩后以 base64 提交，异步任务按 3s × 60 轮询状态；失败重试以「答案 + 照片」指纹复用 sessionId 与服务端预占，避免重复扣减测肤次数与重复 AI 调用。基于 Canvas 2D 按 DPR 绘制十维雷达图与肌肤趋势曲线，端侧合成含动态评分与二维码的证书海报，支持历史回看、档案打卡及报告完成 / 复测订阅消息。
+          </li>
+          <li>
+            <strong>账号与工程治理：</strong>同时对接官网 OAuth public client 与测肤子站双后端，统一请求层实现 Bearer 注入、过期前主动刷新、401 单飞刷新重放、账号禁用强制登出与错误分级；完成微信隐私授权版本化审计、账号注销冷静期接入、登出敏感缓存清理，并与会员中心小程序双向跳转。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD 会员中心小程序</h3>
+          <span class="entry-date">2026.10 – 至今</span>
+        </div>
+        <div class="project-meta">
+          独立完成（产品设计 · 小程序开发） · 原生 TypeScript / 直连官网 OAuth
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>会员中心与积分体系落地：</strong>以原生 TypeScript 构建 19 页会员中心小程序（会员 / 兑礼 / 我的 3 Tab），覆盖微信一键登录与手机号绑定、会员等级权益与升级进度、积分余额与近一年流水（含流水号）、礼品兑换（requestId 幂等）、地址簿、兑换记录与顺丰物流轨迹、消费补录、资料编辑、安全中心（设备 / 授权 / 登录历史）及账号注销。
+          </li>
+          <li>
+            <strong>无自建后端的轻量架构：</strong>小程序直连官网 OAuth 2.0 端点与业务 API，复用统一账号与会员数据；自研 TypeScript 请求层实现 access / refresh 双 Token、单飞刷新与 401 重放、刷新失败分级（invalid / transient）、登录来源回跳、账号禁用强制下线与会话竞态修复，并以 tsc --noEmit 严格类型检查保障 19 页接口契约一致。
+          </li>
+          <li>
+            <strong>跨端业务闭环：</strong>与测肤小程序共享 UnionID / OAuth 账号及会员积分权益，双向跳转串联「测肤 → 会员权益 → 积分兑礼 → 复购」；首页聚合积分、会员卡、测肤次数与临期积分提醒，并接入发货 / 消费补录审核订阅消息。
           </li>
         </ul>
       </div>
@@ -319,7 +365,7 @@ const ld = {
       <h2>技术栈</h2>
       <div class="skills-row">
         <span class="skills-label">前端开发：</span>
-        <span class="skills-content">TypeScript / React / Next.js / Vue 3 / uni-app / Tailwind CSS / 响应式与移动端适配</span>
+        <span class="skills-content">TypeScript / React / Next.js / Vue 3 / uni-app / 微信小程序（原生 / TypeScript）/ Tailwind CSS / Canvas 2D / 响应式与移动端适配</span>
       </div>
       <div class="skills-row">
         <span class="skills-label">后端 &amp; 数据库：</span>
