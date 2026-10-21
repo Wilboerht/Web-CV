@@ -178,12 +178,12 @@ a:hover {
         font-size: 0.875rem;
         font-weight: 600;
         color: var(--link-color);
-        background: #eef4fa;
+        background: transparent;
     }
 
     .cv-toolbar-save:hover {
         color: #123e6b;
-        background: #e3edf7;
+        background: transparent;
     }
 }
 
