@@ -18,7 +18,7 @@ const ld = {
     "alternateName": "王泓坤",
     "givenName": "Hongkun",
     "familyName": "Wang",
-    "description": "Digital Development Manager and full-stack engineer (TypeScript / React / Next.js / AI / RAG) based in Shanghai. First engineer of a brand's Greater China division — built its e-commerce, SSO, AI advisor and customer service systems from 0 to 1.",
+    "description": "Digital Development Manager and full-stack engineer (TypeScript / React / Next.js / AI / RAG) based in Shanghai. First engineer of a brand's Greater China division — built its brand website, membership & points system, unified authentication, AI advisor, customer service, and mini-programs from 0 to 1.",
     "email": "me@wilboerht.cn",
     "url": "https://www.wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
@@ -111,6 +111,7 @@ const ld = {
   <div class="container">
     <header>
       <h1>Hongkun Wang</h1>
+      <p class="tagline">Digital Development Manager · Full-Stack Engineer · Shanghai</p>
       <div class="contact-info">
         <span class="contact-item"><a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a></span>
         <span class="contact-item"><a href="tel:+8618721400154">+86 187 2140 0154</a></span>
@@ -122,26 +123,31 @@ const ld = {
     <section>
       <h2>Experience</h2>
       <div class="entry">
-        <div class="entry-header">
-          <h3 class="entry-org"
-            >Moidas | NIHPLOD Greater China Division — Digital Development Manager</h3>
-          <span class="entry-date">Oct 2025 – Present</span>
+        <div class="entry-header entry-header--stacked">
+          <h3 class="entry-org">Moidas · NIHPLOD Greater China Division</h3>
+          <div class="entry-meta">
+            <span class="entry-role">Digital Development Manager</span>
+            <span class="entry-date">Oct 2025 – Present</span>
+          </div>
         </div>
-        <p class="entry-role-detail">
-          Joined as an intern in Oct 2025 and worked full-time before graduation; converted to full-time in Jul 2026, reporting directly to the brand lead. As the division's first engineer, cold-started the brand's entire Greater China information systems and digital infrastructure from 0 to 1 — independently delivering 5 core systems within 10 months, backed by 1,400+ automated test cases, and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
+        <p class="entry-summary">
+          Joined as an intern in Oct 2025 and worked full-time before graduation; converted to full-time in Jul 2026, reporting directly to the brand lead. As the division's first engineer, cold-started the brand's entire Greater China information systems and digital infrastructure from 0 to 1 — independently delivering 7 core systems within 12 months, backed by 2,100+ automated test cases, and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
         </p>
         <ul class="project-points">
-          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 5 core systems: official China website, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, and authorization &amp; verification platform.</li>
+          <li>Owned planning and delivery of the brand's Greater China digital product portfolio — 7 core systems: official China website, unified authentication (SSO), AI skincare advisor, WeChat AI customer service, authorization &amp; verification platform, and the skin-analysis / member-center mini-programs.</li>
+          <li>Contributed to defining the Greater China membership system with brand and operations teams — four membership tiers, benefits, points and redemption rules — and delivered it across the official website and mini-program member center to support retention and repurchase.</li>
           <li>Established AI-assisted development workflows and design standards, reducing average delivery cycles by over 50% while ensuring parallel multi-project delivery.</li>
           <li>As technical lead, took in requirements from product and marketing teams and broke them down into schedules, owning requirement reviews and iteration cadence, supporting the brand's online retail channel (official China website) from 0 to launch.</li>
           <li>Led ICP filing, privacy policy and user agreement drafting, and data compliance review to ensure compliant launches across systems; dynamically adjusted server resources based on traffic to optimize costs.</li>
         </ul>
       </div>
       <div class="entry">
-        <div class="entry-header">
-          <h3 class="entry-org"
-            >Shanghai Lingang Jinghong Security Technology Development Co., Ltd. — R&amp;D Intern</h3>
-          <span class="entry-date">Jul 2025 – Sep 2025</span>
+        <div class="entry-header entry-header--stacked">
+          <h3 class="entry-org">Shanghai Lingang Jinghong Security Technology Development Co., Ltd.</h3>
+          <div class="entry-meta">
+            <span class="entry-role">R&amp;D Intern</span>
+            <span class="entry-date">Jul 2025 – Sep 2025</span>
+          </div>
         </div>
         <ul class="project-points">
           <li>Independently delivered the company website end-to-end, from architecture and UI/UX design to production deployment.</li>
@@ -167,10 +173,13 @@ const ld = {
         </div>
         <ul class="project-points">
           <li>
-            <strong>E-Commerce Loop:</strong> Built the brand's official website and e-commerce main site with Next.js 16 + Prisma + PostgreSQL, covering dual-channel payments (WeChat Pay / Alipay) and refunds (idempotent async notifications), SF Express logistics, and membership points &amp; coupon systems; aggregated multi-channel identities (WeChat, Douyin, phone OTP) into a unified account system (backed by the unified authentication SSO) — 121 API routes, 36 data models, and 824 test cases across the site.
+            <strong>Brand Website &amp; Member Platform:</strong> Built the brand's official website and member platform with Next.js 16 + Prisma + PostgreSQL — product showcases, third-party e-commerce referral (Tmall / Douyin / Xiaohongshu links + GA event tracking), membership tiers, points ledger, points redemption (SF Express tracking), consumption backfill, skin profiles, and a security center; aggregated WeChat, Douyin, and phone OTP identities into a unified account system — 169 API routes, 43 data models, and 1,725 automated test cases.
           </li>
           <li>
-            <strong>Product &amp; Interaction Design:</strong> Independently designed everything from information architecture and Figma interactive prototypes to visual styling; implemented multi-step skincare ritual guides and immersive brand storytelling with Framer Motion + View Transitions, with integrated product drawer and cart synchronization, fully responsive across devices.
+            <strong>Product &amp; Interaction Design:</strong> Independently designed the information architecture, Figma interactive prototypes, and visual styling; built multi-step skincare ritual guides and immersive brand storytelling with Framer Motion + View Transitions, integrated the product drawer with detail pages, and delivered fully responsive layouts.
+          </li>
+          <li>
+            <strong>Admin Console &amp; Security Governance:</strong> Built an admin console covering products / categories / members / points redemption / consumption backfill / jobs / messages / OAuth clients (Tiptap rich text), with TOTP two-factor authentication and step-up verification for sensitive actions, operation audit logs and daily integrity anchors, scheduled jobs, database-persisted rate limiting, and webhook failure retries; completed SEO / GEO (sitemap / JSON-LD / llms.txt / Baidu push).
           </li>
         </ul>
       </div>
@@ -188,7 +197,7 @@ const ld = {
             <strong>Protocol Implementation:</strong> Built a self-hosted OAuth 2.0 / OIDC SSO, deployed isomorphically with the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE, DPoP, and TOTP two-factor authentication.
           </li>
           <li>
-            <strong>SDK &amp; Integration:</strong> Packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) for minute-level sub-project integration, enabling cross-domain SSO and global sign-out via Token Introspection + Backchannel Logout, supporting unified login across the platform group's 5 systems.
+            <strong>SDK &amp; Integration:</strong> Packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) for minute-level sub-project integration, enabling cross-domain SSO and global sign-out via Token Introspection + Backchannel Logout, supporting unified login across the official website, skin-analysis site, both WeChat mini-programs, and the admin console.
           </li>
           <li>
             <strong>Security Hardening:</strong> Supports secret rotation, token revocation (RFC 7009), and multi-instance blacklist sharing for an operable and auditable auth system.
@@ -202,25 +211,25 @@ const ld = {
           <span class="entry-date">Jan 2026 – Present</span>
         </div>
         <div class="project-meta">
-          Responsible for product design · UX interaction · full-stack development (UI visuals by a collaborating designer) · Live: <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+          Responsible for product design · UX interaction · full-stack development (UI visuals by a collaborating designer) · 85 API routes / 426 automated tests · Live: <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >advisor.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated qwen-vl / deepseek-vl vision LLMs for dual-channel (questionnaire + facial scan) skin analysis; a custom rule engine scores and matches products against 8 skin-type personas, configurable via a visual admin console (zero-code adjustments for operations).
+            <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated Tongyi Qianwen VL / DeepSeek LLMs for dual-channel (questionnaire + facial scan) skin analysis; a custom rule engine scores and matches products against 8 skin-type personas plus seasonal / regional environmental factors, configurable through a visual admin console (zero-code adjustments for operations).
           </li>
           <li>
-            <strong>Conversion &amp; Attribution:</strong> Led model integration and core API development with multi-channel e-commerce outbound-link attribution, lifting user consultation conversion by 30%.
+            <strong>Conversion &amp; Attribution:</strong> Led model integration and core API development; e-commerce outbound links (Tmall / Douyin / Xiaohongshu) support UTM / pid tracking and click-event instrumentation, forming an attributable consultation-to-conversion path together with WeCom advisor short links.
           </li>
           <li>
-            <strong>Growth &amp; Virality Design:</strong> Designed a guest mode (device fingerprint + time-limited profiles) letting users complete skin analysis without registration, plus shareable poster generation and channel-fission attribution to drive social spreading; exported desensitized statistics to feed the brand's whitepaper and market insights, turning the tool into a brand data asset.
+            <strong>Growth &amp; Membership Operations:</strong> Connected four-tier member skin-analysis quotas (Standard 10 sessions; Silver unlocked by spend; Gold / Diamond unlimited), with reports and profiles tied to the logged-in account; designed share posters, channel ref attribution, and registration-conversion popups, and exported desensitized aggregate CSV statistics to feed the brand whitepaper and market insights.
           </li>
           <li>
-            <strong>AI Cost Engineering:</strong> Designed circuit breakers with daily/monthly token budget cutoffs, persisted per-call billing, and a model whitelist with fallback for AI invocations — fixing a duplicate-billing risk caused by 5xx retries; user reports follow 90-day rolling retention with hot/cold tiered archiving (desensitized summaries in the cold tier).
+            <strong>AI Cost &amp; Reliability Engineering:</strong> Designed an AI request queue with concurrency control, circuit breakers, daily / monthly token and cost budget cutoffs, persisted per-call billing, and a model whitelist with provider fallback; used idempotent retries and quota reservation / release to prevent duplicate charges; reports use 90-day rolling validity with hot / cold tiered archiving (desensitized summaries in the cold tier).
           </li>
           <li>
-            <strong>Data Asset Loop:</strong> Designed a server-to-server authenticated API that hands off skin-analysis reports and skincare profiles with the session to WeChat AI customer service (session_id passthrough), turning one-off skin tests into continuously operable, repurchase-driving user data assets.
+            <strong>Data Asset Loop:</strong> Designed a server-to-server API with HMAC signatures + IP rate limiting; skin-analysis reports and skincare profiles pass through to WeCom AI customer service via session_id, turning one-off skin tests into continuously operable, repurchase-driving user data assets.
           </li>
         </ul>
       </div>
@@ -265,6 +274,48 @@ const ld = {
           </li>
           <li>
             <strong>Public Verification &amp; Security System:</strong> Public authenticity verification with three-tier fallback matching (exact → prefix → fuzzy, accelerated by pg_trgm GIN indexes, with camera QR scanning) and a counterfeit-report ticketing system with full status transitions; JWT blacklisting with immediate invalidation on password change, database-persisted rate limiting, and operation audit covering the full certificate lifecycle and ticket handling.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">Jizhipai AI Skin Analysis Mini-Program</h3>
+          <span class="entry-date">Oct 2026 – Present</span>
+        </div>
+        <div class="project-meta">
+          Independently delivered (product design · UI/UX · mini-program development) · Reuses the H5 skin-analysis platform account and AI capabilities
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Mobile Skin-Analysis Loop:</strong> Migrated the questionnaire + facial-scan flow to a WeChat mini-program (14 pages); used WeChat VisionKit with 106 keypoints for four-step pose guidance (front / right / left / chin-up) and auto-capture (five consecutive stable frames, multi-face blocking, timeout manual fallback); the questionnaire supports dependsOn conditional questions and skin-analysis quota interception.
+          </li>
+          <li>
+            <strong>Async Analysis &amp; Report Rendering:</strong> Compressed facial images are submitted as base64, with async tasks polled every 3s for up to 60 rounds; on retry, an answers + photo fingerprint reuses the sessionId and server-side reservation to avoid duplicate quota deduction and AI calls. Canvas 2D renders a 10-dimension radar chart and skin trend curve at device pixel ratio; the client composes a certificate poster with dynamic score and QR code, and supports history review, profile check-ins, and report-completion / retest subscription messages.
+          </li>
+          <li>
+            <strong>Account &amp; Engineering Governance:</strong> Integrates the official website's OAuth public client and the skin-analysis sub-site's dual backends; a unified request layer handles Bearer injection, proactive refresh before expiry, single-flight 401 refresh with replay, forced logout for disabled accounts, and error classification; completed versioned WeChat privacy authorization audit, account-deletion cooling-off, sensitive cache clearing on logout, and bidirectional jumps with the member-center mini-program.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD Member Center Mini-Program</h3>
+          <span class="entry-date">Oct 2026 – Present</span>
+        </div>
+        <div class="project-meta">
+          Independently delivered (product design · mini-program development) · Native TypeScript / direct connection to official OAuth
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>Member Center &amp; Points System:</strong> Built a 19-page member center mini-program in native TypeScript (Member / Rewards / Mine tabs), covering WeChat one-click login and phone binding, member tier benefits and upgrade progress, points balance and past-year transactions (with serial numbers), gift redemption (requestId idempotency), address book, redemption records and SF Express tracking, consumption backfill, profile editing, security center (devices / authorizations / login history), and account deletion.
+          </li>
+          <li>
+            <strong>Lightweight Architecture Without a Custom Backend:</strong> The mini-program connects directly to the official website's OAuth 2.0 endpoints and business APIs, reusing unified accounts and member data; a custom TypeScript request layer implements access / refresh tokens, single-flight refresh and 401 replay, refresh-failure classification (invalid / transient), login-source return, forced logout for disabled accounts, and session-race fixes, with tsc --noEmit strict type checking to keep 19-page API contracts consistent.
+          </li>
+          <li>
+            <strong>Cross-Client Business Loop:</strong> Shares UnionID / OAuth accounts and member points benefits with the skin-analysis mini-program; bidirectional jumps connect "skin analysis → member benefits → points redemption → repurchase"; the home screen aggregates points, membership card, skin-analysis count, and expiring-points reminders, and subscribes to shipping / consumption-backfill review messages.
           </li>
         </ul>
       </div>
@@ -322,7 +373,7 @@ const ld = {
       <h2>Tech Stack</h2>
       <div class="skills-row">
         <span class="skills-label">Frontend:</span>
-        <span class="skills-content">TypeScript / React / Next.js / Vue 3 / uni-app / Tailwind CSS / Responsive &amp; Mobile Adaptation</span>
+        <span class="skills-content">TypeScript / React / Next.js / Vue 3 / uni-app / WeChat Mini Program (native / TypeScript) / Tailwind CSS / Canvas 2D / Responsive &amp; Mobile Adaptation</span>
       </div>
       <div class="skills-row">
         <span class="skills-label">Backend &amp; DB:</span>

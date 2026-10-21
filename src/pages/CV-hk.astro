@@ -18,7 +18,7 @@ const ld = {
     "alternateName": "Hongkun Wang",
     "givenName": "泓坤",
     "familyName": "王",
-    "description": "數碼開發經理、全棧工程師（TypeScript / React / Next.js / AI / RAG），常駐上海。作為品牌大中華區首位工程師，從 0 到 1 構建品牌電商、統一認證（SSO）、AI 顧問與智能客服等數碼系統。",
+    "description": "數碼開發經理、全棧工程師（TypeScript / React / Next.js / AI / RAG），常駐上海。作為品牌大中華區首位工程師，從 0 到 1 構建品牌官網、會員與積分體系、統一認證（SSO）、AI 顧問、智能客服與雙小程式等數碼系統。",
     "email": "me@wilboerht.cn",
     "url": "https://www.wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
@@ -108,6 +108,7 @@ const ld = {
   <div class="container">
     <header>
       <h1>王泓坤</h1>
+      <p class="tagline">數碼開發經理 · 全棧工程師 · 上海</p>
       <div class="contact-info">
         <span class="contact-item"><a href="mailto:me@wilboerht.cn">me@wilboerht.cn</a></span>
         <span class="contact-item"><a href="tel:+8618721400154">+86 187 2140 0154</a></span>
@@ -119,26 +120,31 @@ const ld = {
     <section>
       <h2>工作經歷</h2>
       <div class="entry">
-        <div class="entry-header">
-          <h3 class="entry-org"
-            >穆埃達思 Moidas | 旎柏（大中華區）事業部 —— 數碼開發經理</h3>
-          <span class="entry-date">2025.10 – 至今</span>
+        <div class="entry-header entry-header--stacked">
+          <h3 class="entry-org">穆埃達思 Moidas · 旎柏（大中華區）事業部</h3>
+          <div class="entry-meta">
+            <span class="entry-role">數碼開發經理</span>
+            <span class="entry-date">2025.10 – 至今</span>
+          </div>
         </div>
-        <p class="entry-role-detail">
-          2025.10 以實習生身份加入並於畢業前全職在崗，2026.07 轉正，直接匯報品牌負責人；作為事業部首位技術人員，從 0 到 1 冷啟動品牌大中華區全部資訊系統與數碼化基礎設施，10 個月內獨立完成 5 個核心系統交付，配套 1400+ 自動化測試用例，並以統一帳戶與檔案數據打通「測膚 → 個人化方案 → 7×24 AI 顧問跟進 → 回購」業務閉環。
+        <p class="entry-summary">
+          2025.10 以實習生身份加入並於畢業前全職在崗，2026.07 轉正，直接匯報品牌負責人；作為事業部首位技術人員，從 0 到 1 冷啟動品牌大中華區全部資訊系統與數碼化基礎設施，12 個月內獨立完成 7 個核心系統交付，核心系統配套 2100+ 自動化測試用例，並以統一帳戶與檔案數據打通「測膚 → 個人化方案 → 7×24 AI 顧問跟進 → 回購」業務閉環。
         </p>
         <ul class="project-points">
-          <li>統籌品牌大中華區數碼化產品矩陣的規劃與交付，覆蓋中國官網、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、授權驗真 5 個核心系統。</li>
+          <li>統籌品牌大中華區數碼化產品矩陣的規劃與交付，覆蓋中國官網、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、授權驗真及測膚 / 會員中心雙小程式 7 個核心系統。</li>
+          <li>參與品牌大中華區會員體系制定，聯合品牌與營運團隊設計四檔會員等級、權益、積分與兌禮規則，並落地官網 / 小程式會員中心，支撐會員留存與回購。</li>
           <li>建立 AI 輔助研發工作流與設計規範，將平均交付週期壓縮 50% 以上，保障多專案並行交付。</li>
           <li>作為技術側負責人承接產品、營銷團隊需求並拆解排期，主導需求評審與迭代節奏，支撐品牌網上零售渠道（中國官網）從 0 上線。</li>
           <li>主導 ICP 備案、私隱政策及用戶協議制定，完成數據合規審查，保障多系統合規上線；依據流量動態調整伺服器資源配置，實現成本優化。</li>
         </ul>
       </div>
       <div class="entry">
-        <div class="entry-header">
-          <h3 class="entry-org"
-            >上海臨港景鴻安全防範科技發展有限公司 —— 技術研發實習生</h3>
-          <span class="entry-date">2025.07 – 2025.09</span>
+        <div class="entry-header entry-header--stacked">
+          <h3 class="entry-org">上海臨港景鴻安全防範科技發展有限公司</h3>
+          <div class="entry-meta">
+            <span class="entry-role">技術研發實習生</span>
+            <span class="entry-date">2025.07 – 2025.09</span>
+          </div>
         </div>
         <ul class="project-points">
           <li>獨立承擔企業官網全鏈路交付，覆蓋從架構設計、UI/UX 設計到生產部署全過程。</li>
@@ -164,10 +170,13 @@ const ld = {
         </div>
         <ul class="project-points">
           <li>
-            <strong>電商閉環：</strong>基於 Next.js 16 + Prisma + PostgreSQL 構建品牌官網與電商主站，打通微信支付 / 支付寶雙渠道支付與退款（非同步通知冪等處理）、順豐物流、會員積分與優惠券體系；聚合微信、抖音、手機號驗證碼多端身份至統一帳戶體系（接入統一認證 SSO）；全站 121 個 API 路由、36 個數據模型、824 個測試用例。
+            <strong>品牌官網與會員中台：</strong>基於 Next.js 16 + Prisma + PostgreSQL 建構品牌官網與會員中台 — 產品陳列、第三方電商導購（天貓 / 抖音 / 小紅書外鏈 + GA 事件追蹤）、會員等級、積分帳本、積分兌禮（順豐物流軌跡）、消費補錄、測膚檔案與安全中心；聚合微信、抖音、手機號驗證碼多端身份至統一帳戶體系；全站 169 個 API 路由、43 個資料模型、1725 個自動化測試用例。
           </li>
           <li>
-            <strong>產品與互動設計：</strong>從資訊架構、Figma 互動原型到視覺樣式全程獨立設計，基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與購物車聯動，全端回應式適配。
+            <strong>產品與互動設計：</strong>從資訊架構、Figma 互動原型到視覺樣式全程獨立設計；基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與詳情頁連動，全端響應式適配。
+          </li>
+          <li>
+            <strong>營運後台與安全治理：</strong>搭建覆蓋產品 / 分類 / 會員 / 積分兌禮 / 消費補錄 / 職位 / 訊息 / OAuth 客戶端的營運後台（Tiptap 富文字），配套 TOTP 二因素與敏感操作 Step-up 驗證、操作稽核與每日完整性錨點、定時任務、資料庫持久化限流及 Webhook 失敗重投；完成 SEO / GEO（sitemap / JSON-LD / llms.txt / 百度推送）。
           </li>
         </ul>
       </div>
@@ -185,7 +194,7 @@ const ld = {
             <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同構部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP 與 TOTP 二因素。
           </li>
           <li>
-            <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全局登出，支撐平台群 5 個系統統一登入。
+            <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全局登出，支撐官網、測膚站、微信雙小程式及管理端統一登入。
           </li>
           <li>
             <strong>安全加固：</strong>支援密鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共享，保障認證體系可維護、可審計。
@@ -199,25 +208,25 @@ const ld = {
           <span class="entry-date">2026.01 – 至今</span>
         </div>
         <div class="project-meta">
-          負責產品設計 · UX 互動 · 全棧開發（UI 視覺由協作設計師完成） · 成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
+          負責產品設計 · UX 互動 · 全棧開發（UI 視覺由協作設計師完成） · 85 個 API 路由 / 426 個自動化測試 · 成果展示：<a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer"
             >advisor.nihplod.cn</a
           >
         </div>
         <ul class="project-points">
           <li>
-            <strong>AI 測膚與個人化推薦：</strong>接入 qwen-vl / deepseek-vl 視覺大模型實現「問卷 + 掃臉」雙通道皮膚分析；自研規則引擎按 8 種膚質畫像打分匹配產品，支援後台可視化配置（營運零程式碼調整）。
+            <strong>AI 測膚與個人化推薦：</strong>接入通義千問 VL / DeepSeek 大模型實現「問卷 + 掃臉」雙通道皮膚分析；自研規則引擎按 8 種膚質畫像與季節 / 地域環境因子打分匹配產品，支援後台可視化配置（營運零程式碼調整）。
           </li>
           <li>
-            <strong>轉化與歸因：</strong>主導模型整合與核心介面開發，多渠道電商外鏈歸因，驅動用戶諮詢轉化率提升 30%。
+            <strong>轉化與歸因：</strong>主導模型整合與核心介面開發；電商外鏈（天貓 / 抖音 / 小紅書）支援 UTM / pid 追蹤與點擊事件埋點，結合企微顧問短鏈形成可歸因的諮詢轉化鏈路。
           </li>
           <li>
-            <strong>增長與傳播設計：</strong>設計訪客模式（裝置指紋 + 限時檔案）讓用戶免註冊完成測膚，配合分享海報生成與渠道裂變歸因支撐社交傳播；輸出去識別化統計數據反哺品牌白皮書與市場洞察，將工具沉澱為品牌數據資產。
+            <strong>增長與會員營運：</strong>打通四檔會員測膚配額（普通 10 次、銀卡按消費解鎖、金卡 / 鑽石不限量），以登入帳戶承接報告與檔案；設計分享海報、渠道 ref 歸因與註冊轉化彈窗，並輸出去識別化群體統計 CSV 反哺品牌白皮書與市場洞察。
           </li>
           <li>
-            <strong>AI 成本工程：</strong>為 AI 調用設計熔斷器與日/月 Token 預算熔斷、調用計費持久化與模型白名單回退，修復 5xx 重試導致的重複扣費風險；用戶報告數據 90 天滾動續期並冷熱分層歸檔（冷層去識別化摘要）。
+            <strong>AI 成本與穩定性工程：</strong>設計 AI 請求隊列與併發控制、熔斷器、日/月 Token 與費用預算熔斷、調用計費持久化、模型白名單與 Provider 回退；以失敗重試冪等與額度預佔 / 釋放規避重複扣費；報告採用 90 天滾動有效期 + 冷熱分層歸檔（冷層去識別化摘要）。
           </li>
           <li>
-            <strong>數據資產閉環：</strong>設計伺服器端間鑑權介面，測膚報告與護膚檔案隨會話一鍵透傳至微信 AI 客服（session_id 透傳），將一次性測膚沉澱為可持續營運、可驅動回購的用戶數據資產。
+            <strong>數據資產閉環：</strong>設計 HMAC 簽名 + IP 限流的伺服器間介面，測膚報告與護膚檔案隨 session_id 一鍵透傳至企微 AI 客服，將一次性測膚沉澱為可持續營運、可驅動回購的用戶數據資產。
           </li>
         </ul>
       </div>
@@ -262,6 +271,48 @@ const ld = {
           </li>
           <li>
             <strong>公眾查驗與安全體系：</strong>面向公眾提供「精確 → 前綴 → 模糊」三級回退真偽查驗（pg_trgm GIN 索引加速，支援鏡頭掃碼查驗）與帶完整狀態流轉的打假舉報工單系統；配套 JWT 黑名單與改密即時失效、數據庫持久化限流，以及覆蓋證書全生命週期與工單處理的操作審計。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">肌智派 AI 測膚小程式</h3>
+          <span class="entry-date">2026.10 – 至今</span>
+        </div>
+        <div class="project-meta">
+          獨立完成（產品設計 · UI/UX · 小程式開發） · 複用 H5 測膚平台帳戶與 AI 能力
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>流動端測膚閉環：</strong>將「問卷 + 掃臉」測膚流程遷移至微信小程式（14 個頁面），基於微信 VisionKit 106 關鍵點實現正臉 / 右轉 / 左轉 / 抬頭四步姿態引導與自動拍攝（連續 5 幀穩定判定、多臉阻斷、超時手動降級）；問卷支援 dependsOn 條件題與測膚次數限額攔截。
+          </li>
+          <li>
+            <strong>非同步分析與報告渲染：</strong>人臉圖片壓縮後以 base64 提交，非同步任務按 3s × 60 輪詢狀態；失敗重試以「答案 + 照片」指紋複用 sessionId 與服務端預佔，避免重複扣減測膚次數與重複 AI 調用。基於 Canvas 2D 按 DPR 繪製十維雷達圖與肌膚趨勢曲線，端側合成含動態評分與 QR Code 的證書海報，支援歷史回看、檔案打卡及報告完成 / 複測訂閱訊息。
+          </li>
+          <li>
+            <strong>帳戶與工程治理：</strong>同時對接官網 OAuth public client 與測膚子站雙後端，統一請求層實現 Bearer 注入、過期前主動刷新、401 單飛刷新重放、帳戶禁用強制登出與錯誤分級；完成微信隱私授權版本化稽核、帳戶註銷冷靜期接入、登出敏感快取清理，並與會員中心小程式雙向跳轉。
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="entry-header">
+          <h3 class="project-name">NIHPLOD 會員中心小程式</h3>
+          <span class="entry-date">2026.10 – 至今</span>
+        </div>
+        <div class="project-meta">
+          獨立完成（產品設計 · 小程式開發） · 原生 TypeScript / 直連官網 OAuth
+        </div>
+        <ul class="project-points">
+          <li>
+            <strong>會員中心與積分體系落地：</strong>以原生 TypeScript 構建 19 頁會員中心小程式（會員 / 兌禮 / 我的 3 Tab），覆蓋微信一鍵登入與手機號綁定、會員等級權益與升級進度、積分餘額與近一年流水（含流水號）、禮品兌換（requestId 冪等）、地址簿、兌換記錄與順豐物流軌跡、消費補錄、資料編輯、安全中心（裝置 / 授權 / 登入歷史）及帳戶註銷。
+          </li>
+          <li>
+            <strong>無自建後端的輕量架構：</strong>小程式直連官網 OAuth 2.0 端點與業務 API，複用統一帳戶與會員資料；自研 TypeScript 請求層實現 access / refresh 雙 Token、單飛刷新與 401 重放、刷新失敗分級（invalid / transient）、登入來源回跳、帳戶禁用強制下線與會話競態修復，並以 tsc --noEmit 嚴格型別檢查保障 19 頁介面契約一致。
+          </li>
+          <li>
+            <strong>跨端業務閉環：</strong>與測膚小程式共享 UnionID / OAuth 帳戶及會員積分權益，雙向跳轉串聯「測膚 → 會員權益 → 積分兌禮 → 回購」；首頁聚合積分、會員卡、測膚次數與臨期積分提醒，並接入發貨 / 消費補錄審核訂閱訊息。
           </li>
         </ul>
       </div>
@@ -319,7 +370,7 @@ const ld = {
       <h2>技術棧</h2>
       <div class="skills-row">
         <span class="skills-label">前端開發：</span>
-        <span class="skills-content">TypeScript / React / Next.js / Vue 3 / uni-app / Tailwind CSS / 回應式與流動端適配</span>
+        <span class="skills-content">TypeScript / React / Next.js / Vue 3 / uni-app / 微信小程式（原生 / TypeScript）/ Tailwind CSS / Canvas 2D / 回應式與流動端適配</span>
       </div>
       <div class="skills-row">
         <span class="skills-label">後端 &amp; 數據庫：</span>

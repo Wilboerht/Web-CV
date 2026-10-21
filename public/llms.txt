@@ -1,6 +1,6 @@
 # Hongkun Wang (王泓坤) — CV
 
-> Digital Development Manager and full-stack engineer based in Shanghai, China. Specializes in TypeScript / React / Next.js, Node.js / FastAPI, and LLM / RAG applications. As the first engineer of Moidas' Greater China division, built the brand's e-commerce platform, unified SSO, AI skincare advisor, WeChat AI customer service, mini-program store and brand authorization platform from 0 to 1.
+> Digital Development Manager and full-stack engineer based in Shanghai, China. Specializes in TypeScript / React / Next.js, Node.js / FastAPI, and LLM / RAG applications. As the first engineer of Moidas' Greater China division, built the brand's official website, membership & points platform, unified SSO, AI skincare advisor, WeChat AI customer service, brand authorization platform, and two mini-programs from 0 to 1 — 7 core systems within 12 months, backed by 2,100+ automated test cases.
 
 Key facts:
 
@@ -11,7 +11,7 @@ Key facts:
 - GitHub: https://github.com/Wilboerht · X: https://twitter.com/wilboerht
 - Education: Shanghai Scientific and Technical Vocational College (2023–2026), Information Security Technology Application, Associate Degree, GPA 3.41/4.00
 - Languages: Chinese (native), English (CET-4)
-- Core skills: TypeScript, React, Next.js, Vue 3, uni-app, Node.js, FastAPI, Prisma, PostgreSQL, Redis, OAuth 2.0 / OIDC, LLM integration, RAG, Docker, Linux, Nginx, Figma
+- Core skills: TypeScript, React, Next.js, Vue 3, uni-app, WeChat Mini Program, Canvas 2D, Node.js, FastAPI, Prisma, PostgreSQL, Redis, OAuth 2.0 / OIDC, LLM integration, RAG, Docker, Linux, Nginx, Figma
 
 ## CV pages (multilingual)
 
