@@ -273,11 +273,7 @@ h3.project-name {
     padding-bottom: 12px;
   }
   .contact-info {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-    justify-items: center;
-    gap: 2px 18px;
+    gap: 4px 14px;
     margin-top: 6px;
     font-size: 0.8125rem;
   }
