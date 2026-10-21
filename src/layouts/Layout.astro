@@ -9,12 +9,12 @@ const { title, lang } = Astro.props;
 const SITE_URL = Astro.site ? Astro.site.href.replace(/\/+$/, "") : "https://cv.wilboerht.com";
 
 const desc: Record<string, string> = {
-  "zh-CN": "王泓坤 · 数字开发经理 · 全栈工程师 · TypeScript / React / Next.js / AI / RAG — 个人简历",
-  "zh-TW": "王泓坤 · 數位開發經理 · 全棧工程師 · TypeScript / React / Next.js / AI / RAG — 個人履歷",
-  "zh-HK": "王泓坤 · 數碼開發經理 · 全棧工程師 · TypeScript / React / Next.js / AI / RAG — 個人履歷",
-  "en": "Hongkun Wang · Digital Development Manager · Full-stack Engineer · TypeScript / React / Next.js / AI / RAG — CV",
-  "de": "Hongkun Wang · Digital Development Manager · Full-Stack-Entwickler · TypeScript / React / Next.js / AI / RAG — Lebenslauf",
-  "ko": "왕홍곤 · 디지털 개발 매니저 · 풀스택 엔지니어 · TypeScript / React / Next.js / AI / RAG — 이력서",
+  "zh-CN": "王泓坤 - 简历",
+  "zh-TW": "王泓坤 - 履歷",
+  "zh-HK": "王泓坤 - 履歷",
+  "en": "Hongkun Wang - CV",
+  "de": "Hongkun Wang - Lebenslauf",
+  "ko": "왕홍곤 - 이력서",
 };
 
 const description = desc[lang] || desc["en"];
@@ -50,12 +50,12 @@ const ogLocales: Record<string, string> = {
 const ogLocale = ogLocales[lang] || ogLocales.en;
 
 const ogImageAlt: Record<string, string> = {
-  "zh-CN": "王泓坤 — 数字开发经理 · 全栈工程师简历",
-  "zh-TW": "王泓坤 — 數位開發經理 · 全棧工程師履歷",
-  "zh-HK": "王泓坤 — 數碼開發經理 · 全棧工程師履歷",
-  en: "Hongkun Wang — Digital Development Manager · Full-Stack Engineer CV",
-  de: "Hongkun Wang — Digital Development Manager · Full-Stack-Entwickler Lebenslauf",
-  ko: "왕홍곤 — 디지털 개발 매니저 · 풀스택 엔지니어 이력서",
+  "zh-CN": "王泓坤 - 简历",
+  "zh-TW": "王泓坤 - 履歷",
+  "zh-HK": "王泓坤 - 履歷",
+  en: "Hongkun Wang - CV",
+  de: "Hongkun Wang - Lebenslauf",
+  ko: "왕홍곤 - 이력서",
 };
 
 const skipLabels: Record<string, string> = {
@@ -79,6 +79,7 @@ const canonical = `${SITE_URL}${pathname}`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
     <meta name="author" content="Hongkun Wang" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light" />
