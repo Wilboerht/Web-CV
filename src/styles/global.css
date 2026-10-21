@@ -162,7 +162,8 @@ a:hover {
     }
 
     .cv-toolbar select,
-    .cv-toolbar button {
+    .cv-toolbar button,
+    .cv-toolbar-save {
         min-height: 44px;
         padding: 0 12px;
         font-size: 0.875rem;
@@ -172,18 +173,6 @@ a:hover {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-width: 60px;
-        min-height: 44px;
-        padding: 0 12px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--link-color);
-        background: transparent;
-    }
-
-    .cv-toolbar-save:hover {
-        color: #123e6b;
-        background: transparent;
     }
 }
 
