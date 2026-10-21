@@ -4,12 +4,12 @@
     --light-text: #666666;
     --background: #ffffff;
     --card-bg: #ffffff;
-    --link-color: #7a5c3e;
+    --link-color: #1a5490;
     --border-color: #e5e5e5;
     --header-line-color: #999999;
     --tag-text: #555555;
     --hover-bg: #f8f8f8;
-    --focus-ring: #7a5c3e;
+    --focus-ring: #1a5490;
 }
 
 *,
@@ -77,7 +77,7 @@ a {
 }
 
 a:hover {
-    color: #5e442d;
+    color: #123e6b;
 }
 
 .visually-hidden {
@@ -126,7 +126,7 @@ a:hover {
 .cv-toolbar button:hover,
 .cv-toolbar-save:hover {
     color: var(--text-color);
-    background: #f7f3ee;
+    background: #f1f5f9;
 }
 
 .cv-toolbar select:focus-visible,

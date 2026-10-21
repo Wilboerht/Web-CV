@@ -47,7 +47,7 @@ h1 {
   overflow-wrap: anywhere;
 }
 .contact-item a:hover {
-  color: #5e442d;
+  color: #123e6b;
 }
 .contact-item:not(:last-child)::after {
   content: "·";
@@ -94,7 +94,7 @@ h2 {
   letter-spacing: 0.08em;
   margin: 0 0 10px 0;
   padding-bottom: 4px;
-  border-bottom: 1px solid rgba(122, 92, 62, 0.3);
+  border-bottom: 1px solid rgba(26, 84, 144, 0.25);
   font-family: 'Noto Serif SC', 'Source Serif 4', serif;
 }
 .entry {
