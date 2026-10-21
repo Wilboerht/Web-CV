@@ -110,9 +110,9 @@ a:hover {
     line-height: 1;
 }
 
-.cv-toolbar select,
 .cv-toolbar button,
-.cv-toolbar-save {
+.cv-toolbar-save,
+.cv-lang summary {
     border: 0;
     background: transparent;
     color: var(--light-text);
@@ -122,18 +122,78 @@ a:hover {
     cursor: pointer;
 }
 
-.cv-toolbar select:hover,
 .cv-toolbar button:hover,
-.cv-toolbar-save:hover {
+.cv-toolbar-save:hover,
+.cv-lang summary:hover {
     color: var(--text-color);
     background: #f1f5f9;
 }
 
-.cv-toolbar select:focus-visible,
 .cv-toolbar button:focus-visible,
-.cv-toolbar-save:focus-visible {
+.cv-toolbar-save:focus-visible,
+.cv-lang summary:focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: 2px;
+}
+
+.cv-lang {
+    position: relative;
+}
+
+.cv-lang summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+}
+
+.cv-lang summary::-webkit-details-marker {
+    display: none;
+}
+
+.cv-lang summary::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-top: -2px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+}
+
+.cv-lang[open] summary::after {
+    margin-top: 2px;
+    transform: rotate(-135deg);
+}
+
+.cv-lang-list {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 110;
+    min-width: 160px;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.cv-lang-list a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 0.8125rem;
+    white-space: nowrap;
+}
+
+.cv-lang-list a:hover,
+.cv-lang-list a[aria-current="page"] {
+    color: var(--link-color);
+    background: #f1f5f9;
 }
 
 .cv-toolbar-divider {
@@ -161,7 +221,7 @@ a:hover {
         box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
     }
 
-    .cv-toolbar select,
+    .cv-lang summary,
     .cv-toolbar button,
     .cv-toolbar-save {
         min-height: 44px;
@@ -173,6 +233,11 @@ a:hover {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .cv-lang-list {
+        top: auto;
+        bottom: calc(100% + 8px);
     }
 }
 
