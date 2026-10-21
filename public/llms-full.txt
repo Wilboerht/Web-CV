@@ -9,7 +9,6 @@
 - Title: Digital Development Manager · Full-Stack Engineer
 - Location: Shanghai, China
 - Email: me@wilboerht.cn
-- Phone: +86 187 2140 0154
 - Website: https://www.wilboerht.com
 - GitHub: https://github.com/Wilboerht
 - X (Twitter): https://twitter.com/wilboerht
