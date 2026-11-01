@@ -130,10 +130,10 @@ const ld = {
           </div>
         </div>
         <p class="entry-summary">
-          2025.10 以實習生身分加入並於畢業前全職在崗，2026.07 轉正，直接彙報品牌負責人；作為事業部首位技術人員，從 0 到 1 冷啟動品牌大中華區全部資訊系統與數位化基礎設施，12 個月內獨立完成 7 個核心系統交付，核心系統配套 2100+ 自動化測試用例，並以統一帳號與檔案資料打通「測膚 → 個人化方案 → 7×24 AI 顧問跟進 → 回購」業務閉環。
+          2025.10 以實習生身分加入，2026.07 轉正並直接彙報品牌負責人；作為事業部首位技術人員，以產品思維與 AI 輔助研發獨立完成從需求、設計到開發、上線的全端交付，12 個月內從 0 到 1 交付 7 個核心系統及 2100+ 自動化測試用例，並以統一帳號與檔案資料打通「測膚 → 個人化方案 → AI 顧問跟進 → 回購」業務閉環。
         </p>
         <ul class="project-points">
-          <li>統籌品牌大中華區數位化產品矩陣的規劃與交付，覆蓋中國官網、統一認證（SSO）、AI 護膚顧問、微信 AI 客服、授權驗真及測膚 / 會員中心雙小程式 7 個核心系統。</li>
+          <li>負責品牌大中華區數位化產品矩陣的規劃、技術選型與全端交付，統籌 7 個核心系統從需求、設計、開發到上線維運的完整生命週期。</li>
           <li>參與品牌大中華區會員體系制定，聯合品牌與營運團隊設計四檔會員等級、權益、積分與兌禮規則，並落地官網 / 小程式會員中心，支撐會員留存與回購。</li>
           <li>建立 AI 輔助研發工作流與設計規範，將平均交付週期壓縮 50% 以上，保障多專案並行交付。</li>
           <li>作為技術側負責人承接產品、行銷團隊需求並拆解排期，主導需求評審與迭代節奏，支撐品牌線上零售管道（中國官網）從 0 上線。</li>
@@ -157,17 +157,17 @@ const ld = {
         <ul class="project-points">
           <li>獨立承擔企業官網全鏈路交付，覆蓋從架構設計、UI/UX 設計到生產部署全過程。</li>
           <li>基於宇樹機器狗 SDK 二次開發，完成園區巡邏管理控制平台內部初版並驗證產品可行性。</li>
-          <li>推動 AI 問答助手在企業內部首次落地，作為企業代表與百度官方企業問答團隊對接業務合作。</li>
+          <li>推動 AI 問答助手在企業內部首次落地，參與企業與百度官方企業問答團隊對接業務工作。</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2>項目經歷</h2>
+      <h2>精選專案</h2>
 
-      <div class="project-entry">
+      <div class="project-entry" id="project-website">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 中國官網</h3>
+          <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-website">NIHPLOD 中國官網</button></h3>
           <span class="entry-date">2025.11 – 至今（迭代）</span>
         </div>
         <div class="project-meta">
@@ -176,43 +176,87 @@ const ld = {
             target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
           >
         </div>
-        <ul class="project-points">
-          <li>
-            <strong>品牌官網與會員中台：</strong>基於 Next.js 16 + Prisma + PostgreSQL 建構品牌官網與會員中台 — 產品陳列、第三方電商導購（天貓 / 抖音 / 小紅書外鏈 + GA 事件追蹤）、會員等級、積分帳本、積分兌禮（順豐物流軌跡）、消費補錄、測膚檔案與安全中心；聚合微信、抖音、手機號驗證碼多端身分至統一帳號體系；全站 169 個 API 路由、43 個資料模型、1725 個自動化測試用例。
-          </li>
-          <li>
-            <strong>產品與互動設計：</strong>從資訊架構、Figma 互動原型到視覺樣式全程獨立設計；基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與詳情頁連動，全端響應式適配。
-          </li>
-          <li>
-            <strong>營運後台與安全治理：</strong>搭建覆蓋產品 / 分類 / 會員 / 積分兌禮 / 消費補錄 / 職位 / 訊息 / OAuth 客戶端的營運後台（Tiptap 富文字），配套 TOTP 二因素與敏感操作 Step-up 驗證、操作稽核與每日完整性錨點、定時任務、資料庫持久化限流及 Webhook 失敗重投；完成 SEO / GEO（sitemap / JSON-LD / llms.txt / 百度推送）。
-          </li>
-        </ul>
+        <p class="project-summary">品牌官網與會員中台 0→1 上線：169 個 API 路由、43 個資料模型、1725 個自動化測試，打通微信 / 抖音 / 手機號多端帳號。</p>
+        <button type="button" class="project-more" data-project-dialog="project-website">查看詳情</button>
+        <dialog class="project-dialog" id="dialog-project-website">
+          <div class="project-dialog__panel">
+            <div class="project-dialog__header">
+              <div class="project-dialog__head" data-project-dialog-head></div>
+              <button type="button" class="project-dialog__close" data-project-dialog-close aria-label="關閉">&times;</button>
+            </div>
+            <div class="project-dialog__content">
+              <div class="project-dialog__media">
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>專案截圖 / 介面預覽</span>
+                </div>
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>邏輯圖 / 架構圖</span>
+                </div>
+              </div>
+            <ul class="project-points">
+              <li>
+                <strong>品牌官網與會員中台：</strong>基於 Next.js 16 + Prisma + PostgreSQL 建構品牌官網與會員中台 — 產品陳列、第三方電商導購（天貓 / 抖音 / 小紅書外鏈 + GA 事件追蹤）、會員等級、積分帳本、積分兌禮（順豐物流軌跡）、消費補錄、測膚檔案與安全中心；聚合微信、抖音、手機號驗證碼多端身分至統一帳號體系；全站 169 個 API 路由、43 個資料模型、1725 個自動化測試用例。
+              </li>
+              <li>
+                <strong>產品與互動設計：</strong>從資訊架構、Figma 互動原型到視覺樣式全程獨立設計；基於 Framer Motion + View Transitions 實現多步驟護膚儀式指南與沉浸式品牌敘事，整合產品抽屜與詳情頁連動，全端響應式適配。
+              </li>
+              <li>
+                <strong>營運後台與安全治理：</strong>搭建覆蓋產品 / 分類 / 會員 / 積分兌禮 / 消費補錄 / 職位 / 訊息 / OAuth 客戶端的營運後台（Tiptap 富文字），配套 TOTP 二因素與敏感操作 Step-up 驗證、操作稽核與每日完整性錨點、定時任務、資料庫持久化限流及 Webhook 失敗重投；完成 SEO / GEO（sitemap / JSON-LD / llms.txt / 百度推送）。
+              </li>
+            </ul>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <div class="project-entry">
+      <div class="project-entry" id="project-sso">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 統一認證平台（SSO / OIDC）</h3>
+          <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-sso">NIHPLOD 統一認證平台（SSO / OIDC）</button></h3>
           <span class="entry-date">2026.06 – 至今（迭代）</span>
         </div>
         <div class="project-meta">
           獨立完成（產品設計 · 全棧開發）
         </div>
-        <ul class="project-points">
-          <li>
-            <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同構部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP 與 TOTP 二因素。
-          </li>
-          <li>
-            <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全域登出，支撐官網、測膚站、微信雙小程式及管理端統一登入。
-          </li>
-          <li>
-            <strong>安全加固：</strong>支援金鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共用，保障認證體系可運維、可稽核。
-          </li>
-        </ul>
+        <p class="project-summary">自建 OAuth 2.0 / OIDC 單一簽入，支撐官網、測膚站、雙小程式與管理端 5 個系統統一登入，並發布可複用 npm SDK。</p>
+        <button type="button" class="project-more" data-project-dialog="project-sso">查看詳情</button>
+        <dialog class="project-dialog" id="dialog-project-sso">
+          <div class="project-dialog__panel">
+            <div class="project-dialog__header">
+              <div class="project-dialog__head" data-project-dialog-head></div>
+              <button type="button" class="project-dialog__close" data-project-dialog-close aria-label="關閉">&times;</button>
+            </div>
+            <div class="project-dialog__content">
+              <div class="project-dialog__media">
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>專案截圖 / 介面預覽</span>
+                </div>
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>邏輯圖 / 架構圖</span>
+                </div>
+              </div>
+            <ul class="project-points">
+              <li>
+                <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同構部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP 與 TOTP 二因素。
+              </li>
+              <li>
+                <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子專案分鐘級接入，透過 Token Introspection + Backchannel Logout 實現跨域免登與全域登出，支撐官網、測膚站、微信雙小程式及管理端統一登入。
+              </li>
+              <li>
+                <strong>安全加固：</strong>支援金鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共用，保障認證體系可運維、可稽核。
+              </li>
+            </ul>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <div class="project-entry">
+      <div class="project-entry" id="project-ai-advisor">
         <div class="entry-header">
-          <h3 class="project-name">AI 護膚顧問系統</h3>
+          <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-ai-advisor">AI 護膚顧問系統</button></h3>
           <span class="entry-date">2026.01 – 至今</span>
         </div>
         <div class="project-meta">
@@ -220,158 +264,80 @@ const ld = {
             >advisor.nihplod.cn</a
           >
         </div>
-        <ul class="project-points">
-          <li>
-            <strong>AI 測膚與個人化推薦：</strong>接入通義千問 VL / DeepSeek 大模型實現「問卷 + 掃臉」雙通道皮膚分析；自研規則引擎按 8 種膚質畫像與季節 / 地域環境因子打分匹配產品，支援後台視覺化配置（營運零程式碼調整）。
-          </li>
-          <li>
-            <strong>轉化與歸因：</strong>主導模型整合與核心介面開發；電商外鏈（天貓 / 抖音 / 小紅書）支援 UTM / pid 追蹤與點擊事件埋點，結合企微顧問短鏈形成可歸因的諮詢轉化鏈路。
-          </li>
-          <li>
-            <strong>增長與會員營運：</strong>打通四檔會員測膚配額（一般 10 次、銀卡按消費解鎖、金卡 / 鑽石不限量），以登入帳號承接報告與檔案；設計分享海報、渠道 ref 歸因與註冊轉化彈窗，並輸出去識別化群體統計 CSV 反哺品牌白皮書與市場洞察。
-          </li>
-          <li>
-            <strong>AI 成本與穩定性工程：</strong>設計 AI 請求佇列與併發控制、熔斷器、日/月 Token 與費用預算熔斷、呼叫計費持久化、模型白名單與 Provider 回退；以失敗重試冪等與額度預佔 / 釋放規避重複扣費；報告採用 90 天滾動有效期 + 冷熱分層歸檔（冷層去識別化摘要）。
-          </li>
-          <li>
-            <strong>資料資產閉環：</strong>設計 HMAC 簽名 + IP 限流的伺服器間介面，測膚報告與護膚檔案隨 session_id 一鍵透傳至企微 AI 客服，將一次性測膚沉澱為可持續營運、可驅動回購的使用者資料資產。
-          </li>
-        </ul>
+        <p class="project-summary">「問卷 + 掃臉」雙通道 AI 測膚與個人化推薦，打通測膚 → 方案 → 顧問跟進 → 回購閉環。</p>
+        <button type="button" class="project-more" data-project-dialog="project-ai-advisor">查看詳情</button>
+        <dialog class="project-dialog" id="dialog-project-ai-advisor">
+          <div class="project-dialog__panel">
+            <div class="project-dialog__header">
+              <div class="project-dialog__head" data-project-dialog-head></div>
+              <button type="button" class="project-dialog__close" data-project-dialog-close aria-label="關閉">&times;</button>
+            </div>
+            <div class="project-dialog__content">
+              <div class="project-dialog__media">
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>專案截圖 / 介面預覽</span>
+                </div>
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>邏輯圖 / 架構圖</span>
+                </div>
+              </div>
+            <ul class="project-points">
+              <li>
+                <strong>AI 測膚與個人化推薦：</strong>接入通義千問 VL / DeepSeek 大模型實現「問卷 + 掃臉」雙通道皮膚分析；自研規則引擎按 8 種膚質畫像與季節 / 地域環境因子打分匹配產品，支援後台視覺化配置（營運零程式碼調整）。
+              </li>
+              <li>
+                <strong>轉化與歸因：</strong>主導模型整合與核心介面開發；電商外鏈（天貓 / 抖音 / 小紅書）支援 UTM / pid 追蹤與點擊事件埋點，結合企微顧問短鏈形成可歸因的諮詢轉化鏈路。
+              </li>
+              <li>
+                <strong>增長與會員營運：</strong>打通四檔會員測膚配額（一般 10 次、銀卡按消費解鎖、金卡 / 鑽石不限量），以登入帳號承接報告與檔案；設計分享海報、渠道 ref 歸因與註冊轉化彈窗，並輸出去識別化群體統計 CSV 反哺品牌白皮書與市場洞察。
+              </li>
+              <li>
+                <strong>AI 成本與穩定性工程：</strong>設計 AI 請求佇列與併發控制、熔斷器、日/月 Token 與費用預算熔斷、呼叫計費持久化、模型白名單與 Provider 回退；以失敗重試冪等與額度預佔 / 釋放規避重複扣費；報告採用 90 天滾動有效期 + 冷熱分層歸檔（冷層去識別化摘要）。
+              </li>
+              <li>
+                <strong>資料資產閉環：</strong>設計 HMAC 簽名 + IP 限流的伺服器間介面，測膚報告與護膚檔案隨 session_id 一鍵透傳至企微 AI 客服，將一次性測膚沉澱為可持續營運、可驅動回購的使用者資料資產。
+              </li>
+            </ul>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">微信 AI 智慧客服</h3>
-          <span class="entry-date">2026.08</span>
-        </div>
-        <div class="project-meta">
-          獨立完成（產品設計 · 全棧開發，基於微信客服原生聊天窗）
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>多入口訊息閘道：</strong>基於 FastAPI + Redis + DeepSeek 大模型構建，統一接入企業微信客服、企業微信應用與公眾號三路訊息入口；支援智慧轉人工（關鍵字辨識 + 服務時間窗 + 接待人黏性繫結）。
-          </li>
-          <li>
-            <strong>陪伴式會話營運：</strong>承接測膚平台透傳的使用者檔案，多輪會話中自動沉澱護膚檔案（階段目標管理與複評提醒），並提供訂單查詢引導，將一次性諮詢轉化為長期陪伴式跟進。
-          </li>
-          <li>
-            <strong>提示詞與知識庫工程：</strong>按客服帳號路由雙套人設（品牌客服 / 護膚顧問）的獨立提示詞與知識庫；44KB 品牌 FAQ 知識庫分段構建、按訊息關鍵字匹配按需注入並支援熱載入；內建 Prompt 注入防護與廣告法禁語輸出過濾雙層合規兜底。
-          </li>
-          <li>
-            <strong>品質保障與可用性：</strong>以 34 條真實大模型黃金迴歸用例鎖定提示詞迭代品質，配套 340+ 自動化測試用例；AI 呼叫指數退避重試與逾時控制，Redis 故障自動降級記憶體模式並定時重連恢復；提供 PII 匯出/刪除介面（個保法合規），Linux + Nginx 自託管部署。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 授權驗真平台</h3>
-          <span class="entry-date">2026.04 – 2026.05</span>
-        </div>
-        <div class="project-meta">
-          獨立完成（產品設計 · UI/UX · 全棧開發） · 成果展示：<a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >ba.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>授權稽核與防偽證書：</strong>基於 Next.js 16 + PostgreSQL 構建經銷商授權管理系統，實現「稽核員提報 → 負責人終審簽發」兩級稽核與證書狀態機（簽發 / 打回 / 到期 / 吊銷）；瀏覽器端 Canvas + jsPDF 即時合成含電子公章與動態 QR Code 的防偽授權證書（支援 PNG / PDF 下載）。
-          </li>
-          <li>
-            <strong>公眾查驗與安全體系：</strong>面向公眾提供「精確 → 前綴 → 模糊」三級回退真偽查驗（pg_trgm GIN 索引加速，支援相機掃碼）與帶完整狀態流轉的打假檢舉工單系統；配套 JWT 黑名單與改密即時失效、資料庫持久化限流，以及覆蓋證書全生命週期與工單處理的操作稽核。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">肌智派 AI 測膚小程式</h3>
-          <span class="entry-date">2026.10 – 至今</span>
-        </div>
-        <div class="project-meta">
-          獨立完成（產品設計 · UI/UX · 小程式開發） · 複用 H5 測膚平台帳號與 AI 能力
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>行動端測膚閉環：</strong>將「問卷 + 掃臉」測膚流程遷移至微信小程式（14 個頁面），基於微信 VisionKit 106 關鍵點實現正臉 / 右轉 / 左轉 / 抬頭四步姿態引導與自動拍攝（連續 5 幀穩定判定、多臉阻斷、逾時手動降級）；問卷支援 dependsOn 條件題與測膚次數限額攔截。
-          </li>
-          <li>
-            <strong>非同步分析與報告渲染：</strong>人臉圖片壓縮後以 base64 提交，非同步任務按 3s × 60 輪詢狀態；失敗重試以「答案 + 照片」指紋複用 sessionId 與服務端預佔，避免重複扣減測膚次數與重複 AI 呼叫。基於 Canvas 2D 按 DPR 繪製十維雷達圖與肌膚趨勢曲線，端側合成含動態評分與 QR Code 的證書海報，支援歷史回看、檔案打卡及報告完成 / 複測訂閱訊息。
-          </li>
-          <li>
-            <strong>帳號與工程治理：</strong>同時對接官網 OAuth public client 與測膚子站雙後端，統一請求層實現 Bearer 注入、過期前主動刷新、401 單飛刷新重放、帳號禁用強制登出與錯誤分級；完成微信隱私授權版本化稽核、帳號註銷冷靜期接入、登出敏感快取清理，並與會員中心小程式雙向跳轉。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD 會員中心小程式</h3>
-          <span class="entry-date">2026.10 – 至今</span>
-        </div>
-        <div class="project-meta">
-          獨立完成（產品設計 · 小程式開發） · 原生 TypeScript / 直連官網 OAuth
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>會員中心與積分體系落地：</strong>以原生 TypeScript 構建 19 頁會員中心小程式（會員 / 兌禮 / 我的 3 Tab），覆蓋微信一鍵登入與手機號綁定、會員等級權益與升級進度、積分餘額與近一年流水（含流水號）、禮品兌換（requestId 冪等）、地址簿、兌換記錄與順豐物流軌跡、消費補錄、資料編輯、安全中心（裝置 / 授權 / 登入歷史）及帳號註銷。
-          </li>
-          <li>
-            <strong>無自建後端的輕量架構：</strong>小程式直連官網 OAuth 2.0 端點與業務 API，複用統一帳號與會員資料；自研 TypeScript 請求層實現 access / refresh 雙 Token、單飛刷新與 401 重放、刷新失敗分級（invalid / transient）、登入來源回跳、帳號禁用強制下線與會話競態修復，並以 tsc --noEmit 嚴格型別檢查保障 19 頁介面契約一致。
-          </li>
-          <li>
-            <strong>跨端業務閉環：</strong>與測膚小程式共享 UnionID / OAuth 帳號及會員積分權益，雙向跳轉串聯「測膚 → 會員權益 → 積分兌禮 → 回購」；首頁聚合積分、會員卡、測膚次數與臨期積分提醒，並接入發貨 / 消費補錄審核訂閱訊息。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">Myskin.Today（AI 肌膚分析平台官網）</h3>
-          <span class="entry-date">2026.01 – 2026.02</span>
-        </div>
-        <div class="project-meta">
-          獨立完成（產品設計 · UI/UX · 全棧開發 · AIGC 視覺素材） · 成果展示：<a
-            href="https://myskin.today"
-            target="_blank" rel="noopener noreferrer">myskin.today</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>官網與商業化落地：</strong>基於 Next.js 16 + Tailwind CSS v4 構建 AI 肌膚分析平台官方網站，覆蓋產品能力展示、API 接入 / 白牌客製 / 策略合作三類 B 端商業模式落地頁與 API 文件站；合作意向表單經 API 路由（IP 限流、輸入消毒、逾時重試）即時推送企業微信機器人。
-          </li>
-          <li>
-            <strong>設計系統與視覺資產：</strong>自建品牌設計系統（色彩 / 字體 / 間距變數、Bento 網格、深淺雙主題），並以 AIGC 產出全站插畫素材與宣傳場景影片；基於 Framer Motion 實現捲動感知導覽與數字捲動等互動動效，全端響應式。
-          </li>
-          <li>
-            <strong>SEO 與工程品質：</strong>全站獨立 metadata / OpenGraph / JSON-LD 結構化資料 / sitemap / PWA 體系；next/image 全站圖片最佳化與域名白名單，配套圖片與影片內容防盜保護。
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name"
-            >上海臨港景鴻安全防範科技發展有限公司網站系統</h3
-          >
-          <span class="entry-date">2025.07 – 2025.09</span>
-        </div>
-        <div class="project-meta">
-          獨立完成（產品設計 · UI/UX · 全棧開發） · 成果展示：<a
-            href="https://www.lingangjh.com"
-            target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>全棧開發與設計落地：</strong>基於 Next.js 完成企業官網全棧開發與 CMS 內容管理後台，並基於 Figma 完成品牌視覺與互動原型設計；首屏載入時間控制在 1.5s 以內，全端響應式適配。
-          </li>
-          <li>
-            <strong>AI 問答與安全架構：</strong>本地化部署文心 / Qwen 大模型問答助手 Weknora，搭建 RAG 知識檢索管道，回答準確率 > 85%；實現 JWT 使用者認證、RLS 資料隔離與 CSP 安全策略，保障資料安全與存取控制。
-          </li>
-        </ul>
-      </div>
-
+      <h3 class="project-index-title">其他專案</h3>
+      <ul class="project-index">
+        <li>
+          <span class="project-index-name">微信 AI 智慧客服</span>
+          <span class="project-index-desc">FastAPI + Redis + DeepSeek，三入口訊息閘道與 340+ 自動化測試。</span>
+          <span class="project-index-date">2026.08</span>
+        </li>
+        <li>
+          <span class="project-index-name"><a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer">NIHPLOD 授權驗真平台</a></span>
+          <span class="project-index-desc">Next.js + PostgreSQL，授權審核、防偽證書與公眾查驗。</span>
+          <span class="project-index-date">2026.04 – 2026.05</span>
+        </li>
+        <li>
+          <span class="project-index-name">肌智派 AI 測膚小程式</span>
+          <span class="project-index-desc">微信小程式 + VisionKit，14 頁測膚閉環與非同步報告。</span>
+          <span class="project-index-date">2026.10 – 至今</span>
+        </li>
+        <li>
+          <span class="project-index-name">NIHPLOD 會員中心小程式</span>
+          <span class="project-index-desc">原生 TypeScript，19 頁會員 / 積分 / 兌禮與 OAuth 接入。</span>
+          <span class="project-index-date">2026.10 – 至今</span>
+        </li>
+        <li>
+          <span class="project-index-name"><a href="https://myskin.today" target="_blank" rel="noopener noreferrer">Myskin.Today</a></span>
+          <span class="project-index-desc">Next.js 16 + Tailwind v4，B 端官網、API 文件與設計系統。</span>
+          <span class="project-index-date">2026.01 – 2026.02</span>
+        </li>
+        <li>
+          <span class="project-index-name"><a href="https://www.lingangjh.com" target="_blank" rel="noopener noreferrer">上海臨港景鴻官網系統</a></span>
+          <span class="project-index-desc">Next.js + CMS，1.5s 首屏；RAG 問答準確率 &gt;85%。</span>
+          <span class="project-index-date">2025.07 – 2025.09</span>
+        </li>
+      </ul>
     </section>
 
     <section>

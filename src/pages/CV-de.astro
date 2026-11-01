@@ -133,10 +133,10 @@ const ld = {
           </div>
         </div>
         <p class="entry-summary">
-          Im Oktober 2025 als Praktikant eingestiegen und bereits vor dem Abschluss in Vollzeit tätig; im Juli 2026 in eine Festanstellung übernommen, mit direkter Berichtslinie an die Markenleitung. Als erster Ingenieur der Division sämtliche Informationssysteme und die digitale Infrastruktur der Marke für Greater China von 0 auf 1 kalt gestartet; in 12 Monaten eigenständig 7 Kernsysteme mit über 2.100 automatisierten Testfällen ausgeliefert und über einheitliche Konten und Profildaten den Geschäftskreislauf „Hautanalyse → personalisierte Pflegeroutine → 7×24-KI-Beratung → Wiederkauf" verbunden.
+          Im Oktober 2025 als Praktikant eingestiegen, im Juli 2026 in eine Festanstellung übernommen, mit direkter Berichtslinie an die Markenleitung. Als erster Ingenieur der Division die Full-Stack-Lieferung von der Anforderung über das Design bis zur Entwicklung und zum Launch mit Produktdenken und KI-gestützter Entwicklung eigenständig verantwortet; in 12 Monaten 7 Kernsysteme und über 2.100 automatisierte Testfälle von 0 auf 1 ausgeliefert und über einheitliche Konten und Profildaten den Geschäftskreislauf „Hautanalyse → personalisierte Pflegeroutine → KI-Beratung → Wiederkauf“ verbunden.
         </p>
         <ul class="project-points">
-          <li>Verantwortlich für Planung und Umsetzung des digitalen Produktportfolios der Marke für Greater China — 7 Kernsysteme: offizielle China-Website, einheitliche Authentifizierung (SSO), KI-Hautpflegeberater, WeChat-KI-Kundenservice, Autorisierungs- &amp; Verifizierungsplattform sowie die beiden Mini-Programme für Hautanalyse und Mitgliedercenter.</li>
+          <li>Planung, Technologieauswahl und Full-Stack-Lieferung des digitalen Produktportfolios der Marke für Greater China verantwortet; den vollständigen Lebenszyklus von 7 Kernsystemen von Anforderungen und Design über Entwicklung und Launch bis zum Betrieb gesteuert.</li>
           <li>Das Mitgliedersystem für Greater China gemeinsam mit Marken- und Operationsteams mitgestaltet — vier Mitgliedsstufen, Vorteile, Punkte- und Einlöseregeln — und auf der offiziellen Website sowie im Mitgliedercenter-Mini-Programm umgesetzt, um Bindung und Wiederkauf zu fördern.</li>
           <li>KI-gestützte Entwicklungsworkflows und Designstandards etabliert und die durchschnittlichen Lieferzyklen um über 50 % verkürzt — bei paralleler Auslieferung mehrerer Projekte.</li>
           <li>Als technischer Lead Anforderungen von Produkt- und Marketingteams aufgenommen und in Zeitpläne zerlegt, Requirement-Reviews und Iterationsrhythmus verantwortet sowie den Online-Retail-Kanal der Marke (offizielle China-Website) von 0 bis zum Launch begleitet.</li>
@@ -160,17 +160,17 @@ const ld = {
         <ul class="project-points">
           <li>Eigenverantwortliche End-to-End-Umsetzung der Unternehmenswebsite — von Architektur und UI/UX-Design bis zum Produktions-Deployment.</li>
           <li>Auf Basis des Unitree-Roboterhund-SDKs ein internes MVP für eine Campus-Patrouillen-Verwaltungsplattform entwickelt und die Produktmachbarkeit validiert.</li>
-          <li>Die erste interne Einführung von KI-Frage-Antwort-Tools im Unternehmen vorangetrieben und als Unternehmensvertreter die Geschäftszusammenarbeit mit Baidus offiziellem Enterprise-QA-Team angebahnt.</li>
+          <li>Die erste interne Einführung von KI-Frage-Antwort-Tools im Unternehmen vorangetrieben und die geschäftliche Abstimmung des Unternehmens mit Baidus offiziellem Enterprise-QA-Team mitgestaltet.</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2>Projekte</h2>
+      <h2>Ausgewählte Projekte</h2>
 
-      <div class="project-entry">
+      <div class="project-entry" id="project-website">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Offizielle China-Website</h3>
+          <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-website">NIHPLOD Offizielle China-Website</button></h3>
           <span class="entry-date">Nov. 2025 – heute (iterativ)</span>
         </div>
         <div class="project-meta">
@@ -179,43 +179,87 @@ const ld = {
             target="_blank" rel="noopener noreferrer">www.nihplod.cn</a
           >
         </div>
-        <ul class="project-points">
-          <li>
-            <strong>Markenwebsite &amp; Mitgliederplattform:</strong> Die offizielle Markenwebsite und Mitgliederplattform mit Next.js 16 + Prisma + PostgreSQL aufgebaut — Produktpräsentation, Drittanbieter-E-Commerce-Verlinkung (Tmall / Douyin / Xiaohongshu + GA-Event-Tracking), Mitgliedsstufen, Punkte-Ledger, Punkte-Einlösung (SF-Express-Tracking), Verbrauchsnachtrag, Hautprofile und Sicherheitscenter; WeChat-, Douyin- und Telefon-OTP-Identitäten in einem einheitlichen Kontosystem aggregiert — 169 API-Routen, 43 Datenmodelle und 1.725 automatisierte Testfälle.
-          </li>
-          <li>
-            <strong>Produkt- &amp; Interaktionsdesign:</strong> Informationsarchitektur, interaktive Figma-Prototypen und visuelles Styling eigenständig gestaltet; mehrstufige Hautpflegeritual-Guides und immersives Brand-Storytelling mit Framer Motion + View Transitions umgesetzt, den Produkt-Drawer mit den Detailseiten verknüpft und vollständig responsive Layouts geliefert.
-          </li>
-          <li>
-            <strong>Admin-Konsole &amp; Sicherheits-Governance:</strong> Eine Admin-Konsole für Produkte / Kategorien / Mitglieder / Punkte-Einlösung / Verbrauchsnachtrag / Jobs / Nachrichten / OAuth-Clients (Tiptap Rich Text) aufgebaut, mit TOTP-Zwei-Faktor-Authentifizierung und Step-up-Verifizierung für sensible Aktionen, Audit-Logs und täglichen Integritäts-Ankern, geplanten Jobs, datenbankpersistiertem Rate-Limiting und Webhook-Fehler-Retries; SEO / GEO (sitemap / JSON-LD / llms.txt / Baidu-Push) umgesetzt.
-          </li>
-        </ul>
+        <p class="project-summary">Markenwebsite und Mitgliederplattform von 0 auf 1 gelauncht: 169 API-Routen, 43 Datenmodelle und 1.725 automatisierte Tests; WeChat-, Douyin- und Telefonnummern-Identitäten vereinheitlicht.</p>
+        <button type="button" class="project-more" data-project-dialog="project-website">Details ansehen</button>
+        <dialog class="project-dialog" id="dialog-project-website">
+          <div class="project-dialog__panel">
+            <div class="project-dialog__header">
+              <div class="project-dialog__head" data-project-dialog-head></div>
+              <button type="button" class="project-dialog__close" data-project-dialog-close aria-label="Schließen">&times;</button>
+            </div>
+            <div class="project-dialog__content">
+              <div class="project-dialog__media">
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>Projekt-Screenshot / UI-Vorschau</span>
+                </div>
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>Logik- / Architekturdiagramm</span>
+                </div>
+              </div>
+            <ul class="project-points">
+              <li>
+                <strong>Markenwebsite &amp; Mitgliederplattform:</strong> Die offizielle Markenwebsite und Mitgliederplattform mit Next.js 16 + Prisma + PostgreSQL aufgebaut — Produktpräsentation, Drittanbieter-E-Commerce-Verlinkung (Tmall / Douyin / Xiaohongshu + GA-Event-Tracking), Mitgliedsstufen, Punkte-Ledger, Punkte-Einlösung (SF-Express-Tracking), Verbrauchsnachtrag, Hautprofile und Sicherheitscenter; WeChat-, Douyin- und Telefon-OTP-Identitäten in einem einheitlichen Kontosystem aggregiert — 169 API-Routen, 43 Datenmodelle und 1.725 automatisierte Testfälle.
+              </li>
+              <li>
+                <strong>Produkt- &amp; Interaktionsdesign:</strong> Informationsarchitektur, interaktive Figma-Prototypen und visuelles Styling eigenständig gestaltet; mehrstufige Hautpflegeritual-Guides und immersives Brand-Storytelling mit Framer Motion + View Transitions umgesetzt, den Produkt-Drawer mit den Detailseiten verknüpft und vollständig responsive Layouts geliefert.
+              </li>
+              <li>
+                <strong>Admin-Konsole &amp; Sicherheits-Governance:</strong> Eine Admin-Konsole für Produkte / Kategorien / Mitglieder / Punkte-Einlösung / Verbrauchsnachtrag / Jobs / Nachrichten / OAuth-Clients (Tiptap Rich Text) aufgebaut, mit TOTP-Zwei-Faktor-Authentifizierung und Step-up-Verifizierung für sensible Aktionen, Audit-Logs und täglichen Integritäts-Ankern, geplanten Jobs, datenbankpersistiertem Rate-Limiting und Webhook-Fehler-Retries; SEO / GEO (sitemap / JSON-LD / llms.txt / Baidu-Push) umgesetzt.
+              </li>
+            </ul>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <div class="project-entry">
+      <div class="project-entry" id="project-sso">
         <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Plattform für einheitliche Authentifizierung (SSO / OIDC)</h3>
+          <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-sso">NIHPLOD Plattform für einheitliche Authentifizierung (SSO / OIDC)</button></h3>
           <span class="entry-date">Jun. 2026 – heute (iterativ)</span>
         </div>
         <div class="project-meta">
           Eigenständig umgesetzt (Produktdesign · Full-Stack)
         </div>
-        <ul class="project-points">
-          <li>
-            <strong>Protokoll-Implementierung:</strong> Self-hosted OAuth 2.0 / OIDC-SSO aufgebaut, isomorph mit der offiziellen Hauptseite deployed — die Hauptseite fungiert als Authorization Server und stellt RS256-JWTs aus; die Endpunkte authorize / token / userinfo / introspect / revoke / end-session vollständig implementiert, inkl. PKCE, DPoP und TOTP-Zwei-Faktor-Authentifizierung.
-          </li>
-          <li>
-            <strong>SDK &amp; Integration:</strong> npm-SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) verpackt und veröffentlicht für die Integration von Sub-Projekten im Minutenbereich; mit Token Introspection + Backchannel Logout für domainübergreifendes SSO und globalen Logout — einheitlicher Login für die offizielle Website, die Hautanalyse-Website, beide WeChat-Mini-Programme und die Admin-Konsole.
-          </li>
-          <li>
-            <strong>Security-Härtung:</strong> Unterstützt Secret-Rotation, Token-Revocation (RFC 7009) und Multi-Instanz-Blacklist-Sharing für ein wartbares und auditierbares Authentifizierungssystem.
-          </li>
-        </ul>
+        <p class="project-summary">OAuth 2.0 / OIDC Single Sign-on für 5 Systeme – Website, Hautanalyse-Seite, zwei Mini-Programme und Admin-Konsole – sowie ein wiederverwendbares npm-SDK umgesetzt.</p>
+        <button type="button" class="project-more" data-project-dialog="project-sso">Details ansehen</button>
+        <dialog class="project-dialog" id="dialog-project-sso">
+          <div class="project-dialog__panel">
+            <div class="project-dialog__header">
+              <div class="project-dialog__head" data-project-dialog-head></div>
+              <button type="button" class="project-dialog__close" data-project-dialog-close aria-label="Schließen">&times;</button>
+            </div>
+            <div class="project-dialog__content">
+              <div class="project-dialog__media">
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>Projekt-Screenshot / UI-Vorschau</span>
+                </div>
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>Logik- / Architekturdiagramm</span>
+                </div>
+              </div>
+            <ul class="project-points">
+              <li>
+                <strong>Protokoll-Implementierung:</strong> Self-hosted OAuth 2.0 / OIDC-SSO aufgebaut, isomorph mit der offiziellen Hauptseite deployed — die Hauptseite fungiert als Authorization Server und stellt RS256-JWTs aus; die Endpunkte authorize / token / userinfo / introspect / revoke / end-session vollständig implementiert, inkl. PKCE, DPoP und TOTP-Zwei-Faktor-Authentifizierung.
+              </li>
+              <li>
+                <strong>SDK &amp; Integration:</strong> npm-SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) verpackt und veröffentlicht für die Integration von Sub-Projekten im Minutenbereich; mit Token Introspection + Backchannel Logout für domainübergreifendes SSO und globalen Logout — einheitlicher Login für die offizielle Website, die Hautanalyse-Website, beide WeChat-Mini-Programme und die Admin-Konsole.
+              </li>
+              <li>
+                <strong>Security-Härtung:</strong> Unterstützt Secret-Rotation, Token-Revocation (RFC 7009) und Multi-Instanz-Blacklist-Sharing für ein wartbares und auditierbares Authentifizierungssystem.
+              </li>
+            </ul>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <div class="project-entry">
+      <div class="project-entry" id="project-ai-advisor">
         <div class="entry-header">
-          <h3 class="project-name">KI-Hautpflegeberater</h3>
+          <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-ai-advisor">KI-Hautpflegeberater</button></h3>
           <span class="entry-date">Jan. 2026 – heute</span>
         </div>
         <div class="project-meta">
@@ -223,158 +267,80 @@ const ld = {
             >advisor.nihplod.cn</a
           >
         </div>
-        <ul class="project-points">
-          <li>
-            <strong>KI-Hautanalyse &amp; personalisierte Empfehlungen:</strong> Tongyi Qianwen VL / DeepSeek-LLMs für die zweikanalige Hautanalyse (Fragebogen + Gesichtsscan) integriert; eine eigene Regel-Engine bewertet Produkte anhand von 8 Hauttyp-Personas sowie saisonalen / regionalen Umweltfaktoren — über eine visuelle Admin-Konsole konfigurierbar (Zero-Code-Anpassungen für den Betrieb).
-          </li>
-          <li>
-            <strong>Conversion &amp; Attribution:</strong> Modellintegration und Entwicklung der Kern-APIs geleitet; E-Commerce-Ausgangslinks (Tmall / Douyin / Xiaohongshu) unterstützen UTM-/pid-Tracking und Click-Event-Instrumentierung und bilden zusammen mit WeCom-Berater-Kurzlinks einen attribuierbaren Beratungs-Conversion-Pfad.
-          </li>
-          <li>
-            <strong>Wachstum &amp; Mitgliederbetrieb:</strong> Vierstufige Hautanalyse-Kontingente für Mitglieder angebunden (Standard 10 Sitzungen; Silber durch Umsatz freigeschaltet; Gold / Diamant unbegrenzt), Berichte und Profile an das angemeldete Konto gebunden; Share-Poster, Kanal-ref-Attribution und Registrierungs-Conversion-Popups gestaltet sowie desensibilisierte aggregierte CSV-Statistiken für Marken-Whitepaper und Markt-Insights exportiert.
-          </li>
-          <li>
-            <strong>KI-Kosten- &amp; Zuverlässigkeits-Engineering:</strong> KI-Request-Queue mit Concurrency-Control, Circuit Breaker, täglichen / monatlichen Token- und Kostenbudget-Limits, persistenter Abrechnung pro Aufruf sowie Modell-Whitelist mit Provider-Fallback entworfen; idempotente Retries und Kontingent-Reservierung / -Freigabe verhindern Doppelbelastungen; Berichte nutzen 90 Tage rollierende Gültigkeit mit Hot/Cold-Tier-Archivierung (desensibilisierte Zusammenfassungen im Cold Tier).
-          </li>
-          <li>
-            <strong>Datenasset-Kreislauf:</strong> Eine Server-zu-Server-API mit HMAC-Signaturen + IP-Rate-Limiting entworfen; Hautanalyse-Berichte und Hautpflegeprofile werden per session_id an den WeCom-KI-Kundenservice übergeben — einmalige Hauttests werden so zu dauerhaft nutzbaren, wiederkauf-fördernden Nutzerdaten-Assets.
-          </li>
-        </ul>
+        <p class="project-summary">Zweikanalige KI-Hautanalyse (Fragebogen + Gesichtsscan) mit personalisierten Empfehlungen und geschlossenem Kreislauf bis zum Wiederkauf.</p>
+        <button type="button" class="project-more" data-project-dialog="project-ai-advisor">Details ansehen</button>
+        <dialog class="project-dialog" id="dialog-project-ai-advisor">
+          <div class="project-dialog__panel">
+            <div class="project-dialog__header">
+              <div class="project-dialog__head" data-project-dialog-head></div>
+              <button type="button" class="project-dialog__close" data-project-dialog-close aria-label="Schließen">&times;</button>
+            </div>
+            <div class="project-dialog__content">
+              <div class="project-dialog__media">
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>Projekt-Screenshot / UI-Vorschau</span>
+                </div>
+                <div class="project-media-placeholder" aria-hidden="true">
+                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
+                  <span>Logik- / Architekturdiagramm</span>
+                </div>
+              </div>
+            <ul class="project-points">
+              <li>
+                <strong>KI-Hautanalyse &amp; personalisierte Empfehlungen:</strong> Tongyi Qianwen VL / DeepSeek-LLMs für die zweikanalige Hautanalyse (Fragebogen + Gesichtsscan) integriert; eine eigene Regel-Engine bewertet Produkte anhand von 8 Hauttyp-Personas sowie saisonalen / regionalen Umweltfaktoren — über eine visuelle Admin-Konsole konfigurierbar (Zero-Code-Anpassungen für den Betrieb).
+              </li>
+              <li>
+                <strong>Conversion &amp; Attribution:</strong> Modellintegration und Entwicklung der Kern-APIs geleitet; E-Commerce-Ausgangslinks (Tmall / Douyin / Xiaohongshu) unterstützen UTM-/pid-Tracking und Click-Event-Instrumentierung und bilden zusammen mit WeCom-Berater-Kurzlinks einen attribuierbaren Beratungs-Conversion-Pfad.
+              </li>
+              <li>
+                <strong>Wachstum &amp; Mitgliederbetrieb:</strong> Vierstufige Hautanalyse-Kontingente für Mitglieder angebunden (Standard 10 Sitzungen; Silber durch Umsatz freigeschaltet; Gold / Diamant unbegrenzt), Berichte und Profile an das angemeldete Konto gebunden; Share-Poster, Kanal-ref-Attribution und Registrierungs-Conversion-Popups gestaltet sowie desensibilisierte aggregierte CSV-Statistiken für Marken-Whitepaper und Markt-Insights exportiert.
+              </li>
+              <li>
+                <strong>KI-Kosten- &amp; Zuverlässigkeits-Engineering:</strong> KI-Request-Queue mit Concurrency-Control, Circuit Breaker, täglichen / monatlichen Token- und Kostenbudget-Limits, persistenter Abrechnung pro Aufruf sowie Modell-Whitelist mit Provider-Fallback entworfen; idempotente Retries und Kontingent-Reservierung / -Freigabe verhindern Doppelbelastungen; Berichte nutzen 90 Tage rollierende Gültigkeit mit Hot/Cold-Tier-Archivierung (desensibilisierte Zusammenfassungen im Cold Tier).
+              </li>
+              <li>
+                <strong>Datenasset-Kreislauf:</strong> Eine Server-zu-Server-API mit HMAC-Signaturen + IP-Rate-Limiting entworfen; Hautanalyse-Berichte und Hautpflegeprofile werden per session_id an den WeCom-KI-Kundenservice übergeben — einmalige Hauttests werden so zu dauerhaft nutzbaren, wiederkauf-fördernden Nutzerdaten-Assets.
+              </li>
+            </ul>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">WeChat-KI-Kundenservice</h3>
-          <span class="entry-date">Aug. 2026</span>
-        </div>
-        <div class="project-meta">
-          Eigenständig umgesetzt (Produktdesign · Full-Stack, auf Basis des nativen WeCom-Kundenservice-Chatfensters)
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Multi-Entry-Messaging-Gateway:</strong> Mit FastAPI + Redis + dem DeepSeek-LLM gebaut; drei Nachrichten-Eingänge vereinheitlicht (WeCom-Kundenservice, WeCom-App und WeChat-Official-Account); smarte Übergabe an menschliche Mitarbeiter (Keyword-Erkennung + Servicezeitfenster + Sticky-Agent-Zuordnung).
-          </li>
-          <li>
-            <strong>Begleitende Dialogbetreuung:</strong> Von der Hautanalyse-Plattform übergebene Nutzerprofile übernommen und in Multi-Turn-Dialogen automatisch das Hautpflegeprofil angereichert (Phasenziel-Tracking und Reevaluierungs-Erinnerungen); dazu geführte Bestellabfragen — einmalige Anfragen so zu langfristiger, begleitender Betreuung gemacht.
-          </li>
-          <li>
-            <strong>Prompt- &amp; Wissensdatenbank-Engineering:</strong> Zwei Agenten-Personas (Marken-Service / Hautpflegeberater) mit unabhängigen Prompts und Wissensdatenbanken je Service-Konto geroutet; eine 44-KB-Marken-FAQ-Wissensdatenbank segmentweise aufgebaut, mit Keyword-basiertem On-Demand-Injection und Hot-Reload; doppelte Compliance-Guardrails durch Prompt-Injection-Abwehr und Ausgabefilter für werberechtlich verbotene Begriffe.
-          </li>
-          <li>
-            <strong>Qualitätssicherung &amp; Verfügbarkeit:</strong> Prompt-Iterationsqualität mit 34 Golden-Regression-Cases gegen das Live-LLM abgesichert, unterstützt durch 340+ automatisierte Tests; Exponential-Backoff-Retries mit Timeout-Kontrolle für KI-Aufrufe, mit automatischer In-Memory-Degradierung und geplanter Wiederverbindung bei Redis-Ausfällen; PII-Export/-Lösch-Endpunkte bereitgestellt (PIPL-Compliance); self-hosted auf Linux + Nginx.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Autorisierungs- &amp; Verifizierungsplattform</h3>
-          <span class="entry-date">Apr. 2026 – Mai 2026</span>
-        </div>
-        <div class="project-meta">
-          Eigenständig umgesetzt (Produktdesign · UI/UX · Full-Stack) · Live: <a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer"
-            >ba.nihplod.cn</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Autorisierungsprüfung &amp; Fälschungsschutz-Zertifikate:</strong> Das Händler-Autorisierungssystem mit Next.js 16 + PostgreSQL gebaut und einen zweistufigen Prüfworkflow implementiert (Prüfer-Einreichung → finale Freigabe durch den Verantwortlichen) samt Zertifikats-Statusmaschine (ausgestellt / zurückgewiesen / abgelaufen / widerrufen); browser-seitige Echtzeit-Synthese fälschungssicherer Zertifikate mit E-Siegel und dynamischem QR-Code über Canvas + jsPDF (PNG-/PDF-Download).
-          </li>
-          <li>
-            <strong>Öffentliche Verifizierung &amp; Sicherheitssystem:</strong> Öffentliche Echtheitsprüfung mit dreistufigem Fallback-Matching (exakt → Präfix → fuzzy, beschleunigt durch pg_trgm-GIN-Indizes, inkl. Kamera-QR-Scan) und ein Meldesystem für Fälschungsmeldungen mit vollständigen Statusübergängen; JWT-Blacklisting mit sofortiger Invalidierung bei Passwortänderung, datenbankpersistiertes Rate-Limiting und vollständiges Audit-Logging über den gesamten Zertifikatslebenszyklus und die Ticketbearbeitung.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">Jizhipai KI-Hautanalyse-Mini-Programm</h3>
-          <span class="entry-date">Okt. 2026 – heute</span>
-        </div>
-        <div class="project-meta">
-          Eigenständig umgesetzt (Produktdesign · UI/UX · Mini-Programm-Entwicklung) · Nutzt Konto und KI-Funktionen der H5-Hautanalyseplattform
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Mobiler Hautanalyse-Kreislauf:</strong> Den Fragebogen- + Gesichtsscan-Ablauf in ein WeChat-Mini-Programm (14 Seiten) migriert; mit WeChat VisionKit und 106 Keypoints eine vierstufige Posenerkennung (frontal / rechts / links / Kinn hoch) und automatische Aufnahme umgesetzt (fünf aufeinanderfolgende stabile Frames, Multi-Gesicht-Blockierung, manueller Timeout-Fallback); der Fragebogen unterstützt dependsOn-Bedingungen und Kontingent-Sperren für Hautanalysen.
-          </li>
-          <li>
-            <strong>Asynchrone Analyse &amp; Berichtsrendering:</strong> Komprimierte Gesichtsbilder werden als Base64 übermittelt, asynchrone Aufgaben alle 3 s für bis zu 60 Runden abgefragt; bei Retry verwendet ein Fingerprint aus Antworten + Foto dieselbe sessionId und serverseitige Reservierung, um doppelte Kontingentabzüge und KI-Aufrufe zu vermeiden. Canvas 2D rendert ein 10-Dimensionen-Radar-Diagramm und eine Hauttrend-Kurve in Gerätepixel-Auflösung; clientseitig wird ein Zertifikatsposter mit dynamischem Score und QR-Code zusammengesetzt; Verlauf, Profil-Check-ins sowie Abo-Nachrichten zu Berichtsabschluss / Retest werden unterstützt.
-          </li>
-          <li>
-            <strong>Konto- &amp; Engineering-Governance:</strong> Bindet den OAuth-Public-Client der offiziellen Website und die Dual-Backends der Hautanalyse-Subsite an; eine einheitliche Request-Schicht übernimmt Bearer-Injection, proaktive Aktualisierung vor Ablauf, Single-Flight-401-Refresh mit Replay, erzwungenen Logout bei deaktivierten Konten und Fehlerklassifizierung; versionierte Prüfung der WeChat-Datenschutzautorisierung, Konto-Löschungs-Karenzzeit, Löschen sensibler Caches beim Logout und bidirektionale Sprünge zum Mitgliedercenter-Mini-Programm umgesetzt.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">NIHPLOD Mitgliedercenter-Mini-Programm</h3>
-          <span class="entry-date">Okt. 2026 – heute</span>
-        </div>
-        <div class="project-meta">
-          Eigenständig umgesetzt (Produktdesign · Mini-Programm-Entwicklung) · Natives TypeScript / direkte Anbindung an offizielles OAuth
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Mitgliedercenter &amp; Punktesystem:</strong> Ein 19-seitiges Mitgliedercenter-Mini-Programm in nativem TypeScript (Mitglied / Einlösen / Meine 3 Tabs) gebaut — WeChat-One-Click-Login und Telefonbindung, Mitgliedsstufen-Vorteile und Upgrade-Fortschritt, Punktestand und Transaktionen des letzten Jahres (mit Seriennummern), Geschenke-Einlösung (requestId-Idempotenz), Adressbuch, Einlösehistorie und SF-Express-Tracking, Verbrauchsnachtrag, Profilbearbeitung, Sicherheitscenter (Geräte / Autorisierungen / Login-Verlauf) und Kontolöschung.
-          </li>
-          <li>
-            <strong>Leichtgewichtige Architektur ohne eigenes Backend:</strong> Das Mini-Programm verbindet sich direkt mit den OAuth-2.0-Endpunkten und Business-APIs der offiziellen Website und nutzt einheitliche Konten- und Mitgliederdaten; eine eigene TypeScript-Request-Schicht implementiert Access-/Refresh-Tokens, Single-Flight-Refresh und 401-Replay, Klassifizierung von Refresh-Fehlern (invalid / transient), Rücksprung zur Login-Quelle, erzwungenen Logout bei deaktivierten Konten und Session-Race-Fixes; tsc --noEmit sichert die API-Verträge der 19 Seiten.
-          </li>
-          <li>
-            <strong>Kanalübergreifender Geschäftskreislauf:</strong> Teilt UnionID-/OAuth-Konten und Mitgliederpunkte mit dem Hautanalyse-Mini-Programm; bidirektionale Sprünge verbinden „Hautanalyse → Mitgliedervorteile → Punkte-Einlösung → Wiederkauf"; die Startseite bündelt Punkte, Mitgliedskarte, Hautanalyse-Zähler und Erinnerungen an ablaufende Punkte und abonniert Versand- / Verbrauchsnachtrag-Prüfungsnachrichten.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name">Myskin.Today (Offizielle Website der KI-Hautanalyseplattform)</h3>
-          <span class="entry-date">Jan. 2026 – Feb. 2026</span>
-        </div>
-        <div class="project-meta">
-          Eigenständig umgesetzt (Produktdesign · UI/UX · Full-Stack · AIGC-Visual-Assets) · Live: <a
-            href="https://myskin.today"
-            target="_blank" rel="noopener noreferrer">myskin.today</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Offizielle Website &amp; Kommerzialisierung:</strong> Die offizielle Website der KI-Hautanalyseplattform mit Next.js 16 + Tailwind CSS v4 gebaut — mit Produktkompetenz-Präsentation, drei B2B-Geschäftsmodell-Landingpages (API-Integration / White-Label-Anpassung / strategische Partnerschaft) und API-Dokumentationsseite; Partnerschaftsanfragen werden über API-Routen (IP-Rate-Limiting, Input-Sanitisierung, Timeout-Retries) in Echtzeit an einen WeCom-Bot gepusht.
-          </li>
-          <li>
-            <strong>Designsystem &amp; visuelle Assets:</strong> Ein eigenes Marken-Designsystem aufgebaut (Farb-/Typografie-/Abstands-Variablen, Bento-Grid, helles &amp; dunkles Theme) und alle Website-Illustrationen sowie Werbeszenen-Videos per AIGC erstellt; scrollbewusste Navigation und Zahlen-Zähl-Animationen mit Framer Motion umgesetzt, vollständig responsiv.
-          </li>
-          <li>
-            <strong>SEO &amp; Engineering-Qualität:</strong> Seitenweit eigenständige metadata / OpenGraph / JSON-LD-Strukturdaten / sitemap / PWA; next/image-Optimierung mit Domain-Whitelist seitenweit, plus Diebstahlschutz für Bild- und Videoinhalte.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="entry-header">
-          <h3 class="project-name"
-            >Website-System der Shanghai Lingang Jinghong Security Technology</h3
-          >
-          <span class="entry-date">Jul. 2025 – Sep. 2025</span>
-        </div>
-        <div class="project-meta">
-          Eigenständig umgesetzt (Produktdesign · UI/UX · Full-Stack) · Live: <a
-            href="https://www.lingangjh.com"
-            target="_blank" rel="noopener noreferrer">www.lingangjh.com</a
-          >
-        </div>
-        <ul class="project-points">
-          <li>
-            <strong>Full-Stack-Entwicklung &amp; Design-Umsetzung:</strong> Die Unternehmenswebsite eigenständig End-to-End mit Next.js gebaut, plus ein CMS-Backend für autonomes Content-Management; das visuelle System und Interaktionsprototypen eigenständig in Figma entworfen — First-Screen-Ladezeit unter 1,5 s, vollständig responsiv auf allen Geräten.
-          </li>
-          <li>
-            <strong>KI-QA &amp; Sicherheitsarchitektur:</strong> Den auf Wenxin/Qwen-LLMs basierenden QA-Assistenten (Weknora) lokal mit einer RAG-Retrieval-Pipeline deployed und eine Antwortgenauigkeit von über 85 % erreicht; JWT-Authentifizierung, RLS-Datenisolation und CSP-Richtlinien für Datensicherheit und Zugriffskontrolle implementiert.
-          </li>
-        </ul>
-      </div>
-
+      <h3 class="project-index-title">Weitere Projekte</h3>
+      <ul class="project-index">
+        <li>
+          <span class="project-index-name">WeChat-KI-Kundenservice</span>
+          <span class="project-index-desc">FastAPI + Redis + DeepSeek; Message-Gateway mit drei Eingängen, 340+ automatisierte Tests.</span>
+          <span class="project-index-date">2026.08</span>
+        </li>
+        <li>
+          <span class="project-index-name"><a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer">NIHPLOD Autorisierungs- &amp; Verifizierungsplattform</a></span>
+          <span class="project-index-desc">Next.js + PostgreSQL; Autorisierungsprüfung, fälschungssichere Zertifikate und öffentliche Verifizierung.</span>
+          <span class="project-index-date">2026.04 – 2026.05</span>
+        </li>
+        <li>
+          <span class="project-index-name">Jizhipai KI-Hautanalyse-Mini-Programm</span>
+          <span class="project-index-desc">WeChat-Mini-Programm + VisionKit; 14-seitiger Hautanalyse-Flow mit asynchronen Berichten.</span>
+          <span class="project-index-date">2026.10 – heute</span>
+        </li>
+        <li>
+          <span class="project-index-name">NIHPLOD Mitgliedercenter-Mini-Programm</span>
+          <span class="project-index-desc">Native TypeScript; 19 Seiten für Mitgliedschaft, Punkte, Einlösung und OAuth-Anbindung.</span>
+          <span class="project-index-date">2026.10 – heute</span>
+        </li>
+        <li>
+          <span class="project-index-name"><a href="https://myskin.today" target="_blank" rel="noopener noreferrer">Myskin.Today</a></span>
+          <span class="project-index-desc">Next.js 16 + Tailwind v4; B2B-Website, API-Dokumentation und Designsystem.</span>
+          <span class="project-index-date">2026.01 – 2026.02</span>
+        </li>
+        <li>
+          <span class="project-index-name"><a href="https://www.lingangjh.com" target="_blank" rel="noopener noreferrer">Website-System Shanghai Lingang Jinghong</a></span>
+          <span class="project-index-desc">Next.js + CMS; 1,5 s First Paint; RAG-Q&amp;A-Genauigkeit &gt;85 %.</span>
+          <span class="project-index-date">2025.07 – 2025.09</span>
+        </li>
+      </ul>
     </section>
 
     <section>
