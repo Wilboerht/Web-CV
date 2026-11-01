@@ -220,7 +220,7 @@ h3.project-name {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 4px;
+  margin-top: 6px;
   padding: 0;
   border: 0;
   background: none;
@@ -417,10 +417,11 @@ body.project-modal-open {
   white-space: nowrap;
 }
 .project-index-title {
-  margin: 24px 0 8px;
-  font-size: 0.9375rem;
+  margin: 24px 0 10px;
+  font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--text-color);
+  letter-spacing: 0.04em;
+  color: var(--light-text);
 }
 .project-index {
   margin: 0;
@@ -428,17 +429,22 @@ body.project-modal-open {
   list-style: none;
 }
 .project-index li {
-  display: grid;
-  grid-template-columns: 15em minmax(0, 1fr) auto;
-  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  padding: 5px 0;
-  font-size: 0.8125rem;
-  line-height: 1.55;
+  column-gap: 8px;
+  padding: 0;
+  font-size: var(--cv-copy-size);
+  line-height: 1.7;
   color: var(--light-text);
 }
+.project-index li + li {
+  margin-top: 10px;
+}
 .project-index-name {
+  order: 1;
   font-weight: 600;
+  font-size: var(--cv-copy-size);
   color: var(--text-color);
 }
 .project-index-name a {
@@ -458,9 +464,21 @@ body.project-modal-open {
   color: currentColor;
 }
 .project-index-date {
+  order: 2;
   color: var(--light-text);
+  font-size: 0.8125rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+}
+.project-index-date::before {
+  content: "·";
+  margin-right: 6px;
+  color: #bbb;
+}
+.project-index-desc {
+  order: 3;
+  flex-basis: 100%;
+  color: var(--light-text);
 }
 .entry-figure {
   margin: 12px 0 0;
