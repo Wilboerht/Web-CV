@@ -152,9 +152,9 @@ h2 {
   gap: 8px;
 }
 .project-entry {
-  margin-bottom: 20px;
-  padding-bottom: 16px;
-  border-bottom: 1px dotted var(--border-color);
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
   scroll-margin-top: 24px;
   cursor: pointer;
 }
@@ -180,6 +180,9 @@ h3.project-name {
   color: var(--light-text);
   margin: 8px 0 8px 0;
   overflow-wrap: anywhere;
+}
+.project-entry > .project-meta {
+  display: none;
 }
 .project-meta a {
   color: var(--link-color);
@@ -216,25 +219,24 @@ h3.project-name {
 .project-more {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  margin-top: 8px;
-  padding: 4px 10px;
-  border: 1px solid var(--border-color);
-  border-radius: 999px;
-  background: #fff;
+  gap: 6px;
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
   color: var(--link-color);
   font: inherit;
-  font-size: 0.8125rem;
-  line-height: 1.5;
+  font-size: var(--cv-copy-size);
+  line-height: 1.7;
   cursor: pointer;
 }
-.project-more::after {
-  content: "→";
-  font-size: 0.9em;
+.project-more__icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
 }
 .project-more:hover {
-  border-color: rgba(26, 84, 144, 0.45);
-  background: var(--hover-bg);
+  text-decoration: underline;
 }
 .project-more:focus-visible {
   outline: 2px solid var(--link-color);
@@ -415,7 +417,7 @@ body.project-modal-open {
   white-space: nowrap;
 }
 .project-index-title {
-  margin: 20px 0 6px;
+  margin: 24px 0 8px;
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--text-color);
@@ -430,7 +432,7 @@ body.project-modal-open {
   grid-template-columns: 15em minmax(0, 1fr) auto;
   column-gap: 10px;
   align-items: baseline;
-  padding: 4px 0;
+  padding: 5px 0;
   font-size: 0.8125rem;
   line-height: 1.55;
   color: var(--light-text);
@@ -442,11 +444,18 @@ body.project-modal-open {
 .project-index-name a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--border-color);
+}
+.project-index-name a::after {
+  content: "↗";
+  margin-left: 2px;
+  font-size: 0.78em;
+  color: var(--light-text);
 }
 .project-index-name a:hover {
   color: var(--link-color);
-  border-bottom-color: currentColor;
+}
+.project-index-name a:hover::after {
+  color: currentColor;
 }
 .project-index-date {
   color: var(--light-text);
