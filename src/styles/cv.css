@@ -317,6 +317,35 @@ h3.project-name {
   letter-spacing: 0.01em;
   vertical-align: baseline;
 }
+.project-meta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 2px;
+  padding: 2px 7px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--link-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.project-meta-link:hover {
+  background: #f8fafc;
+  border-color: rgba(26, 84, 144, 0.35);
+}
+.project-meta-link:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+.project-meta-link__icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
 .project-dialog__title-row {
   display: flex;
   flex-wrap: wrap;
