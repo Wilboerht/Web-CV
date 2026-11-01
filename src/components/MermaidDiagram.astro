@@ -1,0 +1,76 @@
+---
+import { renderMermaidSVG } from "beautiful-mermaid";
+
+interface Props {
+  code: string;
+  alt: string;
+  zoomLabel?: string;
+  closeLabel?: string;
+}
+
+const {
+  code,
+  alt,
+  zoomLabel = "Click to enlarge",
+  closeLabel = "Close",
+} = Astro.props;
+
+const svg = renderMermaidSVG(code, {
+  bg: "#ffffff",
+  fg: "#27272a",
+  accent: "#1a5490",
+  font: "Inter",
+  padding: 24,
+}).replace(/@import url\([^)]*\);\s*/g, "");
+---
+
+<figure class="entry-figure">
+  <button
+    type="button"
+    class="entry-figure__trigger"
+    aria-label={`${alt}（${zoomLabel}）`}
+    title={zoomLabel}
+  >
+    <span class="entry-figure__svg" role="img" aria-label={alt} set:html={svg} />
+    <span class="entry-figure__overlay" aria-hidden="true">
+      <span class="entry-figure__hint">{zoomLabel}</span>
+    </span>
+  </button>
+
+  <dialog class="diagram-dialog" aria-label={alt}>
+    <button type="button" class="diagram-dialog__close" aria-label={closeLabel}>
+      &times;
+    </button>
+    <div class="diagram-dialog__body" data-diagram-content></div>
+  </dialog>
+</figure>
+
+<script>
+  document.querySelectorAll(".entry-figure").forEach((figure) => {
+    const trigger = figure.querySelector(".entry-figure__trigger");
+    const dialog = figure.querySelector(".diagram-dialog");
+    if (!trigger || !dialog) return;
+
+    const source = figure.querySelector(".entry-figure__svg svg");
+    const content = dialog.querySelector("[data-diagram-content]");
+    const closeButton = dialog.querySelector(".diagram-dialog__close");
+
+    trigger.addEventListener("click", () => {
+      if (source && content && !content.firstChild) {
+        content.appendChild(source.cloneNode(true));
+      }
+      if (!dialog.open) dialog.showModal();
+      document.body.classList.add("diagram-open");
+    });
+
+    closeButton?.addEventListener("click", () => dialog.close());
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener("close", () => {
+      document.body.classList.remove("diagram-open");
+    });
+  });
+</script>

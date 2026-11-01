@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import MermaidDiagram from "../components/MermaidDiagram.astro";
+import { moidasArchitecture } from "../diagrams/moidas-architecture";
 import "../styles/global.css";
 import "../styles/cv.css";
 
@@ -137,6 +139,12 @@ const ld = {
           <li>作為技術側負責人承接產品、營銷團隊需求並拆解排期，主導需求評審與迭代節奏，支撐品牌網上零售渠道（中國官網）從 0 上線。</li>
           <li>主導 ICP 備案、私隱政策及用戶協議制定，完成數據合規審查，保障多系統合規上線；依據流量動態調整伺服器資源配置，實現成本優化。</li>
         </ul>
+        <MermaidDiagram
+          code={moidasArchitecture.hk}
+          alt="穆埃達思 Moidas 大中華區數碼化系統架構圖：統一認證（SSO）連接官網、AI 測膚、AI 客服與授權驗真等核心系統"
+          zoomLabel="點擊放大查看"
+          closeLabel="關閉"
+        />
       </div>
       <div class="entry">
         <div class="entry-header entry-header--stacked">

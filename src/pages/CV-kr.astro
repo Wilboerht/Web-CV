@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import MermaidDiagram from "../components/MermaidDiagram.astro";
+import { moidasArchitecture } from "../diagrams/moidas-architecture";
 import "../styles/global.css";
 import "../styles/cv.css";
 
@@ -137,6 +139,12 @@ const ld = {
           <li>기술 책임자로서 제품·마케팅 팀의 요구사항을 접수·분해하여 일정 수립, 요구사항 리뷰 및 반복 주기 주도, 브랜드 온라인 리테일 채널(중국 공식 사이트)의 0부터 론칭까지 지원.</li>
           <li>ICP 등록, 개인정보 보호정책 및 이용약관 제정 주도, 데이터 컴플라이언스 심사 완료로 다중 시스템의 컴플라이언스 론칭 보장; 트래픽에 따른 서버 리소스 동적 조정으로 비용 최적화.</li>
         </ul>
+        <MermaidDiagram
+          code={moidasArchitecture.kr}
+          alt="모이다스 중화권 디지털 시스템 아키텍처: 통합 SSO가 공식 사이트, AI 피부 측정, AI 고객서비스, 인증 검증 시스템을 연결"
+          zoomLabel="클릭하여 확대"
+          closeLabel="닫기"
+        />
       </div>
       <div class="entry">
         <div class="entry-header entry-header--stacked">

@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import MermaidDiagram from "../components/MermaidDiagram.astro";
+import { moidasArchitecture } from "../diagrams/moidas-architecture";
 import "../styles/global.css";
 import "../styles/cv.css";
 
@@ -140,6 +142,12 @@ const ld = {
           <li>As technical lead, took in requirements from product and marketing teams and broke them down into schedules, owning requirement reviews and iteration cadence, supporting the brand's online retail channel (official China website) from 0 to launch.</li>
           <li>Led ICP filing, privacy policy and user agreement drafting, and data compliance review to ensure compliant launches across systems; dynamically adjusted server resources based on traffic to optimize costs.</li>
         </ul>
+        <MermaidDiagram
+          code={moidasArchitecture.en}
+          alt="Architecture overview of Moidas' Greater China digital systems: unified SSO connecting the official website, AI skin analysis, AI customer service and authorization verification"
+          zoomLabel="Click to enlarge"
+          closeLabel="Close"
+        />
       </div>
       <div class="entry">
         <div class="entry-header entry-header--stacked">
