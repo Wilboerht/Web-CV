@@ -208,20 +208,25 @@ const canonical = `${SITE_URL}${pathname}`;
           title.textContent = name;
 
           const dateEl = document.createElement("span");
-          dateEl.className = "entry-date";
+          dateEl.className = "project-dialog__date";
           dateEl.textContent = date;
 
-          titleRow.append(title);
+          const titleDate = dateEl.cloneNode(true);
+          titleDate.classList.add("project-dialog__date--title");
+
+          titleRow.append(title, titleDate);
           head.append(titleRow);
 
           if (meta) {
             const metaEl = meta.cloneNode(true);
-            metaEl.prepend(dateEl, document.createTextNode(" · "));
+            const metaDateWrap = document.createElement("span");
+            metaDateWrap.className = "project-dialog__date-meta-wrap";
+            metaDateWrap.append(dateEl.cloneNode(true), document.createTextNode(" · "));
+            metaEl.prepend(metaDateWrap);
             head.append(metaEl);
           } else {
             const metaEl = document.createElement("div");
             metaEl.className = "project-meta";
-            metaEl.append(dateEl);
             head.append(metaEl);
           }
 
