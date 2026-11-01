@@ -303,6 +303,20 @@ h3.project-name {
   font-weight: 500;
   color: var(--text-color);
 }
+.project-meta-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  margin-right: 4px;
+  border-radius: 4px;
+  background: #f3f4f6;
+  color: #555;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  vertical-align: baseline;
+}
 .project-dialog__title-row {
   display: flex;
   flex-wrap: wrap;
