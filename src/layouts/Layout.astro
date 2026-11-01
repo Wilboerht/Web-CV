@@ -211,10 +211,19 @@ const canonical = `${SITE_URL}${pathname}`;
           dateEl.className = "entry-date";
           dateEl.textContent = date;
 
-          titleRow.append(title, dateEl);
+          titleRow.append(title);
           head.append(titleRow);
 
-          if (meta) head.append(meta.cloneNode(true));
+          if (meta) {
+            const metaEl = meta.cloneNode(true);
+            metaEl.prepend(dateEl, document.createTextNode(" · "));
+            head.append(metaEl);
+          } else {
+            const metaEl = document.createElement("div");
+            metaEl.className = "project-meta";
+            metaEl.append(dateEl);
+            head.append(metaEl);
+          }
 
           if (summary) {
             const summaryEl = document.createElement("p");

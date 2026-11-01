@@ -166,7 +166,13 @@ const ld = {
     </section>
 
     <section>
-      <h2>Ausgewählte Projekte</h2>
+      <div class="project-section-head">
+        <h2>Projekte</h2>
+        <a class="project-github-link" href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer" aria-label="Mehr auf GitHub ansehen">
+          <svg class="project-github-link__icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+          Mehr auf GitHub ansehen
+        </a>
+      </div>
 
       <div class="project-entry" id="project-website">
         <div class="entry-header">
@@ -179,22 +185,12 @@ const ld = {
         <p class="project-summary">Markenwebsite und Mitgliederplattform für den China-Markt: verbindet Produktpräsentation, E-Commerce-Verlinkung, Mitgliederpunkte und Hautprofile in einem integrierten Flow, vereinheitlicht WeChat-, Douyin- und Telefonnummern-Identitäten und unterstützt Online-Handel und Wiederkauf von 0 auf 1; 169 API-Routen / 43 Modelle / 1.725 Tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="Details ansehen: NIHPLOD Offizielle China-Website"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>Details ansehen</button>
         <dialog class="project-dialog" id="dialog-project-website">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Projekt-Screenshot / UI-Vorschau</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Logik- / Architekturdiagramm</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>Markenwebsite &amp; Mitgliederplattform:</strong> Die offizielle Markenwebsite und Mitgliederplattform mit Next.js 16 + Prisma + PostgreSQL aufgebaut — Produktpräsentation, Drittanbieter-E-Commerce-Verlinkung (Tmall / Douyin / Xiaohongshu + GA-Event-Tracking), Mitgliedsstufen, Punkte-Ledger, Punkte-Einlösung (SF-Express-Tracking), Verbrauchsnachtrag, Hautprofile und Sicherheitscenter; WeChat-, Douyin- und Telefon-OTP-Identitäten in einem einheitlichen Kontosystem aggregiert — 169 API-Routen, 43 Datenmodelle und 1.725 automatisierte Testfälle.
@@ -220,24 +216,14 @@ const ld = {
           Eigenständig umgesetzt · Produkt / Full-Stack
         </div>
         <p class="project-summary">Die einheitliche Identitätsbasis für Greater China: ein selbst entwickeltes OAuth 2.0 / OIDC Single Sign-on, das Website, Hautanalyse-Seite, zwei Mini-Programme und Admin-Konsole verbindet und systemübergreifendes Login, globales Logout sowie Zwei-Faktor-Authentifizierung für 5 Systeme ermöglicht – verpackt als wiederverwendbares npm-SDK.</p>
-        <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="Details ansehen: NIHPLOD Plattform f?r einheitliche Authentifizierung (SSO / OIDC)"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>Details ansehen</button>
+        <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="Details ansehen: NIHPLOD Plattform für einheitliche Authentifizierung (SSO / OIDC)"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>Details ansehen</button>
         <dialog class="project-dialog" id="dialog-project-sso">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Projekt-Screenshot / UI-Vorschau</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Logik- / Architekturdiagramm</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>Protokoll-Implementierung:</strong> Self-hosted OAuth 2.0 / OIDC-SSO aufgebaut, isomorph mit der offiziellen Hauptseite deployed — die Hauptseite fungiert als Authorization Server und stellt RS256-JWTs aus; die Endpunkte authorize / token / userinfo / introspect / revoke / end-session vollständig implementiert, inkl. PKCE, DPoP und TOTP-Zwei-Faktor-Authentifizierung.
@@ -265,22 +251,12 @@ const ld = {
         <p class="project-summary">Ein KI-Hautpflegeberater für Konsumenten: zweikanalige Hautanalyse per Fragebogen + Gesichtsscan, personalisierte Produktempfehlungen nach Hauttyp, Jahreszeit und Region sowie Übergabe von Berichten und Profilen an WeCom-Berater – geschlossener Kreislauf von Analyse über Pflegeplan und Follow-up bis zum Wiederkauf; 85 API-Routen / 426 Tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="Details ansehen: KI-Hautpflegeberater"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>Details ansehen</button>
         <dialog class="project-dialog" id="dialog-project-ai-advisor">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Projekt-Screenshot / UI-Vorschau</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Logik- / Architekturdiagramm</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>KI-Hautanalyse &amp; personalisierte Empfehlungen:</strong> Tongyi Qianwen VL / DeepSeek-LLMs für die zweikanalige Hautanalyse (Fragebogen + Gesichtsscan) integriert; eine eigene Regel-Engine bewertet Produkte anhand von 8 Hauttyp-Personas sowie saisonalen / regionalen Umweltfaktoren — über eine visuelle Admin-Konsole konfigurierbar (Zero-Code-Anpassungen für den Betrieb).
@@ -303,39 +279,6 @@ const ld = {
         </dialog>
       </div>
 
-      <h3 class="project-index-title">Weitere Projekte</h3>
-      <ul class="project-index">
-        <li>
-          <span class="project-index-name">WeChat-KI-Kundenservice</span>
-          <span class="project-index-desc">FastAPI + Redis + DeepSeek; Message-Gateway mit drei Eingängen, 340+ automatisierte Tests.</span>
-          <span class="project-index-date">2026.08</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer">NIHPLOD Autorisierungs- &amp; Verifizierungsplattform</a></span>
-          <span class="project-index-desc">Next.js + PostgreSQL; Autorisierungsprüfung, fälschungssichere Zertifikate und öffentliche Verifizierung.</span>
-          <span class="project-index-date">2026.04 – 2026.05</span>
-        </li>
-        <li>
-          <span class="project-index-name">Jizhipai KI-Hautanalyse-Mini-Programm</span>
-          <span class="project-index-desc">WeChat-Mini-Programm + VisionKit; 14-seitiger Hautanalyse-Flow mit asynchronen Berichten.</span>
-          <span class="project-index-date">2026.10 – heute</span>
-        </li>
-        <li>
-          <span class="project-index-name">NIHPLOD Mitgliedercenter-Mini-Programm</span>
-          <span class="project-index-desc">Native TypeScript; 19 Seiten für Mitgliedschaft, Punkte, Einlösung und OAuth-Anbindung.</span>
-          <span class="project-index-date">2026.10 – heute</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://myskin.today" target="_blank" rel="noopener noreferrer">Myskin.Today</a></span>
-          <span class="project-index-desc">Next.js 16 + Tailwind v4; B2B-Website, API-Dokumentation und Designsystem.</span>
-          <span class="project-index-date">2026.01 – 2026.02</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://www.lingangjh.com" target="_blank" rel="noopener noreferrer">Website-System Shanghai Lingang Jinghong</a></span>
-          <span class="project-index-desc">Next.js + CMS; 1,5 s First Paint; RAG-Q&amp;A-Genauigkeit &gt;85 %.</span>
-          <span class="project-index-date">2025.07 – 2025.09</span>
-        </li>
-      </ul>
     </section>
 
     <section>

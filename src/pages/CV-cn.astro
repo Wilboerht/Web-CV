@@ -163,7 +163,13 @@ const ld = {
     </section>
 
     <section>
-      <h2>精选项目</h2>
+      <div class="project-section-head">
+        <h2>项目经历</h2>
+        <a class="project-github-link" href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer" aria-label="去 GitHub 查看更多">
+          <svg class="project-github-link__icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+          去 GitHub 查看更多
+        </a>
+      </div>
 
       <div class="project-entry" id="project-website">
         <div class="entry-header">
@@ -174,24 +180,14 @@ const ld = {
           独立完成 · 产品 / UI/UX / 全栈 · <a href="https://www.nihplod.cn" target="_blank" rel="noopener noreferrer">nihplod.cn ↗</a>
         </div>
         <p class="project-summary">品牌在中国市场的官网与会员中台：整合产品展示、电商导购、会员积分与测肤档案，统一微信 / 抖音 / 手机号多端账号；从 0 到 1 支撑品牌线上零售与复购，169 API / 43 模型 / 1725 测试。</p>
-        <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="?????NIHPLOD ????"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
+        <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="查看详情：NIHPLOD 中国官网"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
         <dialog class="project-dialog" id="dialog-project-website">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>项目截图 / 界面预览</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>逻辑图 / 架构图</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>品牌官网与会员中台：</strong>基于 Next.js 16 + Prisma + PostgreSQL 构建品牌官网、产品陈列与第三方电商导购（天猫 / 抖音 / 小红书外链 + GA 事件追踪），并落地会员等级、积分账本、积分兑礼（顺丰物流轨迹）、消费补录、测肤档案与安全中心；聚合微信、抖音、手机号验证码多端身份至统一账号体系；全站 169 个 API 路由、43 个数据模型、1725 个自动化测试用例。
@@ -217,24 +213,14 @@ const ld = {
           独立完成 · 产品 / 全栈
         </div>
         <p class="project-summary">品牌大中华区的统一身份底座：自建 OAuth 2.0 / OIDC 单点登录，打通官网、测肤站、双小程序与管理端的账号与登录状态；支撑 5 个系统跨域免登、全局登出与二因素验证，并沉淀为可复用 npm SDK。</p>
-        <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="?????NIHPLOD ???????SSO / OIDC?"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
+        <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="查看详情：NIHPLOD 统一认证平台（SSO / OIDC）"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
         <dialog class="project-dialog" id="dialog-project-sso">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>项目截图 / 界面预览</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>逻辑图 / 架构图</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>协议实现：</strong>自建 OAuth 2.0 / OIDC 单点登录，与官网主站同构部署，主站作为 Authorization Server 签发 JWT（RS256），完整实现 authorize / token / userinfo / introspect / revoke / end-session 协议端点，支持 PKCE、DPoP 与 TOTP 二因素。
@@ -260,24 +246,14 @@ const ld = {
           独立完成 · 产品 / UX / 全栈 · UI 视觉协作 · <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer">advisor.nihplod.cn ↗</a>
         </div>
         <p class="project-summary">面向消费者的 AI 护肤顾问：以「问卷 + 扫脸」双通道完成皮肤分析，结合肤质 / 季节 / 地域规则生成个性化产品方案，并将报告与档案透传至企微顾问，形成「测肤 → 方案 → 跟进 → 复购」闭环；85 API / 426 测试。</p>
-        <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="?????AI ??????"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
+        <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="查看详情：AI 护肤顾问系统"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
         <dialog class="project-dialog" id="dialog-project-ai-advisor">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>项目截图 / 界面预览</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>逻辑图 / 架构图</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>AI 测肤与个性化推荐：</strong>接入通义千问 VL / DeepSeek 大模型实现「问卷 + 扫脸」双通道皮肤分析；自研规则引擎按 8 种肤质画像与季节 / 地域环境因子打分匹配产品，支持后台可视化配置（运营零代码调整）。
@@ -300,39 +276,6 @@ const ld = {
         </dialog>
       </div>
 
-      <h3 class="project-index-title">其他项目</h3>
-      <ul class="project-index">
-        <li>
-          <span class="project-index-name">微信 AI 智能客服</span>
-          <span class="project-index-desc">FastAPI + Redis + DeepSeek，三入口消息网关与 340+ 自动化测试。</span>
-          <span class="project-index-date">2026.08</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer">NIHPLOD 授权验真平台</a></span>
-          <span class="project-index-desc">Next.js + PostgreSQL，授权审核、防伪证书与公众查验。</span>
-          <span class="project-index-date">2026.04 – 2026.05</span>
-        </li>
-        <li>
-          <span class="project-index-name">肌智派 AI 测肤小程序</span>
-          <span class="project-index-desc">微信小程序 + VisionKit，14 页测肤闭环与异步报告。</span>
-          <span class="project-index-date">2026.10 – 至今</span>
-        </li>
-        <li>
-          <span class="project-index-name">NIHPLOD 会员中心小程序</span>
-          <span class="project-index-desc">原生 TypeScript，19 页会员 / 积分 / 兑礼与 OAuth 接入。</span>
-          <span class="project-index-date">2026.10 – 至今</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://myskin.today" target="_blank" rel="noopener noreferrer">Myskin.Today</a></span>
-          <span class="project-index-desc">Next.js 16 + Tailwind v4，B 端官网、API 文档与设计系统。</span>
-          <span class="project-index-date">2026.01 – 2026.02</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://www.lingangjh.com" target="_blank" rel="noopener noreferrer">上海临港景鸿官网系统</a></span>
-          <span class="project-index-desc">Next.js + CMS，1.5s 首屏；RAG 问答准确率 &gt;85%。</span>
-          <span class="project-index-date">2025.07 – 2025.09</span>
-        </li>
-      </ul>
     </section>
 
     <section>

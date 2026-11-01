@@ -166,7 +166,13 @@ const ld = {
     </section>
 
     <section>
-      <h2>Selected Projects</h2>
+      <div class="project-section-head">
+        <h2>Projects</h2>
+        <a class="project-github-link" href="https://github.com/Wilboerht" target="_blank" rel="noopener noreferrer" aria-label="View more on GitHub">
+          <svg class="project-github-link__icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+          View more on GitHub
+        </a>
+      </div>
 
       <div class="project-entry" id="project-website">
         <div class="entry-header">
@@ -179,22 +185,12 @@ const ld = {
         <p class="project-summary">Brand website and membership platform for the China market: integrates product discovery, e-commerce referral, member points and skin profiles into one experience, unifies WeChat / Douyin / phone-number identities, and supports online retail and repurchase from 0 to 1; 169 API routes / 43 models / 1,725 tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="View details: NIHPLOD China Official Website"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>View details</button>
         <dialog class="project-dialog" id="dialog-project-website">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Project screenshot / UI preview</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Logic / architecture diagram</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>Brand Website &amp; Member Platform:</strong> Built the brand's official website and member platform with Next.js 16 + Prisma + PostgreSQL — product showcases, third-party e-commerce referral (Tmall / Douyin / Xiaohongshu links + GA event tracking), membership tiers, points ledger, points redemption (SF Express tracking), consumption backfill, skin profiles, and a security center; aggregated WeChat, Douyin, and phone OTP identities into a unified account system — 169 API routes, 43 data models, and 1,725 automated test cases.
@@ -222,22 +218,12 @@ const ld = {
         <p class="project-summary">Unified identity foundation for Greater China: a self-built OAuth 2.0 / OIDC single sign-on that connects the website, skin-analysis site, two mini-programs and admin console, and enables cross-domain login, global logout and two-factor authentication across 5 systems, packaged as a reusable npm SDK.</p>
         <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="View details: NIHPLOD Unified Authentication Platform (SSO / OIDC)"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>View details</button>
         <dialog class="project-dialog" id="dialog-project-sso">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Project screenshot / UI preview</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Logic / architecture diagram</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>Protocol Implementation:</strong> Built a self-hosted OAuth 2.0 / OIDC SSO, deployed isomorphically with the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE, DPoP, and TOTP two-factor authentication.
@@ -265,22 +251,12 @@ const ld = {
         <p class="project-summary">AI skincare advisor for consumers: dual-channel skin analysis via questionnaire + face scan, personalized product recommendations based on skin type, season and region, with reports and profiles passed to WeCom advisors — closing the loop from analysis to regimen, follow-up and repurchase; 85 API routes / 426 tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="View details: AI Skincare Advisor System"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>View details</button>
         <dialog class="project-dialog" id="dialog-project-ai-advisor">
+          <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
           <div class="project-dialog__panel">
             <div class="project-dialog__header">
               <div class="project-dialog__head" data-project-dialog-head></div>
-              <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
             </div>
             <div class="project-dialog__content">
-              <div class="project-dialog__media">
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Project screenshot / UI preview</span>
-                </div>
-                <div class="project-media-placeholder" aria-hidden="true">
-                  <svg class="project-media-placeholder__icon"><use href="#icon-image"></use></svg>
-                  <span>Logic / architecture diagram</span>
-                </div>
-              </div>
             <ul class="project-points">
               <li>
                 <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated Tongyi Qianwen VL / DeepSeek LLMs for dual-channel (questionnaire + facial scan) skin analysis; a custom rule engine scores and matches products against 8 skin-type personas plus seasonal / regional environmental factors, configurable through a visual admin console (zero-code adjustments for operations).
@@ -303,39 +279,6 @@ const ld = {
         </dialog>
       </div>
 
-      <h3 class="project-index-title">Other Projects</h3>
-      <ul class="project-index">
-        <li>
-          <span class="project-index-name">WeChat AI Customer Service</span>
-          <span class="project-index-desc">FastAPI + Redis + DeepSeek; three-entry message gateway, 340+ automated tests.</span>
-          <span class="project-index-date">2026.08</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://ba.nihplod.cn" target="_blank" rel="noopener noreferrer">NIHPLOD Authorization &amp; Verification Platform</a></span>
-          <span class="project-index-desc">Next.js + PostgreSQL; authorization review, anti-counterfeit certificates, public verification.</span>
-          <span class="project-index-date">2026.04 – 2026.05</span>
-        </li>
-        <li>
-          <span class="project-index-name">Jizhipai AI Skin Analysis Mini-Program</span>
-          <span class="project-index-desc">WeChat Mini Program + VisionKit; 14-page skin analysis flow with async reports.</span>
-          <span class="project-index-date">2026.10 – Present</span>
-        </li>
-        <li>
-          <span class="project-index-name">NIHPLOD Member Center Mini-Program</span>
-          <span class="project-index-desc">Native TypeScript; 19-page membership, points, redemption and OAuth integration.</span>
-          <span class="project-index-date">2026.10 – Present</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://myskin.today" target="_blank" rel="noopener noreferrer">Myskin.Today</a></span>
-          <span class="project-index-desc">Next.js 16 + Tailwind v4; B2B website, API docs and design system.</span>
-          <span class="project-index-date">2026.01 – 2026.02</span>
-        </li>
-        <li>
-          <span class="project-index-name"><a href="https://www.lingangjh.com" target="_blank" rel="noopener noreferrer">Shanghai Lingang Jinghong Website System</a></span>
-          <span class="project-index-desc">Next.js + CMS; 1.5s first paint; RAG Q&amp;A accuracy &gt;85%.</span>
-          <span class="project-index-date">2025.07 – 2025.09</span>
-        </li>
-      </ul>
     </section>
 
     <section>
