@@ -7,12 +7,12 @@ const { lang } = Astro.props;
 const year = new Date().getFullYear();
 
 const copyright: Record<string, string> = {
-  "zh-CN": `© ${year} 王泓坤 Hongkun Wang · 保留所有权利`,
-  "zh-TW": `© ${year} 王泓坤 Hongkun Wang · 版權所有`,
-  "zh-HK": `© ${year} 王泓坤 Hongkun Wang · 版權所有`,
-  en: `© ${year} Hongkun Wang. All rights reserved.`,
-  de: `© ${year} Hongkun Wang. Alle Rechte vorbehalten.`,
-  ko: `© ${year} 왕홍곤 Hongkun Wang. 모든 권리 보유.`,
+  "zh-CN": `© ${year} 王泓坤`,
+  "zh-TW": `© ${year} 王泓坤`,
+  "zh-HK": `© ${year} 王泓坤`,
+  en: `© ${year} Hongkun Wang`,
+  de: `© ${year} Hongkun Wang`,
+  ko: `© ${year} 왕홍곤`,
 };
 
 const text = copyright[lang] ?? copyright.en;
@@ -24,12 +24,13 @@ const text = copyright[lang] ?? copyright.en;
 
 <style>
   .site-footer {
-    margin-top: 8px;
+    margin-top: 0;
     padding-top: 16px;
     border-top: 1px solid var(--border-color);
     text-align: center;
     color: var(--light-text);
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
     line-height: 1.6;
   }
   .site-footer p {
