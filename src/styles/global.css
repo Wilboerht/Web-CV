@@ -130,8 +130,12 @@ a:hover {
 }
 
 .cv-toolbar button:focus-visible,
-.cv-toolbar-save:focus-visible,
-.cv-lang:focus-within .cv-lang-label {
+.cv-toolbar-save:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+.cv-lang:has(.cv-lang-select:focus-visible) .cv-lang-label {
     outline: 2px solid var(--focus-ring);
     outline-offset: 2px;
 }
@@ -230,6 +234,31 @@ a:hover {
     }
     .skip-link {
         display: none !important;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    a:focus,
+    a:focus-visible,
+    button:focus,
+    button:focus-visible,
+    select:focus,
+    select:focus-visible,
+    dialog:focus,
+    dialog:focus-visible,
+    [tabindex]:focus,
+    [tabindex]:focus-visible {
+        outline: none;
+    }
+
+    .cv-toolbar button:focus,
+    .cv-toolbar button:focus-visible,
+    .cv-toolbar-save:focus,
+    .cv-toolbar-save:focus-visible,
+    .cv-lang:focus-within .cv-lang-label,
+    .cv-lang:has(.cv-lang-select:focus-visible) .cv-lang-label,
+    .cv-lang:has(.cv-lang-select:focus) .cv-lang-label {
+        outline: none;
     }
 }
 

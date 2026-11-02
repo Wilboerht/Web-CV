@@ -1143,3 +1143,27 @@ body.diagram-open {
     orphans: 3;
   }
 }
+
+@media (hover: none), (pointer: coarse) {
+  .project-name-button:focus,
+  .project-name-button:focus-visible,
+  .project-more:focus,
+  .project-more:focus-visible,
+  .project-meta-link:focus,
+  .project-meta-link:focus-visible,
+  .project-dialog__close:focus,
+  .project-dialog__close:focus-visible,
+  .project-github-link:focus,
+  .project-github-link:focus-visible,
+  .entry-figure__trigger:focus,
+  .entry-figure__trigger:focus-visible,
+  .diagram-dialog__close:focus,
+  .diagram-dialog__close:focus-visible {
+    outline: none;
+  }
+
+  .entry-figure__trigger:focus .entry-figure__overlay,
+  .entry-figure__trigger:focus-visible .entry-figure__overlay {
+    opacity: 0;
+  }
+}
