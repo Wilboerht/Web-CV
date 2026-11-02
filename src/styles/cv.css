@@ -353,6 +353,20 @@ h3.project-name {
   height: 12px;
   flex-shrink: 0;
 }
+.project-meta-note {
+  color: var(--light-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.project-meta-note::before {
+  content: "?";
+  margin: 0 4px 0 2px;
+  color: #bbb;
+}
 .project-dialog__title-row {
   display: flex;
   flex-wrap: wrap;
