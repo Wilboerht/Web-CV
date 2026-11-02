@@ -6,6 +6,21 @@ interface Props {
 
 const { title, lang } = Astro.props;
 
+const latinFontFamily =
+  "family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700";
+const cjkFontFamily: Record<string, string> = {
+  "zh-CN": "family=Noto+Serif+SC:wght@400..700",
+  "zh-TW": "family=Noto+Serif+TC:wght@400..700",
+  "zh-HK": "family=Noto+Serif+TC:wght@400..700",
+  ko: "family=Noto+Serif+KR:wght@400..700",
+};
+const fontHref = `https://fonts.googleapis.com/css2?${[
+  latinFontFamily,
+  cjkFontFamily[lang],
+]
+  .filter(Boolean)
+  .join("&")}&display=swap`;
+
 const SITE_URL = Astro.site ? Astro.site.href.replace(/\/+$/, "") : "https://cv.wilboerht.com";
 
 const desc: Record<string, string> = {
@@ -127,15 +142,12 @@ const canonical = `${SITE_URL}${pathname}`;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      href={fontHref}
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-      />
+      <link rel="stylesheet" href={fontHref} />
     </noscript>
 
     <slot name="head" />
@@ -206,7 +218,27 @@ const canonical = `${SITE_URL}${pathname}`;
           const title = document.createElement("h3");
           title.className = "project-dialog__title";
           title.id = `dialog-${dialogId}-title`;
-          title.textContent = name;
+
+          const logoSrc = entry.getAttribute("data-project-logo");
+          const displayName = logoSrc
+            ? name.replace(/^NIHPLOD\s+/i, "") || name
+            : name;
+          title.textContent = displayName;
+
+          if (logoSrc) {
+            const logo = document.createElement("img");
+            logo.className = "project-dialog__logo";
+            logo.src = logoSrc;
+            logo.alt = "";
+            logo.decoding = "async";
+            logo.setAttribute("aria-hidden", "true");
+            title.prepend(logo);
+
+            const separator = document.createElement("span");
+            separator.className = "project-dialog__logo-separator";
+            separator.setAttribute("aria-hidden", "true");
+            logo.after(separator);
+          }
 
           const dateEl = document.createElement("span");
           dateEl.className = "project-dialog__date";
@@ -218,16 +250,41 @@ const canonical = `${SITE_URL}${pathname}`;
           titleRow.append(title, titleDate);
           head.append(titleRow);
 
-          let metaEl;
+          const metaEl = document.createElement("div");
+          metaEl.className = "project-meta project-dialog__meta";
+
+          const metaDateWrap = document.createElement("span");
+          metaDateWrap.className = "project-dialog__date-meta-wrap";
+          metaDateWrap.append(dateEl.cloneNode(true), document.createTextNode(" · "));
+          metaEl.append(metaDateWrap);
+
           if (meta) {
-            metaEl = meta.cloneNode(true);
-            const metaDateWrap = document.createElement("span");
-            metaDateWrap.className = "project-dialog__date-meta-wrap";
-            metaDateWrap.append(dateEl.cloneNode(true), document.createTextNode(" · "));
-            metaEl.prepend(metaDateWrap);
-          } else {
-            metaEl = document.createElement("div");
-            metaEl.className = "project-meta";
+            const owner = meta.querySelector(".project-meta-owner");
+            if (owner) {
+              const ownerEl = document.createElement("span");
+              ownerEl.className = "project-dialog__owner";
+              ownerEl.textContent = owner.textContent.trim();
+              metaEl.append(ownerEl);
+            }
+
+            const tags = Array.from(meta.querySelectorAll(".project-meta-tag"));
+            if (tags.length) {
+              const tagsEl = document.createElement("span");
+              tagsEl.className = "project-dialog__tags";
+              tags.forEach((tag) => tagsEl.append(tag.cloneNode(true)));
+              metaEl.append(tagsEl);
+            }
+
+            const note = meta.querySelector(".project-meta-note");
+            if (note) {
+              const noteEl = document.createElement("span");
+              noteEl.className = "project-dialog__note";
+              noteEl.textContent = note.textContent.trim();
+              metaEl.append(noteEl);
+            }
+
+            const link = meta.querySelector(".project-meta-link");
+            if (link) metaEl.append(link.cloneNode(true));
           }
 
           let summaryEl;

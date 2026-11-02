@@ -104,12 +104,6 @@ const ld = {
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(ld, null, 2)} />
   </Fragment>
-  <style>
-    :root {
-      --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
-    }
-  </style>
-
   <div class="container">
     <header>
       <h1>Hongkun Wang</h1>
@@ -173,7 +167,7 @@ const ld = {
         </a>
       </div>
 
-      <div class="project-entry" id="project-website">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-website">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-website" aria-haspopup="dialog">NIHPLOD China Official Website</button></h3>
           <span class="entry-date">Nov 2025 – Present</span>
@@ -181,7 +175,7 @@ const ld = {
         <div class="project-meta">
           <span class="project-meta-owner">Independently owned</span>: <span class="project-meta-role"><span class="project-meta-tag">product</span> <span class="project-meta-tag">UI/UX</span> <span class="project-meta-tag">full-stack</span> <a href="https://www.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">Brand website and membership platform for the China market: integrates product discovery, e-commerce referral, member points and skin profiles into one experience, unifies WeChat / Douyin / phone-number identities, and supports online retail and repurchase from 0 to 1; 169 API routes / 43 models / 1,725 tests.</p>
+        <p class="project-summary">Brand website and membership platform for the China market: integrates product discovery, e-commerce referral, member points and skin profiles into one experience, unifies WeChat / Douyin / phone-number identities, and supports online retail and repurchase from 0 to 1; 205 API routes / 51 models / 2,100+ tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="View details: NIHPLOD China Official Website"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>View details</button>
         <dialog class="project-dialog" id="dialog-project-website">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
@@ -192,7 +186,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>Brand Website &amp; Member Platform:</strong> Built the brand's official website and member platform with Next.js 16 + Prisma + PostgreSQL — product showcases, third-party e-commerce referral (Tmall / Douyin / Xiaohongshu links + GA event tracking), membership tiers, points ledger, points redemption (SF Express tracking), consumption backfill, skin profiles, and a security center; aggregated WeChat, Douyin, and phone OTP identities into a unified account system — 169 API routes, 43 data models, and 1,725 automated test cases.
+                <strong>Brand Website &amp; Member Platform:</strong> Built the brand's official website and member platform with Next.js 16 + Prisma + PostgreSQL — product showcases, third-party e-commerce referral (Tmall / Douyin / Xiaohongshu / WeChat Shop links + GA event tracking), membership tiers, points ledger, points redemption (SF Express tracking), consumption backfill, skin profiles, and a security center; aggregated WeChat, Douyin, and phone OTP identities into a unified account system — 205 API routes, 51 data models, and 2,100+ automated test cases.
               </li>
               <li>
                 <strong>Product &amp; Interaction Design:</strong> Independently designed the information architecture, Figma interactive prototypes, and visual styling; built multi-step skincare ritual guides and immersive brand storytelling with Framer Motion + View Transitions, integrated the product drawer with detail pages, and delivered fully responsive layouts.
@@ -206,15 +200,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-sso">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-sso">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-sso" aria-haspopup="dialog">NIHPLOD Unified Authentication Platform (SSO / OIDC)</button></h3>
-          <span class="entry-date">Jun 2026 – Present</span>
+          <span class="entry-date">Jul 2026 – Present</span>
         </div>
         <div class="project-meta">
           <span class="project-meta-owner">Independently owned</span>: <span class="project-meta-role"><span class="project-meta-tag">product</span> <span class="project-meta-tag">full-stack</span></span>
         </div>
-        <p class="project-summary">Unified identity foundation for Greater China: a self-built OAuth 2.0 / OIDC single sign-on that connects the website, skin-analysis site, two mini-programs and admin console, and enables cross-domain login, global logout and two-factor authentication across 5 systems, packaged as a reusable npm SDK.</p>
+        <p class="project-summary">Unified identity foundation for Greater China: a self-built OAuth 2.0 / OIDC single sign-on that connects the website, skin-analysis site, two mini-programs and admin console, and enables cross-domain login and global logout across 5 systems, with TOTP 2FA on the admin console, packaged as a reusable npm SDK.</p>
         <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="View details: NIHPLOD Unified Authentication Platform (SSO / OIDC)"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>View details</button>
         <dialog class="project-dialog" id="dialog-project-sso">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
@@ -225,7 +219,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>Protocol Implementation:</strong> Built a self-hosted OAuth 2.0 / OIDC SSO, deployed isomorphically with the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE, DPoP, and TOTP two-factor authentication.
+                <strong>Protocol Implementation:</strong> Built a self-hosted OAuth 2.0 / OIDC SSO, deployed isomorphically with the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE and DPoP; the admin console is protected by TOTP two-factor authentication.
               </li>
               <li>
                 <strong>SDK &amp; Integration:</strong> Packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) for minute-level sub-project integration, enabling cross-domain SSO and global sign-out via Token Introspection + Backchannel Logout, supporting unified login across the official website, skin-analysis site, both WeChat mini-programs, and the admin console.
@@ -239,15 +233,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-ai-advisor">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-ai-advisor">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-ai-advisor" aria-haspopup="dialog">AI Skincare Advisor System</button></h3>
           <span class="entry-date">Jan 2026 – Present</span>
         </div>
         <div class="project-meta">
-          <span class="project-meta-owner">Independently owned</span>: <span class="project-meta-role"><span class="project-meta-tag">product</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">full-stack</span> <span class="project-meta-note">UI visuals in collaboration</span> <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>advisor.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
+          <span class="project-meta-owner">Independently owned</span>: <span class="project-meta-role"><span class="project-meta-tag">product</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">full-stack</span> <span class="project-meta-note">UI visuals in collaboration</span> <a href="https://smart.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>smart.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">AI skincare advisor for consumers: dual-channel skin analysis via questionnaire + face scan, personalized product recommendations based on skin type, season and region, with reports and profiles passed to WeCom advisors — closing the loop from analysis to regimen, follow-up and repurchase; 85 API routes / 426 tests.</p>
+        <p class="project-summary">AI skincare advisor for consumers: dual-channel skin analysis via questionnaire + face scan, personalized product recommendations based on skin type, season and region, with reports and profiles passed to WeCom advisors — closing the loop from analysis to regimen, follow-up and repurchase; 93 API routes / 531 tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="View details: AI Skincare Advisor System"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>View details</button>
         <dialog class="project-dialog" id="dialog-project-ai-advisor">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Close">&times;</button>
@@ -261,13 +255,13 @@ const ld = {
                 <strong>AI Skin Analysis &amp; Personalized Recommendations:</strong> Integrated Tongyi Qianwen VL / DeepSeek LLMs for dual-channel (questionnaire + facial scan) skin analysis; a custom rule engine scores and matches products against 8 skin-type personas plus seasonal / regional environmental factors, configurable through a visual admin console (zero-code adjustments for operations).
               </li>
               <li>
-                <strong>Conversion &amp; Attribution:</strong> Led model integration and core API development; e-commerce outbound links (Tmall / Douyin / Xiaohongshu) support UTM / pid tracking and click-event instrumentation, forming an attributable consultation-to-conversion path together with WeCom advisor short links.
+                <strong>Conversion &amp; Attribution:</strong> Led model integration and core API development; e-commerce outbound links (Tmall / Douyin / Xiaohongshu / WeChat Shop) support UTM / pid tracking and click-event instrumentation, forming an attributable consultation-to-conversion path together with WeCom advisor short links.
               </li>
               <li>
-                <strong>Growth &amp; Membership Operations:</strong> Connected four-tier member skin-analysis quotas (Standard 10 sessions; Silver unlocked by spend; Gold / Diamond unlimited), with reports and profiles tied to the logged-in account; designed share posters, channel ref attribution, and registration-conversion popups, and exported desensitized aggregate CSV statistics to feed the brand whitepaper and market insights.
+                <strong>Growth &amp; Membership Operations:</strong> Connected four-tier member skin-analysis quotas (Standard 10 lifetime sessions; Silver 10 + 20 per ¥1,000 spent, max 10/day; Gold / Diamond unlimited total, max 10/day), with reports and profiles tied to the logged-in account; designed share posters, channel ref attribution, and registration-conversion popups, and exported desensitized aggregate CSV statistics to feed the brand whitepaper and market insights.
               </li>
               <li>
-                <strong>AI Cost &amp; Reliability Engineering:</strong> Designed an AI request queue with concurrency control, circuit breakers, daily / monthly token and cost budget cutoffs, persisted per-call billing, and a model whitelist with provider fallback; used idempotent retries and quota reservation / release to prevent duplicate charges; reports use 90-day rolling validity with hot / cold tiered archiving (desensitized summaries in the cold tier).
+                <strong>AI Cost &amp; Reliability Engineering:</strong> Designed an AI request queue with concurrency control, circuit breakers, daily / monthly token and cost budget cutoffs, persisted per-call billing, and a model whitelist with provider fallback; used idempotent retries and quota reservation / release to prevent duplicate charges; current skin profiles carry a rolling 90-day validity for retest prompts, full reports are retained for 365 days, and hot / cold tiered archiving keeps the latest 10 full reports plus desensitized cold-tier summaries for up to 3 years.
               </li>
               <li>
                 <strong>Data Asset Loop:</strong> Designed a server-to-server API with HMAC signatures + IP rate limiting; skin-analysis reports and skincare profiles pass through to WeCom AI customer service via session_id, turning one-off skin tests into continuously operable, repurchase-driving user data assets.

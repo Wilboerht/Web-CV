@@ -101,12 +101,6 @@ const ld = {
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(ld, null, 2)} />
   </Fragment>
-  <style>
-    :root {
-      --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
-    }
-  </style>
-
   <div class="container">
     <header>
       <h1>왕홍곤</h1>
@@ -170,7 +164,7 @@ const ld = {
         </a>
       </div>
 
-      <div class="project-entry" id="project-website">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-website">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-website" aria-haspopup="dialog">NIHPLOD 중국 공식 사이트</button></h3>
           <span class="entry-date">2025년 11월 – 현재</span>
@@ -178,7 +172,7 @@ const ld = {
         <div class="project-meta">
           <span class="project-meta-owner">독립 담당</span>: <span class="project-meta-role"><span class="project-meta-tag">제품</span> <span class="project-meta-tag">UI/UX</span> <span class="project-meta-tag">풀스택</span> <a href="https://www.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">중국 시장을 위한 브랜드 공식 사이트와 멤버십 플랫폼: 상품 전시, 이커머스 연동, 멤버십 포인트, 피부 측정 프로필을 하나의 경험으로 통합하고 위챗·더우인·휴대폰 번호 계정을 통일해 0→1 온라인 리테일과 재구매를 지원; 169 API / 43 모델 / 1,725 테스트.</p>
+        <p class="project-summary">중국 시장을 위한 브랜드 공식 사이트와 멤버십 플랫폼: 상품 전시, 이커머스 연동, 멤버십 포인트, 피부 측정 프로필을 하나의 경험으로 통합하고 위챗·더우인·휴대폰 번호 계정을 통일해 0→1 온라인 리테일과 재구매를 지원; 205 API / 51 모델 / 2,100+ 테스트.</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="상세 보기: NIHPLOD 중국 공식 사이트"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>상세 보기</button>
         <dialog class="project-dialog" id="dialog-project-website">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="닫기">&times;</button>
@@ -189,7 +183,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>브랜드 공식 사이트 &amp; 멤버십 플랫폼:</strong> Next.js 16 + Prisma + PostgreSQL 기반으로 브랜드 공식 사이트와 멤버십 플랫폼 구축 — 상품 진열, 제3자 이커머스 연동(티몰 / 도우인 / 샤오홍슈 링크 + GA 이벤트 추적), 회원 등급, 포인트 원장, 포인트 교환(순펑 물류 추적), 소비 보충 입력, 피부 측정 프로필 및 보안 센터; 위챗·도우인·휴대폰 OTP 등 다중 채널 신원을 통합 계정 체계로 집계 — 전 사이트 169개 API 라우트, 43개 데이터 모델, 1,725개 자동화 테스트 케이스.
+                <strong>브랜드 공식 사이트 &amp; 멤버십 플랫폼:</strong> Next.js 16 + Prisma + PostgreSQL 기반으로 브랜드 공식 사이트와 멤버십 플랫폼 구축 — 상품 진열, 제3자 이커머스 연동(티몰 / 도우인 / 샤오홍슈 / 위챗 샵 링크 + GA 이벤트 추적), 회원 등급, 포인트 원장, 포인트 교환(순펑 물류 추적), 소비 보충 입력, 피부 측정 프로필 및 보안 센터; 위챗·도우인·휴대폰 OTP 등 다중 채널 신원을 통합 계정 체계로 집계 — 전 사이트 205개 API 라우트, 51개 데이터 모델, 2,100+개 자동화 테스트 케이스.
               </li>
               <li>
                 <strong>제품 &amp; 인터랙션 디자인:</strong> 정보 아키텍처, Figma 인터랙티브 프로토타입, 비주얼 스타일링을 독립적으로 설계; Framer Motion + View Transitions로 다단계 스킨케어 리추얼 가이드와 몰입형 브랜드 스토리텔링을 구현하고 제품 드로어와 상세 페이지를 연동, 전 기기 반응형 레이아웃 제공.
@@ -203,15 +197,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-sso">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-sso">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-sso" aria-haspopup="dialog">NIHPLOD 통합 인증 플랫폼(SSO / OIDC)</button></h3>
-          <span class="entry-date">2026년 6월 – 현재</span>
+          <span class="entry-date">2026년 7월 – 현재</span>
         </div>
         <div class="project-meta">
           <span class="project-meta-owner">독립 담당</span>: <span class="project-meta-role"><span class="project-meta-tag">제품</span> <span class="project-meta-tag">풀스택</span></span>
         </div>
-        <p class="project-summary">중화권의 통합 아이덴티티 기반: 자체 구축한 OAuth 2.0 / OIDC SSO로 공식 사이트, 피부 측정 사이트, 미니프로그램 2종, 관리자 콘솔의 계정과 로그인 상태를 연결하고, 5개 시스템의 크로스 도메인 로그인·글로벌 로그아웃·2단계 인증을 지원하며 재사용 가능한 npm SDK로 패키징.</p>
+        <p class="project-summary">중화권의 통합 아이덴티티 기반: 자체 구축한 OAuth 2.0 / OIDC SSO로 공식 사이트, 피부 측정 사이트, 미니프로그램 2종, 관리자 콘솔의 계정과 로그인 상태를 연결하고, 5개 시스템의 크로스 도메인 로그인·글로벌 로그아웃을 지원하며 관리자 콘솔은 TOTP 2단계 인증으로 보호되고, 재사용 가능한 npm SDK로 패키징.</p>
         <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="상세 보기: NIHPLOD 통합 인증 플랫폼(SSO / OIDC)"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>상세 보기</button>
         <dialog class="project-dialog" id="dialog-project-sso">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="닫기">&times;</button>
@@ -222,7 +216,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>프로토콜 구현:</strong> OAuth 2.0 / OIDC 기반 SSO 자체 구축, 공식 메인 사이트와 동일 구조로 배포되며 메인 사이트가 Authorization Server로서 RS256 JWT 발급, authorize / token / userinfo / introspect / revoke / end-session 프로토콜 엔드포인트 전체 구현 및 PKCE·DPoP·TOTP 2단계 인증 지원.
+                <strong>프로토콜 구현:</strong> OAuth 2.0 / OIDC 기반 SSO 자체 구축, 공식 메인 사이트와 동일 구조로 배포되며 메인 사이트가 Authorization Server로서 RS256 JWT 발급, authorize / token / userinfo / introspect / revoke / end-session 프로토콜 엔드포인트 전체 구현, PKCE·DPoP 지원; 관리자 콘솔은 TOTP 2단계 인증으로 보호.
               </li>
               <li>
                 <strong>SDK 및 연동:</strong> npm SDK(@nihplod/sso-sdk / @nihplod/sso-verify) 패키징·배포로 서브 프로젝트의 분 단위 신속 연동 지원, Token Introspection + Backchannel Logout으로 크로스도메인 SSO 및 글로벌 로그아웃 구현, 공식 사이트·피부 측정 사이트·위챗 미니프로그램 2종·어드민 콘솔의 통합 로그인 지원.
@@ -236,15 +230,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-ai-advisor">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-ai-advisor">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-ai-advisor" aria-haspopup="dialog">AI 스킨케어 어드바이저 시스템</button></h3>
           <span class="entry-date">2026년 1월 – 현재</span>
         </div>
         <div class="project-meta">
-          <span class="project-meta-owner">독립 담당</span>: <span class="project-meta-role"><span class="project-meta-tag">제품</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">풀스택</span> <span class="project-meta-note">UI 비주얼 협업</span> <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>advisor.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
+          <span class="project-meta-owner">독립 담당</span>: <span class="project-meta-role"><span class="project-meta-tag">제품</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">풀스택</span> <span class="project-meta-note">UI 비주얼 협업</span> <a href="https://smart.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>smart.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">소비자용 AI 스킨케어 어드바이저: 설문 + 얼굴 스캔의 듀얼 채널로 피부를 분석하고 피부 타입·계절·지역 규칙에 따라 맞춤 제품안을 생성하며, 리포트와 프로필을 WeCom 어드바이저에게 전달해 「피부 측정 → 솔루션 → 팔로업 → 재구매」 루프를 완성; 85 API / 426 테스트.</p>
+        <p class="project-summary">소비자용 AI 스킨케어 어드바이저: 설문 + 얼굴 스캔의 듀얼 채널로 피부를 분석하고 피부 타입·계절·지역 규칙에 따라 맞춤 제품안을 생성하며, 리포트와 프로필을 WeCom 어드바이저에게 전달해 「피부 측정 → 솔루션 → 팔로업 → 재구매」 루프를 완성; 93 API / 531 테스트.</p>
         <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="상세 보기: AI 스킨케어 어드바이저 시스템"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>상세 보기</button>
         <dialog class="project-dialog" id="dialog-project-ai-advisor">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="닫기">&times;</button>
@@ -258,13 +252,13 @@ const ld = {
                 <strong>AI 피부 측정 및 개인화 추천:</strong> 통이 첸원 VL / DeepSeek LLM 연동으로 「설문 + 얼굴 스캔」 듀얼 채널 피부 분석 구현, 자체 룰 엔진으로 8종 피부 유형 페르소나와 계절 / 지역 환경 요인 기반 제품 스코어링(백오피스 시각화 설정으로 운영팀 무코드 조정) 지원.
               </li>
               <li>
-                <strong>전환 및 어트리뷰션:</strong> 모델 통합 및 핵심 API 개발 주도; 이커머스 링크(티몰 / 도우인 / 샤오홍슈)에 UTM / pid 추적과 클릭 이벤트 계측 지원, 위챗워크 어드바이저 단축 링크와 결합해 어트리뷰션 가능한 상담 전환 경로 구축.
+                <strong>전환 및 어트리뷰션:</strong> 모델 통합 및 핵심 API 개발 주도; 이커머스 링크(티몰 / 도우인 / 샤오홍슈 / 위챗 샵)에 UTM / pid 추적과 클릭 이벤트 계측 지원, 위챗워크 어드바이저 단축 링크와 결합해 어트리뷰션 가능한 상담 전환 경로 구축.
               </li>
               <li>
-                <strong>그로스 및 멤버십 운영:</strong> 4단계 회원 피부 측정 쿼터 연결(일반 10회, 실버 소비로 해제, 골드 / 다이아몬드 무제한), 로그인 계정에 리포트와 프로필 연결; 공유 포스터, 채널 ref 어트리뷰션, 가입 전환 팝업 설계 및 비식별 집계 CSV 통계를 브랜드 백서와 시장 인사이트에 환류.
+                <strong>그로스 및 멤버십 운영:</strong> 4단계 회원 피부 측정 쿼터 연결(일반 10회 평생; 실버 10회 + ¥1,000 소비마다 20회 추가, 일 최대 10회; 골드 / 다이아몬드 총량 무제한, 일 최대 10회), 로그인 계정에 리포트와 프로필 연결; 공유 포스터, 채널 ref 어트리뷰션, 가입 전환 팝업 설계 및 비식별 집계 CSV 통계를 브랜드 백서와 시장 인사이트에 환류.
               </li>
               <li>
-                <strong>AI 비용 및 안정성 엔지니어링:</strong> AI 요청 큐와 동시성 제어, 서킷 브레이커, 일/월 토큰 및 비용 예산 차단, 호출 과금 영속화, 모델 화이트리스트와 Provider 폴백 설계; 실패 재시도 멱등성과 쿼터 예약 / 해제로 중복 과금 방지; 리포트는 90일 롤링 유효기간 + 핫/콜드 계층 아카이빙(콜드 티어 비식별 요약).
+                <strong>AI 비용 및 안정성 엔지니어링:</strong> AI 요청 큐와 동시성 제어, 서킷 브레이커, 일/월 토큰 및 비용 예산 차단, 호출 과금 영속화, 모델 화이트리스트와 Provider 폴백 설계; 실패 재시도 멱등성과 쿼터 예약 / 해제로 중복 과금 방지; 현재 피부 프로필은 재검사 안내를 위한 90일 롤링 유효기간을 가지며, 전체 리포트는 365일 보관되고 핫/콜드 계층 아카이빙(핫 티어 최근 10건 전체 리포트, 콜드 티어 비식별 요약 최대 3년)이 적용됩니다.
               </li>
               <li>
                 <strong>데이터 자산 클로즈드 루프:</strong> HMAC 서명 + IP 레이트 리미팅 서버 간 API 설계, 피부 측정 리포트와 스킨케어 프로필을 session_id로 위챗 AI 고객서비스에 원클릭 전달, 일회성 측정을 지속 운영 가능하고 재구매를 견인하는 사용자 데이터 자산으로 전환.

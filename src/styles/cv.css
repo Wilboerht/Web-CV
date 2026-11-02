@@ -98,7 +98,7 @@ h2 {
   margin: 0 0 10px 0;
   padding-bottom: 4px;
   border-bottom: 1px solid rgba(26, 84, 144, 0.25);
-  font-family: 'Noto Serif SC', 'Source Serif 4', serif;
+  font-family: var(--cv-font-body);
 }
 .entry {
   margin-bottom: 16px;
@@ -246,7 +246,7 @@ h3.project-name {
   outline-offset: 2px;
 }
 .project-dialog {
-  width: min(92vw, 720px);
+  width: min(92vw, 660px);
   max-width: none;
   max-height: none;
   margin: auto;
@@ -257,7 +257,7 @@ h3.project-name {
   box-shadow: none;
   overflow: visible;
   cursor: auto;
-  font-family: 'Noto Serif SC', 'Source Serif 4', serif;
+  font-family: var(--cv-font-body);
   font-optical-sizing: auto;
   text-autospace: normal;
   line-break: strict;
@@ -280,16 +280,45 @@ h3.project-name {
 .project-dialog__header {
   position: relative;
   flex-shrink: 0;
-  padding: 22px 28px 16px;
+  padding: 24px 30px 20px;
   border-bottom: 1px solid var(--border-color);
   background: #fff;
 }
 .project-dialog__head .project-meta {
-  margin: 6px 0 0;
+  margin: 10px 0 0;
   font-size: 0.8125rem;
   letter-spacing: 0.01em;
-  line-height: 1.6;
+  line-height: 1.8;
   text-autospace: normal;
+}
+.project-dialog__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.project-dialog__owner {
+  color: var(--text-color);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.project-dialog__tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.project-dialog__meta .project-meta-tag {
+  margin-right: 0;
+}
+.project-dialog__note {
+  color: var(--light-text);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+.project-dialog__meta .project-meta-link {
+  margin-left: auto;
 }
 .project-dialog__intro .project-meta {
   margin: 0 0 10px;
@@ -305,6 +334,9 @@ h3.project-name {
   font-variant-numeric: tabular-nums lining-nums;
   letter-spacing: 0.01em;
   white-space: nowrap;
+}
+.project-dialog__date--title {
+  margin-left: auto;
 }
 .project-dialog__date-meta-wrap {
   display: none;
@@ -366,7 +398,7 @@ h3.project-name {
   vertical-align: baseline;
 }
 .project-meta-note::before {
-  content: "?";
+  content: "·";
   margin: 0 4px 0 2px;
   color: #bbb;
 }
@@ -387,9 +419,28 @@ h3.project-name {
   text-wrap: balance;
   overflow-wrap: anywhere;
 }
+.project-dialog__logo {
+  display: inline-block;
+  height: 1.15em;
+  width: auto;
+  max-width: 9em;
+  vertical-align: -0.15em;
+  object-fit: contain;
+}
+.project-dialog__logo-separator {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin: 0 0.55em;
+  background: currentColor;
+  opacity: 0.22;
+  vertical-align: -0.1em;
+}
 .project-dialog__summary {
-  margin: 12px 0 0;
-  font-size: 0.9375rem;
+  margin: 16px 0 0;
+  padding: 2px 0 2px 14px;
+  border-left: 2px solid #dbe3ea;
+  font-size: 1rem;
   color: #555;
   letter-spacing: 0.01em;
   line-height: 1.75;
@@ -398,11 +449,36 @@ h3.project-name {
   orphans: 2;
 }
 .project-dialog__content {
-  padding: 24px 28px 28px;
+  padding: 26px 30px 32px;
   overflow: auto;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
   min-height: 0;
+}
+.project-dialog__content::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.project-dialog__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.project-dialog__content::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 999px;
+}
+.project-dialog__content::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+.project-dialog__content::-webkit-scrollbar-corner {
+  background: transparent;
+}
+@supports (-moz-appearance: none) {
+  .project-dialog__content {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
 }
 .project-dialog__content > .project-points {
   margin-top: 0;
@@ -412,12 +488,12 @@ h3.project-name {
 }
 .project-dialog .project-points li {
   position: relative;
-  padding-left: 1.1em;
+  padding-left: 1.35em;
   list-style: none;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 0.01em;
   line-height: 1.75;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   text-wrap: pretty;
   widows: 2;
   orphans: 2;
@@ -425,12 +501,12 @@ h3.project-name {
 .project-dialog .project-points li::before {
   content: "";
   position: absolute;
-  top: 0.75em;
+  top: 0.68em;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: #b3b3b3;
+  background: #9ca3af;
 }
 .project-dialog .project-points li:last-child {
   margin-bottom: 0;

@@ -101,12 +101,6 @@ const ld = {
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(ld, null, 2)} />
   </Fragment>
-  <style>
-    :root {
-      --cv-font-body: 'Source Serif 4', 'Noto Serif SC', serif;
-    }
-  </style>
-
   <div class="container">
     <header>
       <h1>王泓坤</h1>
@@ -170,7 +164,7 @@ const ld = {
         </a>
       </div>
 
-      <div class="project-entry" id="project-website">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-website">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-website" aria-haspopup="dialog">NIHPLOD 中国官网</button></h3>
           <span class="entry-date">2025.11 – 至今</span>
@@ -178,7 +172,7 @@ const ld = {
         <div class="project-meta">
           <span class="project-meta-owner">独立负责</span>：<span class="project-meta-role"><span class="project-meta-tag">产品</span> <span class="project-meta-tag">UI/UX</span> <span class="project-meta-tag">全栈</span> <a href="https://www.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">品牌在中国市场的官网与会员中台：整合产品展示、电商导购、会员积分与测肤档案，统一微信 / 抖音 / 手机号多端账号；从 0 到 1 支撑品牌线上零售与复购，169 API / 43 模型 / 1725 测试。</p>
+        <p class="project-summary">品牌在中国市场的官网与会员中台：整合产品展示、电商导购、会员积分与测肤档案，统一微信 / 抖音 / 手机号多端账号；从 0 到 1 支撑品牌线上零售与复购，205 API / 51 模型 / 2100+ 测试。</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="查看详情：NIHPLOD 中国官网"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
         <dialog class="project-dialog" id="dialog-project-website">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
@@ -189,7 +183,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>品牌官网与会员中台：</strong>基于 Next.js 16 + Prisma + PostgreSQL 构建品牌官网、产品陈列与第三方电商导购（天猫 / 抖音 / 小红书外链 + GA 事件追踪），并落地会员等级、积分账本、积分兑礼（顺丰物流轨迹）、消费补录、测肤档案与安全中心；聚合微信、抖音、手机号验证码多端身份至统一账号体系；全站 169 个 API 路由、43 个数据模型、1725 个自动化测试用例。
+                <strong>品牌官网与会员中台：</strong>基于 Next.js 16 + Prisma + PostgreSQL 构建品牌官网、产品陈列与第三方电商导购（天猫 / 抖音 / 小红书 / 微信小店外链 + GA 事件追踪），并落地会员等级、积分账本、积分兑礼（顺丰物流轨迹）、消费补录、测肤档案与安全中心；聚合微信、抖音、手机号验证码多端身份至统一账号体系；全站 205 个 API 路由、51 个数据模型、2100+ 个自动化测试用例。
               </li>
               <li>
                 <strong>产品与交互设计：</strong>从信息架构、Figma 交互原型到视觉样式全程独立设计，基于 Framer Motion + View Transitions 实现多步骤护肤仪式指南与沉浸式品牌叙事，集成产品抽屉与详情页联动，全端响应式适配。
@@ -203,15 +197,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-sso">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-sso">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-sso" aria-haspopup="dialog">NIHPLOD 统一认证平台（SSO / OIDC）</button></h3>
-          <span class="entry-date">2026.06 – 至今</span>
+          <span class="entry-date">2026.07 – 至今</span>
         </div>
         <div class="project-meta">
           <span class="project-meta-owner">独立负责</span>：<span class="project-meta-role"><span class="project-meta-tag">产品</span> <span class="project-meta-tag">全栈</span></span>
         </div>
-        <p class="project-summary">品牌大中华区的统一身份底座：自建 OAuth 2.0 / OIDC 单点登录，打通官网、测肤站、双小程序与管理端的账号与登录状态；支撑 5 个系统跨域免登、全局登出与二因素验证，并沉淀为可复用 npm SDK。</p>
+        <p class="project-summary">品牌大中华区的统一身份底座：自建 OAuth 2.0 / OIDC 单点登录，打通官网、测肤站、双小程序与管理端的账号与登录状态；支撑 5 个系统跨域免登、全局登出；管理后台启用 TOTP 二因素认证，并沉淀为可复用 npm SDK。</p>
         <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="查看详情：NIHPLOD 统一认证平台（SSO / OIDC）"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
         <dialog class="project-dialog" id="dialog-project-sso">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
@@ -222,7 +216,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>协议实现：</strong>自建 OAuth 2.0 / OIDC 单点登录，与官网主站同构部署，主站作为 Authorization Server 签发 JWT（RS256），完整实现 authorize / token / userinfo / introspect / revoke / end-session 协议端点，支持 PKCE、DPoP 与 TOTP 二因素。
+                <strong>协议实现：</strong>自建 OAuth 2.0 / OIDC 单点登录，与官网主站同构部署，主站作为 Authorization Server 签发 JWT（RS256），完整实现 authorize / token / userinfo / introspect / revoke / end-session 协议端点，支持 PKCE、DPoP；管理后台启用 TOTP 二因素认证。
               </li>
               <li>
                 <strong>SDK 与接入：</strong>封装并发布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）供子项目分钟级接入，通过 Token Introspection + Backchannel Logout 实现跨域免登与全局登出，支撑官网、测肤站、微信双小程序及管理端统一登录。
@@ -236,15 +230,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-ai-advisor">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-ai-advisor">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-ai-advisor" aria-haspopup="dialog">AI 护肤顾问系统</button></h3>
           <span class="entry-date">2026.01 – 至今</span>
         </div>
         <div class="project-meta">
-          <span class="project-meta-owner">独立负责</span>：<span class="project-meta-role"><span class="project-meta-tag">产品</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">全栈</span> <span class="project-meta-note">UI 视觉协作</span> <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>advisor.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
+          <span class="project-meta-owner">独立负责</span>：<span class="project-meta-role"><span class="project-meta-tag">产品</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">全栈</span> <span class="project-meta-note">UI 视觉协作</span> <a href="https://smart.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>smart.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">面向消费者的 AI 护肤顾问：以「问卷 + 扫脸」双通道完成皮肤分析，结合肤质 / 季节 / 地域规则生成个性化产品方案，并将报告与档案透传至企微顾问，形成「测肤 → 方案 → 跟进 → 复购」闭环；85 API / 426 测试。</p>
+        <p class="project-summary">面向消费者的 AI 护肤顾问：以「问卷 + 扫脸」双通道完成皮肤分析，结合肤质 / 季节 / 地域规则生成个性化产品方案，并将报告与档案透传至企微顾问，形成「测肤 → 方案 → 跟进 → 复购」闭环；93 API / 531 测试。</p>
         <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="查看详情：AI 护肤顾问系统"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看详情</button>
         <dialog class="project-dialog" id="dialog-project-ai-advisor">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="关闭">&times;</button>
@@ -258,13 +252,13 @@ const ld = {
                 <strong>AI 测肤与个性化推荐：</strong>接入通义千问 VL / DeepSeek 大模型实现「问卷 + 扫脸」双通道皮肤分析；自研规则引擎按 8 种肤质画像与季节 / 地域环境因子打分匹配产品，支持后台可视化配置（运营零代码调整）。
               </li>
               <li>
-                <strong>转化与归因：</strong>主导模型集成与核心接口开发；电商外链（天猫 / 抖音 / 小红书）支持 UTM / pid 追踪与点击事件埋点，结合企微顾问短链形成可归因的咨询转化链路。
+                <strong>转化与归因：</strong>主导模型集成与核心接口开发；电商外链（天猫 / 抖音 / 小红书 / 微信小店）支持 UTM / pid 追踪与点击事件埋点，结合企微顾问短链形成可归因的咨询转化链路。
               </li>
               <li>
-                <strong>增长与会员运营：</strong>打通四档会员测肤配额（普通 10 次、银卡按消费解锁、金卡 / 钻石不限量），以登录账号承接报告与档案；设计分享海报、渠道 ref 归因与注册转化弹窗，并输出脱敏群体统计 CSV 反哺品牌白皮书与市场洞察。
+                <strong>增长与会员运营：</strong>打通四档会员测肤配额（普通会员终身 10 次；银卡 10 + 每消费满 ¥1,000 加赠 20 次、每日最多 10 次；金卡 / 钻石总量不限、每日最多 10 次），以登录账号承接报告与档案；设计分享海报、渠道 ref 归因与注册转化弹窗，并输出脱敏群体统计 CSV 反哺品牌白皮书与市场洞察。
               </li>
               <li>
-                <strong>AI 成本与稳定性工程：</strong>设计 AI 请求队列与并发控制、熔断器、日/月 Token 与费用预算熔断、调用计费持久化、模型白名单与 Provider 回退；以失败重试幂等与额度预占 / 释放规避重复扣费；报告采用 90 天滚动有效期 + 冷热分层归档（冷层脱敏摘要）。
+                <strong>AI 成本与稳定性工程：</strong>设计 AI 请求队列与并发控制、熔断器、日/月 Token 与费用预算熔断、调用计费持久化、模型白名单与 Provider 回退；以失败重试幂等与额度预占 / 释放规避重复扣费；当前肌肤档案采用 90 天滚动有效期（用于复测提示），完整报告保留 365 天，并按冷热分层归档（热层保留最近 10 条完整报告，冷层脱敏摘要最长保留 3 年）。
               </li>
               <li>
                 <strong>数据资产闭环：</strong>设计 HMAC 签名 + IP 限流的服务端间接口，测肤报告与护肤档案随 session_id 一键透传至企微 AI 客服，将一次性测肤沉淀为可持续运营、可驱动复购的用户数据资产。

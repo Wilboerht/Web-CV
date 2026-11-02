@@ -104,12 +104,6 @@ const ld = {
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(ld, null, 2)} />
   </Fragment>
-  <style>
-    :root {
-      --cv-font-body: 'Noto Serif SC', 'Source Serif 4', serif;
-    }
-  </style>
-
   <div class="container">
     <header>
       <h1>Hongkun Wang</h1>
@@ -173,7 +167,7 @@ const ld = {
         </a>
       </div>
 
-      <div class="project-entry" id="project-website">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-website">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-website" aria-haspopup="dialog">NIHPLOD Offizielle China-Website</button></h3>
           <span class="entry-date">Nov. 2025 – heute</span>
@@ -181,7 +175,7 @@ const ld = {
         <div class="project-meta">
           <span class="project-meta-owner">Eigenverantwortlich</span>: <span class="project-meta-role"><span class="project-meta-tag">Produkt</span> <span class="project-meta-tag">UI/UX</span> <span class="project-meta-tag">Full-Stack</span> <a href="https://www.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">Markenwebsite und Mitgliederplattform für den China-Markt: verbindet Produktpräsentation, E-Commerce-Verlinkung, Mitgliederpunkte und Hautprofile in einem integrierten Flow, vereinheitlicht WeChat-, Douyin- und Telefonnummern-Identitäten und unterstützt Online-Handel und Wiederkauf von 0 auf 1; 169 API-Routen / 43 Modelle / 1.725 Tests.</p>
+        <p class="project-summary">Markenwebsite und Mitgliederplattform für den China-Markt: verbindet Produktpräsentation, E-Commerce-Verlinkung, Mitgliederpunkte und Hautprofile in einem integrierten Flow, vereinheitlicht WeChat-, Douyin- und Telefonnummern-Identitäten und unterstützt Online-Handel und Wiederkauf von 0 auf 1; 205 API-Routen / 51 Modelle / 2.100+ Tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="Details ansehen: NIHPLOD Offizielle China-Website"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>Details ansehen</button>
         <dialog class="project-dialog" id="dialog-project-website">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
@@ -192,7 +186,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>Markenwebsite &amp; Mitgliederplattform:</strong> Die offizielle Markenwebsite und Mitgliederplattform mit Next.js 16 + Prisma + PostgreSQL aufgebaut — Produktpräsentation, Drittanbieter-E-Commerce-Verlinkung (Tmall / Douyin / Xiaohongshu + GA-Event-Tracking), Mitgliedsstufen, Punkte-Ledger, Punkte-Einlösung (SF-Express-Tracking), Verbrauchsnachtrag, Hautprofile und Sicherheitscenter; WeChat-, Douyin- und Telefon-OTP-Identitäten in einem einheitlichen Kontosystem aggregiert — 169 API-Routen, 43 Datenmodelle und 1.725 automatisierte Testfälle.
+                <strong>Markenwebsite &amp; Mitgliederplattform:</strong> Die offizielle Markenwebsite und Mitgliederplattform mit Next.js 16 + Prisma + PostgreSQL aufgebaut — Produktpräsentation, Drittanbieter-E-Commerce-Verlinkung (Tmall / Douyin / Xiaohongshu / WeChat Shop + GA-Event-Tracking), Mitgliedsstufen, Punkte-Ledger, Punkte-Einlösung (SF-Express-Tracking), Verbrauchsnachtrag, Hautprofile und Sicherheitscenter; WeChat-, Douyin- und Telefon-OTP-Identitäten in einem einheitlichen Kontosystem aggregiert — 205 API-Routen, 51 Datenmodelle und 2.100+ automatisierte Testfälle.
               </li>
               <li>
                 <strong>Produkt- &amp; Interaktionsdesign:</strong> Informationsarchitektur, interaktive Figma-Prototypen und visuelles Styling eigenständig gestaltet; mehrstufige Hautpflegeritual-Guides und immersives Brand-Storytelling mit Framer Motion + View Transitions umgesetzt, den Produkt-Drawer mit den Detailseiten verknüpft und vollständig responsive Layouts geliefert.
@@ -206,15 +200,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-sso">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-sso">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-sso" aria-haspopup="dialog">NIHPLOD Plattform für einheitliche Authentifizierung (SSO / OIDC)</button></h3>
-          <span class="entry-date">Jun. 2026 – heute</span>
+          <span class="entry-date">Juli 2026 – heute</span>
         </div>
         <div class="project-meta">
           <span class="project-meta-owner">Eigenverantwortlich</span>: <span class="project-meta-role"><span class="project-meta-tag">Produkt</span> <span class="project-meta-tag">Full-Stack</span></span>
         </div>
-        <p class="project-summary">Die einheitliche Identitätsbasis für Greater China: ein selbst entwickeltes OAuth 2.0 / OIDC Single Sign-on, das Website, Hautanalyse-Seite, zwei Mini-Programme und Admin-Konsole verbindet und systemübergreifendes Login, globales Logout sowie Zwei-Faktor-Authentifizierung für 5 Systeme ermöglicht – verpackt als wiederverwendbares npm-SDK.</p>
+        <p class="project-summary">Die einheitliche Identitätsbasis für Greater China: ein selbst entwickeltes OAuth 2.0 / OIDC Single Sign-on, das Website, Hautanalyse-Seite, zwei Mini-Programme und Admin-Konsole verbindet und systemübergreifendes Login und globales Logout für 5 Systeme ermöglicht; die Admin-Konsole ist durch TOTP-2FA geschützt – verpackt als wiederverwendbares npm-SDK.</p>
         <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="Details ansehen: NIHPLOD Plattform für einheitliche Authentifizierung (SSO / OIDC)"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>Details ansehen</button>
         <dialog class="project-dialog" id="dialog-project-sso">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
@@ -225,7 +219,7 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>Protokoll-Implementierung:</strong> Self-hosted OAuth 2.0 / OIDC-SSO aufgebaut, isomorph mit der offiziellen Hauptseite deployed — die Hauptseite fungiert als Authorization Server und stellt RS256-JWTs aus; die Endpunkte authorize / token / userinfo / introspect / revoke / end-session vollständig implementiert, inkl. PKCE, DPoP und TOTP-Zwei-Faktor-Authentifizierung.
+                <strong>Protokoll-Implementierung:</strong> Self-hosted OAuth 2.0 / OIDC-SSO aufgebaut, isomorph mit der offiziellen Hauptseite deployed — die Hauptseite fungiert als Authorization Server und stellt RS256-JWTs aus; die Endpunkte authorize / token / userinfo / introspect / revoke / end-session vollständig implementiert, inkl. PKCE und DPoP; die Admin-Konsole ist durch TOTP-Zwei-Faktor-Authentifizierung geschützt.
               </li>
               <li>
                 <strong>SDK &amp; Integration:</strong> npm-SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) verpackt und veröffentlicht für die Integration von Sub-Projekten im Minutenbereich; mit Token Introspection + Backchannel Logout für domainübergreifendes SSO und globalen Logout — einheitlicher Login für die offizielle Website, die Hautanalyse-Website, beide WeChat-Mini-Programme und die Admin-Konsole.
@@ -239,15 +233,15 @@ const ld = {
         </dialog>
       </div>
 
-      <div class="project-entry" id="project-ai-advisor">
+      <div class="project-entry" data-project-logo="/images/NIHPLOD-logo.svg" id="project-ai-advisor">
         <div class="entry-header">
           <h3 class="project-name"><button type="button" class="project-name-button" data-project-dialog="project-ai-advisor" aria-haspopup="dialog">KI-Hautpflegeberater</button></h3>
           <span class="entry-date">Jan. 2026 – heute</span>
         </div>
         <div class="project-meta">
-          <span class="project-meta-owner">Eigenverantwortlich</span>: <span class="project-meta-role"><span class="project-meta-tag">Produkt</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">Full-Stack</span> <span class="project-meta-note">UI-Visuals in Zusammenarbeit</span> <a href="https://advisor.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>advisor.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
+          <span class="project-meta-owner">Eigenverantwortlich</span>: <span class="project-meta-role"><span class="project-meta-tag">Produkt</span> <span class="project-meta-tag">UX</span> <span class="project-meta-tag">Full-Stack</span> <span class="project-meta-note">UI-Visuals in Zusammenarbeit</span> <a href="https://smart.nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>smart.nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a></span>
         </div>
-        <p class="project-summary">Ein KI-Hautpflegeberater für Konsumenten: zweikanalige Hautanalyse per Fragebogen + Gesichtsscan, personalisierte Produktempfehlungen nach Hauttyp, Jahreszeit und Region sowie Übergabe von Berichten und Profilen an WeCom-Berater – geschlossener Kreislauf von Analyse über Pflegeplan und Follow-up bis zum Wiederkauf; 85 API-Routen / 426 Tests.</p>
+        <p class="project-summary">Ein KI-Hautpflegeberater für Konsumenten: zweikanalige Hautanalyse per Fragebogen + Gesichtsscan, personalisierte Produktempfehlungen nach Hauttyp, Jahreszeit und Region sowie Übergabe von Berichten und Profilen an WeCom-Berater – geschlossener Kreislauf von Analyse über Pflegeplan und Follow-up bis zum Wiederkauf; 93 API-Routen / 531 Tests.</p>
         <button type="button" class="project-more" data-project-dialog="project-ai-advisor" aria-haspopup="dialog" aria-label="Details ansehen: KI-Hautpflegeberater"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>Details ansehen</button>
         <dialog class="project-dialog" id="dialog-project-ai-advisor">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="Schließen">&times;</button>
@@ -261,13 +255,13 @@ const ld = {
                 <strong>KI-Hautanalyse &amp; personalisierte Empfehlungen:</strong> Tongyi Qianwen VL / DeepSeek-LLMs für die zweikanalige Hautanalyse (Fragebogen + Gesichtsscan) integriert; eine eigene Regel-Engine bewertet Produkte anhand von 8 Hauttyp-Personas sowie saisonalen / regionalen Umweltfaktoren — über eine visuelle Admin-Konsole konfigurierbar (Zero-Code-Anpassungen für den Betrieb).
               </li>
               <li>
-                <strong>Conversion &amp; Attribution:</strong> Modellintegration und Entwicklung der Kern-APIs geleitet; E-Commerce-Ausgangslinks (Tmall / Douyin / Xiaohongshu) unterstützen UTM-/pid-Tracking und Click-Event-Instrumentierung und bilden zusammen mit WeCom-Berater-Kurzlinks einen attribuierbaren Beratungs-Conversion-Pfad.
+                <strong>Conversion &amp; Attribution:</strong> Modellintegration und Entwicklung der Kern-APIs geleitet; E-Commerce-Ausgangslinks (Tmall / Douyin / Xiaohongshu / WeChat Shop) unterstützen UTM-/pid-Tracking und Click-Event-Instrumentierung und bilden zusammen mit WeCom-Berater-Kurzlinks einen attribuierbaren Beratungs-Conversion-Pfad.
               </li>
               <li>
-                <strong>Wachstum &amp; Mitgliederbetrieb:</strong> Vierstufige Hautanalyse-Kontingente für Mitglieder angebunden (Standard 10 Sitzungen; Silber durch Umsatz freigeschaltet; Gold / Diamant unbegrenzt), Berichte und Profile an das angemeldete Konto gebunden; Share-Poster, Kanal-ref-Attribution und Registrierungs-Conversion-Popups gestaltet sowie desensibilisierte aggregierte CSV-Statistiken für Marken-Whitepaper und Markt-Insights exportiert.
+                <strong>Wachstum &amp; Mitgliederbetrieb:</strong> Vierstufige Hautanalyse-Kontingente für Mitglieder angebunden (Standard 10 lebenslange Sitzungen; Silber 10 + 20 pro ¥1.000 Umsatz, max. 10/Tag; Gold / Diamant unbegrenzt insgesamt, max. 10/Tag), Berichte und Profile an das angemeldete Konto gebunden; Share-Poster, Kanal-ref-Attribution und Registrierungs-Conversion-Popups gestaltet sowie desensibilisierte aggregierte CSV-Statistiken für Marken-Whitepaper und Markt-Insights exportiert.
               </li>
               <li>
-                <strong>KI-Kosten- &amp; Zuverlässigkeits-Engineering:</strong> KI-Request-Queue mit Concurrency-Control, Circuit Breaker, täglichen / monatlichen Token- und Kostenbudget-Limits, persistenter Abrechnung pro Aufruf sowie Modell-Whitelist mit Provider-Fallback entworfen; idempotente Retries und Kontingent-Reservierung / -Freigabe verhindern Doppelbelastungen; Berichte nutzen 90 Tage rollierende Gültigkeit mit Hot/Cold-Tier-Archivierung (desensibilisierte Zusammenfassungen im Cold Tier).
+                <strong>KI-Kosten- &amp; Zuverlässigkeits-Engineering:</strong> KI-Request-Queue mit Concurrency-Control, Circuit Breaker, täglichen / monatlichen Token- und Kostenbudget-Limits, persistenter Abrechnung pro Aufruf sowie Modell-Whitelist mit Provider-Fallback entworfen; idempotente Retries und Kontingent-Reservierung / -Freigabe verhindern Doppelbelastungen; aktuelle Hautprofile haben eine rollierende 90-Tage-Gültigkeit für Retest-Hinweise, vollständige Berichte werden 365 Tage aufbewahrt, und die Hot/Cold-Tier-Archivierung behält die letzten 10 vollständigen Berichte sowie desensibilisierte Cold-Tier-Zusammenfassungen für bis zu 3 Jahre.
               </li>
               <li>
                 <strong>Datenasset-Kreislauf:</strong> Eine Server-zu-Server-API mit HMAC-Signaturen + IP-Rate-Limiting entworfen; Hautanalyse-Berichte und Hautpflegeprofile werden per session_id an den WeCom-KI-Kundenservice übergeben — einmalige Hauttests werden so zu dauerhaft nutzbaren, wiederkauf-fördernden Nutzerdaten-Assets.

@@ -10,6 +10,20 @@
     --tag-text: #555555;
     --hover-bg: #f8f8f8;
     --focus-ring: #1a5490;
+    --cv-font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+}
+
+html[lang="zh-CN"] {
+    --cv-font-body: 'Source Serif 4', 'Noto Serif SC', serif;
+}
+
+html[lang="zh-TW"],
+html[lang="zh-HK"] {
+    --cv-font-body: 'Source Serif 4', 'Noto Serif TC', serif;
+}
+
+html[lang="ko"] {
+    --cv-font-body: 'Source Serif 4', 'Noto Serif KR', serif;
 }
 
 *,
@@ -35,7 +49,7 @@ body {
     color: var(--text-color);
     font-size: 1rem;
     line-height: 1.6;
-    font-family: 'Noto Serif SC', 'Source Serif 4', serif;
+    font-family: var(--cv-font-body);
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
