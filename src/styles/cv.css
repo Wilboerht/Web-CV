@@ -288,6 +288,13 @@ h3.project-name {
   line-height: 1.6;
   text-autospace: normal;
 }
+.project-dialog__intro .project-meta {
+  margin: 0 0 10px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  text-autospace: normal;
+}
 .project-dialog__date {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -299,7 +306,7 @@ h3.project-name {
 .project-dialog__date-meta-wrap {
   display: none;
 }
-.project-dialog__head .project-meta-owner {
+.project-dialog .project-meta-owner {
   font-weight: 500;
   color: var(--text-color);
 }
@@ -322,7 +329,7 @@ h3.project-name {
   align-items: center;
   gap: 3px;
   margin-left: 2px;
-  padding: 2px 7px;
+  padding: 1px 7px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   color: var(--link-color);
@@ -932,6 +939,11 @@ body.diagram-open {
   }
   .project-dialog__content {
     padding: 16px 18px 24px;
+  }
+  .project-dialog__intro {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
   }
   .project-dialog__title {
     font-size: 1.125rem;

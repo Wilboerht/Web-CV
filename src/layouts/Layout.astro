@@ -218,24 +218,36 @@ const canonical = `${SITE_URL}${pathname}`;
           titleRow.append(title, titleDate);
           head.append(titleRow);
 
+          let metaEl;
           if (meta) {
-            const metaEl = meta.cloneNode(true);
+            metaEl = meta.cloneNode(true);
             const metaDateWrap = document.createElement("span");
             metaDateWrap.className = "project-dialog__date-meta-wrap";
             metaDateWrap.append(dateEl.cloneNode(true), document.createTextNode(" · "));
             metaEl.prepend(metaDateWrap);
-            head.append(metaEl);
           } else {
-            const metaEl = document.createElement("div");
+            metaEl = document.createElement("div");
             metaEl.className = "project-meta";
-            head.append(metaEl);
           }
 
+          let summaryEl;
           if (summary) {
-            const summaryEl = document.createElement("p");
+            summaryEl = document.createElement("p");
             summaryEl.className = "project-dialog__summary";
             summaryEl.textContent = summary.textContent.trim();
-            head.append(summaryEl);
+          }
+
+          const isMobile = window.matchMedia("(max-width: 600px)").matches;
+          const content = dialog.querySelector(".project-dialog__content");
+          if (isMobile && content) {
+            const intro = document.createElement("div");
+            intro.className = "project-dialog__intro";
+            intro.append(metaEl);
+            if (summaryEl) intro.append(summaryEl);
+            content.prepend(intro);
+          } else {
+            head.append(metaEl);
+            if (summaryEl) head.append(summaryEl);
           }
 
           dialog.setAttribute("aria-labelledby", title.id);
