@@ -352,7 +352,7 @@ const breadcrumbLd = {
             summaryEl.textContent = summary.textContent.trim();
           }
 
-          const isMobile = window.matchMedia("(max-width: 600px)").matches;
+          const isMobile = window.matchMedia("(max-width: 600px), (max-height: 640px)").matches;
           const content = dialog.querySelector(".project-dialog__content");
           if (isMobile && content) {
             const intro = document.createElement("div");
