@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import MermaidDiagram from "../components/MermaidDiagram.astro";
 import { moidasArchitecture } from "../diagrams/moidas-architecture";
+import { CONTENT_LAST_UPDATED } from "../data/site";
 import "../styles/global.css";
 import "../styles/cv.css";
 
@@ -12,17 +13,17 @@ const ld = {
   "@id": "https://cv.wilboerht.com/CV-cn/#page",
   "url": "https://cv.wilboerht.com/CV-cn/",
   "inLanguage": "zh-CN",
-  "dateModified": new Date().toISOString(),
+  "dateModified": CONTENT_LAST_UPDATED,
   "mainEntity": {
     "@type": "Person",
-    "@id": "https://www.wilboerht.com/#person",
+    "@id": "https://wilboerht.com/#person",
     "name": "王泓坤",
-    "alternateName": "Hongkun Wang",
+    "alternateName": ["Hongkun Wang", "Hank Wong", "wilboerht"],
     "givenName": "泓坤",
     "familyName": "王",
     "description": "数字开发经理、全栈工程师（TypeScript / React / Next.js / AI / RAG），常驻上海。作为品牌大中华区首位工程师，从 0 到 1 搭建品牌官网、会员体系与积分、统一认证（SSO）、AI 顾问与智能客服等数字系统。",
     "email": "me@wilboerht.cn",
-    "url": "https://www.wilboerht.com",
+    "url": "https://wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
     "address": {
       "@type": "PostalAddress",
@@ -30,8 +31,9 @@ const ld = {
       "addressCountry": "CN"
     },
     "sameAs": [
-      "https://github.com/Wilboerht",
-      "https://twitter.com/wilboerht"
+      "https://github.com/wilboerht",
+      "https://x.com/wilboerht",
+      "https://www.linkedin.com/in/wilboerht/"
     ],
     "alumniOf": [
       {
@@ -57,8 +59,9 @@ const ld = {
     "jobTitle": "数字开发经理",
     "worksFor": {
       "@type": "Organization",
+      "@id": "https://nihplod.cn/#organization",
       "name": "穆埃达思 Moidas",
-      "url": "https://www.nihplod.cn"
+      "url": "https://nihplod.cn"
     },
     "hasCredential": [
       {

@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import MermaidDiagram from "../components/MermaidDiagram.astro";
 import { moidasArchitecture } from "../diagrams/moidas-architecture";
+import { CONTENT_LAST_UPDATED } from "../data/site";
 import "../styles/global.css";
 import "../styles/cv.css";
 
@@ -12,17 +13,17 @@ const ld = {
   "@id": "https://cv.wilboerht.com/CV-kr/#page",
   "url": "https://cv.wilboerht.com/CV-kr/",
   "inLanguage": "ko",
-  "dateModified": new Date().toISOString(),
+  "dateModified": CONTENT_LAST_UPDATED,
   "mainEntity": {
     "@type": "Person",
-    "@id": "https://www.wilboerht.com/#person",
+    "@id": "https://wilboerht.com/#person",
     "name": "왕홍곤",
-    "alternateName": "Hongkun Wang",
+    "alternateName": ["Hongkun Wang", "王泓坤", "Hank Wong", "wilboerht"],
     "givenName": "Hongkun",
     "familyName": "Wang",
     "description": "상하이에 거주하는 디지털 개발 매니저이자 풀스택 엔지니어(TypeScript / React / Next.js / AI / RAG). 브랜드 중화권 사업부의 첫 엔지니어로 브랜드 공식 사이트, 멤버십·포인트 체계, 통합 인증(SSO), AI 어드바이저, 고객 서비스, 미니프로그램 2종을 0에서 1로 구축.",
     "email": "me@wilboerht.cn",
-    "url": "https://www.wilboerht.com",
+    "url": "https://wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
     "address": {
       "@type": "PostalAddress",
@@ -30,8 +31,9 @@ const ld = {
       "addressCountry": "CN"
     },
     "sameAs": [
-      "https://github.com/Wilboerht",
-      "https://twitter.com/wilboerht"
+      "https://github.com/wilboerht",
+      "https://x.com/wilboerht",
+      "https://www.linkedin.com/in/wilboerht/"
     ],
     "alumniOf": [
       {
@@ -57,8 +59,9 @@ const ld = {
     "jobTitle": "디지털 개발 매니저",
     "worksFor": {
       "@type": "Organization",
+      "@id": "https://nihplod.cn/#organization",
       "name": "모이다스",
-      "url": "https://www.nihplod.cn"
+      "url": "https://nihplod.cn"
     },
     "hasCredential": [
       {

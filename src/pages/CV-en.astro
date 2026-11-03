@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PrintFooter from "../components/PrintFooter.astro";
 import MermaidDiagram from "../components/MermaidDiagram.astro";
 import { moidasArchitecture } from "../diagrams/moidas-architecture";
+import { CONTENT_LAST_UPDATED } from "../data/site";
 import "../styles/global.css";
 import "../styles/cv.css";
 
@@ -12,17 +13,17 @@ const ld = {
   "@id": "https://cv.wilboerht.com/CV-en/#page",
   "url": "https://cv.wilboerht.com/CV-en/",
   "inLanguage": "en",
-  "dateModified": new Date().toISOString(),
+  "dateModified": CONTENT_LAST_UPDATED,
   "mainEntity": {
     "@type": "Person",
-    "@id": "https://www.wilboerht.com/#person",
+    "@id": "https://wilboerht.com/#person",
     "name": "Hongkun Wang",
-    "alternateName": "王泓坤",
+    "alternateName": ["王泓坤", "Hank Wong", "wilboerht"],
     "givenName": "Hongkun",
     "familyName": "Wang",
     "description": "Digital Development Manager and full-stack engineer (TypeScript / React / Next.js / AI / RAG) based in Shanghai. First engineer of a brand's Greater China division — built its brand website, membership & points system, unified authentication, AI advisor, customer service, and mini-programs from 0 to 1.",
     "email": "me@wilboerht.cn",
-    "url": "https://www.wilboerht.com",
+    "url": "https://wilboerht.com",
     "image": "https://cv.wilboerht.com/og-image.png",
     "address": {
       "@type": "PostalAddress",
@@ -30,8 +31,9 @@ const ld = {
       "addressCountry": "CN"
     },
     "sameAs": [
-      "https://github.com/Wilboerht",
-      "https://twitter.com/wilboerht"
+      "https://github.com/wilboerht",
+      "https://x.com/wilboerht",
+      "https://www.linkedin.com/in/wilboerht/"
     ],
     "alumniOf": [
       {
@@ -57,8 +59,9 @@ const ld = {
     "jobTitle": "Digital Development Manager",
     "worksFor": {
       "@type": "Organization",
+      "@id": "https://nihplod.cn/#organization",
       "name": "Moidas",
-      "url": "https://www.nihplod.cn"
+      "url": "https://nihplod.cn"
     },
     "hasCredential": [
       {

@@ -1,6 +1,7 @@
 ﻿// @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { CONTENT_LAST_UPDATED } from './src/data/site.ts';
 
 const SITE = 'https://cv.wilboerht.com';
 
@@ -28,8 +29,8 @@ export default defineConfig({
             { lang: 'x-default', url: `${SITE}/CV-en/` },
           ];
         }
-        // 保持与页面 dateModified 一致的构建时间戳
-        item.lastmod = new Date().toISOString();
+        // 使用统一的内容更新时间，避免每次构建都改变 lastmod
+        item.lastmod = CONTENT_LAST_UPDATED;
         return item;
       },
     }),

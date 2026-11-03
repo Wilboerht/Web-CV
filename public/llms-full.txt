@@ -1,17 +1,20 @@
 # Hongkun Wang (王泓坤) — Full CV
 
 > This file contains the complete CV content of Hongkun Wang in Markdown for LLM consumption.
-> Source: https://cv.wilboerht.com/CV-en/ · Person entity: https://www.wilboerht.com
+> Source: https://cv.wilboerht.com/CV-en/ · Person entity: https://wilboerht.com
 
 ## Profile
 
 - Name: Hongkun Wang (王泓坤)
+- Also known as: Hank Wong · wilboerht · 王泓坤
 - Title: Digital Development Manager · Full-Stack Engineer
 - Location: Shanghai, China
 - Email: me@wilboerht.cn
-- Website: https://www.wilboerht.com
-- GitHub: https://github.com/Wilboerht
-- X (Twitter): https://twitter.com/wilboerht
+- Website: https://wilboerht.com
+- Employer entity: https://nihplod.cn/#organization
+- GitHub: https://github.com/wilboerht
+- X: https://x.com/wilboerht
+- LinkedIn: https://www.linkedin.com/in/wilboerht/
 
 Summary: Digital Development Manager and full-stack engineer specializing in TypeScript / React / Next.js / AI / RAG. First engineer of Moidas' Greater China division — cold-started the brand's entire Greater China information systems and digital infrastructure from 0 to 1, independently delivering 7 core systems within 12 months with 2,100+ automated test cases, and connected the business loop of "skin analysis → personalized regimen → 7×24 AI advisor follow-up → repurchase" through unified accounts and profile data.
 
@@ -37,7 +40,7 @@ Joined as an intern in Oct 2025 and worked full-time before graduation; converte
 
 ### NIHPLOD China Official Website — Nov 2025 – Present (iterating)
 
-Live: https://www.nihplod.cn · Independently delivered (product design · UI/UX · full-stack)
+Live: https://nihplod.cn · Independently delivered (product design · UI/UX · full-stack)
 
 - Brand Website & Member Platform: Built the brand's official website and member platform with Next.js 16 + Prisma + PostgreSQL — product showcases, third-party e-commerce referral (Tmall / Douyin / Xiaohongshu / WeChat Shop links + GA event tracking), membership tiers, points ledger, points redemption (SF Express tracking), consumption backfill, skin profiles, and a security center; aggregated WeChat, Douyin, and phone OTP identities into a unified account system — 205 API routes, 51 data models, and 2,100+ automated test cases.
 - Product & Interaction Design: Independently designed the information architecture, Figma interactive prototypes, and visual styling; built multi-step skincare ritual guides and immersive brand storytelling with Framer Motion + View Transitions, integrated the product drawer with detail pages, and delivered fully responsive layouts.

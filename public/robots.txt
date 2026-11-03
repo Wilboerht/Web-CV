@@ -1,4 +1,4 @@
-﻿# Search engine crawlers: full access
+# Search engine crawlers: full access
 User-agent: *
 Allow: /
 
