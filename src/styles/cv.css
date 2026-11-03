@@ -1055,7 +1055,7 @@ body.diagram-open {
     border-bottom: 1px solid var(--border-color);
   }
   .project-dialog__title {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .project-dialog__date--title {
     display: none;
