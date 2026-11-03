@@ -1,4 +1,6 @@
 ﻿---
+import SiteFooter from "../components/SiteFooter.astro";
+
 interface Props {
   title: string;
   lang: string;
@@ -250,6 +252,8 @@ const breadcrumbLd = {
     <main id="main-content" tabindex="-1">
       <slot />
     </main>
+
+    <SiteFooter lang={lang} />
 
     <script>
       document.querySelectorAll(".project-entry").forEach((entry) => {
