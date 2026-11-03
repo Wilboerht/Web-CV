@@ -13,6 +13,7 @@ const cjkFontStylesheets = [
   ...(lang === "zh-CN" ? ["/fonts/noto-serif-sc.css"] : []),
   ...(lang === "zh-TW" || lang === "zh-HK" ? ["/fonts/noto-serif-tc.css"] : []),
   ...(lang === "ko" ? ["/fonts/noto-serif-kr.css"] : []),
+  ...(lang === "ja" ? ["/fonts/noto-serif-jp.css"] : []),
 ];
 
 const SITE_URL = Astro.site ? Astro.site.href.replace(/\/+$/, "") : "https://cv.wilboerht.com";
