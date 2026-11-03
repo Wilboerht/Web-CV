@@ -26,6 +26,9 @@
     --cv-fs-dialog-title-mobile: 1.125rem;
     --cv-fs-dialog-copy: 1rem;
     --cv-fs-dialog-copy-mobile: 0.9375rem;
+    --cv-dialog-backdrop: rgba(17, 24, 39, 0.55);
+    --cv-dialog-radius: 14px;
+    --cv-dialog-shadow: 0 24px 72px rgba(17, 24, 39, 0.22);
 
     --cv-lh-heading: 1.35;
     --cv-lh-tight: 1.4;

@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteFooter from "../components/SiteFooter.astro";
 
 interface Props {
@@ -273,9 +273,8 @@ const breadcrumbLd = {
           const date = entry.querySelector(".entry-date")?.textContent?.trim() ?? "";
           const meta = entry.querySelector(".project-meta");
           const summary = entry.querySelector(".project-summary");
-
-          const titleRow = document.createElement("div");
-          titleRow.className = "project-dialog__title-row";
+          const content = dialog.querySelector(".project-dialog__content");
+          if (!content) return;
 
           const title = document.createElement("h3");
           title.className = "project-dialog__title";
@@ -302,22 +301,17 @@ const breadcrumbLd = {
             logo.after(separator);
           }
 
-          const dateEl = document.createElement("span");
-          dateEl.className = "project-dialog__date";
-          dateEl.textContent = date;
-
-          const titleDate = dateEl.cloneNode(true);
-          titleDate.classList.add("project-dialog__date--title");
-
-          titleRow.append(title, titleDate);
-          head.append(titleRow);
+          head.append(title);
 
           const metaEl = document.createElement("div");
           metaEl.className = "project-meta project-dialog__meta";
 
           const metaDateWrap = document.createElement("span");
           metaDateWrap.className = "project-dialog__date-meta-wrap";
-          metaDateWrap.append(dateEl.cloneNode(true), document.createTextNode(" · "));
+          const dateEl = document.createElement("span");
+          dateEl.className = "project-dialog__date";
+          dateEl.textContent = date;
+          metaDateWrap.append(dateEl, document.createTextNode(" · "));
           metaEl.append(metaDateWrap);
 
           if (meta) {
@@ -349,25 +343,16 @@ const breadcrumbLd = {
             if (link) metaEl.append(link.cloneNode(true));
           }
 
-          let summaryEl;
+          const intro = document.createElement("div");
+          intro.className = "project-dialog__intro";
+          intro.append(metaEl);
           if (summary) {
-            summaryEl = document.createElement("p");
+            const summaryEl = document.createElement("p");
             summaryEl.className = "project-dialog__summary";
             summaryEl.textContent = summary.textContent.trim();
+            intro.append(summaryEl);
           }
-
-          const isMobile = window.matchMedia("(max-width: 600px), (max-height: 640px)").matches;
-          const content = dialog.querySelector(".project-dialog__content");
-          if (isMobile && content) {
-            const intro = document.createElement("div");
-            intro.className = "project-dialog__intro";
-            intro.append(metaEl);
-            if (summaryEl) intro.append(summaryEl);
-            content.prepend(intro);
-          } else {
-            head.append(metaEl);
-            if (summaryEl) head.append(summaryEl);
-          }
+          content.prepend(intro);
 
           dialog.setAttribute("aria-labelledby", title.id);
           head.dataset.filled = "true";
