@@ -980,6 +980,10 @@ body.diagram-open {
   .project-dialog__header {
     padding: calc(18px + env(safe-area-inset-top, 0px)) calc(60px + env(safe-area-inset-right, 0px)) 14px calc(18px + env(safe-area-inset-left, 0px));
   }
+  .project-dialog__header--compact-title {
+    padding-right: calc(46px + env(safe-area-inset-right, 0px));
+    padding-left: calc(12px + env(safe-area-inset-left, 0px));
+  }
   .project-dialog__content {
     padding: 16px calc(18px + env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) calc(18px + env(safe-area-inset-left, 0px));
   }

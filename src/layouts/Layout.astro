@@ -363,13 +363,33 @@ const breadcrumbLd = {
           if (!title || !dialog.open) return;
 
           title.style.fontSize = "";
+          const header = head?.closest(".project-dialog__header");
+          header?.classList.remove("project-dialog__header--compact-title");
+          const logo = title.querySelector(".project-dialog__logo");
+          const separator = title.querySelector(".project-dialog__logo-separator");
+          if (logo) logo.style.display = "";
+          if (separator) separator.style.display = "";
+
           const maxSize = parseFloat(getComputedStyle(title).fontSize);
-          const availableWidth = title.clientWidth;
-          const requiredWidth = title.scrollWidth;
+          let availableWidth = title.clientWidth;
+          let requiredWidth = title.scrollWidth;
           if (!availableWidth || requiredWidth <= availableWidth) return;
 
-          const minSize = window.matchMedia("(max-width: 600px)").matches ? 10 : 14;
-          const fittedSize = Math.max(minSize, Math.floor((maxSize * availableWidth / requiredWidth) * 2) / 2);
+          const isMobile = window.matchMedia("(max-width: 600px)").matches;
+          let minSize = isMobile ? 10 : 14;
+          const fitSize = () => Math.max(minSize, Math.floor((maxSize * availableWidth / requiredWidth) * 2) / 2);
+          let fittedSize = fitSize();
+
+          if (isMobile && fittedSize < 12 && logo) {
+            logo.style.display = "none";
+            if (separator) separator.style.display = "none";
+            header?.classList.add("project-dialog__header--compact-title");
+            minSize = 9.5;
+            availableWidth = title.clientWidth;
+            requiredWidth = title.scrollWidth;
+            fittedSize = fitSize();
+          }
+
           title.style.fontSize = `${fittedSize}px`;
         };
 
