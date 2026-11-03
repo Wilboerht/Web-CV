@@ -294,7 +294,7 @@ h3.project-name {
 .project-dialog__owner {
   color: var(--cv-text-primary);
   font-weight: 500;
-  white-space: nowrap;
+  white-space: normal;
 }
 .project-dialog__tags {
   display: inline-flex;
