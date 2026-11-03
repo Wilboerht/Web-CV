@@ -48,9 +48,9 @@ const label = labels[lang] ?? labels.en;
     border-top: 1px solid var(--border-color);
     background: var(--background);
     text-align: center;
-    color: var(--light-text);
-    font-size: 0.8125rem;
-    line-height: 1.6;
+    color: var(--cv-text-muted);
+    font-size: var(--cv-fs-meta);
+    line-height: var(--cv-lh-base);
   }
 
   .site-footer__updated {
@@ -61,7 +61,7 @@ const label = labels[lang] ?? labels.en;
   @media (max-width: 600px) {
     .site-footer {
       padding: 18px 16px calc(14px + env(safe-area-inset-bottom, 0px));
-      font-size: 0.75rem;
+      font-size: var(--cv-fs-caption);
     }
   }
 

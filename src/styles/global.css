@@ -11,6 +11,33 @@
     --hover-bg: #f8f8f8;
     --focus-ring: #1a5490;
     --cv-font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+
+    --cv-fs-caption: 0.75rem;
+    --cv-fs-meta: 0.8125rem;
+    --cv-fs-small: 0.875rem;
+    --cv-fs-date: var(--cv-fs-small);
+    --cv-fs-body: 1rem;
+    --cv-fs-copy: clamp(0.875rem, 0.82rem + 0.2vw, 0.9375rem);
+    --cv-fs-entry-role: clamp(0.875rem, 0.8rem + 0.25vw, 0.9375rem);
+    --cv-fs-entry-title: clamp(0.9375rem, 0.85rem + 0.25vw, 1rem);
+    --cv-fs-h2: clamp(1rem, 0.9rem + 0.25vw, 1.0625rem);
+    --cv-fs-h1: clamp(1.375rem, 1.05rem + 1.1vw, 2rem);
+    --cv-fs-dialog-title: 1.25rem;
+    --cv-fs-dialog-title-mobile: 1.125rem;
+    --cv-fs-dialog-copy: 1rem;
+
+    --cv-lh-heading: 1.35;
+    --cv-lh-tight: 1.4;
+    --cv-lh-meta: 1.5;
+    --cv-lh-base: 1.6;
+    --cv-lh-copy: 1.7;
+    --cv-lh-prose: 1.75;
+    --cv-lh-loose: 1.8;
+
+    --cv-text-primary: var(--text-color);
+    --cv-text-secondary: #555555;
+    --cv-text-muted: var(--light-text);
+    --cv-text-subtle: #777777;
 }
 
 html[lang="zh-CN"] {
@@ -46,9 +73,9 @@ body {
     padding: 0;
     padding-bottom: env(safe-area-inset-bottom, 0px);
     background: var(--background);
-    color: var(--text-color);
-    font-size: 1rem;
-    line-height: 1.6;
+    color: var(--cv-text-primary);
+    font-size: var(--cv-fs-body);
+    line-height: var(--cv-lh-base);
     font-family: var(--cv-font-body);
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
@@ -64,7 +91,7 @@ body {
     color: var(--background);
     z-index: 200;
     border-radius: 4px;
-    font-size: 0.875rem;
+    font-size: var(--cv-fs-small);
     text-decoration: none;
 }
 
@@ -120,7 +147,7 @@ a:hover {
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    font-size: 0.75rem;
+    font-size: var(--cv-fs-caption);
     line-height: 1;
 }
 
@@ -129,7 +156,7 @@ a:hover {
 .cv-lang-label {
     border: 0;
     background: transparent;
-    color: var(--light-text);
+    color: var(--cv-text-muted);
     font: inherit;
     padding: 5px 7px;
     border-radius: 999px;
@@ -139,7 +166,7 @@ a:hover {
 .cv-toolbar button:hover,
 .cv-toolbar-save:hover,
 .cv-lang:hover .cv-lang-label {
-    color: var(--text-color);
+    color: var(--cv-text-primary);
     background: #f1f5f9;
 }
 
@@ -194,8 +221,8 @@ a:hover {
     gap: 4px 8px;
     max-width: 280px;
     padding: 0 6px;
-    color: var(--light-text);
-    font-size: 0.75rem;
+    color: var(--cv-text-muted);
+    font-size: var(--cv-fs-caption);
 }
 
 .cv-lang-fallback a {
@@ -204,7 +231,7 @@ a:hover {
 }
 
 .cv-lang-fallback a:hover {
-    color: var(--text-color);
+    color: var(--cv-text-primary);
 }
 
 .cv-toolbar-divider {
@@ -237,13 +264,13 @@ a:hover {
     .cv-toolbar-save {
         min-height: 44px;
         padding: 0 12px;
-        font-size: 0.875rem;
+        font-size: var(--cv-fs-small);
     }
 
     .cv-lang-fallback {
         min-height: 44px;
         max-width: 220px;
-        font-size: 0.875rem;
+        font-size: var(--cv-fs-small);
     }
 
     .cv-toolbar-save {
