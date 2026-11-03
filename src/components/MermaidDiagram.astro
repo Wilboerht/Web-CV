@@ -37,7 +37,13 @@ const svg = renderMermaidSVG(code, {
   >
     <span class="entry-figure__svg" role="img" aria-label={alt} set:html={svg} />
     <span class="entry-figure__overlay" aria-hidden="true">
-      <span class="entry-figure__hint">{zoomLabel}</span>
+      <span class="entry-figure__hint">
+        <svg class="entry-figure__hint-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8" />
+          <path d="m20 20-4-4M11 8v6M8 11h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+        {zoomLabel}
+      </span>
     </span>
   </button>
 
