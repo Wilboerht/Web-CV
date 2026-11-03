@@ -1180,6 +1180,26 @@ body.diagram-open {
   }
 }
 
+@media (max-width: 600px), (max-height: 640px) {
+  .project-dialog__meta .project-meta-link {
+    margin-left: 0;
+  }
+
+  .project-dialog__summary {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .project-dialog .project-points li {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .project-dialog__content {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px) + 2rem);
+  }
+}
+
 /* Print Optimization */
 @media print {
   @page {
