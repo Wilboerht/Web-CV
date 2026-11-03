@@ -148,4 +148,29 @@ const kr = `flowchart LR
   KF -.->|"검증 링크"| BA
 `;
 
-export const moidasArchitecture = { cn, tw, hk, en, de, kr };
+const ja = `flowchart LR
+  subgraph C["クライアント"]
+    WEB["Web"]
+    MP["WeChatミニプログラム"]
+  end
+
+  subgraph P["コアプラットフォーム"]
+    MAIN["nihplod.cn<br/>ID・コマース"]
+    SKIN["smart.nihplod.cn<br/>AI肌診断"]
+    KF["kf.nihplod.cn<br/>AIカスタマーサービス"]
+  end
+
+  subgraph I["独立システム"]
+    BA["ba.nihplod.cn<br/>認証確認"]
+  end
+
+  WEB -->|"SSO"| MAIN
+  MP -->|"ログイン"| MAIN
+  MP -->|"肌診断"| SKIN
+  MAIN <-->|"商品 / ポイント / レポート"| SKIN
+  SKIN <-->|"問合せリンク / レポート"| KF
+  MAIN -.->|"サービス入口"| BA
+  KF -.->|"認証確認リンク"| BA
+`;
+
+export const moidasArchitecture = { cn, tw, hk, en, de, kr, ja };

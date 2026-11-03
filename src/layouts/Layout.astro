@@ -24,6 +24,7 @@ const desc: Record<string, string> = {
   "en": "Hongkun Wang - CV",
   "de": "Hongkun Wang - Lebenslauf",
   "ko": "왕홍곤 - 이력서",
+  "ja": "王泓坤 - 履歴書",
 };
 
 const description = desc[lang] || desc["en"];
@@ -35,6 +36,7 @@ const langs = [
   { code: "en", label: "EN", full: "English", path: "/CV-en/" },
   { code: "de", label: "DE", full: "Deutsch", path: "/CV-de/" },
   { code: "ko", label: "한", full: "한국어", path: "/CV-kr/" },
+  { code: "ja", label: "日", full: "日本語", path: "/CV-jp/" },
 ];
 const currentLang = langs.find((l) => l.code === lang) ?? langs[0];
 
@@ -45,6 +47,7 @@ const saveLabels: Record<string, string> = {
   en: "Save",
   de: "Speichern",
   ko: "저장",
+  ja: "保存",
 };
 
 const ogLocales: Record<string, string> = {
@@ -54,6 +57,7 @@ const ogLocales: Record<string, string> = {
   en: "en_US",
   de: "de_DE",
   ko: "ko_KR",
+  ja: "ja_JP",
 };
 
 const ogLocale = ogLocales[lang] || ogLocales.en;
@@ -65,9 +69,11 @@ const ogImageAlt: Record<string, string> = {
   en: "Hongkun Wang - CV",
   de: "Hongkun Wang - Lebenslauf",
   ko: "왕홍곤 - 이력서",
+  ja: "王泓坤 - 履歴書",
 };
 
 const skipLabels: Record<string, string> = {
+  ja: "本文へスキップ",
   "zh-CN": "跳到正文",
   "zh-TW": "跳至正文",
   "zh-HK": "跳至正文",
@@ -83,6 +89,7 @@ const navLabels: Record<string, string> = {
   en: "Language / Save CV",
   de: "Sprache / Lebenslauf speichern",
   ko: "언어 / 이력서 저장",
+  ja: "言語 / 履歴書を保存",
 };
 
 const languageLabels: Record<string, string> = {
@@ -92,6 +99,7 @@ const languageLabels: Record<string, string> = {
   en: "Language",
   de: "Sprache",
   ko: "언어",
+  ja: "言語",
 };
 
 const homeLabels: Record<string, string> = {
@@ -101,6 +109,7 @@ const homeLabels: Record<string, string> = {
   en: "Home",
   de: "Startseite",
   ko: "홈",
+  ja: "ホーム",
 };
 
 const pathname = Astro.url.pathname.endsWith("/")

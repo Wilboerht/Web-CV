@@ -57,6 +57,10 @@ html[lang="ko"] {
     --cv-font-body: 'Source Serif 4', 'Noto Serif KR', serif;
 }
 
+html[lang="ja"] {
+    --cv-font-body: 'Source Serif 4', 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+}
+
 *,
 *::before,
 *::after {

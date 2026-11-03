@@ -4,8 +4,6 @@ import { renderMermaidSVG } from "beautiful-mermaid";
 interface Props {
   code: string;
   alt: string;
-  dialogTitle: string;
-  panHint: string;
   zoomLabel?: string;
   closeLabel?: string;
 }
@@ -13,8 +11,6 @@ interface Props {
 const {
   code,
   alt,
-  dialogTitle,
-  panHint,
   zoomLabel = "View larger",
   closeLabel = "Close",
 } = Astro.props;
@@ -48,15 +44,9 @@ const svg = renderMermaidSVG(code, {
   </button>
 
   <dialog class="diagram-dialog" aria-label={alt}>
-    <div class="diagram-dialog__header">
-      <div class="diagram-dialog__heading">
-        <span class="diagram-dialog__title">{dialogTitle}</span>
-        <span class="diagram-dialog__hint">{panHint}</span>
-      </div>
-      <button type="button" class="diagram-dialog__close" aria-label={closeLabel}>
-        &times;
-      </button>
-    </div>
+    <button type="button" class="diagram-dialog__close" aria-label={closeLabel}>
+      &times;
+    </button>
     <div class="diagram-dialog__body" data-diagram-content></div>
   </dialog>
 </figure>

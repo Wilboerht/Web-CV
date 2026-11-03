@@ -1,4 +1,4 @@
-﻿// @ts-check
+// @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { CONTENT_LAST_UPDATED } from './src/data/site.ts';
@@ -12,6 +12,7 @@ const locales = [
   { code: 'en', path: '/CV-en/' },
   { code: 'de', path: '/CV-de/' },
   { code: 'ko', path: '/CV-kr/' },
+  { code: 'ja', path: '/CV-jp/' },
 ];
 
 // https://astro.build/config
