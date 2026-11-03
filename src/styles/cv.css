@@ -964,6 +964,10 @@ body.diagram-open {
   .project-dialog__title {
     font-size: var(--cv-fs-dialog-title-mobile);
   }
+  .project-dialog__summary,
+  .project-dialog .project-points li {
+    font-size: var(--cv-fs-dialog-copy-mobile);
+  }
   .project-dialog__date--title {
     display: none;
   }
