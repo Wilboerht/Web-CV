@@ -1055,7 +1055,8 @@ body.diagram-open {
     border-bottom: 1px solid var(--border-color);
   }
   .project-dialog__title {
-    font-size: 1rem;
+    font-size: 1.125rem;
+    word-break: keep-all;
   }
   .project-dialog__date--title {
     display: none;
@@ -1183,16 +1184,6 @@ body.diagram-open {
 @media (max-width: 600px), (max-height: 640px) {
   .project-dialog__meta .project-meta-link {
     margin-left: 0;
-  }
-
-  .project-dialog__summary {
-    font-size: 0.9375rem;
-    line-height: 1.7;
-  }
-
-  .project-dialog .project-points li {
-    font-size: 0.9375rem;
-    line-height: 1.7;
   }
 
   .project-dialog__content {
