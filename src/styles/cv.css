@@ -996,12 +996,13 @@ body.diagram-open {
   .project-dialog__close {
     top: calc(10px + env(safe-area-inset-top, 0px));
     right: calc(10px + env(safe-area-inset-right, 0px));
-    width: 44px;
-    height: 44px;
-    background: rgba(0, 0, 0, 0.04);
-    border: 1px solid var(--border-color);
-    color: var(--cv-text-primary);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    color: var(--cv-text-muted);
     box-shadow: none;
+    font-size: 26px;
   }
   .project-points {
     padding-left: 16px;
@@ -1035,8 +1036,12 @@ body.diagram-open {
   }
 
   .diagram-dialog__close {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    color: var(--cv-text-muted);
+    font-size: 26px;
     box-shadow: none;
   }
 
@@ -1095,32 +1100,37 @@ body.diagram-open {
   .project-dialog__close {
     top: 10px;
     right: 10px;
-    width: 44px;
-    height: 44px;
-    background: rgba(0, 0, 0, 0.04);
-    border: 1px solid var(--border-color);
-    color: var(--cv-text-primary);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    color: var(--cv-text-muted);
     box-shadow: none;
+    font-size: 26px;
   }
 }
 
 @media (pointer: coarse) {
   .diagram-dialog__close {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    color: var(--cv-text-muted);
+    font-size: 26px;
   }
 
   .project-dialog__meta .project-meta-link {
-    min-height: 44px;
-    padding: 8px 10px;
+    min-height: 0;
+    padding: 3px 8px;
   }
 }
 
 @media (max-width: 600px), (max-height: 640px) {
   .project-dialog__meta .project-meta-link {
     margin-left: 0;
-    min-height: 44px;
-    padding: 8px 10px;
+    min-height: 0;
+    padding: 3px 8px;
   }
 
   .project-dialog__content {
