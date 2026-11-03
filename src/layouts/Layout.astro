@@ -74,10 +74,66 @@ const skipLabels: Record<string, string> = {
   ko: "본문으로 건너뛰기",
 };
 
+const navLabels: Record<string, string> = {
+  "zh-CN": "语言 / 保存简历",
+  "zh-TW": "語言 / 儲存履歷",
+  "zh-HK": "語言 / 儲存履歷",
+  en: "Language / Save CV",
+  de: "Sprache / Lebenslauf speichern",
+  ko: "언어 / 이력서 저장",
+};
+
+const languageLabels: Record<string, string> = {
+  "zh-CN": "语言",
+  "zh-TW": "語言",
+  "zh-HK": "語言",
+  en: "Language",
+  de: "Sprache",
+  ko: "언어",
+};
+
+const homeLabels: Record<string, string> = {
+  "zh-CN": "首页",
+  "zh-TW": "首頁",
+  "zh-HK": "首頁",
+  en: "Home",
+  de: "Startseite",
+  ko: "홈",
+};
+
 const pathname = Astro.url.pathname.endsWith("/")
   ? Astro.url.pathname
   : `${Astro.url.pathname}/`;
 const canonical = `${SITE_URL}${pathname}`;
+
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  "url": `${SITE_URL}/`,
+  "name": "Hongkun Wang · CV",
+  "inLanguage": langs.map((l) => l.code),
+  "publisher": { "@id": "https://wilboerht.com/#person" },
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": homeLabels[lang] || homeLabels.en,
+      "item": `${SITE_URL}/`,
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": title,
+      "item": canonical,
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -142,18 +198,21 @@ const canonical = `${SITE_URL}${pathname}`;
       ))}
     </noscript>
 
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd, null, 2)} />
+
     <slot name="head" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">{skipLabels[lang] || skipLabels.en}</a>
 
-    <nav class="cv-toolbar" aria-label="Language / Save CV">
+    <nav class="cv-toolbar" aria-label={navLabels[lang] || navLabels.en}>
       <div class="cv-lang">
         <span class="cv-lang-label" aria-hidden="true">{currentLang.label}</span>
         <select
           id="cv-lang"
           class="cv-lang-select"
-          aria-label="Language"
+          aria-label={languageLabels[lang] || languageLabels.en}
           onchange="location.href=this.value"
         >
           {
@@ -165,6 +224,13 @@ const canonical = `${SITE_URL}${pathname}`;
           }
         </select>
       </div>
+      <noscript>
+        <span class="cv-lang-fallback">
+          {langs.map((l) => (
+            <a href={l.path} hreflang={l.code} lang={l.code}>{l.full}</a>
+          ))}
+        </span>
+      </noscript>
       <span class="cv-toolbar-divider" aria-hidden="true"></span>
       <a class="cv-toolbar-save" href="/wanghongkun-cv.pdf" download="王泓坤 CV.pdf">
         {saveLabels[lang] || saveLabels.en}

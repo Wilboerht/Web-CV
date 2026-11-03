@@ -5,6 +5,7 @@
 Key facts:
 
 - Also known as: Hank Wong · wilboerht · 王泓坤
+- Last updated: 2026-11-03
 - Current role: Digital Development Manager at Moidas (NIHPLOD Greater China Division), Oct 2025 – present
 - Location: Shanghai, China
 - Contact: me@wilboerht.cn
@@ -27,3 +28,7 @@ Key facts:
 ## Full text
 
 - [llms-full.txt](https://cv.wilboerht.com/llms-full.txt): complete CV content in Markdown (English)
+
+## 中文摘要
+
+王泓坤，常驻上海的数字开发经理、全栈工程师，专注 TypeScript / React / Next.js 与 AI / RAG。作为 Moidas（NIHPLOD）大中华区首位工程师，12 个月内从 0 到 1 交付 7 个核心系统、2,100+ 自动化测试，覆盖品牌官网、会员积分、统一认证（SSO）、AI 护肤顾问、企微 AI 客服、授权核验平台与两个小程序。详见 [简体中文简历](https://cv.wilboerht.com/CV-cn/)。
