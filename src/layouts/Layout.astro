@@ -358,11 +358,35 @@ const breadcrumbLd = {
           head.dataset.filled = "true";
         };
 
+        const fitTitle = () => {
+          const title = head?.querySelector(".project-dialog__title");
+          if (!title || !dialog.open) return;
+
+          title.style.fontSize = "";
+          const maxSize = parseFloat(getComputedStyle(title).fontSize);
+          const availableWidth = title.clientWidth;
+          const requiredWidth = title.scrollWidth;
+          if (!availableWidth || requiredWidth <= availableWidth) return;
+
+          const minSize = window.matchMedia("(max-width: 600px)").matches ? 10 : 14;
+          const fittedSize = Math.max(minSize, Math.floor((maxSize * availableWidth / requiredWidth) * 2) / 2);
+          title.style.fontSize = `${fittedSize}px`;
+        };
+
         const open = () => {
           fill();
           if (!dialog.open) dialog.showModal();
+          fitTitle();
+          requestAnimationFrame(fitTitle);
+          document.fonts.ready.then(fitTitle);
+          const logo = head?.querySelector(".project-dialog__logo");
+          if (logo && !logo.complete) logo.addEventListener("load", fitTitle, { once: true });
           document.body.classList.add("project-modal-open");
         };
+
+        window.addEventListener("resize", () => {
+          if (dialog.open) fitTitle();
+        });
 
         triggers.forEach((trigger) => {
           trigger.addEventListener("click", (event) => {

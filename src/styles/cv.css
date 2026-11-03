@@ -400,9 +400,10 @@ h3.project-name {
   font-weight: 600;
   line-height: var(--cv-lh-heading);
   color: var(--cv-text-primary);
-  text-wrap: balance;
-  overflow-wrap: anywhere;
-  word-break: keep-all;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .project-dialog__logo {
   display: inline-block;
