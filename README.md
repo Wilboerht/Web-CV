@@ -4,8 +4,6 @@ A fast, multilingual, print-ready personal CV built with [Astro](https://astro.b
 
 [Live CV](https://cv.wilboerht.com) · [GitHub](https://github.com/Wilboerht/Web-CV)
 
-![Web CV preview](public/og-image.png)
-
 ## Overview
 
 This repository contains the source code for my personal curriculum vitae. The
