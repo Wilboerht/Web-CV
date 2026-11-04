@@ -299,12 +299,12 @@ const breadcrumbLd = {
             logo.alt = "";
             logo.decoding = "async";
             logo.setAttribute("aria-hidden", "true");
-            title.prepend(logo);
+            head.append(logo);
 
             const separator = document.createElement("span");
             separator.className = "project-dialog__logo-separator";
             separator.setAttribute("aria-hidden", "true");
-            logo.after(separator);
+            head.append(separator);
           }
 
           head.append(title);
@@ -312,13 +312,13 @@ const breadcrumbLd = {
           const metaEl = document.createElement("div");
           metaEl.className = "project-meta project-dialog__meta";
 
-          const metaDateWrap = document.createElement("span");
-          metaDateWrap.className = "project-dialog__date-meta-wrap";
+          const metaPrimary = document.createElement("div");
+          metaPrimary.className = "project-dialog__meta-primary";
           const dateEl = document.createElement("span");
           dateEl.className = "project-dialog__date";
           dateEl.textContent = date;
-          metaDateWrap.append(dateEl, document.createTextNode(" · "));
-          metaEl.append(metaDateWrap);
+          metaPrimary.append(dateEl);
+          metaEl.append(metaPrimary);
 
           if (meta) {
             const owner = meta.querySelector(".project-meta-owner");
@@ -326,7 +326,7 @@ const breadcrumbLd = {
               const ownerEl = document.createElement("span");
               ownerEl.className = "project-dialog__owner";
               ownerEl.textContent = owner.textContent.trim();
-              metaEl.append(ownerEl);
+              metaPrimary.append(ownerEl);
             }
 
             const tags = Array.from(meta.querySelectorAll(".project-meta-tag"));
@@ -364,55 +364,11 @@ const breadcrumbLd = {
           head.dataset.filled = "true";
         };
 
-        const fitTitle = () => {
-          const title = head?.querySelector(".project-dialog__title");
-          if (!title || !dialog.open) return;
-
-          title.style.fontSize = "";
-          const header = head?.closest(".project-dialog__header");
-          header?.classList.remove("project-dialog__header--compact-title");
-          const logo = title.querySelector(".project-dialog__logo");
-          const separator = title.querySelector(".project-dialog__logo-separator");
-          if (logo) logo.style.display = "";
-          if (separator) separator.style.display = "";
-
-          const maxSize = parseFloat(getComputedStyle(title).fontSize);
-          let availableWidth = title.clientWidth;
-          let requiredWidth = title.scrollWidth;
-          if (!availableWidth || requiredWidth <= availableWidth) return;
-
-          const isMobile = window.matchMedia("(max-width: 600px)").matches;
-          let minSize = isMobile ? 10 : 14;
-          const fitSize = () => Math.max(minSize, Math.floor((maxSize * availableWidth / requiredWidth) * 2) / 2);
-          let fittedSize = fitSize();
-
-          if (isMobile && fittedSize < 12 && logo) {
-            logo.style.display = "none";
-            if (separator) separator.style.display = "none";
-            header?.classList.add("project-dialog__header--compact-title");
-            minSize = 9.5;
-            availableWidth = title.clientWidth;
-            requiredWidth = title.scrollWidth;
-            fittedSize = fitSize();
-          }
-
-          title.style.fontSize = `${fittedSize}px`;
-        };
-
         const open = () => {
           fill();
           if (!dialog.open) dialog.showModal();
-          fitTitle();
-          requestAnimationFrame(fitTitle);
-          document.fonts.ready.then(fitTitle);
-          const logo = head?.querySelector(".project-dialog__logo");
-          if (logo && !logo.complete) logo.addEventListener("load", fitTitle, { once: true });
           document.body.classList.add("project-modal-open");
         };
-
-        window.addEventListener("resize", () => {
-          if (dialog.open) fitTitle();
-        });
 
         triggers.forEach((trigger) => {
           trigger.addEventListener("click", (event) => {

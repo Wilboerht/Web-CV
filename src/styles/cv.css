@@ -276,9 +276,14 @@ h3.project-name {
 .project-dialog__header {
   position: relative;
   flex-shrink: 0;
-  padding: 20px 30px 18px;
+  padding: 20px 72px 18px 30px;
   border-bottom: 1px solid var(--border-color);
   background: #fff;
+}
+.project-dialog__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .project-dialog__intro {
   padding-bottom: 18px;
@@ -287,9 +292,15 @@ h3.project-name {
 }
 .project-dialog__meta {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.project-dialog__meta-primary {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 10px;
+  align-items: baseline;
+  gap: 2px 12px;
 }
 .project-dialog__owner {
   color: var(--cv-text-primary);
@@ -312,7 +323,7 @@ h3.project-name {
   letter-spacing: 0.01em;
 }
 .project-dialog__meta .project-meta-link {
-  margin-left: auto;
+  margin-left: 0;
 }
 .project-dialog__intro .project-meta {
   margin: 0 0 10px;
@@ -328,9 +339,6 @@ h3.project-name {
   font-variant-numeric: tabular-nums lining-nums;
   letter-spacing: 0.01em;
   white-space: nowrap;
-}
-.project-dialog__date-meta-wrap {
-  display: inline;
 }
 .project-dialog .project-meta-owner {
   font-weight: 500;
@@ -400,27 +408,24 @@ h3.project-name {
   font-weight: 600;
   line-height: var(--cv-lh-heading);
   color: var(--cv-text-primary);
-  white-space: nowrap;
-  text-wrap: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 .project-dialog__logo {
-  display: inline-block;
+  display: block;
+  flex-shrink: 0;
   height: 1.15em;
   width: auto;
   max-width: 9em;
-  vertical-align: -0.15em;
   object-fit: contain;
 }
 .project-dialog__logo-separator {
-  display: inline-block;
+  display: block;
+  flex-shrink: 0;
   width: 1px;
-  height: 1em;
-  margin: 0 0.55em;
+  height: 1.35em;
   background: currentColor;
   opacity: 0.22;
-  vertical-align: -0.1em;
 }
 .project-dialog__summary {
   margin: 16px 0 0;
@@ -526,8 +531,8 @@ h3.project-name {
 }
 .project-dialog__close {
   position: absolute;
-  top: -48px;
-  right: 0;
+  top: 12px;
+  right: 16px;
   z-index: 1;
   display: grid;
   place-items: center;
@@ -536,10 +541,9 @@ h3.project-name {
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: #fff;
-  color: var(--cv-text-primary);
-  box-shadow: 0 4px 16px rgba(17, 24, 39, 0.18);
-  font-size: 22px;
+  background: transparent;
+  color: var(--cv-text-muted);
+  font-size: 26px;
   line-height: 1;
   cursor: pointer;
 }
@@ -970,36 +974,35 @@ body.diagram-open {
     box-shadow: none;
   }
   .project-dialog__header {
-    padding: calc(18px + env(safe-area-inset-top, 0px)) calc(60px + env(safe-area-inset-right, 0px)) 14px calc(18px + env(safe-area-inset-left, 0px));
-  }
-  .project-dialog__header--compact-title {
-    padding-right: calc(46px + env(safe-area-inset-right, 0px));
-    padding-left: calc(12px + env(safe-area-inset-left, 0px));
+    padding: calc(18px + env(safe-area-inset-top, 0px)) calc(64px + env(safe-area-inset-right, 0px)) 14px calc(18px + env(safe-area-inset-left, 0px));
   }
   .project-dialog__content {
     padding: 16px calc(18px + env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) calc(18px + env(safe-area-inset-left, 0px));
+    scrollbar-gutter: auto;
   }
   .project-dialog__intro {
-    padding-bottom: 16px;
+    padding-bottom: 14px;
     margin-bottom: 16px;
   }
   .project-dialog__title {
     font-size: var(--cv-fs-dialog-title-mobile);
+  }
+  .project-dialog__summary {
+    margin-top: 12px;
   }
   .project-dialog__summary,
   .project-dialog .project-points li {
     font-size: var(--cv-fs-dialog-copy-mobile);
   }
   .project-dialog__close {
-    top: calc(10px + env(safe-area-inset-top, 0px));
-    right: calc(10px + env(safe-area-inset-right, 0px));
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 0;
-    color: var(--cv-text-muted);
-    box-shadow: none;
-    font-size: 26px;
+    top: calc(8px + env(safe-area-inset-top, 0px));
+    right: calc(8px + env(safe-area-inset-right, 0px));
+    width: 44px;
+    height: 44px;
+  }
+  .project-dialog__meta .project-meta-link {
+    min-height: 44px;
+    padding: 3px 8px;
   }
   .project-points {
     padding-left: 16px;
@@ -1053,6 +1056,13 @@ body.diagram-open {
   }
 }
 
+@media (max-width: 360px) {
+  .project-dialog__logo,
+  .project-dialog__logo-separator {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) and (prefers-reduced-motion: reduce) {
   .project-dialog[open] {
     animation: none;
@@ -1066,7 +1076,7 @@ body.diagram-open {
   }
 
   .project-dialog__header {
-    padding: 14px 60px 12px 18px;
+    padding: 14px 64px 12px 18px;
   }
 
   .project-dialog__content {
@@ -1076,18 +1086,6 @@ body.diagram-open {
   .project-dialog__intro {
     padding-bottom: 16px;
     margin-bottom: 16px;
-  }
-
-  .project-dialog__close {
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 0;
-    color: var(--cv-text-muted);
-    box-shadow: none;
-    font-size: 26px;
   }
 }
 
@@ -1104,19 +1102,18 @@ body.diagram-open {
     padding-top: 60px;
   }
 
+  .project-dialog__close {
+    width: 44px;
+    height: 44px;
+  }
+
   .project-dialog__meta .project-meta-link {
-    min-height: 0;
+    min-height: 44px;
     padding: 3px 8px;
   }
 }
 
 @media (max-width: 600px), (max-height: 640px) {
-  .project-dialog__meta .project-meta-link {
-    margin-left: 0;
-    min-height: 0;
-    padding: 3px 8px;
-  }
-
   .project-dialog__content {
     padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px) + 2rem);
   }
@@ -1272,24 +1269,4 @@ body.diagram-open {
     widows: 3;
     orphans: 3;
   }
-}
-
-@media (hover: none), (pointer: coarse) {
-  .project-name-button:focus,
-  .project-name-button:focus-visible,
-  .project-more:focus,
-  .project-more:focus-visible,
-  .project-meta-link:focus,
-  .project-meta-link:focus-visible,
-  .project-dialog__close:focus,
-  .project-dialog__close:focus-visible,
-  .project-github-link:focus,
-  .project-github-link:focus-visible,
-  .entry-figure__trigger:focus,
-  .entry-figure__trigger:focus-visible,
-  .diagram-dialog__close:focus,
-  .diagram-dialog__close:focus-visible {
-    outline: none;
-  }
-
 }
