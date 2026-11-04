@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import "../styles/cv.css";
+
+const languages = [
+  { code: "zh-CN", label: "中文", path: "/CV-cn/" },
+  { code: "zh-TW", label: "繁體中文（台灣）", path: "/CV-tw/" },
+  { code: "zh-HK", label: "繁體中文（香港）", path: "/CV-hk/" },
+  { code: "en", label: "English", path: "/CV-en/" },
+  { code: "de", label: "Deutsch", path: "/CV-de/" },
+  { code: "ko", label: "한국어", path: "/CV-kr/" },
+  { code: "ja", label: "日本語", path: "/CV-jp/" },
+];
+---
+
+<Layout title="Page not found - Hongkun Wang" lang="en" noindex={true}>
+  <div class="container">
+    <header>
+      <p class="tagline">404</p>
+      <h1>Page not found</h1>
+    </header>
+    <section>
+      <p class="entry-desc">
+        The page you are looking for does not exist. You can view the CV in one
+        of the available languages:
+      </p>
+      <p class="entry-desc" lang="zh-CN">
+        页面不存在。请选择语言查看简历：
+      </p>
+      <ul class="not-found-links">
+        {
+          languages.map((l) => (
+            <li>
+              <a href={l.path} hreflang={l.code} lang={l.code}>
+                {l.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .not-found-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--cv-fs-copy);
+  }
+
+  .not-found-links a {
+    color: var(--link-color);
+  }
+
+  @media (max-width: 600px) {
+    .not-found-links {
+      gap: 6px 14px;
+      font-size: var(--cv-fs-small);
+    }
+  }
+</style>

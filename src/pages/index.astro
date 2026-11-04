@@ -28,18 +28,14 @@ export const prerender = true;
     <meta name="twitter:description" content="王泓坤 · 数字开发经理 · 全栈工程师 · 个人简历 / Hongkun Wang · CV" />
     <meta name="twitter:image" content="https://cv.wilboerht.com/og-image.png" />
     <meta name="twitter:image:alt" content="王泓坤 · Hongkun Wang · CV" />
-    <meta
-      http-equiv="refresh"
-      content="0; url=/CV-en/"
-    />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script is:inline>
       (function () {
         var lang = navigator.language || navigator.userLanguage || "";
         var l = lang.toLowerCase();
         var target;
-        if (l.startsWith("zh-hk") || l.startsWith("zh-mo")) target = "/CV-hk/";
-        else if (l.startsWith("zh-tw")) target = "/CV-tw/";
+        if (l.startsWith("zh-hant-hk") || l.startsWith("zh-hant-mo") || l.startsWith("zh-hk") || l.startsWith("zh-mo")) target = "/CV-hk/";
+        else if (l.startsWith("zh-hant") || l.startsWith("zh-tw")) target = "/CV-tw/";
         else if (l.startsWith("zh")) target = "/CV-cn/";
         else if (l.startsWith("de")) target = "/CV-de/";
         else if (l.startsWith("ko")) target = "/CV-kr/";

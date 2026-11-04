@@ -5,6 +5,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# 自定义 404
+ErrorDocument 404 /404.html
+
 # 设置安全相关的HTTP头
 <IfModule mod_headers.c>
   # 启用HSTS

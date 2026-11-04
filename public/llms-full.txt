@@ -7,7 +7,7 @@
 
 - Name: Hongkun Wang (王泓坤)
 - Also known as: Hank Wong · wilboerht · 王泓坤
-- Last updated: 2026-11-03
+- Last updated: 2026-11-04
 - Title: Digital Development Manager · Full-Stack Engineer
 - Location: Shanghai, China
 - Email: me@wilboerht.cn

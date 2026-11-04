@@ -24,14 +24,20 @@ const ld = {
   "mainEntity": {
     "@type": "Person",
     "@id": "https://wilboerht.com/#person",
-    "name": "왕홍곤",
-    "alternateName": ["Hongkun Wang", "王泓坤", "Hank Wong", "wilboerht"],
+    "name": "Hongkun Wang",
+    "alternateName": ["王泓坤", "Hank Wong", "wilboerht", "왕홍곤"],
     "givenName": "Hongkun",
     "familyName": "Wang",
     "description": "상하이에 거주하는 디지털 개발 매니저이자 풀스택 엔지니어(TypeScript / React / Next.js / AI / RAG). Moidas(NIHPLOD) 중화권 사업부의 첫 엔지니어로 브랜드 공식 사이트, 멤버십·포인트 체계, 통합 인증(SSO), AI 어드바이저, 고객 서비스, 미니프로그램 2종을 0에서 1로 구축.",
     "email": "me@wilboerht.cn",
     "url": "https://wilboerht.com",
-    "image": "https://cv.wilboerht.com/og-image.png",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://wilboerht.com/opengraph-image",
+      "width": 1200,
+      "height": 630,
+      "caption": "Hongkun Wang · CV"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "상하이",

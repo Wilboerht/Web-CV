@@ -25,13 +25,19 @@ const ld = {
     "@type": "Person",
     "@id": "https://wilboerht.com/#person",
     "name": "Hongkun Wang",
-    "alternateName": ["王泓坤", "Hank Wong", "wilboerht"],
+    "alternateName": ["王泓坤", "Hank Wong", "wilboerht", "왕홍곤"],
     "givenName": "Hongkun",
     "familyName": "Wang",
     "description": "Digital Development Manager and full-stack engineer (TypeScript / React / Next.js / AI / RAG) based in Shanghai. First engineer of Moidas' (NIHPLOD) Greater China division — built its brand website, membership & points system, unified authentication, AI advisor, customer service, and mini-programs from 0 to 1.",
     "email": "me@wilboerht.cn",
     "url": "https://wilboerht.com",
-    "image": "https://cv.wilboerht.com/og-image.png",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://wilboerht.com/opengraph-image",
+      "width": 1200,
+      "height": 630,
+      "caption": "Hongkun Wang · CV"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Shanghai",

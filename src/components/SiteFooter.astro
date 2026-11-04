@@ -36,9 +36,28 @@ const formatted = new Intl.DateTimeFormat(locales[lang] ?? "en-US", {
 }).format(updated);
 
 const label = labels[lang] ?? labels.en;
+
+const languages = [
+  { code: "zh-CN", label: "中文", path: "/CV-cn/" },
+  { code: "zh-TW", label: "繁體中文（台灣）", path: "/CV-tw/" },
+  { code: "zh-HK", label: "繁體中文（香港）", path: "/CV-hk/" },
+  { code: "en", label: "English", path: "/CV-en/" },
+  { code: "de", label: "Deutsch", path: "/CV-de/" },
+  { code: "ko", label: "한국어", path: "/CV-kr/" },
+  { code: "ja", label: "日本語", path: "/CV-jp/" },
+];
 ---
 
 <footer class="site-footer">
+  <nav class="site-footer__langs" aria-label="Language">
+    {
+      languages.map((l) => (
+        <a href={l.path} hreflang={l.code} lang={l.code} aria-current={l.code === lang ? "page" : undefined}>
+          {l.label}
+        </a>
+      ))
+    }
+  </nav>
   <p class="site-footer__updated">
     {label}<time datetime={CONTENT_LAST_UPDATED}>{formatted}</time>
   </p>
@@ -55,6 +74,28 @@ const label = labels[lang] ?? labels.en;
     line-height: var(--cv-lh-base);
   }
 
+  .site-footer__langs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 14px;
+    margin: 0 0 14px;
+  }
+
+  .site-footer__langs a {
+    color: var(--cv-text-muted);
+    text-decoration: none;
+  }
+
+  .site-footer__langs a:hover {
+    color: var(--cv-text-primary);
+  }
+
+  .site-footer__langs a[aria-current="page"] {
+    color: var(--cv-text-primary);
+    font-weight: 600;
+  }
+
   .site-footer__updated {
     margin: 0;
     font-variant-numeric: tabular-nums lining-nums;
@@ -64,6 +105,10 @@ const label = labels[lang] ?? labels.en;
     .site-footer {
       padding: 18px 16px calc(14px + env(safe-area-inset-bottom, 0px));
       font-size: var(--cv-fs-caption);
+    }
+
+    .site-footer__langs {
+      display: none;
     }
   }
 

@@ -4,9 +4,10 @@ import SiteFooter from "../components/SiteFooter.astro";
 interface Props {
   title: string;
   lang: string;
+  noindex?: boolean;
 }
 
-const { title, lang } = Astro.props;
+const { title, lang, noindex = false } = Astro.props;
 
 const baseFontStylesheets = ["/fonts/source-serif-4.css"];
 const cjkFontStylesheets = [
@@ -122,7 +123,7 @@ const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
-  "url": `${SITE_URL}/`,
+  "url": `${SITE_URL}/CV-en/`,
   "name": "Hongkun Wang · CV",
   "inLanguage": langs.map((l) => l.code),
   "publisher": { "@id": "https://wilboerht.com/#person" },
@@ -136,7 +137,7 @@ const breadcrumbLd = {
       "@type": "ListItem",
       "position": 1,
       "name": homeLabels[lang] || homeLabels.en,
-      "item": `${SITE_URL}/`,
+      "item": `${SITE_URL}/CV-en/`,
     },
     {
       "@type": "ListItem",
@@ -154,7 +155,7 @@ const breadcrumbLd = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
     <meta name="author" content="Hongkun Wang" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light" />
@@ -186,13 +187,13 @@ const breadcrumbLd = {
     <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
     <meta name="twitter:image:alt" content={ogImageAlt[lang] || ogImageAlt.en} />
 
-    <link rel="canonical" href={canonical} />
+    {!noindex && <link rel="canonical" href={canonical} />}
     {
-      langs.map((l) => (
+      !noindex && langs.map((l) => (
         <link rel="alternate" hreflang={l.code} href={`${SITE_URL}${l.path}`} />
       ))
     }
-    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/CV-en/`} />
+    {!noindex && <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/CV-en/`} />}
 
     <title>{title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -202,16 +203,11 @@ const breadcrumbLd = {
       <link rel="stylesheet" href={href} />
     ))}
     {cjkFontStylesheets.map((href) => (
-      <link rel="stylesheet" href={href} media="print" onload="this.media='all'" />
+      <link rel="stylesheet" href={href} />
     ))}
-    <noscript>
-      {cjkFontStylesheets.map((href) => (
-        <link rel="stylesheet" href={href} />
-      ))}
-    </noscript>
 
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd, null, 2)} />
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd, null, 2)} />
+    {!noindex && <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd, null, 2)} />}
+    {!noindex && <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd, null, 2)} />}
 
     <slot name="head" />
   </head>
