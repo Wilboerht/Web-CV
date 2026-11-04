@@ -1,8 +1,8 @@
-﻿# Web CV
+﻿# Web-Curriculum-Vitae
 
 A fast, multilingual, print-ready personal CV built with [Astro](https://astro.build).
 
-[Live CV](https://cv.wilboerht.com) · [GitHub](https://github.com/Wilboerht/Web-CV)
+[Live CV](https://cv.wilboerht.com) · [GitHub](https://github.com/Wilboerht/Web-Curriculum-Vitae)
 
 ## Overview
 
@@ -54,8 +54,8 @@ Requirements: Node.js `^18.17.1`, `^20.3.0`, or `>=22.0.0` (Node 20 LTS
 recommended).
 
 ```bash
-git clone https://github.com/Wilboerht/Web-CV.git
-cd Web-CV
+git clone https://github.com/Wilboerht/Web-Curriculum-Vitae.git
+cd Web-Curriculum-Vitae
 npm install
 npm run dev
 ```
