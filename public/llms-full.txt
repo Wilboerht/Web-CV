@@ -45,15 +45,15 @@ Joined as a full-time intern in Oct 2025 while completing studies and transition
 
 ### NIHPLOD China Official Website — Nov 2025 – Present (iterating)
 
-Live: https://nihplod.cn · Independently delivered (product design · UI/UX · full-stack)
+Live: https://nihplod.cn · Independently delivered (product design · UI/UX · full-stack · deployment and operations)
 
 - Brand Website & Member Platform: Built the brand's official website and member platform with Next.js 16 + Prisma + PostgreSQL — product showcases, third-party e-commerce referral (Tmall / Douyin / Xiaohongshu / WeChat Shop links + GA event tracking), membership tiers, points ledger, points redemption (SF Express tracking), manual purchase record entry for offline purchases, skin profiles, and an account security center; consolidated WeChat, Douyin, and phone OTP identities into a unified account system — 205 API routes, 51 data models, and 2,100+ automated test cases (this system alone; 2,900+ across the portfolio).
-- Product & Interaction Design: Owned product design and authored the PRD independently; implemented the information architecture and interactions directly in code. Collaborated with a UI designer on Figma high-fidelity visuals, contributed optimization proposals in design reviews, and owned design implementation and launch. Built multi-step skincare ritual guides and immersive brand storytelling with Framer Motion + View Transitions, integrated the product drawer with detail pages, and delivered fully responsive layouts.
+- Product & Interaction Design: Owned product design and authored the PRD independently; completed the information architecture, interaction, and UI/UX design independently and implemented directly in code. Built multi-step skincare ritual guides and immersive brand storytelling with Framer Motion + View Transitions, integrated the product drawer with detail pages, and delivered fully responsive layouts.
 - Admin Console & Security Governance: Built an admin console covering products / categories / members / points redemption / manual purchase record entry / job postings / messages / OAuth clients (Tiptap rich text), with TOTP two-factor authentication and step-up verification for sensitive actions, operation audit logs and daily integrity checkpoints, scheduled jobs, database-persisted rate limiting, and webhook failure retries; implemented SEO / GEO (generative engine optimization; sitemap / JSON-LD / llms.txt / Baidu push).
 
 ### NIHPLOD Unified Authentication Platform (SSO / OIDC) — Jul 2026 – Present (iterating)
 
-Independently delivered (product design · full-stack)
+Independently delivered (product · full-stack · deployment and operations)
 
 - Protocol Implementation: Built a self-hosted OAuth 2.0 / OIDC SSO, co-deployed on the same domain as the official main site, which acts as the Authorization Server issuing RS256 JWTs — fully implementing the authorize / token / userinfo / introspect / revoke / end-session protocol endpoints with support for PKCE and DPoP; the admin console is protected by TOTP two-factor authentication.
 - SDK & Integration: Packaged and published npm SDKs (@nihplod/sso-sdk / @nihplod/sso-verify) so sub-projects can integrate in minutes, enabling cross-system SSO and global sign-out via Token Introspection + Backchannel Logout, supporting unified login across two WeChat mini-programs, the official website (user and admin sides), the skin-analysis sub-site (user and admin sides), and the BA authorization verification platform (admin side).
@@ -61,7 +61,7 @@ Independently delivered (product design · full-stack)
 
 ### AI Skincare Advisor System — Jan 2026 – Present
 
-Live: https://smart.nihplod.cn · Responsible for product design · UX interaction · full-stack development (UI visuals by a collaborating designer) · 93 API routes / 531 automated tests
+Live: https://smart.nihplod.cn · Responsible for product design · UX interaction · full-stack development · deployment and operations (UI visuals by a collaborating designer) · 93 API routes / 531 automated tests
 
 - AI Skin Analysis & Personalized Recommendations: Integrated Tongyi Qianwen VL / DeepSeek LLMs for dual-channel (questionnaire + facial scan) skin analysis; a custom rule engine scores and matches products against 8 skin types plus seasonal / regional environmental factors, configurable through a visual admin console so operations teams can adjust without code.
 - Conversion & Attribution: Led model integration and core API development; e-commerce outbound links (Tmall / Douyin / Xiaohongshu / WeChat Shop) support UTM / pid tracking and click-event instrumentation, forming an attributable consultation-to-conversion path together with WeCom advisor short links.
@@ -71,7 +71,7 @@ Live: https://smart.nihplod.cn · Responsible for product design · UX interacti
 
 ### WeChat AI Customer Service — Aug 2026
 
-Independently delivered (product design · full-stack, built on the native WeCom customer-service chat window)
+Independently delivered (product · full-stack · deployment and operations, built on the native WeCom customer-service chat window)
 
 - Multi-Entry Messaging Gateway: Built with FastAPI + Redis + the DeepSeek LLM, unifying three message entry points (WeCom customer service, WeCom app, and WeChat Official Account); supports smart human handoff (keyword detection + service-hour windows + sticky agent assignment).
 - Companion-Style Conversation Operations: Inherits user profiles handed off from the skin-analysis platform, automatically accumulating skincare profiles across multi-turn dialogue (stage-goal tracking and re-evaluation reminders) and providing guided order inquiries — turning one-off inquiries into long-term companion-style engagement.
@@ -80,14 +80,14 @@ Independently delivered (product design · full-stack, built on the native WeCom
 
 ### NIHPLOD Authorization & Verification Platform — Apr 2026 – May 2026
 
-Live: https://ba.nihplod.cn · Independently delivered (product design · UI/UX · full-stack)
+Live: https://ba.nihplod.cn · Independently delivered (product design · UI/UX · full-stack · deployment and operations)
 
 - Authorization Review & Anti-Counterfeit Certificates: Built the dealer authorization management system with Next.js 16 + PostgreSQL, implementing a two-level review workflow (auditor submission → manager final issuance) and a certificate state machine (issued / returned / expired / revoked); browser-side Canvas + jsPDF real-time synthesis of anti-counterfeit authorization certificates with e-seal and dynamic QR codes (PNG / PDF download).
 - Public Verification & Security System: Public authenticity verification with three-tier fallback matching (exact → prefix → fuzzy, accelerated by pg_trgm GIN indexes, with camera QR scanning) and a counterfeit-report ticketing system with full status transitions; JWT blacklisting with immediate invalidation on password change, database-persisted rate limiting, and operation audit covering the full certificate lifecycle and ticket handling.
 
 ### Jizhipai AI Skin Analysis Mini-Program — Oct 2026 – Present
 
-Independently delivered (product design · UI/UX · mini-program development) · Reuses the H5 skin-analysis platform account and AI capabilities
+Independently delivered (product design · UI/UX · mini-program development · deployment and operations) · Reuses the H5 skin-analysis platform account and AI capabilities
 
 - Mobile Skin-Analysis Loop: Migrated the questionnaire + facial-scan flow to a WeChat mini-program (14 pages); used WeChat VisionKit with 106 keypoints for four-step pose guidance (front / right / left / chin-up) and auto-capture (five consecutive stable frames, multi-face blocking, timeout manual fallback); the questionnaire supports dependsOn conditional questions and skin-analysis quota interception.
 - Async Analysis & Report Rendering: Compressed facial images are submitted as base64, with async tasks polled every 3s for up to 60 rounds; on retry, an answers + photo fingerprint reuses the sessionId and server-side reservation to avoid duplicate quota deduction and AI calls. Canvas 2D renders a 10-dimension radar chart and skin trend curve at device pixel ratio; the client composes a certificate poster with dynamic score and QR code, and supports history review, profile check-ins, and report-completion / retest subscription messages.
@@ -95,7 +95,7 @@ Independently delivered (product design · UI/UX · mini-program development) ·
 
 ### NIHPLOD Member Center Mini-Program — Oct 2026 – Present
 
-Independently delivered (product design · mini-program development) · Native TypeScript / direct connection to official OAuth
+Independently delivered (product design · mini-program development · deployment and operations) · Native TypeScript / direct connection to official OAuth
 
 - Member Center & Points System: Built a 19-page member center mini-program in native TypeScript (Member / Rewards / Mine tabs), covering WeChat one-click login and phone binding, member tier benefits and upgrade progress, points balance and past-year transactions (with serial numbers), gift redemption (requestId idempotency), address book, redemption records and SF Express tracking, manual purchase record entry, profile editing, security center (devices / authorizations / login history), and account deletion.
 - Lightweight Architecture Without a Custom Backend: The mini-program connects directly to the official website's OAuth 2.0 endpoints and business APIs, reusing unified accounts and member data; a custom TypeScript request layer implements access / refresh tokens, single-flight refresh and 401 replay, refresh-failure classification (invalid / transient), login-source return, forced logout for disabled accounts, and session-race fixes, with tsc --noEmit strict type checking to keep 19-page API contracts consistent.
@@ -103,7 +103,7 @@ Independently delivered (product design · mini-program development) · Native T
 
 ### Myskin.Today (AI Skin Analysis Platform Official Website) — Jan 2026 – Feb 2026
 
-Live: https://myskin.today · Independently delivered (product design · UI/UX · full-stack · AIGC visual assets)
+Live: https://myskin.today · Independently delivered (product design · UI/UX · full-stack · AIGC visual assets · deployment and operations)
 
 - Official Site & Commercialization: Built the official website of the AI skin analysis platform with Next.js 16 + Tailwind CSS v4, covering product capability showcases, three B2B business-model landing pages (API integration / white-label customization / strategic partnership), and an API documentation site; partnership inquiry forms are pushed in real time to a WeCom bot via API routes (IP rate limiting, input sanitization, timeout retries).
 - Design System & Visual Assets: Built a custom brand design system (color / typography / spacing variables, Bento grid, light & dark themes) and produced all site illustrations and promotional scene videos with AIGC; implemented scroll-aware navigation and number-counting interactions with Framer Motion, fully responsive across devices.
@@ -123,7 +123,7 @@ Live: https://www.lingangjh.com · Independently delivered (product design · UI
 - AI & LLM: LLM Integration / Vision-Model Skin Analysis / RAG / AI Cost Engineering (Circuit Breakers & Budget Control) / Claude Code / Codex-Driven Development
 - DevOps & Deploy: Linux / Docker / Nginx / CDN / ICP Filing / Cost Control & Resource Optimization
 - Security & Compliance: CSP / RLS / Information Security Baseline / Privacy & Data Compliance
-- Product & Interaction: Product Design (PRD) / Interaction Design / Design Review / Design-to-Code
+- Product & UI/UX: Product Design (PRD) / UI/UX Design / Interaction Design / Design Review / Design-to-Code
 
 ## Awards & Certifications
 
