@@ -213,6 +213,7 @@ const breadcrumbLd = {
       <style>
         .project-extra[hidden] { display: block !important; }
         .project-toggle-wrap { display: none; }
+        section:has(> .project-extra[hidden]) > .project-entry:has(+ .project-extra[hidden]) { margin-bottom: 24px; }
       </style>
     </noscript>
 

@@ -176,7 +176,12 @@ h2 {
 .project-toggle-wrap {
   display: flex;
   justify-content: center;
-  margin: 4px 0 20px;
+  margin: 24px 0 0;
+}
+@media screen {
+  section:has(> .project-extra[hidden]) > .project-entry:has(+ .project-extra[hidden]) {
+    margin-bottom: 0;
+  }
 }
 .project-toggle {
   display: inline-flex;
