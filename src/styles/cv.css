@@ -164,12 +164,6 @@ h2 {
 .project-entry--static {
   cursor: default;
 }
-.project-entry.project-entry--static > .project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px 12px;
-}
 .project-extra[hidden] {
   display: none;
 }
@@ -247,7 +241,10 @@ h3.project-name {
   overflow-wrap: anywhere;
 }
 .project-entry > .project-meta {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
 }
 .project-meta a {
   color: var(--link-color);
