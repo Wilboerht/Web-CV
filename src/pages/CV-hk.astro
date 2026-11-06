@@ -195,7 +195,7 @@ const ld = {
           <span class="entry-date">2025.11 – 至今</span>
         </div>
         <div class="project-meta">
-          <span class="project-meta-owner">產品、設計與全棧開發獨立負責</span> <a href="https://nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a>
+          <span class="project-meta-owner">產品設計（PRD）、互動與全棧開發獨立負責，UI 視覺設計協作完成</span> <a href="https://nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a>
         </div>
         <p class="project-summary">品牌在中國市場的官網與會員平台：整合產品展示、電商導購、會員積分與測膚檔案，統一微信、抖音、手機號等多來源帳戶；支撐品牌網上零售從零上線與回購，205 API / 51 模型 / 2,100+ 測試（官網單系統）。</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="查看詳情：NIHPLOD 中國官網"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看詳情</button>
@@ -211,7 +211,7 @@ const ld = {
                 <strong>品牌官網與會員平台：</strong>基於 Next.js 16 + Prisma + PostgreSQL 建構品牌官網與會員平台 — 產品陳列、第三方電商導購（天貓 / 抖音 / 小紅書 / 微信小店外鏈 + GA 事件追蹤）、會員等級、積分帳本、積分兌禮（對接順豐物流軌跡）、線下消費補錄、測膚檔案與帳戶安全中心；聚合微信、抖音、手機號驗證碼等多來源身份至統一帳戶體系；全站 205 個 API 路由、51 個資料模型、2,100+ 個自動化測試用例（該單系統）。
               </li>
               <li>
-                <strong>產品與互動設計：</strong>從資訊架構、Figma 互動原型到視覺設計全程獨立設計；基於 Framer Motion + View Transitions 實現多步驟護膚流程指南與沉浸式品牌敘事，整合產品抽屜（drawer）與詳情頁連動，全端響應式適配。
+                <strong>產品與互動設計：</strong>獨立完成產品設計 PRD；資訊架構與互動設計由本人直接以程式碼實現；UI 高保真視覺由合作 UI 設計師在 Figma 完成，本人提供修改建議並負責還原上線。基於 Framer Motion + View Transitions 實現多步驟護膚流程指南與沉浸式品牌敘事，整合產品抽屜（drawer）與詳情頁連動，全端響應式適配。
               </li>
               <li>
                 <strong>管理後台與安全治理：</strong>搭建覆蓋產品 / 分類 / 會員 / 積分兌禮 / 線下消費補錄 / 招聘職位 / 訊息 / OAuth 客戶端的管理後台（Tiptap 富文字），配套 TOTP 雙因素認證（2FA）與敏感操作二次驗證（Step-up）、操作稽核與每日完整性校驗錨點、定時任務、基於資料庫的持久化限流及 Webhook 失敗重試；實現 SEO / GEO（生成式引擎優化；sitemap / JSON-LD / llms.txt / 百度推送）。
@@ -230,7 +230,7 @@ const ld = {
         <div class="project-meta">
           <span class="project-meta-owner">產品與全棧開發獨立負責</span>
         </div>
-        <p class="project-summary">品牌大中華區的統一身份基礎設施：自建 OAuth 2.0 / OIDC 單一登入，連接官網、測膚站、兩個微信小程式與管理後台的帳戶與登入狀態；支撐 5 個系統跨系統單一登入（免重複登入）與全域登出；管理後台啟用 TOTP 雙因素認證（2FA），並封裝為可重用 npm SDK。</p>
+        <p class="project-summary">品牌大中華區的統一身份基礎設施：自建 OAuth 2.0 / OIDC 單一登入，覆蓋 5 個系統——兩個微信小程式、官網（用戶端 / 管理端）、測膚子站（用戶端 / 管理端）與 BA 授權驗真平台（管理端）；實現跨系統單一登入（免重複登入）與全局登出；管理後台支援 TOTP 雙因素認證（2FA），並封裝為可重用 npm SDK。</p>
         <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="查看詳情：NIHPLOD 統一認證平台（SSO / OIDC）"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>查看詳情</button>
         <dialog class="project-dialog" id="dialog-project-sso">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="關閉">&times;</button>
@@ -241,10 +241,10 @@ const ld = {
             <div class="project-dialog__content">
             <ul class="project-points">
               <li>
-                <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同域部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP；管理後台啟用 TOTP 雙因素認證（2FA）。
+                <strong>協定實現：</strong>自建 OAuth 2.0 / OIDC 單一登入，與官網主站同域部署，主站作為 Authorization Server 簽發 JWT（RS256），完整實現 authorize / token / userinfo / introspect / revoke / end-session 協定端點，支援 PKCE、DPoP；管理後台支援 TOTP 雙因素認證（2FA）。
               </li>
               <li>
-                <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify），供子專案在數分鐘內完成接入；透過 Token Introspection + Backchannel Logout 實現跨系統單一登入與全局登出，支撐官網、測膚站、兩個微信小程式及管理後台統一登入。
+                <strong>SDK 與接入：</strong>封裝並發布 npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify），供子專案在數分鐘內完成接入；透過 Token Introspection + Backchannel Logout 實現跨系統單一登入與全局登出，支撐兩個微信小程式、官網（用戶端 / 管理端）、測膚子站（用戶端 / 管理端）與 BA 授權驗真平台（管理端）統一登入。
               </li>
               <li>
                 <strong>安全加固：</strong>支援密鑰輪換、Token 撤銷（RFC 7009）與多實例黑名單共享，保障認證體系便於維護與審計。

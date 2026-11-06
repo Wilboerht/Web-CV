@@ -195,7 +195,7 @@ const ld = {
           <span class="entry-date">2025年11月 – 現在</span>
         </div>
         <div class="project-meta">
-          <span class="project-meta-owner">プロダクト・デザイン・フルスタック開発：独立担当</span> <a href="https://nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a>
+          <span class="project-meta-owner">プロダクトデザイン（PRD）・インタラクション・フルスタック開発：独立担当、UIビジュアルデザインは協働</span> <a href="https://nihplod.cn" target="_blank" rel="noopener noreferrer" class="project-meta-link"><span>nihplod.cn</span><svg class="project-meta-link__icon" aria-hidden="true"><use href="#icon-external"></use></svg></a>
         </div>
         <p class="project-summary">中国市場向けブランドサイト兼会員プラットフォーム。商品紹介、EC誘導、会員ポイント、肌プロフィールを一つの体験に統合し、WeChat・Douyin・電話番号のIDを統一。オンライン販売の立ち上げとリピート購入を支援。205 APIルート / 51データモデル / 2,100件以上のテスト（本システム単体）。</p>
         <button type="button" class="project-more" data-project-dialog="project-website" aria-haspopup="dialog" aria-label="詳細を見る：NIHPLOD 中国公式サイト"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>詳細を見る</button>
@@ -211,7 +211,7 @@ const ld = {
                 <strong>ブランドサイト・会員プラットフォーム：</strong>Next.js 16 + Prisma + PostgreSQLでブランド公式サイトと会員プラットフォームを構築。商品紹介、外部EC誘導（Tmall / Douyin / Xiaohongshu / WeChat Shopリンク + GAイベント計測）、会員ランク、ポイント台帳、ポイント交換（SF Express配送追跡）、購入履歴の後付け登録、肌プロフィール、アカウントセキュリティセンターを実装。WeChat・Douyin・電話番号OTPのIDを統一アカウントに集約。205 APIルート、51データモデル、2,100件以上の自動テストを整備（本システム単体）。
               </li>
               <li>
-                <strong>プロダクト・インタラクション設計：</strong>情報アーキテクチャ、Figmaインタラクティブプロトタイプ、ビジュアルスタイルを独力で設計。Framer Motion + View Transitionsによる多段階スキンケアガイドと没入型ブランドストーリーを構築し、商品ドロワーと詳細ページを連携。完全レスポンシブレイアウトを実装。
+                <strong>プロダクト・インタラクション設計：</strong>プロダクトデザイン（PRD）を独立して作成。情報アーキテクチャとインタラクションはコードで直接実装。UIハイファイのビジュアルデザインは協働するUIデザイナーがFigmaで制作し、修正提案を行い、実装・リリースまで担当。Framer Motion + View Transitionsによる多段階スキンケアガイドと没入型ブランドストーリーを構築し、商品ドロワーと詳細ページを連携。完全レスポンシブレイアウトを実装。
               </li>
               <li>
                 <strong>管理画面・セキュリティガバナンス：</strong>商品・カテゴリー・会員・ポイント交換・購入履歴の後付け登録・求人情報・メッセージ・OAuthクライアント（Tiptapリッチテキスト）を管理する管理画面を構築。TOTP二要素認証、重要操作の再認証、操作監査ログと日次整合性チェックポイント、定期ジョブ、データベースに永続化するレート制限、Webhook失敗時リトライを実装。SEO / GEO（生成エンジン最適化；sitemap / JSON-LD / llms.txt / 百度プッシュ）に対応。
@@ -230,7 +230,7 @@ const ld = {
         <div class="project-meta">
           <span class="project-meta-owner">プロダクト・フルスタック開発：独立担当</span>
         </div>
-        <p class="project-summary">大中華圏向け統一ID基盤。独自開発のOAuth 2.0 / OIDCシングルサインオンで、公式サイト、肌診断サイト、WeChatミニプログラム2種、管理画面を接続。5システム間のシステム間シングルサインオンとグローバルログアウトを実現し、管理画面にTOTP二要素認証を導入。再利用可能なnpm SDKとして提供。</p>
+        <p class="project-summary">大中華圏向け統一ID基盤。独自開発のOAuth 2.0 / OIDCシングルサインオンで、5つのシステム——WeChatミニプログラム2種、公式サイト（ユーザー／管理）、肌診断サブサイト（ユーザー／管理）、BA認証検証プラットフォーム（管理）——を接続。システム間シングルサインオンとグローバルログアウトを実現し、管理画面はTOTP二要素認証で保護。再利用可能なnpm SDKとして提供。</p>
         <button type="button" class="project-more" data-project-dialog="project-sso" aria-haspopup="dialog" aria-label="詳細を見る：NIHPLOD 統合認証プラットフォーム（SSO / OIDC）"><svg class="project-more__icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>詳細を見る</button>
         <dialog class="project-dialog" id="dialog-project-sso">
           <button type="button" class="project-dialog__close" data-project-dialog-close autofocus aria-label="閉じる">&times;</button>
@@ -244,7 +244,7 @@ const ld = {
                 <strong>プロトコル実装：</strong>セルフホスト型OAuth 2.0 / OIDC SSOを構築し、公式メインサイトと同一ドメインにデプロイ。認可サーバーとしてRS256 JWTを発行し、authorize / token / userinfo / introspect / revoke / end-sessionの各プロトコルエンドポイントを完全実装。PKCEとDPoPに対応し、管理画面はTOTP二要素認証で保護。
               </li>
               <li>
-                <strong>SDK・システム連携：</strong>npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）をパッケージ化して公開し、各サブプロジェクトへ数分で導入可能に。Token Introspection + Backchannel Logoutによるシステム間SSOとグローバルログアウトを実現し、公式サイト、肌診断サイト、WeChatミニプログラム2種、管理画面の統一ログインをサポート。
+                <strong>SDK・システム連携：</strong>npm SDK（@nihplod/sso-sdk / @nihplod/sso-verify）をパッケージ化して公開し、各サブプロジェクトへ数分で導入可能に。Token Introspection + Backchannel Logoutによるシステム間SSOとグローバルログアウトを実現し、WeChatミニプログラム2種、公式サイト（ユーザー／管理）、肌診断サブサイト（ユーザー／管理）、BA認証検証プラットフォーム（管理）の統一ログインをサポート。
               </li>
               <li>
                 <strong>セキュリティ強化：</strong>シークレットのローテーション、トークン失効（RFC 7009）、複数インスタンス間のブラックリスト共有に対応し、保守・監査しやすい認証基盤を実現。
