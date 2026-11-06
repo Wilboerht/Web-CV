@@ -14,7 +14,7 @@ Key facts:
 - GitHub: https://github.com/wilboerht · X: https://x.com/wilboerht · LinkedIn: https://www.linkedin.com/in/wilboerht/
 - Education: Shanghai Scientific and Technical Vocational College (2023–2026), Information Security Technology Application, Associate Degree, GPA 3.41/4.00
 - Languages: Chinese (native), English (CET-4)
-- Core skills: TypeScript, React, Next.js, Vue 3, uni-app, WeChat Mini Program, Canvas 2D, Node.js, FastAPI, Prisma, PostgreSQL, Redis, OAuth 2.0 / OIDC, LLM integration, RAG, Docker, Linux, Nginx, Figma
+- Core skills: TypeScript, React, Next.js, Vue 3, uni-app, WeChat Mini Program, Canvas 2D, Node.js, FastAPI, Prisma, PostgreSQL, Redis, OAuth 2.0 / OIDC, LLM integration, RAG, Docker, Linux, Nginx, product design (PRD), interaction design, design review, design-to-code
 
 ## CV pages (multilingual)
 
