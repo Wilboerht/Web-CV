@@ -209,6 +209,13 @@ const breadcrumbLd = {
     {!noindex && <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd, null, 2)} />}
     {!noindex && <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd, null, 2)} />}
 
+    <noscript>
+      <style>
+        .project-extra[hidden] { display: block !important; }
+        .project-toggle-wrap { display: none; }
+      </style>
+    </noscript>
+
     <slot name="head" />
   </head>
   <body>
