@@ -345,14 +345,6 @@ const breadcrumbLd = {
               metaEl.append(tagsEl);
             }
 
-            const note = meta.querySelector(".project-meta-note");
-            if (note) {
-              const noteEl = document.createElement("span");
-              noteEl.className = "project-dialog__note";
-              noteEl.textContent = note.textContent.trim();
-              metaEl.append(noteEl);
-            }
-
             const link = meta.querySelector(".project-meta-link");
             if (link) metaEl.append(link.cloneNode(true));
           }
