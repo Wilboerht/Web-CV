@@ -161,6 +161,68 @@ h2 {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+.project-entry--static {
+  cursor: default;
+}
+.project-entry.project-entry--static > .project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+}
+.project-extra[hidden] {
+  display: none;
+}
+.project-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 20px;
+}
+.project-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 6px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--link-color);
+  font: inherit;
+  font-size: var(--cv-fs-copy);
+  line-height: var(--cv-lh-copy);
+  cursor: pointer;
+}
+.project-toggle:hover {
+  background: var(--hover-bg);
+}
+.project-toggle:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+.project-toggle__less {
+  display: none;
+}
+.project-toggle[aria-expanded="true"] .project-toggle__more {
+  display: none;
+}
+.project-toggle[aria-expanded="true"] .project-toggle__less {
+  display: inline;
+}
+@media (max-width: 600px) {
+  .project-toggle {
+    min-height: 44px;
+  }
+}
+@media print {
+  .project-extra[hidden] {
+    display: block !important;
+  }
+  .project-toggle-wrap {
+    display: none;
+  }
+}
 .project-name {
   min-width: 0;
   font-weight: 600;

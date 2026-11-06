@@ -1,11 +1,11 @@
 # Hongkun Wang (王泓坤) — CV
 
-> Digital Development Manager and full-stack engineer based in Shanghai, China. Specializes in TypeScript / React / Next.js, Node.js / FastAPI, and LLM / RAG applications. As the first engineer of Moidas' Greater China division, built the brand's official website, membership & points platform, unified SSO, AI skincare advisor, WeChat AI customer service, brand authorization platform, and two mini-programs from 0 to 1 — 7 core systems within 12 months, backed by 2,100+ automated test cases.
+> Digital Development Manager and full-stack engineer based in Shanghai, China. Specializes in TypeScript / React / Next.js, Node.js / FastAPI, and LLM / RAG applications. As the first engineer of Moidas' Greater China division, built the brand's official website & membership platform, unified SSO, AI skincare advisor, WeChat AI customer service, brand authorization platform, AI skin-analysis mini-program, and member-center mini-program from the ground up — 7 core systems within 12 months, backed by 2,900+ automated test cases.
 
 Key facts:
 
 - Also known as: Hank Wong · wilboerht · 王泓坤
-- Last updated: 2026-11-04
+- Last updated: 2026-11-07
 - Current role: Digital Development Manager at Moidas (NIHPLOD Greater China Division), Oct 2025 – present
 - Location: Shanghai, China
 - Contact: me@wilboerht.cn
@@ -32,4 +32,4 @@ Key facts:
 
 ## 中文摘要
 
-王泓坤，常驻上海的数字开发经理、全栈工程师，专注 TypeScript / React / Next.js 与 AI / RAG。作为 Moidas（NIHPLOD）大中华区首位工程师，12 个月内从 0 到 1 交付 7 个核心系统、2,100+ 自动化测试，覆盖品牌官网、会员积分、统一认证（SSO）、AI 护肤顾问、企微 AI 客服、授权核验平台与两个小程序。详见 [简体中文简历](https://cv.wilboerht.com/CV-cn/)。
+王泓坤，常驻上海的数字化开发经理、全栈工程师，专注 TypeScript / React / Next.js 与 AI / RAG。作为 Moidas（NIHPLOD）大中华区首位工程师，12 个月内从零搭建并上线 7 个核心系统、2,900+ 自动化测试，覆盖品牌官网与会员平台、统一认证（SSO）、AI 护肤顾问、企微 AI 客服、授权验真平台、AI 测肤小程序与会员中心小程序。详见 [简体中文简历](https://cv.wilboerht.com/CV-cn/)。
